@@ -1,0 +1,14 @@
+PODS:
+  - BitreserveSdk (0.1.0)
+
+DEPENDENCIES:
+  - BitreserveSdk (from `../`)
+
+EXTERNAL SOURCES:
+  BitreserveSdk:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BitreserveSdk: 847be5752bc7f1225bab34bc1480144338bf41c2
+
+COCOAPODS: 0.38.2
