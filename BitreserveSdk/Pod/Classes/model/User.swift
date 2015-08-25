@@ -1,37 +1,44 @@
 import Foundation
+import ObjectMapper
 
 /// User model.
-public class User {
+public class User: Mappable {
     
     /// The user country.
-    public private(set) var country: String
+    public private(set) var country: String?
     
     /// The user list of currencies.
-    public private(set) var currencies: [String]
+    public private(set) var currencies: [String]?
     
     /// The user email.
-    public private(set) var email: String
+    public private(set) var email: String?
     
     /// The user first name.
-    public private(set) var firstName: String
+    public private(set) var firstName: String?
     
     /// The user last name.
-    public private(set) var lastName: String
+    public private(set) var lastName: String?
     
     /// The user name.
-    public private(set) var name: String
+    public private(set) var name: String?
     
     /// The user settings.
-    public private(set) var settings: UserSettings
+    public private(set) var settings: UserSettings?
     
     /// The user state.
-    public private(set) var state: String
+    public private(set) var state: String?
     
     /// The user status.
-    public private(set) var status: String
+    public private(set) var status: String?
     
     /// The user username.
-    public private(set) var username: String
+    public private(set) var username: String?
+
+    /**
+        Constructor.
+    */
+    public init() {
+    }
     
     /**
         Constructor.
@@ -60,4 +67,25 @@ public class User {
         self.username = username
     }
     
+    // MARK: Functions required by the ObjectMapper
+
+    /// Returns a Mappable User.
+    public class func newInstance(map: Map) -> Mappable? {
+        return User()
+    }
+
+    /// Maps the JSON to the Object.
+    public func mapping(map: Map) {
+        self.country <- map["country"]
+        self.currencies <- map["currencies"]
+        self.email <- map["email"]
+        self.firstName <- map["firstName"]
+        self.lastName <- map["lastName"]
+        self.name <- map["name"]
+        self.settings <- map["settings"]
+        self.state <- map["state"]
+        self.status <- map["status"]
+        self.username <- map["username"]
+    }
+
 }

@@ -1,19 +1,26 @@
 import Foundation
+import ObjectMapper
 
 /// Denomination model.
-public class Denomination {
+public class Denomination: Mappable {
     
     /// The amount of the transaction.
-    public private(set) var amount: String
+    public private(set) var amount: String?
     
     /// The currency of the transaction.
-    public private(set) var currency: String
+    public private(set) var currency: String?
     
     /// The pair of the transaction.
-    public private(set) var pair: String
+    public private(set) var pair: String?
     
     /// The rate of the transaction.
-    public private(set) var rate: String
+    public private(set) var rate: String?
+
+    /**
+        Constructor.
+    */
+    public init() {
+    }
     
     /**
         Constructor.
@@ -30,4 +37,19 @@ public class Denomination {
         self.rate = rate
     }
     
+    // MARK: Functions required by the ObjectMapper
+
+    /// Returns a Mappable Denomination.
+    public class func newInstance(map: Map) -> Mappable? {
+        return Denomination()
+    }
+
+    /// Maps the JSON to the Object.
+    public func mapping(map: Map) {
+        amount  <- map["amount"]
+        currency <- map["currency"]
+        pair <- map["pair"]
+        rate <- map["rate"]
+    }
+
 }

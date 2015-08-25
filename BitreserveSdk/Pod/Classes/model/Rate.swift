@@ -1,19 +1,26 @@
 import Foundation
+import ObjectMapper
 
 /// Rate model.
-public class Rate {
+public class Rate: Mappable {
     
     /// The rate ask.
-    public private(set) var ask: String
+    public private(set) var ask: String?
     
     /// The rate bid.
-    public private(set) var bid: String
+    public private(set) var bid: String?
     
     /// The rate currency.
-    public private(set) var currency: String
+    public private(set) var currency: String?
     
     /// The rate pair.
-    public private(set) var pair: String
+    public private(set) var pair: String?
+
+    /**
+        Constructor.
+    */
+    public init(){
+    }
 
     /**
         Constructor.
@@ -28,6 +35,21 @@ public class Rate {
         self.bid = bid
         self.currency = currency
         self.pair = pair
+    }
+
+    // MARK: Functions required by the ObjectMapper
+
+    /// Returns a Mappable Rate.
+    public class func newInstance(map: Map) -> Mappable? {
+        return Rate()
+    }
+
+    /// Maps the JSON to the Object.
+    public func mapping(map: Map) {
+        ask  <- map["ask"]
+        bid <- map["bid"]
+        currency <- map["currency"]
+        pair <- map["pair"]
     }
     
 }

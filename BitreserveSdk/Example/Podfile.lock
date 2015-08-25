@@ -1,6 +1,8 @@
 PODS:
   - BitreserveSdk (0.1.0):
+    - ObjectMapper (~> 0.15)
     - SwiftClient (~> 1.0)
+  - ObjectMapper (0.15)
   - SwiftClient (1.0.0)
 
 DEPENDENCIES:
@@ -11,7 +13,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BitreserveSdk: dfbe8ff6c34bee6f25fef7f2763b67d34e232722
+  BitreserveSdk: 573c204fed289eac24e9fd4dd95c8a536edabbc5
+  ObjectMapper: 0656dc1c155825897e5acfcd25362c6b61786dcb
   SwiftClient: b6186869aeb1ed6582cbc52a89fe3c1dccbd96d3
 
 COCOAPODS: 0.38.2

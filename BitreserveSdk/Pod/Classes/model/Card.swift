@@ -1,37 +1,44 @@
 import Foundation
+import ObjectMapper
 
 /// Card model.
-public class Card {
+public class Card: Mappable {
   
     /// The id of the card.
-    public private(set) var id: String
+    public private(set) var id: String?
     
     /// The address of the card.
-    public private(set) var address: [String: String]
+    public private(set) var address: Dictionary<String, String>?
     
     /// The list of address for the card.
-    public private(set) var addresses: [Address]
+    public private(set) var addresses: [Address]?
     
     /// The balance available for withdrawal/usage.
-    public private(set) var available: String
+    public private(set) var available: String?
     
     /// The total balance of the card, including all pending transactions.
-    public private(set) var balance: String
+    public private(set) var balance: String?
     
     /// The currency of the card.
-    public private(set) var currency: String
+    public private(set) var currency: String?
     
     /// The display name of the card as chosen by the user.
-    public private(set) var label: String
+    public private(set) var label: String?
     
     /// A timestamp of the last time a transaction on this card was conducted.
-    public private(set) var lastTransactionAt: String
+    public private(set) var lastTransactionAt: String?
     
     /// The list with the normalized fields.
-    public private(set) var normalized: [Normalized]
+    public private(set) var normalized: [Normalized]?
     
     /// The Settings of the card.
-    public private(set) var settings: CardSettings
+    public private(set) var settings: CardSettings?
+
+    /**
+        Constructor.
+    */
+    public init(){
+    }
 
     /**
         Constructor.
@@ -47,7 +54,7 @@ public class Card {
         :param: normalized The list with the normalized fields.
         :param: settings The Settings of the card.
     */
-    public init(id: String, address: [String: String], addresses: [Address], available: String, balance: String, currency: String, label: String, lastTransactionAt: String, normalized: [Normalized], settings: CardSettings) {
+    public init(id: String, address: [String: String], addresses: [Address], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [Normalized], settings: CardSettings) {
         self.id = id;
         self.address = address
         self.addresses = addresses
@@ -58,6 +65,27 @@ public class Card {
         self.lastTransactionAt = lastTransactionAt
         self.normalized = normalized
         self.settings = settings
+    }
+
+    // MARK: Functions required by the ObjectMapper
+
+    /// Returns a Mappable Card.
+    public class func newInstance(map: Map) -> Mappable? {
+        return Card()
+    }
+
+    /// Maps the JSON to the Object.
+    public func mapping(map: Map) {
+        self.id <- map["id"]
+        self.address <- map["address"]
+        self.addresses <- map["addresses"]
+        self.available <- map["available"]
+        self.balance <- map["balance"]
+        self.currency <- map["currency"]
+        self.label <- map["label"]
+        self.lastTransactionAt <- map["lastTransactionAt"]
+        self.normalized <- map["normalized"]
+        self.settings <- map["settings"]
     }
 
 }
