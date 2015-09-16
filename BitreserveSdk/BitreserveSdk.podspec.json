@@ -19,6 +19,9 @@
     "dependencies": {
         "SwiftClient": [
             "~> 1.0"
+        ],
+        "ObjectMapper": [
+            "~> 0.15"
         ]
     },
     "source_files": "Pod/Classes/**/*",

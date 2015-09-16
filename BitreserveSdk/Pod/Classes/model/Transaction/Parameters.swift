@@ -1,31 +1,38 @@
 import Foundation
+import ObjectMapper
 
 /// Parameters model.
-public class Parameters {
+public class Parameters: Mappable {
     
     /// The transaction currency.
-    public private(set) var currency: String
+    public private(set) var currency: String?
     
     /// The transaction margin.
-    public private(set) var margin: String
+    public private(set) var margin: String?
     
     /// The transaction pair.
-    public private(set) var pair: String
+    public private(set) var pair: String?
     
     /// The transaction progress.
-    public private(set) var progress: String
+    public private(set) var progress: String?
     
     /// The transaction rate.
-    public private(set) var rate: String
+    public private(set) var rate: String?
     
     /// The transaction ttl.
-    public private(set) var ttl: String
+    public private(set) var ttl: String?
     
     /// The transaction txid.
-    public private(set) var txid: String
+    public private(set) var txid: String?
     
     /// The transaction type.
-    public private(set) var type: String
+    public private(set) var type: String?
+
+    /**
+        Constructor.
+    */
+    public init() {
+    }
 
     /**
         Constructor.
@@ -50,4 +57,23 @@ public class Parameters {
         self.type = type
     }
     
+    // MARK: Functions required by the ObjectMapper
+
+    /// Returns a Mappable Parameters.
+    public class func newInstance(map: Map) -> Mappable? {
+        return Parameters()
+    }
+
+    /// Maps the JSON to the Object.
+    public func mapping(map: Map) {
+        currency  <- map["currency"]
+        margin <- map["margin"]
+        pair <- map["pair"]
+        progress <- map["progress"]
+        rate <- map["rate"]
+        ttl <- map["ttl"]
+        txid <- map["txid"]
+        type <- map["type"]
+    }
+
 }

@@ -1,37 +1,44 @@
 import Foundation
+import ObjectMapper
 
 /// Transaction model.
-public class Transaction {
+public class Transaction: Mappable {
     
     /// A unique id the transaction.
-    public private(set) var id: String
+    public private(set) var id: String?
     
     /// The date and time the transaction was initiated.
-    public private(set) var createdAt: String
+    public private(set) var createdAt: String?
     
     /// The funds to be transfered.
-    public private(set) var denomination: Denomination
+    public private(set) var denomination: Denomination?
     
     /// The recipient of the funds.
-    public private(set) var destination: Destination
+    public private(set) var destination: Destination?
     
     /// A message or note provided by the user at the time the transaction was initiated, with the intent of communicating additional information and context about the nature/purpose of the transaction.
-    public private(set) var message: String
+    public private(set) var message: String?
     
     /// The sender of the funds.
-    public private(set) var origin: Origin
+    public private(set) var origin: Origin?
     
     /// Other parameters of this transaction.
-    public private(set) var params: Parameters
+    public private(set) var params: Parameters?
     
     /// When a transaction is cancelled, specifically a transaction in which money is sent to an email address, this contains the transaction ID of the transaction which refunds the amount back to the user.
-    public private(set) var refundedById: String
+    public private(set) var refundedById: String?
     
     /// The current status of the transaction.
-    public private(set) var status: String
+    public private(set) var status: String?
     
     /// The nature of the transaction.
-    public private(set) var type: String
+    public private(set) var type: String?
+
+    /**
+        Constructor.
+    */
+    public init() {
+    }
     
     /**
         Constructor.
@@ -58,6 +65,27 @@ public class Transaction {
         self.refundedById = refundedById
         self.status = status
         self.type = type
+    }
+
+    // MARK: Functions required by the ObjectMapper
+
+    /// Returns a Mappable Transaction.
+    public class func newInstance(map: Map) -> Mappable? {
+        return Transaction()
+    }
+
+    /// Maps the JSON to the Object.
+    public func mapping(map: Map) {
+        id  <- map["id"]
+        createdAt <- map["createdAt"]
+        denomination <- map["denomination"]
+        destination <- map["destination"]
+        message <- map["message"]
+        origin <- map["origin"]
+        params <- map["params"]
+        refundedById <- map["RefundedById"]
+        status <- map["status"]
+        type <- map["type"]
     }
 
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5A83D31B8B6B5F006CDE7D /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5A83D21B8B6B5F006CDE7D /* CardTest.swift */; };
+		2A6334521B8B939400512FDC /* RateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6334511B8B939400512FDC /* RateTest.swift */; };
+		2A6334541B8C7DBD00512FDC /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6334531B8C7DBD00512FDC /* UserTest.swift */; };
+		2A6334561B8C983A00512FDC /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6334551B8C983A00512FDC /* TransactionTest.swift */; };
 		5483C0CEC5DBE76E9219D6BC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E116CC8423D70F4A5B70F64 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5A83D21B8B6B5F006CDE7D /* CardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTest.swift; path = Integration/Model/CardTest.swift; sourceTree = "<group>"; };
+		2A6334511B8B939400512FDC /* RateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RateTest.swift; path = Integration/Model/RateTest.swift; sourceTree = "<group>"; };
+		2A6334531B8C7DBD00512FDC /* UserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTest.swift; path = Integration/Model/UserTest.swift; sourceTree = "<group>"; };
+		2A6334551B8C983A00512FDC /* TransactionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionTest.swift; path = Integration/Model/TransactionTest.swift; sourceTree = "<group>"; };
 		2E116CC8423D70F4A5B70F64 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E83C46DE3A7093C8DD3E95E /* BitreserveSdk.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = BitreserveSdk.podspec.json; path = ../BitreserveSdk.podspec.json; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BitreserveSdkExample_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitreserveSdkExample_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +70,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A5A83D01B8B6B2F006CDE7D /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				2A5A83D11B8B6B37006CDE7D /* Model */,
+			);
+			name = Integration;
+			sourceTree = "<group>";
+		};
+		2A5A83D11B8B6B37006CDE7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A5A83D21B8B6B5F006CDE7D /* CardTest.swift */,
+				2A6334511B8B939400512FDC /* RateTest.swift */,
+				2A6334531B8C7DBD00512FDC /* UserTest.swift */,
+				2A6334551B8C983A00512FDC /* TransactionTest.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +135,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2A5A83D01B8B6B2F006CDE7D /* Integration */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -256,7 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6334541B8C7DBD00512FDC /* UserTest.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				2A5A83D31B8B6B5F006CDE7D /* CardTest.swift in Sources */,
+				2A6334521B8B939400512FDC /* RateTest.swift in Sources */,
+				2A6334561B8C983A00512FDC /* TransactionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

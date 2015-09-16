@@ -1,40 +1,47 @@
 import Foundation
+import ObjectMapper
 
 /// Origin model.
-public class Origin {
+public class Origin: Mappable {
     
     /// The card id of the card from the origin of the transaction.
-    public private(set) var cardId: String
+    public private(set) var cardId: String?
     
     /// The amount from the origin of the transaction.
-    public private(set) var amount: String
+    public private(set) var amount: String?
     
     /// The base from the origin of the transaction.
-    public private(set) var base: String
+    public private(set) var base: String?
     
     /// The commission from the origin of the transaction.
-    public private(set) var commission: String
+    public private(set) var commission: String?
     
     /// The currency from the origin of the transaction.
-    public private(set) var currency: String
+    public private(set) var currency: String?
     
     /// The description from the origin of the transaction.
-    public private(set) var description: String
+    public private(set) var description: String?
     
     /// The fee from the origin of the transaction.
-    public private(set) var fee: String
+    public private(set) var fee: String?
     
     /// The rate from the origin of the transaction.
-    public private(set) var rate: String
+    public private(set) var rate: String?
     
     /// The sources from the origin of the transaction.
-    public private(set) var sources: [Source]
+    public private(set) var sources: [Source]?
     
     /// The type from the origin of the transaction.
-    public private(set) var type: String
+    public private(set) var type: String?
     
     /// The username from the origin of the transaction.
-    public private(set) var username: String
+    public private(set) var username: String?
+
+    /**
+        Constructor.
+    */
+    public init() {
+    }
     
     /**
         Constructor.
@@ -65,4 +72,26 @@ public class Origin {
         self.username = username
     }
     
+    // MARK: Functions required by the ObjectMapper
+
+    /// Returns a Mappable Origin.
+    public class func newInstance(map: Map) -> Mappable? {
+        return Origin()
+    }
+
+    /// Maps the JSON to the Object.
+    public func mapping(map: Map) {
+        cardId  <- map["CardId"]
+        amount <- map["amount"]
+        base <- map["base"]
+        commission <- map["commission"]
+        currency <- map["currency"]
+        description <- map["description"]
+        fee <- map["fee"]
+        rate <- map["rate"]
+        sources <- map["sources"]
+        type <- map["type"]
+        username <- map["username"]
+    }
+
 }
