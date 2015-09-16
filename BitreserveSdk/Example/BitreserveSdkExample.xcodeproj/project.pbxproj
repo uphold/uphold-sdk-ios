@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		2E116CC8423D70F4A5B70F64 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E83C46DE3A7093C8DD3E95E /* BitreserveSdk.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BitreserveSdk.podspec; path = ../BitreserveSdk.podspec; sourceTree = "<group>"; };
+		5E83C46DE3A7093C8DD3E95E /* BitreserveSdk.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = BitreserveSdk.podspec.json; path = ../BitreserveSdk.podspec.json; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BitreserveSdkExample_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitreserveSdkExample_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				5E83C46DE3A7093C8DD3E95E /* BitreserveSdk.podspec */,
+				5E83C46DE3A7093C8DD3E95E /* BitreserveSdk.podspec.json */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
