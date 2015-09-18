@@ -1,30 +1,26 @@
-## Mac OS X
-.DS_Store
-
-## Build generated
+# Build generated
 build/
 DerivedData
 
-# CocoaPods
-Pods
-Acknowledgements.plist
+# Carthage
+Carthage/
 
-## Various settings
-*.pbxuser
-!default.pbxuser
-*.mode1v3
+# Mac OS X
+.DS_Store
+
+# Xcode settings
 !default.mode1v3
-*.mode2v3
 !default.mode2v3
-*.perspectivev3
+!default.pbxuser
 !default.perspectivev3
-xcuserdata
-
-## Other
-*.xccheckout
-*.moved-aside
-*.xcuserstate
-
-## Swift specific
 *.hmap
 *.ipa
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+xcuserdata
