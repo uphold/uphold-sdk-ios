@@ -34,6 +34,10 @@
 		BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817E1BB4627C0060CC80 /* UserTest.swift */; settings = {ASSET_TAGS = (); }; };
 		BC2381BC1BB464D90060CC80 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2381AA1BB464B00060CC80 /* ObjectMapper.framework */; };
 		BC2381BD1BB464D90060CC80 /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2381B91BB464B70060CC80 /* SwiftClient.framework */; };
+		BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,10 @@
 		BC23817E1BB4627C0060CC80 /* UserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
 		BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectMapper.xcodeproj; path = Carthage/Checkouts/ObjectMapper/ObjectMapper.xcodeproj; sourceTree = "<group>"; };
 		BC2381B31BB464B70060CC80 /* SwiftClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftClient.xcodeproj; path = Carthage/Checkouts/SwiftClient/SwiftClient.xcodeproj; sourceTree = "<group>"; };
+		BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveServiceTest.swift; sourceTree = "<group>"; };
+		BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerServiceTest.swift; sourceTree = "<group>"; };
+		BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardServiceTest.swift; sourceTree = "<group>"; };
+		BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +264,7 @@
 		BC2381791BB4627C0060CC80 /* Integration */ = {
 			isa = PBXGroup;
 			children = (
+				BC38D9FA1BB97E4F0044239A /* Service */,
 				BC23817A1BB4627C0060CC80 /* Model */,
 			);
 			path = Integration;
@@ -291,6 +300,17 @@
 				BC2381BB1BB464B70060CC80 /* SwiftClientTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BC38D9FA1BB97E4F0044239A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */,
+				BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */,
+				BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */,
+				BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		BC3DD9DB1BB470480067CBCC /* Dependencies */ = {
@@ -497,9 +517,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */,
+				BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */,
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
+				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
+				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
