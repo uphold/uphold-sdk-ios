@@ -1,0 +1,29 @@
+{
+  "name": "BitreserveSdk",
+  "version": "0.1.0",
+  "summary": "The Bitreserve Swift SDK",
+  "description": "Bitreserve Swift SDK\n\nThis SDK provides an abstraction from the bitreserve api.\nMore information of the Bitreserve developer tools available at: https://developer.bitreserve.org",
+  "homepage": "https://github.com/bitreserve/bitreserve-sdk-ios",
+  "license": "MIT",
+  "authors": {
+    "Diogo Guimarães": "guimaraes@bitreserve.org",
+    "Sandro Machado": "sandro@bitreserve.org"
+  },
+  "source": {
+    "git": "https://github.com/bitreserve/bitreserve-sdk-ios.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source_files": "Source/**/*",
+  "dependencies": {
+    "SwiftClient": [
+      "~> 2.0"
+    ],
+    "ObjectMapper": [
+      "~> 0.18"
+    ]
+  }
+}

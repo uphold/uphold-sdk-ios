@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC2381371BB462180060CC80 /* BitreserveSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC23812C1BB462170060CC80 /* BitreserveSdk.framework */; settings = {ASSET_TAGS = (); }; };
+		BC2381621BB4626F0060CC80 /* BitreserveClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* BitreserveClient.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381641BB4626F0060CC80 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814C1BB4626F0060CC80 /* Address.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381661BB4626F0060CC80 /* Normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* Normalized.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381671BB4626F0060CC80 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814F1BB4626F0060CC80 /* Card.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381681BB4626F0060CC80 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381501BB4626F0060CC80 /* Rate.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381521BB4626F0060CC80 /* Denomination.swift */; settings = {ASSET_TAGS = (); }; };
+		BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381531BB4626F0060CC80 /* Destination.swift */; settings = {ASSET_TAGS = (); }; };
+		BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381541BB4626F0060CC80 /* Origin.swift */; settings = {ASSET_TAGS = (); }; };
+		BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381551BB4626F0060CC80 /* Parameters.swift */; settings = {ASSET_TAGS = (); }; };
+		BC23816D1BB4626F0060CC80 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381561BB4626F0060CC80 /* Source.swift */; settings = {ASSET_TAGS = (); }; };
+		BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381571BB4626F0060CC80 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
+		BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815A1BB4626F0060CC80 /* InternationalizationUserSettings.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815B1BB4626F0060CC80 /* UserSettings.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381721BB4626F0060CC80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815C1BB4626F0060CC80 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815E1BB4626F0060CC80 /* ReserveService.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815F1BB4626F0060CC80 /* TickerService.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381601BB4626F0060CC80 /* UserCardService.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381761BB4626F0060CC80 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381611BB4626F0060CC80 /* UserService.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817B1BB4627C0060CC80 /* CardTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817C1BB4627C0060CC80 /* RateTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817D1BB4627C0060CC80 /* TransactionTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817E1BB4627C0060CC80 /* UserTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC2381BC1BB464D90060CC80 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2381AA1BB464B00060CC80 /* ObjectMapper.framework */; };
+		BC2381BD1BB464D90060CC80 /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2381B91BB464B70060CC80 /* SwiftClient.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC2381381BB462180060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381231BB462170060CC80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC23812B1BB462170060CC80;
+			remoteInfo = BitreserveSdk;
+		};
+		BC2381A91BB464B00060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6AAC8F7619F03C2900E7A677;
+			remoteInfo = "ObjectMapper-iOS";
+		};
+		BC2381AB1BB464B00060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD1602FF1AC023D5000CD69A;
+			remoteInfo = "ObjectMapper-Mac";
+		};
+		BC2381AD1BB464B00060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A2AD03D1B2C78540097E150;
+			remoteInfo = "ObjectMapper-watchOS";
+		};
+		BC2381AF1BB464B00060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6AAC8F8119F03C2900E7A677;
+			remoteInfo = "ObjectMapper-iOSTests";
+		};
+		BC2381B11BB464B00060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD1603091AC023D6000CD69A;
+			remoteInfo = "ObjectMapper-MacTests";
+		};
+		BC2381B81BB464B70060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381B31BB464B70060CC80 /* SwiftClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0CB88D619FC645300DA6940;
+			remoteInfo = SwiftClient;
+		};
+		BC2381BA1BB464B70060CC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381B31BB464B70060CC80 /* SwiftClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0CB88E119FC645300DA6940;
+			remoteInfo = SwiftClientTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC23812C1BB462170060CC80 /* BitreserveSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitreserveSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2381361BB462180060CC80 /* BitreserveSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitreserveSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2381481BB4626F0060CC80 /* BitreserveClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitreserveClient.swift; sourceTree = "<group>"; };
+		BC2381491BB4626F0060CC80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC23814C1BB4626F0060CC80 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		BC23814D1BB4626F0060CC80 /* CardSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSettings.swift; sourceTree = "<group>"; };
+		BC23814E1BB4626F0060CC80 /* Normalized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Normalized.swift; sourceTree = "<group>"; };
+		BC23814F1BB4626F0060CC80 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BC2381501BB4626F0060CC80 /* Rate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		BC2381521BB4626F0060CC80 /* Denomination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Denomination.swift; sourceTree = "<group>"; };
+		BC2381531BB4626F0060CC80 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		BC2381541BB4626F0060CC80 /* Origin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
+		BC2381551BB4626F0060CC80 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		BC2381561BB4626F0060CC80 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		BC2381571BB4626F0060CC80 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternationalizationUserSetting.swift; sourceTree = "<group>"; };
+		BC23815A1BB4626F0060CC80 /* InternationalizationUserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternationalizationUserSettings.swift; sourceTree = "<group>"; };
+		BC23815B1BB4626F0060CC80 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		BC23815C1BB4626F0060CC80 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC23815E1BB4626F0060CC80 /* ReserveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveService.swift; sourceTree = "<group>"; };
+		BC23815F1BB4626F0060CC80 /* TickerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerService.swift; sourceTree = "<group>"; };
+		BC2381601BB4626F0060CC80 /* UserCardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardService.swift; sourceTree = "<group>"; };
+		BC2381611BB4626F0060CC80 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		BC2381781BB4627C0060CC80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC23817B1BB4627C0060CC80 /* CardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTest.swift; sourceTree = "<group>"; };
+		BC23817C1BB4627C0060CC80 /* RateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTest.swift; sourceTree = "<group>"; };
+		BC23817D1BB4627C0060CC80 /* TransactionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTest.swift; sourceTree = "<group>"; };
+		BC23817E1BB4627C0060CC80 /* UserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
+		BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectMapper.xcodeproj; path = Carthage/Checkouts/ObjectMapper/ObjectMapper.xcodeproj; sourceTree = "<group>"; };
+		BC2381B31BB464B70060CC80 /* SwiftClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftClient.xcodeproj; path = Carthage/Checkouts/SwiftClient/SwiftClient.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC2381281BB462170060CC80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2381BC1BB464D90060CC80 /* ObjectMapper.framework in Frameworks */,
+				BC2381BD1BB464D90060CC80 /* SwiftClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2381331BB462180060CC80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2381371BB462180060CC80 /* BitreserveSdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC2381221BB462170060CC80 = {
+			isa = PBXGroup;
+			children = (
+				BC3DD9DB1BB470480067CBCC /* Dependencies */,
+				BC2381771BB4627C0060CC80 /* Tests */,
+				BC2381461BB4626F0060CC80 /* Source */,
+				BC23812D1BB462170060CC80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC23812D1BB462170060CC80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC23812C1BB462170060CC80 /* BitreserveSdk.framework */,
+				BC2381361BB462180060CC80 /* BitreserveSdkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC2381461BB4626F0060CC80 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381471BB4626F0060CC80 /* Client */,
+				BC2381491BB4626F0060CC80 /* Info.plist */,
+				BC23814A1BB4626F0060CC80 /* Model */,
+				BC23815D1BB4626F0060CC80 /* Service */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BC2381471BB4626F0060CC80 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381481BB4626F0060CC80 /* BitreserveClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		BC23814A1BB4626F0060CC80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC23814B1BB4626F0060CC80 /* Card */,
+				BC23814F1BB4626F0060CC80 /* Card.swift */,
+				BC2381501BB4626F0060CC80 /* Rate.swift */,
+				BC2381511BB4626F0060CC80 /* Transaction */,
+				BC2381571BB4626F0060CC80 /* Transaction.swift */,
+				BC2381581BB4626F0060CC80 /* User */,
+				BC23815C1BB4626F0060CC80 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC23814B1BB4626F0060CC80 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				BC23814C1BB4626F0060CC80 /* Address.swift */,
+				BC23814D1BB4626F0060CC80 /* CardSettings.swift */,
+				BC23814E1BB4626F0060CC80 /* Normalized.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		BC2381511BB4626F0060CC80 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381521BB4626F0060CC80 /* Denomination.swift */,
+				BC2381531BB4626F0060CC80 /* Destination.swift */,
+				BC2381541BB4626F0060CC80 /* Origin.swift */,
+				BC2381551BB4626F0060CC80 /* Parameters.swift */,
+				BC2381561BB4626F0060CC80 /* Source.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		BC2381581BB4626F0060CC80 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */,
+				BC23815A1BB4626F0060CC80 /* InternationalizationUserSettings.swift */,
+				BC23815B1BB4626F0060CC80 /* UserSettings.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BC23815D1BB4626F0060CC80 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BC23815E1BB4626F0060CC80 /* ReserveService.swift */,
+				BC23815F1BB4626F0060CC80 /* TickerService.swift */,
+				BC2381601BB4626F0060CC80 /* UserCardService.swift */,
+				BC2381611BB4626F0060CC80 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BC2381771BB4627C0060CC80 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381781BB4627C0060CC80 /* Info.plist */,
+				BC2381791BB4627C0060CC80 /* Integration */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BC2381791BB4627C0060CC80 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				BC23817A1BB4627C0060CC80 /* Model */,
+			);
+			path = Integration;
+			sourceTree = "<group>";
+		};
+		BC23817A1BB4627C0060CC80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC23817B1BB4627C0060CC80 /* CardTest.swift */,
+				BC23817C1BB4627C0060CC80 /* RateTest.swift */,
+				BC23817D1BB4627C0060CC80 /* TransactionTest.swift */,
+				BC23817E1BB4627C0060CC80 /* UserTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC2381A21BB464B00060CC80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381AA1BB464B00060CC80 /* ObjectMapper.framework */,
+				BC2381AC1BB464B00060CC80 /* ObjectMapper.framework */,
+				BC2381AE1BB464B00060CC80 /* ObjectMapper.framework */,
+				BC2381B01BB464B00060CC80 /* ObjectMapper-iOSTests.xctest */,
+				BC2381B21BB464B00060CC80 /* ObjectMapper-MacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC2381B41BB464B70060CC80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381B91BB464B70060CC80 /* SwiftClient.framework */,
+				BC2381BB1BB464B70060CC80 /* SwiftClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3DD9DB1BB470480067CBCC /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BC2381B31BB464B70060CC80 /* SwiftClient.xcodeproj */,
+				BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BC2381291BB462170060CC80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BC23812B1BB462170060CC80 /* BitreserveSdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC2381401BB462180060CC80 /* Build configuration list for PBXNativeTarget "BitreserveSdk" */;
+			buildPhases = (
+				BC2381271BB462170060CC80 /* Sources */,
+				BC2381281BB462170060CC80 /* Frameworks */,
+				BC2381291BB462170060CC80 /* Headers */,
+				BC23812A1BB462170060CC80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitreserveSdk;
+			productName = BitreserveSdk;
+			productReference = BC23812C1BB462170060CC80 /* BitreserveSdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC2381351BB462180060CC80 /* BitreserveSdkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC2381431BB462180060CC80 /* Build configuration list for PBXNativeTarget "BitreserveSdkTests" */;
+			buildPhases = (
+				BC2381321BB462180060CC80 /* Sources */,
+				BC2381331BB462180060CC80 /* Frameworks */,
+				BC2381341BB462180060CC80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC2381391BB462180060CC80 /* PBXTargetDependency */,
+			);
+			name = BitreserveSdkTests;
+			productName = BitreserveSdkTests;
+			productReference = BC2381361BB462180060CC80 /* BitreserveSdkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC2381231BB462170060CC80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Bitreserve;
+				TargetAttributes = {
+					BC23812B1BB462170060CC80 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					BC2381351BB462180060CC80 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = BC2381261BB462170060CC80 /* Build configuration list for PBXProject "BitreserveSdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BC2381221BB462170060CC80;
+			productRefGroup = BC23812D1BB462170060CC80 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BC2381A21BB464B00060CC80 /* Products */;
+					ProjectRef = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+				},
+				{
+					ProductGroup = BC2381B41BB464B70060CC80 /* Products */;
+					ProjectRef = BC2381B31BB464B70060CC80 /* SwiftClient.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BC23812B1BB462170060CC80 /* BitreserveSdk */,
+				BC2381351BB462180060CC80 /* BitreserveSdkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BC2381AA1BB464B00060CC80 /* ObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjectMapper.framework;
+			remoteRef = BC2381A91BB464B00060CC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC2381AC1BB464B00060CC80 /* ObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjectMapper.framework;
+			remoteRef = BC2381AB1BB464B00060CC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC2381AE1BB464B00060CC80 /* ObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjectMapper.framework;
+			remoteRef = BC2381AD1BB464B00060CC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC2381B01BB464B00060CC80 /* ObjectMapper-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ObjectMapper-iOSTests.xctest";
+			remoteRef = BC2381AF1BB464B00060CC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC2381B21BB464B00060CC80 /* ObjectMapper-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ObjectMapper-MacTests.xctest";
+			remoteRef = BC2381B11BB464B00060CC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC2381B91BB464B70060CC80 /* SwiftClient.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftClient.framework;
+			remoteRef = BC2381B81BB464B70060CC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC2381BB1BB464B70060CC80 /* SwiftClientTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftClientTests.xctest;
+			remoteRef = BC2381BA1BB464B70060CC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC23812A1BB462170060CC80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2381341BB462180060CC80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC2381271BB462170060CC80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2381661BB4626F0060CC80 /* Normalized.swift in Sources */,
+				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
+				BC2381641BB4626F0060CC80 /* Address.swift in Sources */,
+				BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */,
+				BC2381721BB4626F0060CC80 /* User.swift in Sources */,
+				BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */,
+				BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */,
+				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
+				BC2381671BB4626F0060CC80 /* Card.swift in Sources */,
+				BC23816D1BB4626F0060CC80 /* Source.swift in Sources */,
+				BC2381681BB4626F0060CC80 /* Rate.swift in Sources */,
+				BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */,
+				BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */,
+				BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */,
+				BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */,
+				BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */,
+				BC2381761BB4626F0060CC80 /* UserService.swift in Sources */,
+				BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */,
+				BC2381621BB4626F0060CC80 /* BitreserveClient.swift in Sources */,
+				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2381321BB462180060CC80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
+				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
+				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
+				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC2381391BB462180060CC80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC23812B1BB462170060CC80 /* BitreserveSdk */;
+			targetProxy = BC2381381BB462180060CC80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BC23813E1BB462180060CC80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC23813F1BB462180060CC80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC2381411BB462180060CC80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.bitreserve.bitreservesdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BC2381421BB462180060CC80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.bitreserve.bitreservesdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BC2381441BB462180060CC80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.Bitreserve.BitreserveSdkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC2381451BB462180060CC80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.Bitreserve.BitreserveSdkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC2381261BB462170060CC80 /* Build configuration list for PBXProject "BitreserveSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC23813E1BB462180060CC80 /* Debug */,
+				BC23813F1BB462180060CC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC2381401BB462180060CC80 /* Build configuration list for PBXNativeTarget "BitreserveSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC2381411BB462180060CC80 /* Debug */,
+				BC2381421BB462180060CC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC2381431BB462180060CC80 /* Build configuration list for PBXNativeTarget "BitreserveSdkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC2381441BB462180060CC80 /* Debug */,
+				BC2381451BB462180060CC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC2381231BB462170060CC80 /* Project object */;
+}
