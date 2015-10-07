@@ -7,8 +7,8 @@ public class Card: Mappable {
     /// The id of the card.
     public private(set) var id: String?
 
-    /// The list of addresses for the card.
-    public private(set) var addresses: [Address]?
+    /// The card's primary address dictionary.
+    public private(set) var address: [String : String]?
 
     /// The balance available for withdrawal/usage.
     public private(set) var available: String?
@@ -35,7 +35,7 @@ public class Card: Mappable {
       Constructor.
 
       - parameter id: The id of the card.
-      - parameter addresses: The list of address for the card.
+      - parameter address: The card's primary address dictionary.
       - parameter available: The balance available for withdrawal/usage.
       - parameter balance: The total balance of the card, including all pending transactions.
       - parameter currency: The currency of the card.
@@ -44,9 +44,9 @@ public class Card: Mappable {
       - parameter normalized: The list with the normalized fields.
       - parameter settings: The Settings of the card.
     */
-    public init(id: String, addresses: [Address], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [Normalized], settings: CardSettings) {
+    public init(id: String, address: [String : String], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [Normalized], settings: CardSettings) {
         self.id = id;
-        self.addresses = addresses
+        self.address = address
         self.available = available
         self.balance = balance
         self.currency = currency
@@ -67,7 +67,7 @@ public class Card: Mappable {
     /// Maps the JSON to the Object.
     public func mapping(map: Map) {
         self.id <- map["id"]
-        self.addresses <- map["addresses"]
+        self.address <- map["address"]
         self.available <- map["available"]
         self.balance <- map["balance"]
         self.currency <- map["currency"]
