@@ -23,7 +23,7 @@ public class ReserveService {
       - returns: A request to get a reserve transaction.
     */
     static func getReserveTransactionById(transactionId: String) -> Request {
-        return BitreserveClient().get(String(format: "/v0/reserve/transactions/%s", transactionId))
+        return BitreserveClient().get(String(format: "/v0/reserve/transactions/%@", transactionId))
     }
 
     /**
@@ -42,7 +42,7 @@ public class ReserveService {
 
       - returns: A request to get the reserve statistics.
     */
-    static func getStatistics(range: String) -> Request {
+    static func getStatistics() -> Request {
         return BitreserveClient().get("/v0/reserve/statistics")
     }
 
