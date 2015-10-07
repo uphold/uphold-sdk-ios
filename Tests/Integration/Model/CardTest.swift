@@ -8,9 +8,9 @@ class CardTest: XCTestCase {
         let card = Mapper<Card>().map("{ \"address\": { \"bitcoin\": \"fuzbuz\" }, \"available\": \"87.52\", \"balance\": \"87.52\", \"currency\": \"EUR\", \"id\": \"foobar\", \"label\": \"Foo card\", \"lastTransactionAt\": \"foobiz\", \"settings\": { \"position\": 4, \"starred\": true }, \"addresses\": [ { \"id\": \"fiz\", \"network\": \"biz\" } ], \"normalized\": [ { \"available\": \"99.04\", \"balance\": \"99.04\", \"currency\": \"USD\" } ] }")
 
         XCTAssertEqual(card!.id!, "foobar", "Failed: Card id didn't match.")
-        XCTAssertEqual(card!.addresses!.count, 1, "Failed: Addresses didn't match.")
-        XCTAssertEqual(card!.addresses![0].id!, "fiz", "Failed: Addresses didn't match.")
-        XCTAssertEqual(card!.addresses![0].network!, "biz", "Failed: Addresses didn't match.")
+        XCTAssertFalse(card!.address!.isEmpty, "Failed: Address didn't match.")
+        XCTAssertEqual(card!.address!.count, 1, "Failed: Address didn't match.")
+        XCTAssertEqual(card!.address!["bitcoin"]!, "fuzbuz", "Failed: Address didn't match.")
         XCTAssertEqual(card!.available!, "87.52", "Failed: Available didn't match.")
         XCTAssertEqual(card!.balance!, "87.52", "Failed: Balance didn't match.")
         XCTAssertEqual(card!.currency!, "EUR", "Failed: Currency didn't match.")
