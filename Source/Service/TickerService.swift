@@ -10,7 +10,7 @@ public class TickerService {
       - returns: A request to get the tickers on the system.
     */
     static func getAllTickers() -> Request {
-        return BitreserveClient().get("/v0/ticker")
+        return UpholdClient().get("/v0/ticker")
     }
 
     /**
@@ -21,7 +21,7 @@ public class TickerService {
       - returns: A request to get the tickers on the system for the selected currency.
     */
     static func getAllTickersByCurrency(currency: String) -> Request {
-        return BitreserveClient().get(String(format: "/v0/ticker/%@", currency))
+        return UpholdClient().get(String(format: "/v0/ticker/%@", currency))
     }
 
 }

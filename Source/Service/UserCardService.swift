@@ -13,7 +13,7 @@ public class UserCardService {
       - returns: A request to cancel the transaction.
     */
     static func cancelTransaction(cardId: String, transactionId: String) -> Request {
-        return BitreserveClient().get(String(format: "/v0/me/cards/%@/transactions/%@/cancel", cardId, transactionId))
+        return UpholdClient().get(String(format: "/v0/me/cards/%@/transactions/%@/cancel", cardId, transactionId))
     }
 
     /**
@@ -25,7 +25,7 @@ public class UserCardService {
       - returns: A request to confirm the transaction.
     */
     static func confirmTransaction(cardId: String, transactionId: String, message: String) -> Request {
-        return BitreserveClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(message)
+        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(message)
     }
 
     /**
@@ -38,7 +38,7 @@ public class UserCardService {
       - returns: A request to create a transaction.
     */
     static func createTransaction(cardId: String, transactionId: String, transactionRequest: String) -> Request {
-        return BitreserveClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(transactionRequest)
+        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(transactionRequest)
     }
 
     /**
@@ -49,7 +49,7 @@ public class UserCardService {
       - returns: A request to create a card.
     */
     static func createUserCard(cardRequest: String) -> Request {
-        return BitreserveClient().post("/v0/me/cards").send(cardRequest)
+        return UpholdClient().post("/v0/me/cards").send(cardRequest)
     }
 
     /**
@@ -60,7 +60,7 @@ public class UserCardService {
       - returns: A request to create a transaction.
     */
     static func getUserCardById(cardId: String) -> Request {
-        return BitreserveClient().get(String(format: "/v0/me/cards/%@", cardId))
+        return UpholdClient().get(String(format: "/v0/me/cards/%@", cardId))
     }
 
     /**
@@ -69,7 +69,7 @@ public class UserCardService {
       - returns: A request to get the user cards.
     */
     static func getUserCards() -> Request {
-        return BitreserveClient().get("/v0/me/cards")
+        return UpholdClient().get("/v0/me/cards")
     }
 
     /**
@@ -81,7 +81,7 @@ public class UserCardService {
       - returns: A request to get the list of transactions for a card.
     */
     static func getUserCardTransactions(cardId: String, range: String) -> Request {
-        return BitreserveClient().get(String(format: "/v0/me/cards/%@/transactions", cardId)).set("Range", range)
+        return UpholdClient().get(String(format: "/v0/me/cards/%@/transactions", cardId)).set("Range", range)
     }
 
     /**
@@ -93,7 +93,7 @@ public class UserCardService {
       - returns: A request to update a card.
     */
     static func updateCard(cardId: String, updateFields: String) -> Request {
-        return BitreserveClient().patch(String(format: "/v0/me/cards/%@", cardId)).send(updateFields)
+        return UpholdClient().patch(String(format: "/v0/me/cards/%@", cardId)).send(updateFields)
     }
 
 }

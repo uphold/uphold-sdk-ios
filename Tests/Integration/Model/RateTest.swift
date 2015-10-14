@@ -1,5 +1,5 @@
 import XCTest
-import BitreserveSdk
+import UpholdSdk
 import ObjectMapper
 
 

@@ -12,23 +12,22 @@
 		BC2381161BB461DE0060CC80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2381141BB461DE0060CC80 /* Main.storyboard */; };
 		BC2381181BB461DE0060CC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2381171BB461DE0060CC80 /* Assets.xcassets */; };
 		BC23811B1BB461DE0060CC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2381191BB461DE0060CC80 /* LaunchScreen.storyboard */; };
-		BC2381C91BB465420060CC80 /* BitreserveSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2381C61BB465260060CC80 /* BitreserveSdk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BC2381C51BB465260060CC80 /* PBXContainerItemProxy */ = {
+		BC7C7BEB1BCE782C00CB0CDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BC2381BE1BB465260060CC80 /* BitreserveSdk.xcodeproj */;
+			containerPortal = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC23812C1BB462170060CC80;
-			remoteInfo = BitreserveSdk;
+			remoteInfo = UpholdSdk;
 		};
-		BC2381C71BB465260060CC80 /* PBXContainerItemProxy */ = {
+		BC7C7BED1BCE782C00CB0CDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BC2381BE1BB465260060CC80 /* BitreserveSdk.xcodeproj */;
+			containerPortal = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC2381361BB462180060CC80;
-			remoteInfo = BitreserveSdkTests;
+			remoteInfo = UpholdSdkTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,7 +39,7 @@
 		BC2381171BB461DE0060CC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC23811A1BB461DE0060CC80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC23811C1BB461DE0060CC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC2381BE1BB465260060CC80 /* BitreserveSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BitreserveSdk.xcodeproj; sourceTree = "<group>"; };
+		BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = UpholdSdk.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2381C91BB465420060CC80 /* BitreserveSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +56,7 @@
 		BC2381041BB461DE0060CC80 = {
 			isa = PBXGroup;
 			children = (
-				BC2381BE1BB465260060CC80 /* BitreserveSdk.xcodeproj */,
+				BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */,
 				BC23810F1BB461DE0060CC80 /* Example */,
 				BC23810E1BB461DE0060CC80 /* Products */,
 			);
@@ -85,11 +83,11 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		BC2381BF1BB465260060CC80 /* Products */ = {
+		BC7C7BE71BCE782B00CB0CDD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC2381C61BB465260060CC80 /* BitreserveSdk.framework */,
-				BC2381C81BB465260060CC80 /* BitreserveSdkTests.xctest */,
+				BC7C7BEC1BCE782C00CB0CDD /* UpholdSdk.framework */,
+				BC7C7BEE1BCE782C00CB0CDD /* UpholdSdk.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +119,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = Bitreserve;
+				ORGANIZATIONNAME = Uphold;
 				TargetAttributes = {
 					BC23810C1BB461DE0060CC80 = {
 						CreatedOnToolsVersion = 7.0;
@@ -141,8 +139,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BC2381BF1BB465260060CC80 /* Products */;
-					ProjectRef = BC2381BE1BB465260060CC80 /* BitreserveSdk.xcodeproj */;
+					ProductGroup = BC7C7BE71BCE782B00CB0CDD /* Products */;
+					ProjectRef = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -153,18 +151,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BC2381C61BB465260060CC80 /* BitreserveSdk.framework */ = {
+		BC7C7BEC1BCE782C00CB0CDD /* UpholdSdk.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = BitreserveSdk.framework;
-			remoteRef = BC2381C51BB465260060CC80 /* PBXContainerItemProxy */;
+			path = UpholdSdk.framework;
+			remoteRef = BC7C7BEB1BCE782C00CB0CDD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC2381C81BB465260060CC80 /* BitreserveSdkTests.xctest */ = {
+		BC7C7BEE1BCE782C00CB0CDD /* UpholdSdk.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = BitreserveSdkTests.xctest;
-			remoteRef = BC2381C71BB465260060CC80 /* PBXContainerItemProxy */;
+			path = UpholdSdk.xctest;
+			remoteRef = BC7C7BED1BCE782C00CB0CDD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -303,7 +301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.bitreserve.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -315,7 +313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.bitreserve.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

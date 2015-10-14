@@ -12,7 +12,7 @@ public class UserService {
       - returns: A request to create a contact.
     */
     static func createContact(contactRequest: String) -> Request {
-        return BitreserveClient().post("/v0/me/contacts").send(contactRequest)
+        return UpholdClient().post("/v0/me/contacts").send(contactRequest)
     }
 
     /**
@@ -21,7 +21,7 @@ public class UserService {
       - returns: A request to get the user information.
     */
     static func getUser() -> Request {
-        return BitreserveClient().get("/v0/me")
+        return UpholdClient().get("/v0/me")
     }
 
     /**
@@ -30,7 +30,7 @@ public class UserService {
       - returns: A request to get the user balances.
     */
     static func getUserBalances() -> Request {
-        return BitreserveClient().get("/v0/me")
+        return UpholdClient().get("/v0/me")
     }
 
     /**
@@ -39,7 +39,7 @@ public class UserService {
       - returns: A request to get the user contacts.
     */
     static func getUserContacts() -> Request {
-        return BitreserveClient().get("/v0/me/contacts")
+        return UpholdClient().get("/v0/me/contacts")
     }
 
     /**
@@ -48,7 +48,7 @@ public class UserService {
       - returns: A request to get the user phones.
     */
     static func getUserPhones() -> Request {
-        return BitreserveClient().get("/v0/me/phones")
+        return UpholdClient().get("/v0/me/phones")
     }
 
     /**
@@ -59,7 +59,7 @@ public class UserService {
       - returns: A request to get the user transactions.
     */
     static func getUserTransactions(range: String) -> Request {
-        return BitreserveClient().get("/v0/me/transactions").set("Range", range)
+        return UpholdClient().get("/v0/me/transactions").set("Range", range)
     }
 
     /**
@@ -70,7 +70,7 @@ public class UserService {
       - returns: A request to update the user information.
     */
     static func updateUser(updatefields: String) -> Request {
-        return BitreserveClient().patch("/v0/me").send(updatefields)
+        return UpholdClient().patch("/v0/me").send(updatefields)
     }
 
 }
