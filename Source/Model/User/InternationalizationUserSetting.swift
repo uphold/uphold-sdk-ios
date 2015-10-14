@@ -23,7 +23,7 @@ public class InternationalizationUserSetting: Mappable {
     */
     required public init?(_ map: Map) {
     }
-    
+
     /// Maps the JSON to the Object.
     public func mapping(map: Map) {
         locale  <- map["locale"]

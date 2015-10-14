@@ -36,7 +36,7 @@ public class Destination: Mappable {
 
     /**
       Constructor.
-      
+
       - parameter cardId: The card id of the card from the destination of the transaction.
       - parameter amount: The amount from the destination of the transaction.
       - parameter base: The base from the destination of the transaction.
