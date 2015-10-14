@@ -6,6 +6,8 @@ before_script:
   - brew update
   - brew install carthage
   - carthage update --use-submodules --no-build --no-use-binaries
+  - brew install swiftlint
 
 script:
+  - swiftlint lint
   - xctool -project BitreserveSdk.xcodeproj -scheme BitreserveSdk test sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO

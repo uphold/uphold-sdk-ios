@@ -48,7 +48,7 @@ public class User: Mappable {
       - parameter status: The user status.
       - parameter username: The user username.
     */
-    public init(country : String, currencies : [String], email : String, firstName : String, lastName : String, name : String, settings : UserSettings, state : String, status : String, username : String) {
+    public init(country: String, currencies: [String], email: String, firstName: String, lastName: String, name: String, settings: UserSettings, state: String, status: String, username: String) {
         self.country = country
         self.currencies = currencies
         self.email = email

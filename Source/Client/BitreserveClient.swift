@@ -3,7 +3,7 @@ import SwiftClient
 
 public class BitreserveClient: Client {
 
-    public override init(){
+    public override init() {
         super.init()
 
         self.baseUrl("https://api.bitreserve.org")

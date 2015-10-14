@@ -39,7 +39,7 @@ public class Origin: Mappable {
 
     /**
       Constructor.
-    
+
       - parameter cardId: The card id of the card from the origin of the transaction.
       - parameter amount: The amount from the origin of the transaction.
       - parameter base: The base from the origin of the transaction.
@@ -65,7 +65,7 @@ public class Origin: Mappable {
         self.type = type
         self.username = username
     }
-    
+
     // MARK: Required by the ObjectMapper.
 
     /**

@@ -15,7 +15,7 @@ public class InternationalizationUserSettings: Mappable {
 
     /**
       Constructor.
-    
+
       - parameter language: The internationalization language user settings.
       - parameter dateTimeFormat: The internationalization date time format user settings.
       - parameter numberFormat: The internationalization number format user settings.

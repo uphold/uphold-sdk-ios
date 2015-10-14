@@ -28,7 +28,7 @@ public class UserSettings: Mappable {
       - parameter intl: The user internationalization settings.
       - parameter theme: The user theme.
     */
-    public init(currency: String, hasNewsSubscription : Bool, hasOtpEnabled : Bool, intl : InternationalizationUserSettings, theme : String) {
+    public init(currency: String, hasNewsSubscription: Bool, hasOtpEnabled: Bool, intl: InternationalizationUserSettings, theme: String) {
         self.currency = currency
         self.hasNewsSubscription = hasNewsSubscription
         self.hasOtpEnabled = hasOtpEnabled
