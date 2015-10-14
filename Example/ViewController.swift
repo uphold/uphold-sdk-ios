@@ -1,5 +1,5 @@
 import UIKit
-import BitreserveSdk
+import UpholdSdk
 
 class ViewController: UIViewController {
 }

@@ -12,7 +12,7 @@ public class ReserveService {
       - returns: A request to get the reserve ledger.
     */
     static func getLedger(range: String) -> Request {
-        return BitreserveClient().get("/v0/reserve/ledger").set("Range", range)
+        return UpholdClient().get("/v0/reserve/ledger").set("Range", range)
     }
 
     /**
@@ -23,7 +23,7 @@ public class ReserveService {
       - returns: A request to get a reserve transaction.
     */
     static func getReserveTransactionById(transactionId: String) -> Request {
-        return BitreserveClient().get(String(format: "/v0/reserve/transactions/%@", transactionId))
+        return UpholdClient().get(String(format: "/v0/reserve/transactions/%@", transactionId))
     }
 
     /**
@@ -34,7 +34,7 @@ public class ReserveService {
       - returns: A request to get the reserve transactions.
     */
     static func getReserveTransactions(range: String) -> Request {
-        return BitreserveClient().get("/v0/reserve/transactions").set("Range", range)
+        return UpholdClient().get("/v0/reserve/transactions").set("Range", range)
     }
 
     /**
@@ -43,7 +43,7 @@ public class ReserveService {
       - returns: A request to get the reserve statistics.
     */
     static func getStatistics() -> Request {
-        return BitreserveClient().get("/v0/reserve/statistics")
+        return UpholdClient().get("/v0/reserve/statistics")
     }
 
 }

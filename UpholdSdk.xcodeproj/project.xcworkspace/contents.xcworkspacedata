@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BitreserveSdk.xcodeproj">
+      location = "self:UpholdSdk.xcodeproj">
    </FileRef>
 </Workspace>

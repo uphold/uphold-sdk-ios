@@ -1,12 +1,12 @@
 import Foundation
 import SwiftClient
 
-public class BitreserveClient: Client {
+public class UpholdClient: Client {
 
     public override init() {
         super.init()
 
-        self.baseUrl("https://api.bitreserve.org")
+        self.baseUrl("https://api.uphold.com")
     }
 
 }

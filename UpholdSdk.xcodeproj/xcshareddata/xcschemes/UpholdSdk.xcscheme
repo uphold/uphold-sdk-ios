@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC23812B1BB462170060CC80"
-               BuildableName = "BitreserveSdk.framework"
-               BlueprintName = "BitreserveSdk"
-               ReferencedContainer = "container:BitreserveSdk.xcodeproj">
+               BuildableName = "UpholdSdk.framework"
+               BlueprintName = "UpholdSdk"
+               ReferencedContainer = "container:UpholdSdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC2381351BB462180060CC80"
-               BuildableName = "BitreserveSdkTests.xctest"
-               BlueprintName = "BitreserveSdkTests"
-               ReferencedContainer = "container:BitreserveSdk.xcodeproj">
+               BuildableName = "UpholdSdk.xctest"
+               BlueprintName = "UpholdSdkTests"
+               ReferencedContainer = "container:UpholdSdk.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC23812B1BB462170060CC80"
-            BuildableName = "BitreserveSdk.framework"
-            BlueprintName = "BitreserveSdk"
-            ReferencedContainer = "container:BitreserveSdk.xcodeproj">
+            BuildableName = "UpholdSdk.framework"
+            BlueprintName = "UpholdSdk"
+            ReferencedContainer = "container:UpholdSdk.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC23812B1BB462170060CC80"
-            BuildableName = "BitreserveSdk.framework"
-            BlueprintName = "BitreserveSdk"
-            ReferencedContainer = "container:BitreserveSdk.xcodeproj">
+            BuildableName = "UpholdSdk.framework"
+            BlueprintName = "UpholdSdk"
+            ReferencedContainer = "container:UpholdSdk.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC23812B1BB462170060CC80"
-            BuildableName = "BitreserveSdk.framework"
-            BlueprintName = "BitreserveSdk"
-            ReferencedContainer = "container:BitreserveSdk.xcodeproj">
+            BuildableName = "UpholdSdk.framework"
+            BlueprintName = "UpholdSdk"
+            ReferencedContainer = "container:UpholdSdk.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

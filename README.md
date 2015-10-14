@@ -1,8 +1,8 @@
-# Bitreserve SDK for iOS
+# Uphold SDK for iOS
 
-Bitreserve is a next generation platform that allows anyone to transfer and exchange value for free, instantly and securely.
+Uphold is a next generation platform that allows anyone to transfer and exchange value for free, instantly and securely.
 
-The Bitreserve SDK for iOS provides an easy way for developers to integrate iOS applications with the [Bitreserve API](https://developers.bitreserve.org).
+The Uphold SDK for iOS provides an easy way for developers to integrate iOS applications with the [Uphold API](https://uphold.com/en/developer/api).
 
 ## Requirements
 
@@ -20,7 +20,7 @@ The Bitreserve SDK for iOS provides an easy way for developers to integrate iOS 
     platform :ios, '9.0'
     use_frameworks!
 
-    pod 'BitreserveSdk'
+    pod 'UpholdSdk'
     ```
 
 2. Run `pod install`.
@@ -30,7 +30,7 @@ The Bitreserve SDK for iOS provides an easy way for developers to integrate iOS 
 1. Create `Cartfile`.
 
     ```
-    github "bitreserve/bitreserve-sdk-ios" ~> 0.1.0
+    github "uphold/uphold-sdk-ios" ~> 0.1.0
     ```
 
 2. Run `carthage update --platform iOS`.
