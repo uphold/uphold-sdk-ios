@@ -1,6 +1,6 @@
 import XCTest
-@testable import UpholdSdk
 @testable import SwiftClient
+@testable import UpholdSdk
 
 /// ReserveService integration tests.
 class ReserveServiceTest: XCTestCase {

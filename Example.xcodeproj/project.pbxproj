@@ -29,6 +29,13 @@
 			remoteGlobalIDString = BC2381361BB462180060CC80;
 			remoteInfo = UpholdSdkTests;
 		};
+		BC8E257C1BCFBBA100C15899 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BC23812B1BB462170060CC80;
+			remoteInfo = UpholdSdk;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +113,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BC8E257D1BCFBBA100C15899 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -161,7 +169,7 @@
 		BC7C7BEE1BCE782C00CB0CDD /* UpholdSdk.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UpholdSdk.xctest;
+			path = UpholdSdkTests.xctest;
 			remoteRef = BC7C7BED1BCE782C00CB0CDD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -191,6 +199,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC8E257D1BCFBBA100C15899 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UpholdSdk;
+			targetProxy = BC8E257C1BCFBBA100C15899 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC2381141BB461DE0060CC80 /* Main.storyboard */ = {
