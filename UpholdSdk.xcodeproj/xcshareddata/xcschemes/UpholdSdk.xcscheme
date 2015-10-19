@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC2381351BB462180060CC80"
-               BuildableName = "UpholdSdk.xctest"
+               BuildableName = "UpholdSdkTests.xctest"
                BlueprintName = "UpholdSdkTests"
                ReferencedContainer = "container:UpholdSdk.xcodeproj">
             </BuildableReference>

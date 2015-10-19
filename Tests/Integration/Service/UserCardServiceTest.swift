@@ -1,6 +1,6 @@
 import XCTest
-@testable import UpholdSdk
 @testable import SwiftClient
+@testable import UpholdSdk
 
 /// UserCardService integration tests.
 class UserCardServiceTest: XCTestCase {

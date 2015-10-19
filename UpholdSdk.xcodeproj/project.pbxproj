@@ -36,6 +36,18 @@
 		BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
 		BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
 		BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; settings = {ASSET_TAGS = (); }; };
+		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */; settings = {ASSET_TAGS = (); }; };
+		BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5611BC692E200D61852 /* AuthenticationError.swift */; settings = {ASSET_TAGS = (); }; };
+		BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5621BC692E200D61852 /* BadRequestError.swift */; settings = {ASSET_TAGS = (); }; };
+		BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5631BC692E200D61852 /* UpholdClientError.swift */; settings = {ASSET_TAGS = (); }; };
+		BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5641BC692E200D61852 /* NotFoundError.swift */; settings = {ASSET_TAGS = (); }; };
+		BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5651BC692E200D61852 /* UnhandledError.swift */; settings = {ASSET_TAGS = (); }; };
+		BCF5C6A41BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5C6A31BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C41BCFCEE5008E2F97 /* Header.swift */; settings = {ASSET_TAGS = (); }; };
+		BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +107,27 @@
 			remoteGlobalIDString = BC23812B1BB462170060CC80;
 			remoteInfo = UpholdSdk;
 		};
+		BCF5C6B81BCFEA5900B6DFAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2746CDBF1A702F7800719B66;
+			remoteInfo = Mockingjay;
+		};
+		BCF5C6BA1BCFEA5900B6DFAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2746CDCA1A702F7800719B66;
+			remoteInfo = MockingjayTests;
+		};
+		BCF5C6BC1BCFEA6400B6DFAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2746CDBE1A702F7800719B66;
+			remoteInfo = Mockingjay;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +164,19 @@
 		BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
+		BC5C0A841BD4F77700CEF466 /* MockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRequest.swift; path = Util/MockRequest.swift; sourceTree = "<group>"; };
+		BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLimitExceedError.swift; sourceTree = "<group>"; };
+		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
+		BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientErrorHandling.swift; sourceTree = "<group>"; };
+		BCCBE5611BC692E200D61852 /* AuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		BCCBE5621BC692E200D61852 /* BadRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadRequestError.swift; sourceTree = "<group>"; };
+		BCCBE5631BC692E200D61852 /* UpholdClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientError.swift; sourceTree = "<group>"; };
+		BCCBE5641BC692E200D61852 /* NotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotFoundError.swift; sourceTree = "<group>"; };
+		BCCBE5651BC692E200D61852 /* UnhandledError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhandledError.swift; sourceTree = "<group>"; };
+		BCF5C6A31BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = Client/ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
+		BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mockingjay.xcodeproj; path = Carthage/Checkouts/Mockingjay/Mockingjay.xcodeproj; sourceTree = "<group>"; };
+		BCF656C41BCFCEE5008E2F97 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Header.swift; path = Util/Header.swift; sourceTree = "<group>"; };
+		BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalConfigurations.swift; path = Config/GlobalConfigurations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,10 +221,13 @@
 		BC2381461BB4626F0060CC80 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BC2381471BB4626F0060CC80 /* Client */,
 				BC2381491BB4626F0060CC80 /* Info.plist */,
+				BC2381471BB4626F0060CC80 /* Client */,
+				BCF656B91BCFCD6E008E2F97 /* Config */,
+				BCCBE55F1BC692E200D61852 /* ErrorHandling */,
 				BC23814A1BB4626F0060CC80 /* Model */,
 				BC23815D1BB4626F0060CC80 /* Service */,
+				BCF656C31BCFCEAE008E2F97 /* Util */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -186,6 +235,7 @@
 		BC2381471BB4626F0060CC80 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */,
 				BC2381481BB4626F0060CC80 /* UpholdClient.swift */,
 			);
 			path = Client;
@@ -252,6 +302,7 @@
 			children = (
 				BC2381781BB4627C0060CC80 /* Info.plist */,
 				BC2381791BB4627C0060CC80 /* Integration */,
+				BC5C0A7B1BD4F6F800CEF466 /* Util */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -259,8 +310,10 @@
 		BC2381791BB4627C0060CC80 /* Integration */ = {
 			isa = PBXGroup;
 			children = (
+				BCF5C69A1BCFE82200B6DFAC /* Client */,
 				BC38D9FA1BB97E4F0044239A /* Service */,
 				BC23817A1BB4627C0060CC80 /* Model */,
+				BCC9E0AE1BD10F0500C5C3C8 /* Util */,
 			);
 			path = Integration;
 			sourceTree = "<group>";
@@ -311,10 +364,81 @@
 		BC3DD9DB1BB470480067CBCC /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */,
 				BC2381B31BB464B70060CC80 /* SwiftClient.xcodeproj */,
 				BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		BC5C0A7B1BD4F6F800CEF466 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BC5C0A841BD4F77700CEF466 /* MockRequest.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		BCC9E0AE1BD10F0500C5C3C8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		BCCBE55F1BC692E200D61852 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */,
+				BCCBE5611BC692E200D61852 /* AuthenticationError.swift */,
+				BCCBE5621BC692E200D61852 /* BadRequestError.swift */,
+				BCCBE5631BC692E200D61852 /* UpholdClientError.swift */,
+				BCCBE5641BC692E200D61852 /* NotFoundError.swift */,
+				BCCBE5651BC692E200D61852 /* UnhandledError.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		BCF5C69A1BCFE82200B6DFAC /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				BCF5C6A21BCFE82700B6DFAC /* ErrorHandling */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		BCF5C6A21BCFE82700B6DFAC /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				BCF5C6A31BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift */,
+			);
+			name = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		BCF5C6B31BCFEA5800B6DFAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCF5C6B91BCFEA5900B6DFAC /* Mockingjay.framework */,
+				BCF5C6BB1BCFEA5900B6DFAC /* MockingjayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCF656B91BCFCD6E008E2F97 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		BCF656C31BCFCEAE008E2F97 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BCF656C41BCFCEE5008E2F97 /* Header.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +484,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BCF5C6BD1BCFEA6400B6DFAC /* PBXTargetDependency */,
 				BC6BEE231BCEACBA0090656F /* PBXTargetDependency */,
 			);
 			name = UpholdSdkTests;
@@ -395,6 +520,10 @@
 			productRefGroup = BC23812D1BB462170060CC80 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = BCF5C6B31BCFEA5800B6DFAC /* Products */;
+					ProjectRef = BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */;
+				},
 				{
 					ProductGroup = BC2381A21BB464B00060CC80 /* Products */;
 					ProjectRef = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
@@ -462,6 +591,20 @@
 			remoteRef = BC2381BA1BB464B70060CC80 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BCF5C6B91BCFEA5900B6DFAC /* Mockingjay.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mockingjay.framework;
+			remoteRef = BCF5C6B81BCFEA5900B6DFAC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BCF5C6BB1BCFEA5900B6DFAC /* MockingjayTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MockingjayTests.xctest;
+			remoteRef = BCF5C6BA1BCFEA5900B6DFAC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -504,20 +647,29 @@
 			files = (
 				BC2381661BB4626F0060CC80 /* Normalized.swift in Sources */,
 				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
+				BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */,
 				BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */,
 				BC2381721BB4626F0060CC80 /* User.swift in Sources */,
 				BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */,
 				BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */,
+				BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */,
 				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
+				BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */,
 				BC2381671BB4626F0060CC80 /* Card.swift in Sources */,
+				BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */,
 				BC23816D1BB4626F0060CC80 /* Source.swift in Sources */,
+				BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */,
 				BC2381681BB4626F0060CC80 /* Rate.swift in Sources */,
 				BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */,
+				BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */,
 				BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */,
 				BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */,
+				BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */,
 				BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */,
+				BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */,
 				BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */,
 				BC2381761BB4626F0060CC80 /* UserService.swift in Sources */,
+				BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */,
 				BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */,
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
@@ -528,14 +680,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF5C6A41BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift in Sources */,
 				BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */,
 				BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */,
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
+				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
+				BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +701,11 @@
 			isa = PBXTargetDependency;
 			target = BC23812B1BB462170060CC80 /* UpholdSdk */;
 			targetProxy = BC6BEE221BCEACBA0090656F /* PBXContainerItemProxy */;
+		};
+		BCF5C6BD1BCFEA6400B6DFAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mockingjay;
+			targetProxy = BCF5C6BC1BCFEA6400B6DFAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
