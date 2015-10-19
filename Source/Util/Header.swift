@@ -10,7 +10,7 @@ public class Header {
       - returns: The default headers.
     */
     public static func getDefaultHeaders() -> [String: String] {
-        let headers: [String: String] = [ "Content-Type": "application/json", "User-Agent": String(format: "uphold-ios-sdk) %@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL)]
+        let headers: [String: String] = ["User-Agent": String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL)]
 
         return headers
     }
