@@ -7,50 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* UpholdClient.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381661BB4626F0060CC80 /* Normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* Normalized.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381671BB4626F0060CC80 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814F1BB4626F0060CC80 /* Card.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381681BB4626F0060CC80 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381501BB4626F0060CC80 /* Rate.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381521BB4626F0060CC80 /* Denomination.swift */; settings = {ASSET_TAGS = (); }; };
-		BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381531BB4626F0060CC80 /* Destination.swift */; settings = {ASSET_TAGS = (); }; };
-		BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381541BB4626F0060CC80 /* Origin.swift */; settings = {ASSET_TAGS = (); }; };
-		BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381551BB4626F0060CC80 /* Parameters.swift */; settings = {ASSET_TAGS = (); }; };
-		BC23816D1BB4626F0060CC80 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381561BB4626F0060CC80 /* Source.swift */; settings = {ASSET_TAGS = (); }; };
-		BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381571BB4626F0060CC80 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
-		BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815A1BB4626F0060CC80 /* InternationalizationUserSettings.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815B1BB4626F0060CC80 /* UserSettings.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381721BB4626F0060CC80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815C1BB4626F0060CC80 /* User.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815E1BB4626F0060CC80 /* ReserveService.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815F1BB4626F0060CC80 /* TickerService.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381601BB4626F0060CC80 /* UserCardService.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381761BB4626F0060CC80 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381611BB4626F0060CC80 /* UserService.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817B1BB4627C0060CC80 /* CardTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817C1BB4627C0060CC80 /* RateTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817D1BB4627C0060CC80 /* TransactionTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817E1BB4627C0060CC80 /* UserTest.swift */; settings = {ASSET_TAGS = (); }; };
+		BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; };
+		BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* UpholdClient.swift */; };
+		BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; };
+		BC2381661BB4626F0060CC80 /* Normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* Normalized.swift */; };
+		BC2381671BB4626F0060CC80 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814F1BB4626F0060CC80 /* Card.swift */; };
+		BC2381681BB4626F0060CC80 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381501BB4626F0060CC80 /* Rate.swift */; };
+		BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381521BB4626F0060CC80 /* Denomination.swift */; };
+		BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381531BB4626F0060CC80 /* Destination.swift */; };
+		BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381541BB4626F0060CC80 /* Origin.swift */; };
+		BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381551BB4626F0060CC80 /* Parameters.swift */; };
+		BC23816D1BB4626F0060CC80 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381561BB4626F0060CC80 /* Source.swift */; };
+		BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381571BB4626F0060CC80 /* Transaction.swift */; };
+		BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */; };
+		BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815A1BB4626F0060CC80 /* InternationalizationUserSettings.swift */; };
+		BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815B1BB4626F0060CC80 /* UserSettings.swift */; };
+		BC2381721BB4626F0060CC80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815C1BB4626F0060CC80 /* User.swift */; };
+		BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815E1BB4626F0060CC80 /* ReserveService.swift */; };
+		BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815F1BB4626F0060CC80 /* TickerService.swift */; };
+		BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381601BB4626F0060CC80 /* UserCardService.swift */; };
+		BC2381761BB4626F0060CC80 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381611BB4626F0060CC80 /* UserService.swift */; };
+		BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817B1BB4627C0060CC80 /* CardTest.swift */; };
+		BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817C1BB4627C0060CC80 /* RateTest.swift */; };
+		BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817D1BB4627C0060CC80 /* TransactionTest.swift */; };
+		BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817E1BB4627C0060CC80 /* UserTest.swift */; };
 		BC2381BC1BB464D90060CC80 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2381AA1BB464B00060CC80 /* ObjectMapper.framework */; };
 		BC2381BD1BB464D90060CC80 /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2381B91BB464B70060CC80 /* SwiftClient.framework */; };
-		BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; settings = {ASSET_TAGS = (); }; };
-		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; settings = {ASSET_TAGS = (); }; };
-		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */; };
+		BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; };
+		BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; };
+		BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; };
+		BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
+		BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; };
+		BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
+		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
+		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCB089B81BD52F270097C475 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB089A71BD52EEC0097C475 /* PromiseKit.framework */; };
-		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */; settings = {ASSET_TAGS = (); }; };
-		BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5611BC692E200D61852 /* AuthenticationError.swift */; settings = {ASSET_TAGS = (); }; };
-		BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5621BC692E200D61852 /* BadRequestError.swift */; settings = {ASSET_TAGS = (); }; };
-		BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5631BC692E200D61852 /* UpholdClientError.swift */; settings = {ASSET_TAGS = (); }; };
-		BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5641BC692E200D61852 /* NotFoundError.swift */; settings = {ASSET_TAGS = (); }; };
-		BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5651BC692E200D61852 /* UnhandledError.swift */; settings = {ASSET_TAGS = (); }; };
-		BCF5C6A41BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5C6A31BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift */; settings = {ASSET_TAGS = (); }; };
-		BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C41BCFCEE5008E2F97 /* Header.swift */; settings = {ASSET_TAGS = (); }; };
-		BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */; settings = {ASSET_TAGS = (); }; };
+		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
+		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
+		BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */; };
+		BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5611BC692E200D61852 /* AuthenticationError.swift */; };
+		BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5621BC692E200D61852 /* BadRequestError.swift */; };
+		BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5631BC692E200D61852 /* UpholdClientError.swift */; };
+		BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5641BC692E200D61852 /* NotFoundError.swift */; };
+		BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5651BC692E200D61852 /* UnhandledError.swift */; };
+		BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C41BCFCEE5008E2F97 /* Header.swift */; };
+		BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,10 +233,13 @@
 		BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
+		BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdTestCase.swift; path = Util/UpholdTestCase.swift; sourceTree = "<group>"; };
 		BC5C0A841BD4F77700CEF466 /* MockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRequest.swift; path = Util/MockRequest.swift; sourceTree = "<group>"; };
+		BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdRestAdapterTest.swift; path = Client/UpholdRestAdapterTest.swift; sourceTree = "<group>"; };
 		BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLimitExceedError.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCB0899A1BD52EEC0097C475 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = Carthage/Checkouts/PromiseKit/PromiseKit.xcodeproj; sourceTree = "<group>"; };
+		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
 		BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientErrorHandling.swift; sourceTree = "<group>"; };
 		BCCBE5611BC692E200D61852 /* AuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
@@ -242,7 +247,6 @@
 		BCCBE5631BC692E200D61852 /* UpholdClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientError.swift; sourceTree = "<group>"; };
 		BCCBE5641BC692E200D61852 /* NotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotFoundError.swift; sourceTree = "<group>"; };
 		BCCBE5651BC692E200D61852 /* UnhandledError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhandledError.swift; sourceTree = "<group>"; };
-		BCF5C6A31BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = Client/ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mockingjay.xcodeproj; path = Carthage/Checkouts/Mockingjay/Mockingjay.xcodeproj; sourceTree = "<group>"; };
 		BCF656C41BCFCEE5008E2F97 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Header.swift; path = Util/Header.swift; sourceTree = "<group>"; };
 		BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalConfigurations.swift; path = Config/GlobalConfigurations.swift; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				BCF5C69A1BCFE82200B6DFAC /* Client */,
+				BC995DA71BDFD9B50031FA5E /* ErrorHandling */,
 				BC38D9FA1BB97E4F0044239A /* Service */,
 				BC23817A1BB4627C0060CC80 /* Model */,
 				BCC9E0AE1BD10F0500C5C3C8 /* Util */,
@@ -447,8 +452,17 @@
 			isa = PBXGroup;
 			children = (
 				BC5C0A841BD4F77700CEF466 /* MockRequest.swift */,
+				BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		BC995DA71BDFD9B50031FA5E /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */,
+			);
+			name = ErrorHandling;
 			sourceTree = "<group>";
 		};
 		BCB0899B1BD52EEC0097C475 /* Products */ = {
@@ -492,17 +506,9 @@
 		BCF5C69A1BCFE82200B6DFAC /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				BCF5C6A21BCFE82700B6DFAC /* ErrorHandling */,
+				BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */,
 			);
 			name = Client;
-			sourceTree = "<group>";
-		};
-		BCF5C6A21BCFE82700B6DFAC /* ErrorHandling */ = {
-			isa = PBXGroup;
-			children = (
-				BCF5C6A31BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift */,
-			);
-			name = ErrorHandling;
 			sourceTree = "<group>";
 		};
 		BCF5C6B31BCFEA5800B6DFAC /* Products */ = {
@@ -838,15 +844,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF5C6A41BCFE84A00B6DFAC /* UpholdClientErrorHandlingTest.swift in Sources */,
 				BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */,
 				BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */,
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
+				BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */,
+				BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */,
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
+				BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
 				BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */,
 			);

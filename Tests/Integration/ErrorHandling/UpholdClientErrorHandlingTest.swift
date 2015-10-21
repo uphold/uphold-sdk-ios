@@ -3,15 +3,7 @@ import UpholdSdk
 @testable import SwiftClient
 
 /// UpholdClientErrorHandling integration tests.
-class UpholdClientErrorHandlingTest: XCTestCase {
-
-    private func wait() {
-        waitForExpectationsWithTimeout (5, handler: { error in
-            if error != nil {
-                print("Test timed out with error \(error).")
-            }
-        })
-    }
+class UpholdClientErrorHandlingTest: UpholdTestCase {
 
     var defaultError: ((NSError) -> Void)!
     var expectation: XCTestExpectation!
@@ -87,6 +79,21 @@ class UpholdClientErrorHandlingTest: XCTestCase {
         }
 
         MockRequest(body: "body", code: 400, errorHandler: {(error: NSError) -> Void in},  headers: nil, method: "foo").end(done, onError: self.defaultError)
+
+        wait()
+    }
+
+    func testHandleErrorShouldReturnLogicError() {
+        let done = { (response: Response) -> Void in
+            let error = LogicError(code: 200, message: "foo")
+
+            XCTAssertEqual(error.code, 200, "Failed: Wrong response HTTP status code.")
+            XCTAssertEqual(error.info, ["Logic error": "foo"], "Failed: Wrong error message.")
+
+            self.expectation.fulfill()
+        }
+
+        MockRequest(body: "body", code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo").end(done, onError: self.defaultError)
 
         wait()
     }
