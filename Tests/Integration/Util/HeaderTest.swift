@@ -3,13 +3,12 @@ import SwiftClient
 import UpholdSdk
 
 /// Header integration tests.
-class HeaderTest: XCTest {
+class HeaderTest: XCTestCase {
 
     func testGetDefaultHeadersShouldReturnHeaders() {
         let headers: [String: String] = Header.getDefaultHeaders()
 
-        XCTAssertEqual(headers["Content-Type"], "application/json", "Failed: Wrong header")
-        XCTAssertEqual(headers["User-Agent"], String(format: "uphold-ios-sdk) %@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL), "Failed: Wrong header")
+        XCTAssertEqual(headers["User-Agent"], String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL), "Failed: Wrong header")
     }
 
     func testGetRateLimitValueShouldReturnRateLimit() {

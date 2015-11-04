@@ -6,9 +6,6 @@ import UpholdSdk
 /// MockRequest test util.
 public class MockRequest: Request {
 
-    /// The mock request body.
-    let body: String
-
     /// The mock request HTTP status code.
     let code: Int
 
@@ -24,17 +21,19 @@ public class MockRequest: Request {
       - parameter headers: The request headers.
       - parameter method: The HTTP method.
     */
-    init(body: String, code: Int, errorHandler: (NSError) -> Void, headers: [String: String]?, method: String) {
-        self.body = body
+    init(body: String?, code: Int, errorHandler: (NSError) -> Void, headers: [String: String]?, method: String) {
         self.code = code
 
         super.init(method, mockURL, errorHandler)
 
-        guard let headers = headers else {
-            return
+        if let body = body {
+            super.data = body
         }
 
-        super.headers = headers
+        if let headers = headers {
+            super.headers = headers
+        }
+
     }
 
     /**
@@ -45,20 +44,21 @@ public class MockRequest: Request {
       - returns: The mock response.
     */
     func builder(request: NSURLRequest) -> Mockingjay.Response {
-        let data: NSData? = nil
         let response = NSHTTPURLResponse(URL: request.URL!, statusCode: self.code, HTTPVersion: nil, headerFields: super.headers)!
 
-        return .Success(response, data)
+        guard let body = super.data else {
+            return .Success(response, nil)
+        }
+
+        return .Success(response, body.dataUsingEncoding(NSUTF8StringEncoding))
     }
 
     /// Mocked SwiftClient Request class end method.
     public override func end(done: (SwiftClient.Response) -> Void, onError errorHandler: ((NSError) -> Void)? = nil) {
         let request = NSMutableURLRequest(URL: NSURL(string: self.mockURL)!)
+        request.HTTPMethod = super.method
         let response = builder(request)
         let stubError = NSError(domain: "Stub error", code: -1, userInfo: ["Stub error": "Could not create stub."])
-
-        request.HTTPBody = stringToData(self.body)
-        request.HTTPMethod = super.method
 
         switch response {
             case let .Success(response, data):

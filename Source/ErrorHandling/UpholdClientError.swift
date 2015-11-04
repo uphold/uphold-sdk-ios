@@ -20,7 +20,7 @@ public class UpholdClientError: ErrorType, CustomStringConvertible {
     public let info: [String: String]
 
     /// The HTTP response.
-    public var response: Response
+    public var response: Response?
 
     /**
       Constructor.
@@ -29,7 +29,7 @@ public class UpholdClientError: ErrorType, CustomStringConvertible {
       - parameter info: The error's information being shown to the user.
       - parameter response: The HTTP response.
     */
-    public init(code: Int?, info: [String: String], response: Response) {
+    public init(code: Int?, info: [String: String], response: Response?) {
         self.code = code
         self.info = info
         self.response = response
