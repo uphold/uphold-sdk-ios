@@ -53,28 +53,22 @@ public class MockRequest: Request {
         return .Success(response, body.dataUsingEncoding(NSUTF8StringEncoding))
     }
 
-    /// Mocked SwiftClient Request class end method.
+    /**
+      Mock SwiftClient Request class end method.
+
+      - parameter done: The completion handler.
+      - parameter errorHandler: The error handler.
+     */
     public override func end(done: (SwiftClient.Response) -> Void, onError errorHandler: ((NSError) -> Void)? = nil) {
         let request = NSMutableURLRequest(URL: NSURL(string: self.mockURL)!)
         request.HTTPMethod = super.method
-        let response = builder(request)
-        let stubError = NSError(domain: "Stub error", code: -1, userInfo: ["Stub error": "Could not create stub."])
 
-        switch response {
+        switch builder(request) {
             case let .Success(response, data):
-                guard let mockResponse = response as? NSHTTPURLResponse else {
-                    errorHandler!(stubError)
+               return done(self.transformer(SwiftClient.Response((response as? NSHTTPURLResponse)!, self, data)))
 
-                    return
-                }
-
-                done(self.transformer(SwiftClient.Response(mockResponse, self, data)))
-
-                break
             default:
-                errorHandler!(stubError)
-
-                break
+                return
         }
     }
 

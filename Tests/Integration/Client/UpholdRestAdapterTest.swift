@@ -7,8 +7,6 @@ import UpholdSdk
 /// UpholdRestAdapter integration tests.
 class UpholdRestAdapterTest: UpholdTestCase {
 
-    var expectation: XCTestExpectation!
-
     func testBuildRequestShouldReturnRequest() {
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
@@ -19,7 +17,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildEmptyResponseShouldReturnBadRequestError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
         let mockRequest = MockRequest(body: nil, code: 400, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
@@ -36,7 +34,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(badRequestError.code, 400, "Failed: Wrong response HTTP status code.")
             XCTAssertEqual(badRequestError.info["Bad request error"], "HTTP error 400 - Bad request.", "Failed: Wrong message.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -45,7 +43,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildEmptyResponseShouldReturnFulfilledPromise() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
@@ -55,14 +53,14 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(response.basicStatus, Response.BasicResponseType.OK, "Failed: Wrong response basic status code.")
             XCTAssertNil(response.text, "Failed: Wrong response body.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
         }
 
         wait()
     }
 
     func testBuildEmptyResponseShouldReturnLogicError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
         let mockRequest = MockRequest(body: "foobar", code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
@@ -79,7 +77,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(logicError.info, ["Logic error": "Response body should be empty."], "Failed: Wrong error message.")
             XCTAssertNil(logicError.code, "Failed: Wrong response HTTP status code.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -88,15 +86,15 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildResponseShouldReturnBadRequestError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
-        let jsonRate = "{" +
+        let json = "{" +
             "\"ask\":\"1.2\"," +
             "\"bid\":\"1\"," +
             "\"currency\":\"BTC\"," +
             "\"pair\":\"BTCBTC\"" +
         "}"
-        let mockRequest = MockRequest(body: jsonRate, code: 400, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
+        let mockRequest = MockRequest(body: json, code: 400, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<Rate> = UpholdRestAdapter().buildResponse(request)
 
@@ -111,7 +109,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(badRequestError.code, 400, "Failed: Wrong response HTTP status code.")
             XCTAssertEqual(badRequestError.info["Bad request error"], "HTTP error 400 - Bad request.", "Failed: Wrong message.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -120,7 +118,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildResponseShouldReturnEmptyBodyLogicError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
@@ -137,7 +135,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(logicError.info, ["Logic error": "Response body should not be empty."], "Failed: Wrong error message.")
             XCTAssertNil(logicError.code, "Failed: Wrong response HTTP status code.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -146,15 +144,15 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildResponseShouldReturnFailedMapLogicError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
-        let jsonRate = "{[" +
+        let json = "{[" +
             "\"ask\":\"1.2\"," +
             "\"bid\":\"1\"," +
             "\"currency\":\"BTC\"," +
             "\"pair\":\"BTCBTC\"" +
         "}"
-        let mockRequest = MockRequest(body: jsonRate, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
+        let mockRequest = MockRequest(body: json, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<Rate> = UpholdRestAdapter().buildResponse(request)
 
@@ -169,7 +167,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(logicError.info, ["Logic error": "Failed to map the JSON object."], "Failed: Wrong error message.")
             XCTAssertNil(logicError.code, "Failed: Wrong response HTTP status code.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -178,15 +176,15 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildResponseShouldReturnFulfilledPromise() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
-        let jsonRate = "{" +
+        let json = "{" +
             "\"ask\":\"1.2\"," +
             "\"bid\":\"1\"," +
             "\"currency\":\"BTC\"," +
             "\"pair\":\"BTCBTC\"" +
         "}"
-        let mockRequest = MockRequest(body: jsonRate, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
+        let mockRequest = MockRequest(body: json, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<Rate> = UpholdRestAdapter().buildResponse(request)
 
@@ -196,17 +194,17 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(rate.currency, "BTC", "Failed: Wrong response object attribute.")
             XCTAssertEqual(rate.pair, "BTCBTC", "Failed: Wrong response object attribute.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
         }
 
         wait()
     }
 
     func testBuildResponseArrayShouldReturnBadRequestError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
-        let jsonRates = "[{\"ask\":\"1\"}, {\"ask\":\"440.99\"}]"
-        let mockRequest = MockRequest(body: jsonRates, code: 400, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
+        let json = "[{\"ask\":\"1\"}, {\"ask\":\"440.99\"}]"
+        let mockRequest = MockRequest(body: json, code: 400, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<[Rate]> = UpholdRestAdapter().buildResponse(request)
 
@@ -221,7 +219,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(badRequestError.code, 400, "Failed: Wrong response HTTP status code.")
             XCTAssertEqual(badRequestError.info["Bad request error"], "HTTP error 400 - Bad request.", "Failed: Wrong message.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -230,7 +228,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildResponseArrayShouldReturnEmptyBodyLogicError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
@@ -247,7 +245,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(logicError.info, ["Logic error": "Response body should not be empty."], "Failed: Wrong error message.")
             XCTAssertNil(logicError.code, "Failed: Wrong response HTTP status code.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -256,7 +254,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildResponseArrayShouldReturnFailedMapLogicError() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
         let jsonRates = "[[{\"ask\":\"1\"}, {\"ask\":\"440.99\"}]"
         let mockRequest = MockRequest(body: jsonRates, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
@@ -274,7 +272,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(logicError.info, ["Logic error": "Failed to map the JSON object."], "Failed: Wrong error message.")
             XCTAssertNil(logicError.code, "Failed: Wrong response HTTP status code.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
 
             return promise
         }
@@ -283,7 +281,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
     }
 
     func testBuildResponseArrayShouldReturnFulfilledPromise() {
-        self.expectation = expectationWithDescription("REST adapter response.")
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
 
         let jsonRates = "[{\"ask\":\"1\"}, {\"ask\":\"440.99\"}]"
         let mockRequest = MockRequest(body: jsonRates, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
@@ -295,7 +293,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
             XCTAssertEqual(rates[0].ask, "1", "Failed: Wrong response object attribute.")
             XCTAssertEqual(rates[1].ask, "440.99", "Failed: Wrong response object attribute.")
 
-            self.expectation.fulfill()
+            expectation.fulfill()
         }
 
         wait()
