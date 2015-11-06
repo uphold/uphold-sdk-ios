@@ -51,6 +51,7 @@
 		BC91E8A21BECD8270074C538 /* ReserveStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89D1BECD8270074C538 /* ReserveStatistics.swift */; };
 		BC91E8A31BECD8270074C538 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89E1BECD8270074C538 /* Total.swift */; };
 		BC91E8A41BECD8270074C538 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89F1BECD8270074C538 /* Value.swift */; };
+		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCB089B81BD52F270097C475 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB089A71BD52EEC0097C475 /* PromiseKit.framework */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
@@ -271,6 +272,7 @@
 		BC91E89D1BECD8270074C538 /* ReserveStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReserveStatistics.swift; path = Reserve/ReserveStatistics.swift; sourceTree = "<group>"; };
 		BC91E89E1BECD8270074C538 /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Total.swift; path = Reserve/Total.swift; sourceTree = "<group>"; };
 		BC91E89F1BECD8270074C538 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Reserve/Value.swift; sourceTree = "<group>"; };
+		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCB0899A1BD52EEC0097C475 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = Carthage/Checkouts/PromiseKit/PromiseKit.xcodeproj; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			children = (
 				BC23817B1BB4627C0060CC80 /* CardTest.swift */,
 				BC23817C1BB4627C0060CC80 /* RateTest.swift */,
+				BC91E8A51BECDB030074C538 /* ReserveTest.swift */,
 				BC23817D1BB4627C0060CC80 /* TransactionTest.swift */,
 				BC23817E1BB4627C0060CC80 /* UserTest.swift */,
 			);
@@ -928,6 +931,7 @@
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
+				BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */,
 				BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
