@@ -5,7 +5,31 @@ import ObjectMapper
 class CardTest: XCTestCase {
 
     func testCardMapperShouldReturnACard() {
-        let card = Mapper<Card>().map("{ \"address\": { \"bitcoin\": \"fuzbuz\" }, \"available\": \"87.52\", \"balance\": \"87.52\", \"currency\": \"EUR\", \"id\": \"foobar\", \"label\": \"Foo card\", \"lastTransactionAt\": \"foobiz\", \"settings\": { \"position\": 4, \"starred\": true }, \"addresses\": [ { \"id\": \"fiz\", \"network\": \"biz\" } ], \"normalized\": [ { \"available\": \"99.04\", \"balance\": \"99.04\", \"currency\": \"USD\" } ] }")
+        let json: String = "{" +
+            "\"address\": {" +
+                "\"bitcoin\": \"fuzbuz\"" +
+            "}," +
+            "\"available\": \"87.52\"," +
+            "\"balance\": \"87.52\"," +
+            "\"currency\": \"EUR\"," +
+            "\"id\": \"foobar\"," +
+            "\"label\": \"Foo card\"," +
+            "\"lastTransactionAt\": \"foobiz\"," +
+            "\"settings\": {" +
+                "\"position\": 4," +
+                "\"starred\": true" +
+            "}," +
+            "\"addresses\": [{" +
+                "\"id\": \"fiz\"," +
+                "\"network\": \"biz\"" +
+            "}]," +
+            "\"normalized\": [{" +
+                "\"available\": \"99.04\"," +
+                "\"balance\": \"99.04\"," +
+                "\"currency\": \"USD\"" +
+            "}]" +
+        "}"
+        let card = Mapper<Card>().map(json)
 
         XCTAssertEqual(card!.id!, "foobar", "Failed: Card id didn't match.")
         XCTAssertFalse(card!.address!.isEmpty, "Failed: Address didn't match.")
