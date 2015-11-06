@@ -38,8 +38,12 @@
 		BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; };
 		BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; };
 		BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
+		BC4A30571BEA655B001B6249 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A30561BEA655B001B6249 /* Token.swift */; };
+		BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A306F1BEA657C001B6249 /* BaseModel.swift */; };
 		BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; };
 		BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
+		BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
+		BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
 		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCB089B81BD52F270097C475 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB089A71BD52EEC0097C475 /* PromiseKit.framework */; };
@@ -104,6 +108,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = D0CB88E119FC645300DA6940;
 			remoteInfo = SwiftClientTests;
+		};
+		BC4A30601BEA655C001B6249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A05B7A61BE274BE00F19B53;
+			remoteInfo = "ObjectMapper-tvOS";
+		};
+		BC4A30621BEA655C001B6249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A05B7AF1BE274BE00F19B53;
+			remoteInfo = "ObjectMapper-tvOSTests";
 		};
 		BC6BEE221BCEACBA0090656F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -234,8 +252,12 @@
 		BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
 		BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdTestCase.swift; path = Util/UpholdTestCase.swift; sourceTree = "<group>"; };
+		BC4A30561BEA655B001B6249 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		BC4A306F1BEA657C001B6249 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		BC5C0A841BD4F77700CEF466 /* MockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRequest.swift; path = Util/MockRequest.swift; sourceTree = "<group>"; };
 		BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdRestAdapterTest.swift; path = Client/UpholdRestAdapterTest.swift; sourceTree = "<group>"; };
+		BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientTest.swift; path = Client/UpholdClientTest.swift; sourceTree = "<group>"; };
+		BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRestAdapter.swift; path = Util/MockRestAdapter.swift; sourceTree = "<group>"; };
 		BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLimitExceedError.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCB0899A1BD52EEC0097C475 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = Carthage/Checkouts/PromiseKit/PromiseKit.xcodeproj; sourceTree = "<group>"; };
@@ -326,6 +348,8 @@
 				BC2381571BB4626F0060CC80 /* Transaction.swift */,
 				BC2381581BB4626F0060CC80 /* User */,
 				BC23815C1BB4626F0060CC80 /* User.swift */,
+				BC4A30561BEA655B001B6249 /* Token.swift */,
+				BC4A306F1BEA657C001B6249 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,8 +435,10 @@
 				BC2381AA1BB464B00060CC80 /* ObjectMapper.framework */,
 				BC2381AC1BB464B00060CC80 /* ObjectMapper.framework */,
 				BC2381AE1BB464B00060CC80 /* ObjectMapper.framework */,
+				BC4A30611BEA655C001B6249 /* ObjectMapper.framework */,
 				BC2381B01BB464B00060CC80 /* ObjectMapper-iOSTests.xctest */,
 				BC2381B21BB464B00060CC80 /* ObjectMapper-MacTests.xctest */,
+				BC4A30631BEA655C001B6249 /* ObjectMapper-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -453,6 +479,7 @@
 			children = (
 				BC5C0A841BD4F77700CEF466 /* MockRequest.swift */,
 				BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */,
+				BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -507,6 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */,
+				BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */,
 			);
 			name = Client;
 			sourceTree = "<group>";
@@ -690,6 +718,20 @@
 			remoteRef = BC2381BA1BB464B70060CC80 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BC4A30611BEA655C001B6249 /* ObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjectMapper.framework;
+			remoteRef = BC4A30601BEA655C001B6249 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC4A30631BEA655C001B6249 /* ObjectMapper-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ObjectMapper-tvOSTests.xctest";
+			remoteRef = BC4A30621BEA655C001B6249 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		BCB089A71BD52EEC0097C475 /* PromiseKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -829,9 +871,11 @@
 				BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */,
 				BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */,
 				BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */,
+				BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */,
 				BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */,
 				BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */,
 				BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */,
+				BC4A30571BEA655B001B6249 /* Token.swift in Sources */,
 				BC2381761BB4626F0060CC80 /* UserService.swift in Sources */,
 				BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */,
 				BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */,
@@ -852,8 +896,10 @@
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
+				BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
+				BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */,
 				BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
 				BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */,
