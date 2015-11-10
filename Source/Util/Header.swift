@@ -5,6 +5,18 @@ import SwiftClient
 public class Header {
 
     /**
+     Builds a string with the range header.
+
+     - parameter start: The position of the first element.
+     - parameter end: The position of the last element.
+
+     - returns: The string with the header value.
+     */
+    public static func buildRangeHeader(start: Int, end: Int) -> String {
+        return String(format: "items=%i-%i", start, end)
+    }
+
+    /**
       Gets the default headers.
 
       - returns: The default headers.

@@ -5,7 +5,57 @@ import ObjectMapper
 class TransactionTest: XCTestCase {
 
     func testTransactionMapperShouldReturnATransaction() {
-        let transaction = Mapper<Transaction>().map("{\"id\":\"foobar\",\"type\":\"transfer\",\"message\":\"foobar message\",\"status\":\"pending\",\"RefundedById\":\"foobiz\",\"createdAt\":\"fuz\",\"denomination\":{\"amount\":\"0.1\",\"currency\":\"BTC\",\"pair\":\"BTCBTC\",\"rate\":\"1.00\"},\"origin\":{\"CardId\":\"fizbiz\",\"amount\":\"0.1\",\"base\":\"0.1\",\"commission\":\"0.00\",\"currency\":\"BTC\",\"description\":\"Fuz Buz\",\"fee\":\"0.00\",\"rate\":\"1.00\",\"sources\":[{\"id\":\"fizbuz\",\"amount\":\"2.00\"}],\"type\":\"card\",\"username\":\"fuzbuz\"},\"destination\":{\"CardId\": \"fuzbuz\", \"amount\":\"0.1\",\"base\":\"0.1\",\"commission\":\"0.00\",\"currency\":\"BTC\",\"description\":\"foo@bar.com\",\"fee\":\"0.00\",\"rate\":\"1.00\",\"type\":\"email\", \"username\": \"fizbiz\"},\"params\":{\"currency\":\"BTC\",\"margin\":\"0.00\",\"pair\":\"BTCBTC\",\"rate\":\"1.00\",\"ttl\":30000,\"type\":\"invite\"}}")
+        let json: String = "{" +
+            "\"id\": \"foobar\"," +
+            "\"type\": \"transfer\"," +
+            "\"message\": \"foobar message\"," +
+            "\"status\": \"pending\"," +
+            "\"RefundedById\": \"foobiz\"," +
+            "\"createdAt\": \"fuz\"," +
+            "\"denomination\": {" +
+                "\"amount\": \"0.1\"," +
+                "\"currency\": \"BTC\"," +
+                "\"pair\": \"BTCBTC\"," +
+                "\"rate\": \"1.00\"" +
+            "}," +
+            "\"origin\": {" +
+                "\"CardId\": \"fizbiz\"," +
+                "\"amount\": \"0.1\"," +
+                "\"base\": \"0.1\"," +
+                "\"commission\": \"0.00\"," +
+                "\"currency\": \"BTC\"," +
+                "\"description\": \"Fuz Buz\"," +
+                "\"fee\": \"0.00\"," +
+                "\"rate\": \"1.00\"," +
+                "\"sources\": [{" +
+                    "\"id\": \"fizbuz\"," +
+                    "\"amount\": \"2.00\"" +
+                "}]," +
+                "\"type\": \"card\"," +
+                "\"username\": \"fuzbuz\"" +
+            "}," +
+            "\"destination\": {" +
+                "\"CardId\": \"fuzbuz\"," +
+                "\"amount\": \"0.1\"," +
+                "\"base\": \"0.1\"," +
+                "\"commission\": \"0.00\"," +
+                "\"currency\": \"BTC\"," +
+                "\"description\": \"foo@bar.com\"," +
+                "\"fee\": \"0.00\"," +
+                "\"rate\": \"1.00\"," +
+                "\"type\": \"email\"," +
+                "\"username\": \"fizbiz\"" +
+            "}," +
+            "\"params\": {" +
+                "\"currency\": \"BTC\"," +
+                "\"margin\": \"0.00\"," +
+                "\"pair\": \"BTCBTC\"," +
+                "\"rate\": \"1.00\"," +
+                "\"ttl\": 30000," +
+                "\"type\": \"invite\"" +
+            "}" +
+        "}"
+        let transaction = Mapper<Transaction>().map(json)
 
         XCTAssertEqual(transaction!.id!, "foobar", "Failed: Transaction id didn't match.")
         XCTAssertEqual(transaction!.createdAt!, "fuz", "Failed: Transaction createdAt didn't match.")

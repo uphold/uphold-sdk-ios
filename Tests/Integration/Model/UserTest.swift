@@ -5,7 +5,37 @@ import ObjectMapper
 class UserTest: XCTestCase {
 
     func testUserMapperShouldReturnAUser() {
-        let user = Mapper<User>().map("{\"country\":\"US\",\"currencies\":[\"BTC\"],\"email\":\"foo@bar.org\",\"firstName\":\"Foo\",\"lastName\":\"Bar\",\"name\":\"Foo Bar\",\"settings\":{\"currency\":\"USD\",\"hasOtpEnabled\":true,\"hasNewsSubscription\":true,\"intl\":{\"dateTimeFormat\":{\"locale\":\"foo\"},\"language\":{\"locale\":\"bar\"},\"numberFormat\":{\"locale\":\"biz\"}},\"theme\":\"vintage\"},\"state\":\"WA\",\"status\":\"ok\",\"username\":\"foobar\"}")
+        let json: String = "{" +
+            "\"country\": \"US\"," +
+            "\"currencies\": [" +
+                "\"BTC\"" +
+            "]," +
+            "\"email\": \"foo@bar.org\"," +
+            "\"firstName\": \"Foo\"," +
+            "\"lastName\": \"Bar\"," +
+            "\"name\": \"Foo Bar\"," +
+            "\"settings\": {" +
+                "\"currency\": \"USD\"," +
+                "\"hasOtpEnabled\": true," +
+                "\"hasNewsSubscription\": true," +
+                "\"intl\": {" +
+                    "\"dateTimeFormat\": {" +
+                        "\"locale\": \"foo\"" +
+                    "}," +
+                    "\"language\": {" +
+                        "\"locale\": \"bar\"" +
+                    "}," +
+                    "\"numberFormat\": {" +
+                        "\"locale\": \"biz\"" +
+                    "}" +
+                "}," +
+                "\"theme\": \"vintage\"" +
+            "}," +
+            "\"state\": \"WA\"," +
+            "\"status\": \"ok\"," +
+            "\"username\": \"foobar\"" +
+        "}"
+        let user = Mapper<User>().map(json)
 
         XCTAssertEqual(user!.country!, "US", "Failed: User country didn't match.")
         XCTAssertEqual(user!.currencies!.count, 1, "Failed: User currencies didn't match.")

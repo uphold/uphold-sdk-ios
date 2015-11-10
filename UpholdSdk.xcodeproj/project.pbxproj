@@ -45,6 +45,13 @@
 		BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
 		BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
 		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
+		BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8851BECD80C0074C538 /* Reserve.swift */; };
+		BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89B1BECD8270074C538 /* Deposit.swift */; };
+		BC91E8A11BECD8270074C538 /* DepositMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89C1BECD8270074C538 /* DepositMovement.swift */; };
+		BC91E8A21BECD8270074C538 /* ReserveStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89D1BECD8270074C538 /* ReserveStatistics.swift */; };
+		BC91E8A31BECD8270074C538 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89E1BECD8270074C538 /* Total.swift */; };
+		BC91E8A41BECD8270074C538 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89F1BECD8270074C538 /* Value.swift */; };
+		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCB089B81BD52F270097C475 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB089A71BD52EEC0097C475 /* PromiseKit.framework */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
@@ -259,6 +266,13 @@
 		BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientTest.swift; path = Client/UpholdClientTest.swift; sourceTree = "<group>"; };
 		BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRestAdapter.swift; path = Util/MockRestAdapter.swift; sourceTree = "<group>"; };
 		BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLimitExceedError.swift; sourceTree = "<group>"; };
+		BC91E8851BECD80C0074C538 /* Reserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reserve.swift; sourceTree = "<group>"; };
+		BC91E89B1BECD8270074C538 /* Deposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deposit.swift; path = Reserve/Deposit.swift; sourceTree = "<group>"; };
+		BC91E89C1BECD8270074C538 /* DepositMovement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DepositMovement.swift; path = Reserve/DepositMovement.swift; sourceTree = "<group>"; };
+		BC91E89D1BECD8270074C538 /* ReserveStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReserveStatistics.swift; path = Reserve/ReserveStatistics.swift; sourceTree = "<group>"; };
+		BC91E89E1BECD8270074C538 /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Total.swift; path = Reserve/Total.swift; sourceTree = "<group>"; };
+		BC91E89F1BECD8270074C538 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Reserve/Value.swift; sourceTree = "<group>"; };
+		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCB0899A1BD52EEC0097C475 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = Carthage/Checkouts/PromiseKit/PromiseKit.xcodeproj; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
@@ -344,6 +358,8 @@
 				BC23814B1BB4626F0060CC80 /* Card */,
 				BC23814F1BB4626F0060CC80 /* Card.swift */,
 				BC2381501BB4626F0060CC80 /* Rate.swift */,
+				BC91E89A1BECD8170074C538 /* Reserve */,
+				BC91E8851BECD80C0074C538 /* Reserve.swift */,
 				BC2381511BB4626F0060CC80 /* Transaction */,
 				BC2381571BB4626F0060CC80 /* Transaction.swift */,
 				BC2381581BB4626F0060CC80 /* User */,
@@ -423,6 +439,7 @@
 			children = (
 				BC23817B1BB4627C0060CC80 /* CardTest.swift */,
 				BC23817C1BB4627C0060CC80 /* RateTest.swift */,
+				BC91E8A51BECDB030074C538 /* ReserveTest.swift */,
 				BC23817D1BB4627C0060CC80 /* TransactionTest.swift */,
 				BC23817E1BB4627C0060CC80 /* UserTest.swift */,
 			);
@@ -482,6 +499,18 @@
 				BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		BC91E89A1BECD8170074C538 /* Reserve */ = {
+			isa = PBXGroup;
+			children = (
+				BC91E89B1BECD8270074C538 /* Deposit.swift */,
+				BC91E89C1BECD8270074C538 /* DepositMovement.swift */,
+				BC91E89D1BECD8270074C538 /* ReserveStatistics.swift */,
+				BC91E89E1BECD8270074C538 /* Total.swift */,
+				BC91E89F1BECD8270074C538 /* Value.swift */,
+			);
+			name = Reserve;
 			sourceTree = "<group>";
 		};
 		BC995DA71BDFD9B50031FA5E /* ErrorHandling */ = {
@@ -853,16 +882,22 @@
 				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
 				BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */,
 				BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */,
+				BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */,
+				BC91E8A31BECD8270074C538 /* Total.swift in Sources */,
+				BC91E8A11BECD8270074C538 /* DepositMovement.swift in Sources */,
 				BC2381721BB4626F0060CC80 /* User.swift in Sources */,
 				BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */,
+				BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */,
 				BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */,
 				BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */,
 				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
 				BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */,
 				BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */,
+				BC91E8A41BECD8270074C538 /* Value.swift in Sources */,
 				BC2381671BB4626F0060CC80 /* Card.swift in Sources */,
 				BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */,
 				BC23816D1BB4626F0060CC80 /* Source.swift in Sources */,
+				BC91E8A21BECD8270074C538 /* ReserveStatistics.swift in Sources */,
 				BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */,
 				BC2381681BB4626F0060CC80 /* Rate.swift in Sources */,
 				BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */,
@@ -896,6 +931,7 @@
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
+				BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */,
 				BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,

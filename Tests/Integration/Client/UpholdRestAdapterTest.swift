@@ -18,13 +18,11 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildEmptyResponseShouldReturnBadRequestError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let mockRequest = MockRequest(body: nil, code: 400, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<Response> = UpholdRestAdapter().buildEmptyResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<Response> in
-
             guard let badRequestError = error as? BadRequestError else {
                 XCTFail("Error should be BadRequestError.")
 
@@ -44,7 +42,6 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildEmptyResponseShouldReturnFulfilledPromise() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<Response> = UpholdRestAdapter().buildEmptyResponse(request)
@@ -61,13 +58,11 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildEmptyResponseShouldReturnLogicError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let mockRequest = MockRequest(body: "foobar", code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<Response> = UpholdRestAdapter().buildEmptyResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<Response> in
-
             guard let logicError = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
@@ -87,7 +82,6 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseShouldReturnBadRequestError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let json = "{" +
             "\"ask\":\"1.2\"," +
             "\"bid\":\"1\"," +
@@ -99,7 +93,6 @@ class UpholdRestAdapterTest: UpholdTestCase {
         let promise: Promise<Rate> = UpholdRestAdapter().buildResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<Rate> in
-
             guard let badRequestError = error as? BadRequestError else {
                 XCTFail("Error should be BadRequestError.")
 
@@ -119,13 +112,11 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseShouldReturnEmptyBodyLogicError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<Rate> = UpholdRestAdapter().buildResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<Rate> in
-
             guard let logicError = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
@@ -145,7 +136,6 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseShouldReturnFailedMapLogicError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let json = "{[" +
             "\"ask\":\"1.2\"," +
             "\"bid\":\"1\"," +
@@ -157,7 +147,6 @@ class UpholdRestAdapterTest: UpholdTestCase {
         let promise: Promise<Rate> = UpholdRestAdapter().buildResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<Rate> in
-
             guard let logicError = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
@@ -177,7 +166,6 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseShouldReturnFulfilledPromise() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let json = "{" +
             "\"ask\":\"1.2\"," +
             "\"bid\":\"1\"," +
@@ -202,14 +190,12 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseArrayShouldReturnBadRequestError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let json = "[{\"ask\":\"1\"}, {\"ask\":\"440.99\"}]"
         let mockRequest = MockRequest(body: json, code: 400, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<[Rate]> = UpholdRestAdapter().buildResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<[Rate]> in
-
             guard let badRequestError = error as? BadRequestError else {
                 XCTFail("Error should be BadRequestError.")
 
@@ -229,13 +215,11 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseArrayShouldReturnEmptyBodyLogicError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<[Rate]> = UpholdRestAdapter().buildResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<[Rate]> in
-
             guard let logicError = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
@@ -255,14 +239,12 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseArrayShouldReturnFailedMapLogicError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let jsonRates = "[[{\"ask\":\"1\"}, {\"ask\":\"440.99\"}]"
         let mockRequest = MockRequest(body: jsonRates, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
         let promise: Promise<[Rate]> = UpholdRestAdapter().buildResponse(request)
 
         promise.recover { (error: ErrorType) -> Promise<[Rate]> in
-
             guard let logicError = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
@@ -282,7 +264,6 @@ class UpholdRestAdapterTest: UpholdTestCase {
 
     func testBuildResponseArrayShouldReturnFulfilledPromise() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
-
         let jsonRates = "[{\"ask\":\"1\"}, {\"ask\":\"440.99\"}]"
         let mockRequest = MockRequest(body: jsonRates, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)

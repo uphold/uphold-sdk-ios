@@ -20,6 +20,15 @@ public class UpholdClient: Client {
     }
 
     /**
+      Gets the reserve object.
+
+      - returns: The reserve object.
+     */
+    public func getReserve() -> Reserve {
+        return Reserve()
+    }
+
+    /**
       Gets all the exchange rates for all currency pairs.
 
       - returns: A promise with all exchanges rates for all currency pairs.

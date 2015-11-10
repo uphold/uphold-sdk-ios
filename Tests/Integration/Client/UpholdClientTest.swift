@@ -9,26 +9,22 @@ class UpholdClientTest: UpholdTestCase {
 
     func testGetTickersShouldReturnTheArrayOfTickers() {
         let expectation = expectationWithDescription("Uphold client test.")
-
-        let json: String = "[" +
-            "{" +
-                "\"ask\": \"foo\"," +
-                "\"bid\": \"bar\"," +
-                "\"currency\": \"foobar\"," +
-                "\"pair\": \"foobiz\"" +
-            "}, {" +
-                "\"ask\": \"fiz\"," +
-                "\"bid\": \"biz\"," +
-                "\"currency\": \"foobiz\"," +
-                "\"pair\": \"bar\"" +
-            "}, {" +
-                "\"ask\": \"foobar\"," +
-                "\"bid\": \"foobaz\"," +
-                "\"currency\": \"bar\"," +
-                "\"pair\": \"foo\"" +
-            "}" +
-        "]"
-
+        let json: String = "[{" +
+            "\"ask\": \"foo\"," +
+            "\"bid\": \"bar\"," +
+            "\"currency\": \"foobar\"," +
+            "\"pair\": \"foobiz\"" +
+        "}, {" +
+            "\"ask\": \"fiz\"," +
+            "\"bid\": \"biz\"," +
+            "\"currency\": \"foobiz\"," +
+            "\"pair\": \"bar\"" +
+        "}, {" +
+            "\"ask\": \"foobar\"," +
+            "\"bid\": \"foobaz\"," +
+            "\"currency\": \"bar\"," +
+            "\"pair\": \"foo\"" +
+        "}]"
         let client = UpholdClient()
         client.token.adapter = MockRestAdapter(body: json)
 
@@ -55,26 +51,22 @@ class UpholdClientTest: UpholdTestCase {
 
     func testGetTickersByCurrencyShouldReturnTheArrayOfTickers() {
         let expectation = expectationWithDescription("Uphold client test.")
-
-        let json: String = "[" +
-            "{" +
-                "\"ask\": \"foo\"," +
-                "\"bid\": \"bar\"," +
-                "\"currency\": \"foobar\"," +
-                "\"pair\": \"foobiz\"" +
-            "}, {" +
-                "\"ask\": \"fiz\"," +
-                "\"bid\": \"biz\"," +
-                "\"currency\": \"foobiz\"," +
-                "\"pair\": \"bar\"" +
-            "}, {" +
-                "\"ask\": \"foobar\"," +
-                "\"bid\": \"foobaz\"," +
-                "\"currency\": \"bar\"," +
-                "\"pair\": \"foo\"" +
-            "}" +
-        "]"
-
+        let json: String = "[{" +
+            "\"ask\": \"foo\"," +
+            "\"bid\": \"bar\"," +
+            "\"currency\": \"foobar\"," +
+            "\"pair\": \"foobiz\"" +
+        "}, {" +
+            "\"ask\": \"fiz\"," +
+            "\"bid\": \"biz\"," +
+            "\"currency\": \"foobiz\"," +
+            "\"pair\": \"bar\"" +
+        "}, {" +
+            "\"ask\": \"foobar\"," +
+            "\"bid\": \"foobaz\"," +
+            "\"currency\": \"bar\"," +
+            "\"pair\": \"foo\"" +
+        "}]"
         let client = UpholdClient()
         client.token.adapter = MockRestAdapter(body: json)
 
