@@ -5,7 +5,18 @@ import SwiftClient
 public class Header {
 
     /**
-     Builds a string with the range header.
+      Builds the authorization header.
+
+      - parameter token: The bearer token.
+
+      - returns: The authorization header.
+     */
+    public static func buildAuthorizationHeader(token: String) -> [String: String] {
+        return ["authorization": String(format: "Bearer %@", token)]
+    }
+
+    /**
+      Builds a string with the range header.
 
      - parameter start: The position of the first element.
      - parameter end: The position of the last element.
@@ -22,7 +33,7 @@ public class Header {
       - returns: The default headers.
     */
     public static func getDefaultHeaders() -> [String: String] {
-        let headers: [String: String] = ["User-Agent": String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL)]
+        let headers: [String: String] = ["user-agent": String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL)]
 
         return headers
     }
