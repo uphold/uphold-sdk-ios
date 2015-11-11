@@ -5,6 +5,10 @@ import UpholdSdk
 /// Header integration tests.
 class HeaderTest: XCTestCase {
 
+    func testBuildAuthorizationHeaderShouldReturnAuthorizationHeader() {
+        XCTAssertEqual(Header.buildAuthorizationHeader("foo")["authorization"], "Bearer foo", "Failed: Wrong value.")
+    }
+
     func testBuildRangeHeaderShouldReturnRange() {
         XCTAssertEqual(Header.buildRangeHeader(0, end: 5), "items=0-5", "Failed: Wrong value.")
     }
@@ -12,7 +16,7 @@ class HeaderTest: XCTestCase {
     func testGetDefaultHeadersShouldReturnHeaders() {
         let headers: [String: String] = Header.getDefaultHeaders()
 
-        XCTAssertEqual(headers["User-Agent"], String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL), "Failed: Wrong header.")
+        XCTAssertEqual(headers["user-agent"], String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL), "Failed: Wrong header.")
     }
 
     func testGetRateLimitValueShouldReturnRateLimit() {

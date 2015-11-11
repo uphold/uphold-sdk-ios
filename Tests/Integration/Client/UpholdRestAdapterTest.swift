@@ -11,7 +11,7 @@ class UpholdRestAdapterTest: UpholdTestCase {
         let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
         let request = UpholdRestAdapter().buildRequest(mockRequest)
 
-        XCTAssertEqual(request.headers["User-Agent"], String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL), "Failed: Wrong headers.")
+        XCTAssertEqual(request.headers["user-agent"], String(format: "uphold-ios-sdk/%@ (%@)", GlobalConfigurations.UPHOLD_SDK_VERSION, GlobalConfigurations.SDK_GITHUB_URL), "Failed: Wrong headers.")
         XCTAssertEqual(request.method, "foo", "Failed: Wrong method.")
         XCTAssertNil(request.data, "Failed: Wrong body.")
     }

@@ -46,6 +46,7 @@
 		BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
 		BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8386CE1BF2458B00D67F98 /* SessionManager.swift */; };
 		BC8386FA1BF2464E00D67F98 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8386EF1BF2463500D67F98 /* KeychainSwift.framework */; };
+		BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8387171BF395A300D67F98 /* SessionManagerTest.swift */; };
 		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
 		BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8851BECD80C0074C538 /* Reserve.swift */; };
 		BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89B1BECD8270074C538 /* Deposit.swift */; };
@@ -311,6 +312,7 @@
 		BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRestAdapter.swift; path = Util/MockRestAdapter.swift; sourceTree = "<group>"; };
 		BC8386CE1BF2458B00D67F98 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "Carthage/Checkouts/keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
+		BC8387171BF395A300D67F98 /* SessionManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManagerTest.swift; path = Client/SessionManagerTest.swift; sourceTree = "<group>"; };
 		BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLimitExceedError.swift; sourceTree = "<group>"; };
 		BC91E8851BECD80C0074C538 /* Reserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reserve.swift; sourceTree = "<group>"; };
 		BC91E89B1BECD8270074C538 /* Deposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deposit.swift; path = Reserve/Deposit.swift; sourceTree = "<group>"; };
@@ -624,6 +626,7 @@
 		BCF5C69A1BCFE82200B6DFAC /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				BC8387171BF395A300D67F98 /* SessionManagerTest.swift */,
 				BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */,
 				BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */,
 			);
@@ -1037,6 +1040,7 @@
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
 				BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */,
 				BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */,
+				BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */,
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
