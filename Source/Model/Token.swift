@@ -5,7 +5,7 @@ import PromiseKit
 public class Token: BaseModel {
 
     /// The bearer token.
-    private var bearerToken: String?
+    private(set) var bearerToken: String?
 
     /**
       Constructor.
@@ -17,12 +17,12 @@ public class Token: BaseModel {
     /**
       Constructor.
 
-      - parameter token: The bearer token.
+      - parameter bearerToken: The bearer token.
      */
-    public init(token: String) {
+    public init(bearerToken: String) {
         super.init()
 
-        self.bearerToken = token
+        self.bearerToken = bearerToken
     }
 
 }

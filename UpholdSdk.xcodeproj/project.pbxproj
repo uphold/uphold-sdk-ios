@@ -44,6 +44,9 @@
 		BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
 		BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
 		BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
+		BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8386CE1BF2458B00D67F98 /* SessionManager.swift */; };
+		BC8386FA1BF2464E00D67F98 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8386EF1BF2463500D67F98 /* KeychainSwift.framework */; };
+		BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8387171BF395A300D67F98 /* SessionManagerTest.swift */; };
 		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
 		BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8851BECD80C0074C538 /* Reserve.swift */; };
 		BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89B1BECD8270074C538 /* Deposit.swift */; };
@@ -136,6 +139,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = BC23812B1BB462170060CC80;
 			remoteInfo = UpholdSdk;
+		};
+		BC8386EE1BF2463500D67F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
+		BC8386F01BF2463500D67F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C7A1BC29950001F2B7A;
+			remoteInfo = "KeychainSwift-OSX";
+		};
+		BC8386F21BF2463500D67F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C8A1BC29984001F2B7A;
+			remoteInfo = "KeychainSwift-watchOS";
+		};
+		BC8386F41BF2463500D67F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23E785601BDA410C00B7564A;
+			remoteInfo = "KeychainSwift-tvOS";
+		};
+		BC8386F61BF2463500D67F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C9771B1C118F00FE8090;
+			remoteInfo = KeychainSwiftTests;
+		};
+		BC8386F81BF2463500D67F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C99D1B1C133500FE8090;
+			remoteInfo = Demo;
 		};
 		BCB089A61BD52EEC0097C475 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -265,6 +310,9 @@
 		BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdRestAdapterTest.swift; path = Client/UpholdRestAdapterTest.swift; sourceTree = "<group>"; };
 		BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientTest.swift; path = Client/UpholdClientTest.swift; sourceTree = "<group>"; };
 		BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRestAdapter.swift; path = Util/MockRestAdapter.swift; sourceTree = "<group>"; };
+		BC8386CE1BF2458B00D67F98 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "Carthage/Checkouts/keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
+		BC8387171BF395A300D67F98 /* SessionManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManagerTest.swift; path = Client/SessionManagerTest.swift; sourceTree = "<group>"; };
 		BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLimitExceedError.swift; sourceTree = "<group>"; };
 		BC91E8851BECD80C0074C538 /* Reserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reserve.swift; sourceTree = "<group>"; };
 		BC91E89B1BECD8270074C538 /* Deposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deposit.swift; path = Reserve/Deposit.swift; sourceTree = "<group>"; };
@@ -293,6 +341,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8386FA1BF2464E00D67F98 /* KeychainSwift.framework in Frameworks */,
 				BCB089B81BD52F270097C475 /* PromiseKit.framework in Frameworks */,
 				BC2381BC1BB464D90060CC80 /* ObjectMapper.framework in Frameworks */,
 				BC2381BD1BB464D90060CC80 /* SwiftClient.framework in Frameworks */,
@@ -345,6 +394,7 @@
 		BC2381471BB4626F0060CC80 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				BC8386CE1BF2458B00D67F98 /* SessionManager.swift */,
 				BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */,
 				BC2381481BB4626F0060CC80 /* UpholdClient.swift */,
 				BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */,
@@ -483,6 +533,7 @@
 		BC3DD9DB1BB470480067CBCC /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */,
 				BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */,
 				BC2381A11BB464B00060CC80 /* ObjectMapper.xcodeproj */,
 				BCB0899A1BD52EEC0097C475 /* PromiseKit.xcodeproj */,
@@ -499,6 +550,19 @@
 				BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		BC8386E51BF2463500D67F98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC8386EF1BF2463500D67F98 /* KeychainSwift.framework */,
+				BC8386F11BF2463500D67F98 /* KeychainSwift.framework */,
+				BC8386F31BF2463500D67F98 /* KeychainSwift.framework */,
+				BC8386F51BF2463500D67F98 /* KeychainSwift.framework */,
+				BC8386F71BF2463500D67F98 /* KeychainSwiftTests.xctest */,
+				BC8386F91BF2463500D67F98 /* Demo.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC91E89A1BECD8170074C538 /* Reserve */ = {
@@ -562,6 +626,7 @@
 		BCF5C69A1BCFE82200B6DFAC /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				BC8387171BF395A300D67F98 /* SessionManagerTest.swift */,
 				BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */,
 				BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */,
 			);
@@ -673,6 +738,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = BC8386E51BF2463500D67F98 /* Products */;
+					ProjectRef = BC8386E41BF2463500D67F98 /* KeychainSwift.xcodeproj */;
+				},
+				{
 					ProductGroup = BCF5C6B31BCFEA5800B6DFAC /* Products */;
 					ProjectRef = BCF5C6B21BCFEA5800B6DFAC /* Mockingjay.xcodeproj */;
 				},
@@ -759,6 +828,48 @@
 			fileType = wrapper.cfbundle;
 			path = "ObjectMapper-tvOSTests.xctest";
 			remoteRef = BC4A30621BEA655C001B6249 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC8386EF1BF2463500D67F98 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = BC8386EE1BF2463500D67F98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC8386F11BF2463500D67F98 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = BC8386F01BF2463500D67F98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC8386F31BF2463500D67F98 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = BC8386F21BF2463500D67F98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC8386F51BF2463500D67F98 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = BC8386F41BF2463500D67F98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC8386F71BF2463500D67F98 /* KeychainSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KeychainSwiftTests.xctest;
+			remoteRef = BC8386F61BF2463500D67F98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC8386F91BF2463500D67F98 /* Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Demo.app;
+			remoteRef = BC8386F81BF2463500D67F98 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		BCB089A71BD52EEC0097C475 /* PromiseKit.framework */ = {
@@ -916,6 +1027,7 @@
 				BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */,
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
+				BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,6 +1040,7 @@
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
 				BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */,
 				BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */,
+				BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */,
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,

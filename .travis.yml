@@ -3,11 +3,12 @@ language: objective-c
 osx_image: xcode7.1
 
 before_script:
-  # Workaround introduced to fix the homebrew issue #45616 (https://github.com/Homebrew/homebrew/issues/45616).
-  - brew update || brew update
+  - brew update
   - brew install carthage
   - carthage update --use-submodules --no-build --no-use-binaries
   - brew install swiftlint
+  # Workaround introduced to fix the xctool issue #454 (https://github.com/facebook/xctool/issues/454).
+  - open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args -CurrentDeviceUDID 4E51E3C5-611D-403E-8EFD-1DA15203C4DF
 
 script:
   - swiftlint lint --strict

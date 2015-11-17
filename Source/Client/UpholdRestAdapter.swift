@@ -20,9 +20,13 @@ public class UpholdRestAdapter {
       - returns: The configured HTTP request.
     */
     public func buildRequest(request: Request) -> Request {
+        guard let bearerToken = SessionManager.sharedInstance.getBearerToken() else {
+            return request.set(Header.getDefaultHeaders())
+        }
+
         request.set(Header.getDefaultHeaders())
 
-        return request
+        return request.set(Header.buildAuthorizationHeader(bearerToken))
     }
 
     /**

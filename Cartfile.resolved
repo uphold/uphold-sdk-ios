@@ -1,5 +1,6 @@
 github "kylef/Mockingjay" "40a2f0f4efb483b398dfe46e5d8a3cf6c1510ec3"
 github "mxcl/OMGHTTPURLRQ" "3.0.2"
 github "Hearst-DD/ObjectMapper" "1.0.1"
-github "theadam/SwiftClient" "894faaa1474cedab535ee2efc9edb88de351d1e7"
+github "theadam/SwiftClient" "2.0.1"
+github "exchangegroup/keychain-swift" "3.0.10"
 github "mxcl/PromiseKit" "3.0.0"

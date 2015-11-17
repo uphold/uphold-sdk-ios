@@ -20,6 +20,21 @@ public class UpholdClient: Client {
     }
 
     /**
+      Contructor.
+
+      - parameter token: Authenticated user token.
+     */
+    public convenience init(token: Token) {
+        self.init()
+
+        self.token = token
+
+        if let token = token.bearerToken {
+            SessionManager.sharedInstance.setBearerToken(token)
+        }
+    }
+
+    /**
       Gets the reserve object.
 
       - returns: The reserve object.
