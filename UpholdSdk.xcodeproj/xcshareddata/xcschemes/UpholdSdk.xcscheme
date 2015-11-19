@@ -20,6 +20,20 @@
                ReferencedContainer = "container:UpholdSdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BC2381351BB462180060CC80"
+               BuildableName = "UpholdSdkTests.xctest"
+               BlueprintName = "UpholdSdkTests"
+               ReferencedContainer = "container:UpholdSdk.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
