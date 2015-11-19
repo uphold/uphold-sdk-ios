@@ -9,3 +9,7 @@ included:
   - Example
   - Source
   - Tests
+
+variable_name_min_length:
+  - 2 # warning
+  - 2 # error

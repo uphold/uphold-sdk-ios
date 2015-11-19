@@ -26,7 +26,7 @@ public class MockRestAdapter: UpholdRestAdapter {
 
       - returns: The mock response.
      */
-    public override func buildResponse<T : Mappable>(request: Request) -> Promise<T> {
+    public override func buildResponse<T: Mappable>(request: Request) -> Promise<T> {
         let mockRequest = MockRequest(body: self.body, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
 
         return UpholdRestAdapter().buildResponse(mockRequest)
@@ -39,7 +39,7 @@ public class MockRestAdapter: UpholdRestAdapter {
 
       - returns: The mock response.
      */
-    public override func buildResponse<T : Mappable>(request: Request) -> Promise<[T]> {
+    public override func buildResponse<T: Mappable>(request: Request) -> Promise<[T]> {
         let mockRequest = MockRequest(body: self.body, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
 
         return UpholdRestAdapter().buildResponse(mockRequest)
