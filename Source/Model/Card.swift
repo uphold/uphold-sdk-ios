@@ -45,7 +45,7 @@ public class Card: Mappable {
       - parameter settings: The Settings of the card.
     */
     public init(id: String, address: [String : String], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [Normalized], settings: CardSettings) {
-        self.id = id;
+        self.id = id
         self.address = address
         self.available = available
         self.balance = balance

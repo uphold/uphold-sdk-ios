@@ -32,7 +32,7 @@ class ReserveTest: UpholdTestCase {
             "}," +
             "\"TransactionId\": \"foobar\"," +
             "\"createdAt\": \"2015-04-21T14:57:12.398Z\"" +
-        "}]";
+        "}]"
         let reserve = UpholdClient().getReserve()
         reserve.adapter = MockRestAdapter(body: json)
 
