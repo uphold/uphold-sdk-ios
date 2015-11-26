@@ -25,8 +25,8 @@ public class Card: Mappable {
     /// A timestamp of the last time a transaction on this card was conducted.
     public private(set) var lastTransactionAt: String?
 
-    /// The list with the normalized fields.
-    public private(set) var normalized: [Normalized]?
+    /// The card details normalized.
+    public private(set) var normalized: [NormalizedCard]?
 
     /// The card settings.
     public private(set) var settings: CardSettings?
@@ -41,10 +41,10 @@ public class Card: Mappable {
       - parameter currency: The currency of the card.
       - parameter label: The display name of the card as chosen by the user.
       - parameter lastTransactionAt: A timestamp of the last time a transaction on this card was conducted.
-      - parameter normalized: The list with the normalized fields.
+      - parameter normalized: The card details normalized.
       - parameter settings: The Settings of the card.
     */
-    public init(id: String, address: [String : String], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [Normalized], settings: CardSettings) {
+    public init(id: String, address: [String : String], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [NormalizedCard], settings: CardSettings) {
         self.id = id
         self.address = address
         self.available = available
@@ -64,7 +64,11 @@ public class Card: Mappable {
     required public init?(_ map: Map) {
     }
 
-    /// Maps the JSON to the Object.
+    /**
+      Maps the JSON to the Object.
+
+      - parameter map: The object to map.
+     */
     public func mapping(map: Map) {
         self.id <- map["id"]
         self.address <- map["address"]

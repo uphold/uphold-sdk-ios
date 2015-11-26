@@ -10,7 +10,7 @@
 		BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; };
 		BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* UpholdClient.swift */; };
 		BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; };
-		BC2381661BB4626F0060CC80 /* Normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* Normalized.swift */; };
+		BC2381661BB4626F0060CC80 /* NormalizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */; };
 		BC2381671BB4626F0060CC80 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814F1BB4626F0060CC80 /* Card.swift */; };
 		BC2381681BB4626F0060CC80 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381501BB4626F0060CC80 /* Rate.swift */; };
 		BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381521BB4626F0060CC80 /* Denomination.swift */; };
@@ -42,6 +42,8 @@
 		BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
 		BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
 		BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
+		BC81F7021C0753BA0025A1AF /* NormalizedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */; };
+		BC81F7031C0758830025A1AF /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62431BFE28A600094F3A /* ObjectMapper.framework */; };
 		BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8386CE1BF2458B00D67F98 /* SessionManager.swift */; };
 		BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8387171BF395A300D67F98 /* SessionManagerTest.swift */; };
 		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
@@ -63,7 +65,6 @@
 		BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5651BC692E200D61852 /* UnhandledError.swift */; };
 		BCEB62411BFE285000094F3A /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62401BFE285000094F3A /* Mockingjay.framework */; };
 		BCEB62471BFE28A600094F3A /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62421BFE28A600094F3A /* KeychainSwift.framework */; };
-		BCEB62481BFE28A600094F3A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62431BFE28A600094F3A /* ObjectMapper.framework */; };
 		BCEB62491BFE28A600094F3A /* OMGHTTPURLRQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62441BFE28A600094F3A /* OMGHTTPURLRQ.framework */; };
 		BCEB624A1BFE28A600094F3A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62451BFE28A600094F3A /* PromiseKit.framework */; };
 		BCEB624B1BFE28A600094F3A /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62461BFE28A600094F3A /* SwiftClient.framework */; };
@@ -89,7 +90,7 @@
 		BC2381481BB4626F0060CC80 /* UpholdClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClient.swift; sourceTree = "<group>"; };
 		BC2381491BB4626F0060CC80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC23814D1BB4626F0060CC80 /* CardSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSettings.swift; sourceTree = "<group>"; };
-		BC23814E1BB4626F0060CC80 /* Normalized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Normalized.swift; sourceTree = "<group>"; };
+		BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalizedCard.swift; sourceTree = "<group>"; };
 		BC23814F1BB4626F0060CC80 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BC2381501BB4626F0060CC80 /* Rate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		BC2381521BB4626F0060CC80 /* Denomination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Denomination.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdRestAdapterTest.swift; path = Client/UpholdRestAdapterTest.swift; sourceTree = "<group>"; };
 		BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientTest.swift; path = Client/UpholdClientTest.swift; sourceTree = "<group>"; };
 		BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRestAdapter.swift; path = Util/MockRestAdapter.swift; sourceTree = "<group>"; };
+		BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalizedTransaction.swift; sourceTree = "<group>"; };
 		BC8386CE1BF2458B00D67F98 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		BC8387171BF395A300D67F98 /* SessionManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManagerTest.swift; path = Client/SessionManagerTest.swift; sourceTree = "<group>"; };
 		BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLimitExceedError.swift; sourceTree = "<group>"; };
@@ -158,10 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCEB62471BFE28A600094F3A /* KeychainSwift.framework in Frameworks */,
-				BCEB62481BFE28A600094F3A /* ObjectMapper.framework in Frameworks */,
 				BCEB62491BFE28A600094F3A /* OMGHTTPURLRQ.framework in Frameworks */,
 				BCEB624A1BFE28A600094F3A /* PromiseKit.framework in Frameworks */,
 				BCEB624B1BFE28A600094F3A /* SwiftClient.framework in Frameworks */,
+				BC81F7031C0758830025A1AF /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				BC23814D1BB4626F0060CC80 /* CardSettings.swift */,
-				BC23814E1BB4626F0060CC80 /* Normalized.swift */,
+				BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -256,6 +258,7 @@
 				BC2381541BB4626F0060CC80 /* Origin.swift */,
 				BC2381551BB4626F0060CC80 /* Parameters.swift */,
 				BC2381561BB4626F0060CC80 /* Source.swift */,
+				BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -581,7 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2381661BB4626F0060CC80 /* Normalized.swift in Sources */,
+				BC2381661BB4626F0060CC80 /* NormalizedCard.swift in Sources */,
 				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
 				BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */,
 				BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */,
@@ -613,6 +616,7 @@
 				BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */,
 				BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */,
 				BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */,
+				BC81F7021C0753BA0025A1AF /* NormalizedTransaction.swift in Sources */,
 				BC4A30571BEA655B001B6249 /* Token.swift in Sources */,
 				BC2381761BB4626F0060CC80 /* UserService.swift in Sources */,
 				BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */,
