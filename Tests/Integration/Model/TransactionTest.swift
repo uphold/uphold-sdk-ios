@@ -50,10 +50,19 @@ class TransactionTest: XCTestCase {
                 "\"currency\": \"BTC\"," +
                 "\"margin\": \"0.00\"," +
                 "\"pair\": \"BTCBTC\"," +
+                "\"progress\": \"foo\"," +
                 "\"rate\": \"1.00\"," +
                 "\"ttl\": 30000," +
+                "\"txid\": \"bar\"," +
                 "\"type\": \"invite\"" +
-            "}" +
+            "}," +
+            "\"normalized\": [{" +
+                "\"amount\": \"14.00\"," +
+                "\"commissions\": \"1.20\"," +
+                "\"currency\": \"BTC\"," +
+                "\"fee\": \"1.00\"," +
+                "\"rate\": \"2.345\"" +
+            "}]" +
         "}"
         let transaction = Mapper<Transaction>().map(json)
 
@@ -74,6 +83,11 @@ class TransactionTest: XCTestCase {
         XCTAssertEqual(transaction!.destination!.type!, "email", "Failed: Transaction destination type didn't match.")
         XCTAssertEqual(transaction!.destination!.username!, "fizbiz", "Failed: Transaction destination username didn't match.")
         XCTAssertEqual(transaction!.message!, "foobar message", "Failed: Transaction message didn't match.")
+        XCTAssertEqual(transaction!.normalized![0].amount, "14.00", "Failed: Normalized amount didn't match.")
+        XCTAssertEqual(transaction!.normalized![0].commissions, "1.20", "Failed: Normalized comission didn't match.")
+        XCTAssertEqual(transaction!.normalized![0].currency, "BTC", "Failed: Normalized currency didn't match.")
+        XCTAssertEqual(transaction!.normalized![0].fee, "1.00", "Failed: Normalized fee didn't match.")
+        XCTAssertEqual(transaction!.normalized![0].rate, "2.345", "Failed: Normalized rate didn't match.")
         XCTAssertEqual(transaction!.origin!.cardId!, "fizbiz", "Failed: Transaction origin cardId didn't match.")
         XCTAssertEqual(transaction!.origin!.amount!, "0.1", "Failed: Transaction origin amount didn't match.")
         XCTAssertEqual(transaction!.origin!.base!, "0.1", "Failed: Transaction origin base didn't match.")
@@ -87,6 +101,14 @@ class TransactionTest: XCTestCase {
         XCTAssertEqual(transaction!.origin!.sources![0].amount!, "2.00", "Failed: Transaction origin type didn't match.")
         XCTAssertEqual(transaction!.origin!.type!, "card", "Failed: Transaction origin type didn't match.")
         XCTAssertEqual(transaction!.origin!.username!, "fuzbuz", "Failed: Transaction origin username didn't match.")
+        XCTAssertEqual(transaction!.params!.currency, "BTC", "Failed: Transaction parameter currency didn't match.")
+        XCTAssertEqual(transaction!.params!.margin, "0.00", "Failed: Transaction parameter margin didn't match.")
+        XCTAssertEqual(transaction!.params!.pair, "BTCBTC", "Failed: Transaction parameter pair didn't match.")
+        XCTAssertEqual(transaction!.params!.progress, "foo", "Failed: Transaction parameter progress didn't match.")
+        XCTAssertEqual(transaction!.params!.rate, "1.00", "Failed: Transaction parameter rate didn't match.")
+        XCTAssertEqual(transaction!.params!.ttl, 30000, "Failed: Transaction parameter ttl didn't match.")
+        XCTAssertEqual(transaction!.params!.txid, "bar", "Failed: Transaction parameter txid didn't match.")
+        XCTAssertEqual(transaction!.params!.type, "invite", "Failed: Transaction parameter txid didn't match.")
         XCTAssertEqual(transaction!.refundedById!, "foobiz", "Failed: Transaction refundedById didn't match.")
         XCTAssertEqual(transaction!.status!, "pending", "Failed: Transaction status didn't match.")
         XCTAssertEqual(transaction!.type!, "transfer", "Failed: Transaction type didn't match.")
