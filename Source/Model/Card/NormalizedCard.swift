@@ -1,8 +1,8 @@
 import Foundation
 import ObjectMapper
 
-/// Normalized model.
-public class Normalized: Mappable {
+/// Card normalized model.
+public class NormalizedCard: Mappable {
 
     /// The amount available normalized.
     public private(set) var available: String?

@@ -20,7 +20,7 @@ public class Parameters: Mappable {
     public private(set) var rate: String?
 
     /// The transaction ttl.
-    public private(set) var ttl: String?
+    public private(set) var ttl: Int?
 
     /// The transaction txid.
     public private(set) var txid: String?
@@ -40,7 +40,7 @@ public class Parameters: Mappable {
       - parameter txid: The transaction txid.
       - parameter type: The transaction type.
     */
-    public init(currency: String, margin: String, pair: String, progress: String, rate: String, ttl: String, txid: String, type: String) {
+    public init(currency: String, margin: String, pair: String, progress: String, rate: String, ttl: Int, txid: String, type: String) {
         self.currency = currency
         self.margin = margin
         self.pair = pair
