@@ -1,1 +1,2 @@
+github "seegno-forks/Fakery" "support/update-dependencies"
 github "seegno-forks/Mockingjay" "support/add-carthage-configuration"
