@@ -5,11 +5,10 @@ import SwiftClient
 public class LogicError: UpholdClientError {
 
     /**
-    Constructor.
+      Constructor.
 
-    - parameter code: The HTTP status code.
-    - parameter message: The error message being shown to the user.
-    - parameter response: The HTTP response.
+      - parameter code: The HTTP status code.
+      - parameter message: The error message being shown to the user.
     */
     public init(code: Int?, message: String) {
         let info: [String: String] = ["Logic error": message]

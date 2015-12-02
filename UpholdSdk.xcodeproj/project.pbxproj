@@ -35,6 +35,15 @@
 		BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; };
 		BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; };
 		BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; };
+		BC4110461C05E5F90063761C /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110451C05E5F90063761C /* Fixtures.swift */; };
+		BC4110481C05E6350063761C /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110471C05E6350063761C /* Balance.swift */; };
+		BC41104C1C05E6400063761C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104A1C05E6400063761C /* Currency.swift */; };
+		BC41104D1C05E6400063761C /* UserBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104B1C05E6400063761C /* UserBalance.swift */; };
+		BC4110511C05E68E0063761C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104E1C05E68E0063761C /* Contact.swift */; };
+		BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104F1C05E68E0063761C /* ContactRequest.swift */; };
+		BC4110531C05E68E0063761C /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110501C05E68E0063761C /* Phone.swift */; };
+		BC4110551C05E6CC0063761C /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110541C05E6CC0063761C /* JSONUtils.swift */; };
+		BC4110571C05E7270063761C /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4110561C05E7270063761C /* Fakery.framework */; };
 		BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
 		BC4A30571BEA655B001B6249 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A30561BEA655B001B6249 /* Token.swift */; };
 		BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A306F1BEA657C001B6249 /* BaseModel.swift */; };
@@ -54,7 +63,9 @@
 		BC91E8A31BECD8270074C538 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89E1BECD8270074C538 /* Total.swift */; };
 		BC91E8A41BECD8270074C538 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89F1BECD8270074C538 /* Value.swift */; };
 		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
+		BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
+		BCBF406A1C0C73C900F69C49 /* JSONUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBF40691C0C73C900F69C49 /* JSONUtilsTest.swift */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
 		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
 		BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */; };
@@ -68,7 +79,7 @@
 		BCEB62491BFE28A600094F3A /* OMGHTTPURLRQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62441BFE28A600094F3A /* OMGHTTPURLRQ.framework */; };
 		BCEB624A1BFE28A600094F3A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62451BFE28A600094F3A /* PromiseKit.framework */; };
 		BCEB624B1BFE28A600094F3A /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62461BFE28A600094F3A /* SwiftClient.framework */; };
-		BCEB624D1BFE28B000094F3A /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB624C1BFE28B000094F3A /* URITemplate.framework */; };
+		BCF38A631C0DFD1B0075E477 /* JSONTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */; };
 		BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C41BCFCEE5008E2F97 /* Header.swift */; };
 		BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */; };
 /* End PBXBuildFile section */
@@ -116,6 +127,15 @@
 		BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
+		BC4110451C05E5F90063761C /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fixtures.swift; path = Util/Fixtures.swift; sourceTree = "<group>"; };
+		BC4110471C05E6350063761C /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		BC41104A1C05E6400063761C /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		BC41104B1C05E6400063761C /* UserBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBalance.swift; sourceTree = "<group>"; };
+		BC41104E1C05E68E0063761C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		BC41104F1C05E68E0063761C /* ContactRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRequest.swift; sourceTree = "<group>"; };
+		BC4110501C05E68E0063761C /* Phone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
+		BC4110541C05E6CC0063761C /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONUtils.swift; path = Util/JSONUtils.swift; sourceTree = "<group>"; };
+		BC4110561C05E7270063761C /* Fakery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fakery.framework; path = Carthage/Build/iOS/Fakery.framework; sourceTree = "<group>"; };
 		BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdTestCase.swift; path = Util/UpholdTestCase.swift; sourceTree = "<group>"; };
 		BC4A30561BEA655B001B6249 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		BC4A306F1BEA657C001B6249 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -134,7 +154,9 @@
 		BC91E89E1BECD8270074C538 /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Total.swift; path = Reserve/Total.swift; sourceTree = "<group>"; };
 		BC91E89F1BECD8270074C538 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Reserve/Value.swift; sourceTree = "<group>"; };
 		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
+		BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedResponseError.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
+		BCBF40691C0C73C900F69C49 /* JSONUtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONUtilsTest.swift; path = Util/JSONUtilsTest.swift; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
 		BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientErrorHandling.swift; sourceTree = "<group>"; };
@@ -149,7 +171,7 @@
 		BCEB62441BFE28A600094F3A /* OMGHTTPURLRQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OMGHTTPURLRQ.framework; path = Carthage/Build/iOS/OMGHTTPURLRQ.framework; sourceTree = "<group>"; };
 		BCEB62451BFE28A600094F3A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		BCEB62461BFE28A600094F3A /* SwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftClient.framework; path = Carthage/Build/iOS/SwiftClient.framework; sourceTree = "<group>"; };
-		BCEB624C1BFE28B000094F3A /* URITemplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URITemplate.framework; path = Carthage/Build/iOS/URITemplate.framework; sourceTree = "<group>"; };
+		BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONTestUtils.swift; path = Util/JSONTestUtils.swift; sourceTree = "<group>"; };
 		BCF656C41BCFCEE5008E2F97 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Header.swift; path = Util/Header.swift; sourceTree = "<group>"; };
 		BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalConfigurations.swift; path = Config/GlobalConfigurations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,8 +193,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4110571C05E7270063761C /* Fakery.framework in Frameworks */,
 				BCEB62411BFE285000094F3A /* Mockingjay.framework in Frameworks */,
-				BCEB624D1BFE28B000094F3A /* URITemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +248,8 @@
 		BC23814A1BB4626F0060CC80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC4110491C05E6400063761C /* Balance */,
+				BC4110471C05E6350063761C /* Balance.swift */,
 				BC23814B1BB4626F0060CC80 /* Card */,
 				BC23814F1BB4626F0060CC80 /* Card.swift */,
 				BC2381501BB4626F0060CC80 /* Rate.swift */,
@@ -266,6 +290,9 @@
 		BC2381581BB4626F0060CC80 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				BC41104E1C05E68E0063761C /* Contact.swift */,
+				BC41104F1C05E68E0063761C /* ContactRequest.swift */,
+				BC4110501C05E68E0063761C /* Phone.swift */,
 				BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */,
 				BC23815A1BB4626F0060CC80 /* InternationalizationUserSettings.swift */,
 				BC23815B1BB4626F0060CC80 /* UserSettings.swift */,
@@ -329,9 +356,20 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		BC4110491C05E6400063761C /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				BC41104A1C05E6400063761C /* Currency.swift */,
+				BC41104B1C05E6400063761C /* UserBalance.swift */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
 		BC5C0A7B1BD4F6F800CEF466 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BC4110451C05E5F90063761C /* Fixtures.swift */,
+				BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */,
 				BC5C0A841BD4F77700CEF466 /* MockRequest.swift */,
 				BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */,
 				BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */,
@@ -363,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */,
+				BCBF40691C0C73C900F69C49 /* JSONUtilsTest.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -377,6 +416,7 @@
 				BCCBE5641BC692E200D61852 /* NotFoundError.swift */,
 				BCCBE5651BC692E200D61852 /* UnhandledError.swift */,
 				BC1CFA451BDFCF1D00979038 /* LogicError.swift */,
+				BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */,
 			);
 			path = ErrorHandling;
 			sourceTree = "<group>";
@@ -384,7 +424,7 @@
 		BCEB624E1BFE28B500094F3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BCEB624C1BFE28B000094F3A /* URITemplate.framework */,
+				BC4110561C05E7270063761C /* Fakery.framework */,
 				BCEB62421BFE28A600094F3A /* KeychainSwift.framework */,
 				BCEB62431BFE28A600094F3A /* ObjectMapper.framework */,
 				BCEB62441BFE28A600094F3A /* OMGHTTPURLRQ.framework */,
@@ -416,6 +456,7 @@
 		BCF656C31BCFCEAE008E2F97 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BC4110541C05E6CC0063761C /* JSONUtils.swift */,
 				BCF656C41BCFCEE5008E2F97 /* Header.swift */,
 			);
 			name = Util;
@@ -570,6 +611,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/URITemplate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OMGHTTPURLRQ.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Fakery.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
@@ -590,14 +633,20 @@
 				BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */,
 				BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */,
 				BC91E8A31BECD8270074C538 /* Total.swift in Sources */,
+				BC4110481C05E6350063761C /* Balance.swift in Sources */,
+				BC41104D1C05E6400063761C /* UserBalance.swift in Sources */,
 				BC91E8A11BECD8270074C538 /* DepositMovement.swift in Sources */,
 				BC2381721BB4626F0060CC80 /* User.swift in Sources */,
 				BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */,
 				BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */,
 				BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */,
+				BC41104C1C05E6400063761C /* Currency.swift in Sources */,
 				BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */,
 				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
+				BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */,
 				BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */,
+				BC4110511C05E68E0063761C /* Contact.swift in Sources */,
+				BC4110551C05E6CC0063761C /* JSONUtils.swift in Sources */,
 				BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */,
 				BC91E8A41BECD8270074C538 /* Value.swift in Sources */,
 				BC2381671BB4626F0060CC80 /* Card.swift in Sources */,
@@ -609,6 +658,7 @@
 				BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */,
 				BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */,
 				BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */,
+				BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */,
 				BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */,
 				BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */,
 				BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */,
@@ -620,6 +670,7 @@
 				BC4A30571BEA655B001B6249 /* Token.swift in Sources */,
 				BC2381761BB4626F0060CC80 /* UserService.swift in Sources */,
 				BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */,
+				BC4110531C05E68E0063761C /* Phone.swift in Sources */,
 				BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */,
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
@@ -636,6 +687,8 @@
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
 				BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */,
 				BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */,
+				BCF38A631C0DFD1B0075E477 /* JSONTestUtils.swift in Sources */,
+				BC4110461C05E5F90063761C /* Fixtures.swift in Sources */,
 				BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */,
 				BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */,
 				BC2381821BB4627C0060CC80 /* TransactionTest.swift in Sources */,
@@ -644,6 +697,7 @@
 				BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
+				BCBF406A1C0C73C900F69C49 /* JSONUtilsTest.swift in Sources */,
 				BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */,
 				BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
