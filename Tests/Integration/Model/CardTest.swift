@@ -192,6 +192,22 @@ class CardTest: UpholdTestCase {
         wait()
     }
 
+    func testCreateTransactionWithCommitShouldReturnTheTransaction() {
+        let card: Card = Fixtures.loadCard(nil)
+        card.adapter = MockRestAdapter(body: "{ \"id\": \"foobar\" }")
+        let expectation = expectationWithDescription("Card test: create transaction.")
+        let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
+        let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
+
+        card.createTransaction(true, transactionRequest: transactionRequest).then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testGetTransactionsShouldReturnTheArrayOfTransactions() {
         let card: Card = Fixtures.loadCard(nil)
         let transactions: [Transaction] = [Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])]

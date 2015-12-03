@@ -13,7 +13,7 @@ class UserCardServiceTest: XCTestCase {
     }
 
     func testConfirmTransactionShouldReturnTheRequest() {
-        let request = UserCardService.confirmTransaction("bar", transactionId: "foo", message: "foobar")
+        let request = UserCardService.confirmTransaction("bar", transactionId: "foo", transactionCommitRequest: "foobar")
 
         XCTAssertEqual(request.url, "https://api.uphold.com/v0/me/cards/bar/transactions/foo/commit",  "Failed: Wrong URL.")
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
@@ -21,9 +21,21 @@ class UserCardServiceTest: XCTestCase {
     }
 
     func testCreateTransactionShouldReturnTheRequest() {
-        let request = UserCardService.createTransaction("bar", transactionRequest: "foobar")
+        let request = UserCardService.createTransaction("bar", commit: false, transactionRequest: "foobar")
 
         XCTAssertEqual(request.url, "https://api.uphold.com/v0/me/cards/bar/transactions", "Failed: Wrong URL.")
+        XCTAssertEqual(request.query.count, 1, "Failed: Wrong number of query parameters.")
+        XCTAssertEqual(request.query[0], "commit=false", "Failed: Wrong URL.")
+        XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
+        XCTAssertEqual(request.data! as? String, "foobar", "Failed: Wrong body.")
+    }
+
+    func testCreateTransactionWithCommitShouldReturnTheRequest() {
+        let request = UserCardService.createTransaction("bar", commit: true, transactionRequest: "foobar")
+
+        XCTAssertEqual(request.url, "https://api.uphold.com/v0/me/cards/bar/transactions", "Failed: Wrong URL.")
+        XCTAssertEqual(request.query.count, 1, "Failed: Wrong number of query parameters.")
+        XCTAssertEqual(request.query[0], "commit=true", "Failed: Wrong URL.")
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
         XCTAssertEqual(request.data! as? String, "foobar", "Failed: Wrong body.")
     }
