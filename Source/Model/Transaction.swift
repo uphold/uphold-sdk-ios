@@ -1,8 +1,9 @@
 import Foundation
+import PromiseKit
 import ObjectMapper
 
 /// Transaction model.
-public class Transaction: Mappable {
+public class Transaction: BaseModel, Mappable {
 
     /// The id of the transaction.
     public private(set) var id: String?
@@ -78,7 +79,7 @@ public class Transaction: Mappable {
       Maps the JSON to the Object.
 
       - parameter map: The object to map.
-     */
+    */
     public func mapping(map: Map) {
         id  <- map["id"]
         createdAt <- map["createdAt"]
@@ -91,6 +92,67 @@ public class Transaction: Mappable {
         refundedById <- map["RefundedById"]
         status <- map["status"]
         type <- map["type"]
+    }
+
+    /**
+      Cancel a transaction.
+
+      - returns: A promise with the transaction.
+    */
+    public func cancel() -> Promise<Transaction> {
+        guard let id = self.id else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction id should not be nil."))
+        }
+
+        guard let cardId = self.origin?.cardId else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Origin cardId is missing from this transaction."))
+        }
+
+        guard let status = self.status else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction status should not be nil."))
+        }
+
+        switch (status) {
+            case "pending":
+                return Promise<Transaction>(error: LogicError(code: nil, message: "Unable to cancel uncommited transaction."))
+
+            case "waiting":
+                let request = self.adapter.buildRequest(UserCardService.cancelTransaction(cardId, transactionId: id))
+
+                return self.adapter.buildResponse(request)
+
+            default:
+                return Promise<Transaction>(error: LogicError(code: nil, message: String(format: "This transaction cannot be cancelled, because the current status is %@.", status)))
+        }
+    }
+
+    /**
+      Confirm a transaction.
+
+      - parameter transactionCommit: A transactionCommitRequest with an optional transaction message.
+
+      - returns: A promise with the transaction.
+    */
+    public func commit(transactionCommit: TransactionCommitRequest) -> Promise<Transaction> {
+        guard let id = self.id else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction id should not be nil."))
+        }
+
+        guard let cardId = self.origin?.cardId else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Origin cardId is missing from this transaction."))
+        }
+
+        guard let status = self.status else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction status should not be nil."))
+        }
+
+        if (status != "pending") {
+            return Promise<Transaction>(error: LogicError(code: nil, message: String(format: "This transaction cannot be committed, because the current status is %@.", status)))
+        }
+
+        let request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, transactionId: id, transactionCommitRequest: Mapper().toJSONString(transactionCommit, prettyPrint: false)!))
+
+        return self.adapter.buildResponse(request)
     }
 
 }

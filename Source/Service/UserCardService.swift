@@ -24,20 +24,21 @@ public class UserCardService {
 
       - returns: A request to confirm the transaction.
     */
-    static func confirmTransaction(cardId: String, transactionId: String, message: String) -> Request {
-        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(message)
+    static func confirmTransaction(cardId: String, transactionId: String, transactionCommitRequest: String) -> Request {
+        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(transactionCommitRequest)
     }
 
     /**
       Creates a request to create a transaction.
 
       - parameter cardId: The id of the card.
+      - parameter commit: A boolean to indicate if it is to commit the transaction on the creation process.
       - parameter transactionRequest: The transaction request.
 
       - returns: A request to create a transaction.
     */
-    static func createTransaction(cardId: String, transactionRequest: String) -> Request {
-        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions", cardId)).send(transactionRequest)
+    static func createTransaction(cardId: String, commit: Bool, transactionRequest: String) -> Request {
+        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions", cardId)).query(["commit": commit ? "true" : "false"]).send(transactionRequest)
     }
 
     /**
