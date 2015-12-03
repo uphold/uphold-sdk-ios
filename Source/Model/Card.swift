@@ -1,6 +1,7 @@
 import Foundation
 import ObjectMapper
 import PromiseKit
+import SwiftClient
 
 /// Card model.
 public class Card: BaseModel, Mappable {
@@ -116,16 +117,61 @@ public class Card: BaseModel, Mappable {
     /**
       Gets the transactions for the current card.
 
-      - returns: A promise with the list of transactions for the current card.
+      - returns: A paginator with the list of transactions for the current card.
     */
-    public func getTransactions() -> Promise<[Transaction]> {
+    public func getTransactions() -> Paginator<Transaction> {
         guard let id = self.id else {
-            return Promise<[Transaction]>(error: UnexpectedResponseError(message: "Card id should not be nil."))
+            let error = UnexpectedResponseError(message: "Card id should not be nil.")
+
+            return Paginator<Transaction>(countClosure: { () -> Promise<Int> in
+                    return Promise<Int>(error: error)
+                },
+                elements: Promise<[Transaction]>(error: error),
+                hasNextPageClosure: { (currentPage) -> Promise<Bool> in
+                    return Promise<Bool>(error: error)
+                },
+                nextPageClosure: { (range) -> Promise<[Transaction]> in
+                    return Promise<[Transaction]>(error: error)
+                })
         }
 
-        let request = self.adapter.buildRequest(UserCardService.getUserCardTransactions(id, range: Header.buildRangeHeader(0, end: 5)))
+        let request = self.adapter.buildRequest(UserCardService.getUserCardTransactions(id, range: Header.buildRangeHeader(Paginator<Transaction>.DEFAULT_START, end: Paginator<Transaction>.DEFAULT_OFFSET - 1)))
 
-        return self.adapter.buildResponse(request)
+        let paginator: Paginator<Transaction> = Paginator(countClosure: { () -> Promise<Int> in
+                return Promise { fulfill, reject in
+                    self.adapter.buildRequest(UserCardService.getUserCardTransactions(id, range: Header.buildRangeHeader(0, end: 1))).end({ (response: Response) -> Void in
+                        guard let count = Header.getTotalNumberOfResults(response.headers) else {
+                            reject(UnexpectedResponseError(message: "Content-Type header should not be nil."))
+
+                            return
+                        }
+
+                        fulfill(count)
+                    })
+                }
+            },
+            elements: self.adapter.buildResponse(request),
+            hasNextPageClosure: { (currentPage) -> Promise<Bool> in
+                return Promise { fulfill, reject in
+                    self.adapter.buildRequest(UserCardService.getUserCardTransactions(id, range: Header.buildRangeHeader(0, end: 1))).end({ (response: Response) -> Void in
+                        guard let count = Header.getTotalNumberOfResults(response.headers) else {
+                            reject(UnexpectedResponseError(message: "Content-Type header should not be nil."))
+
+                            return
+                        }
+
+                        fulfill((currentPage * Paginator<Transaction>.DEFAULT_OFFSET) < count)
+                    })
+                }
+            },
+            nextPageClosure: { (range) -> Promise<[Transaction]> in
+                let request = self.adapter.buildRequest(UserCardService.getUserCardTransactions(id, range: range))
+                let promise: Promise<[Transaction]> = self.adapter.buildResponse(request)
+
+                return promise
+            })
+
+        return paginator
     }
 
     /**

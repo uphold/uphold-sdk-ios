@@ -1,6 +1,7 @@
 import Foundation
 import ObjectMapper
 import PromiseKit
+import SwiftClient
 
 /// User model.
 public class User: BaseModel, Mappable {
@@ -270,12 +271,46 @@ public class User: BaseModel, Mappable {
     /**
       Gets the user transactions.
 
-      - returns: A promise with the user transactions.
+      - returns: A paginator with the user transactions.
      */
-    public func getUserTransactions() -> Promise<[Transaction]> {
-        let request = self.adapter.buildRequest(UserService.getUserPhones())
+    public func getUserTransactions() -> Paginator<Transaction> {
+        let request = self.adapter.buildRequest(UserService.getUserTransactions(Header.buildRangeHeader(Paginator<Transaction>.DEFAULT_START, end: Paginator<Transaction>.DEFAULT_OFFSET - 1)))
 
-        return self.adapter.buildResponse(request)
+        let paginator: Paginator<Transaction> = Paginator(countClosure: { () -> Promise<Int> in
+                return Promise { fulfill, reject in
+                    self.adapter.buildRequest(UserService.getUserTransactions(Header.buildRangeHeader(0, end: 1))).end({ (response: Response) -> Void in
+                        guard let count = Header.getTotalNumberOfResults(response.headers) else {
+                            reject(UnexpectedResponseError(message: "Content-Range header should not be nil."))
+
+                            return
+                        }
+
+                        fulfill(count)
+                    })
+                }
+            },
+            elements: self.adapter.buildResponse(request),
+            hasNextPageClosure: { (currentPage) -> Promise<Bool> in
+                return Promise { fulfill, reject in
+                    self.adapter.buildRequest(UserService.getUserTransactions(Header.buildRangeHeader(0, end: 1))).end({ (response: Response) -> Void in
+                        guard let count = Header.getTotalNumberOfResults(response.headers) else {
+                            reject(UnexpectedResponseError(message: "Content-Range header should not be nil."))
+
+                            return
+                        }
+
+                        fulfill((currentPage * Paginator<Transaction>.DEFAULT_OFFSET) < count)
+                    })
+                }
+            },
+            nextPageClosure: { (range) -> Promise<[Transaction]> in
+                let request = self.adapter.buildRequest(UserService.getUserTransactions(range))
+                let promise: Promise<[Transaction]> = self.adapter.buildResponse(request)
+
+                return promise
+            })
+
+        return paginator
     }
 
     /**
