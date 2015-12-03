@@ -29,7 +29,11 @@ public class CardSettings: Mappable {
     required public init?(_ map: Map) {
     }
 
-    /// Maps the JSON to the Object.
+    /**
+      Maps the JSON to the Object.
+
+      - parameter map: The object to map.
+    */
     public func mapping(map: Map) {
         position  <- map["position"]
         starred <- map["starred"]

@@ -8,7 +8,7 @@ public class NormalizedTransaction: Mappable {
     public private(set) var amount: String?
 
     /// The commission of the transaction normalized.
-    public private(set) var commissions: String?
+    public private(set) var commission: String?
 
     /// The currency of the transaction normalized.
     public private(set) var currency: String?
@@ -23,14 +23,14 @@ public class NormalizedTransaction: Mappable {
       Constructor.
 
       - parameter amount: The amount of the transaction normalized.
-      - parameter commissions: The commission of the transaction normalized.
+      - parameter commission: The commission of the transaction normalized.
       - parameter currency: The currency of the transaction normalized.
       - parameter fee: The fee of the transaction normalized.
       - parameter rate: The rate of the transaction normalized.
      */
-    public init(amount: String, commissions: String, currency: String, fee: String, rate: String) {
+    public init(amount: String, commission: String, currency: String, fee: String, rate: String) {
         self.amount = amount
-        self.commissions = commissions
+        self.commission = commission
         self.currency = currency
         self.fee = fee
         self.rate = rate
@@ -51,7 +51,7 @@ public class NormalizedTransaction: Mappable {
      */
     public func mapping(map: Map) {
         self.amount <- map["amount"]
-        self.commissions <- map["commissions"]
+        self.commission <- map["commission"]
         self.currency <- map["currency"]
         self.fee <- map["fee"]
         self.rate <- map["rate"]

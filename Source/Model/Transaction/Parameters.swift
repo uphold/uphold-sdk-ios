@@ -19,6 +19,9 @@ public class Parameters: Mappable {
     /// The transaction rate.
     public private(set) var rate: String?
 
+    /// The transaction refunds information.
+    public private(set) var refunds: String?
+
     /// The transaction ttl.
     public private(set) var ttl: Int?
 
@@ -36,16 +39,18 @@ public class Parameters: Mappable {
       - parameter pair: The transaction pair.
       - parameter progress: The transaction progress.
       - parameter rate: The transaction rate.
+      - parameter refunds: The transaction refunds information.
       - parameter ttl: The transaction ttl.
       - parameter txid: The transaction txid.
       - parameter type: The transaction type.
     */
-    public init(currency: String, margin: String, pair: String, progress: String, rate: String, ttl: Int, txid: String, type: String) {
+    public init(currency: String, margin: String, pair: String, progress: String, rate: String, refunds: String, ttl: Int, txid: String, type: String) {
         self.currency = currency
         self.margin = margin
         self.pair = pair
         self.progress = progress
         self.rate = rate
+        self.refunds = refunds
         self.ttl = ttl
         self.txid = txid
         self.type = type
@@ -59,13 +64,18 @@ public class Parameters: Mappable {
     required public init?(_ map: Map) {
     }
 
-    /// Maps the JSON to the Object.
+    /**
+      Maps the JSON to the Object.
+
+      - parameter map: The object to map.
+    */
     public func mapping(map: Map) {
         currency  <- map["currency"]
         margin <- map["margin"]
         pair <- map["pair"]
         progress <- map["progress"]
         rate <- map["rate"]
+        refunds <- map["refunds"]
         ttl <- map["ttl"]
         txid <- map["txid"]
         type <- map["type"]
