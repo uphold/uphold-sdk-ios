@@ -21,9 +21,9 @@ class UserCardServiceTest: XCTestCase {
     }
 
     func testCreateTransactionShouldReturnTheRequest() {
-        let request = UserCardService.createTransaction("bar", transactionId: "foo", transactionRequest: "foobar")
+        let request = UserCardService.createTransaction("bar", transactionRequest: "foobar")
 
-        XCTAssertEqual(request.url, "https://api.uphold.com/v0/me/cards/bar/transactions/foo/commit",  "Failed: Wrong URL.")
+        XCTAssertEqual(request.url, "https://api.uphold.com/v0/me/cards/bar/transactions", "Failed: Wrong URL.")
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
         XCTAssertEqual(request.data! as? String, "foobar", "Failed: Wrong body.")
     }

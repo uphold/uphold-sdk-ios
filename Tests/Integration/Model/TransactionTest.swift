@@ -58,7 +58,7 @@ class TransactionTest: XCTestCase {
             "}," +
             "\"normalized\": [{" +
                 "\"amount\": \"14.00\"," +
-                "\"commissions\": \"1.20\"," +
+                "\"commission\": \"1.20\"," +
                 "\"currency\": \"BTC\"," +
                 "\"fee\": \"1.00\"," +
                 "\"rate\": \"2.345\"" +
@@ -84,7 +84,7 @@ class TransactionTest: XCTestCase {
         XCTAssertEqual(transaction!.destination!.username!, "fizbiz", "Failed: Transaction destination username didn't match.")
         XCTAssertEqual(transaction!.message!, "foobar message", "Failed: Transaction message didn't match.")
         XCTAssertEqual(transaction!.normalized![0].amount, "14.00", "Failed: Normalized amount didn't match.")
-        XCTAssertEqual(transaction!.normalized![0].commissions, "1.20", "Failed: Normalized comission didn't match.")
+        XCTAssertEqual(transaction!.normalized![0].commission, "1.20", "Failed: Normalized comission didn't match.")
         XCTAssertEqual(transaction!.normalized![0].currency, "BTC", "Failed: Normalized currency didn't match.")
         XCTAssertEqual(transaction!.normalized![0].fee, "1.00", "Failed: Normalized fee didn't match.")
         XCTAssertEqual(transaction!.normalized![0].rate, "2.345", "Failed: Normalized rate didn't match.")
