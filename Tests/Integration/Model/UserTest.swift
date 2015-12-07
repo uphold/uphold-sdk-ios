@@ -221,9 +221,10 @@ class UserTest: UpholdTestCase {
     }
 
     func testGetCardsByCurrencyShouldReturnTheArrayOfCardsWithCurrency() {
+        let cards: [Card] = [Fixtures.loadCard(["id": "foobar", "currency": "USD"]), Fixtures.loadCard(["id": "foobiz", "currency": "BTC"]), Fixtures.loadCard(["id": "fuzbuz", "currency": "BTC"])]
         let expectation = expectationWithDescription("User test: get cards by currency.")
         let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: "[{ \"id\": \"foobar\", \"currency\": \"USD\" }, { \"id\": \"foobiz\", \"currency\": \"BTC\" }, { \"id\": \"fuzbuz\", \"currency\": \"BTC\" }]")
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(cards)!)
 
         user.getCardsByCurrency("BTC").then { (cards: [Card]) -> () in
             XCTAssertEqual(cards.count, 2, "Failed: Wrong number of card objects.")
@@ -239,9 +240,10 @@ class UserTest: UpholdTestCase {
     }
 
     func testGetCardsByCurrencyShouldReturnUnmatchedCurrencyError() {
+        let card: Card = Fixtures.loadCard(["id": "foobar", "currency": "BTC"])
         let expectation = expectationWithDescription("User test: get balances by currency.")
         let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: "[{ \"id\": \"foobiz\", \"currency\": \"BTC\" }]")
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(card)!)
         let promise: Promise<[Card]> = user.getCardsByCurrency("USD")
 
         promise.recover { (error: ErrorType) -> Promise<[Card]> in
@@ -263,9 +265,10 @@ class UserTest: UpholdTestCase {
     }
 
     func testGetCardByIdShouldReturnTheCard() {
+        let card: Card = Fixtures.loadCard(["id": "foobar"])
         let expectation = expectationWithDescription("User test: get card by id.")
         let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: "{ \"id\": \"foobar\" }")
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(card)!)
 
         user.getCardById("foobar").then { (card: Card) -> () in
             XCTAssertEqual(card.id, "foobar", "Failed: Wrong card object.")
@@ -277,9 +280,10 @@ class UserTest: UpholdTestCase {
     }
 
     func testGetCardsShouldReturnTheArrayOfCards() {
+        let cards: [Card] = [Fixtures.loadCard(["id": "foo"]), Fixtures.loadCard(["id": "bar"])]
         let expectation = expectationWithDescription("User test: get cards.")
         let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: "[{ \"id\": \"foo\" }, { \"id\": \"bar\" }]")
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(cards)!)
 
         user.getCards().then { (cards: [Card]) -> () in
             XCTAssertEqual(cards[0].id, "foo", "Failed: Wrong card object.")
@@ -446,8 +450,9 @@ class UserTest: UpholdTestCase {
 
     func testGetUserTransactionsShouldReturnTheListOfTransactions() {
         let expectation = expectationWithDescription("User test: get user transactions.")
+        let transactions: [Transaction] = [Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])]
         let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: "[{ \"id\": \"foobar\" }, { \"id\": \"foobiz\" }]")
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(transactions)!)
 
         user.getUserTransactions().then { (transactions: [Transaction]) -> () in
             XCTAssertEqual(transactions.count, 2, "Failed: Wrong number of phone transactions.")
@@ -462,8 +467,8 @@ class UserTest: UpholdTestCase {
 
     func testUpdateShouldReturnParseError() {
         let expectation = expectationWithDescription("User test: update user.")
-        let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: "{ \"username\": \"foobar\" }")
+        let user: User = Fixtures.loadUser(["username": "foobar"])
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(user)!)
         let promise: Promise<User> = user.update(["username": [true: true]])
 
         promise.recover { (error: ErrorType) -> Promise<User> in
@@ -485,8 +490,8 @@ class UserTest: UpholdTestCase {
 
     func testUpdateShouldReturnTheUser() {
         let expectation = expectationWithDescription("User test: update user.")
-        let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: "{ \"username\": \"foobar\" }")
+        let user: User = Fixtures.loadUser(["username": "foobar"])
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(user)!)
 
         user.update(["username": "foobar"]).then { (user: User) -> () in
             XCTAssertEqual(user.username, "foobar", "Failed: Wrong username.")

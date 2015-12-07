@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
+		BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
 		BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; };
 		BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* UpholdClient.swift */; };
 		BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; };
@@ -95,6 +97,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRequest.swift; sourceTree = "<group>"; };
+		BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDenominationRequest.swift; sourceTree = "<group>"; };
 		BC1CFA451BDFCF1D00979038 /* LogicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicError.swift; sourceTree = "<group>"; };
 		BC23812C1BB462170060CC80 /* UpholdSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpholdSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2381361BB462180060CC80 /* UpholdSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpholdSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +287,8 @@
 				BC2381551BB4626F0060CC80 /* Parameters.swift */,
 				BC2381561BB4626F0060CC80 /* Source.swift */,
 				BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */,
+				BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */,
+				BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
 				BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */,
 				BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */,
+				BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */,
 				BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */,
 				BC91E8A31BECD8270074C538 /* Total.swift in Sources */,
 				BC4110481C05E6350063761C /* Balance.swift in Sources */,
@@ -675,6 +682,7 @@
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
 				BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */,
+				BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,2 +1,2 @@
-github "seegno-forks/Fakery" "support/update-dependencies"
+github "vadymmarkov/Fakery" "7931ddbaa957d83649c82402539c425c480186a7"
 github "seegno-forks/Mockingjay" "support/add-carthage-configuration"

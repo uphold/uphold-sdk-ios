@@ -32,13 +32,12 @@ public class UserCardService {
       Creates a request to create a transaction.
 
       - parameter cardId: The id of the card.
-      - parameter transactionId: The id of the transaction.
       - parameter transactionRequest: The transaction request.
 
       - returns: A request to create a transaction.
     */
-    static func createTransaction(cardId: String, transactionId: String, transactionRequest: String) -> Request {
-        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(transactionRequest)
+    static func createTransaction(cardId: String, transactionRequest: String) -> Request {
+        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions", cardId)).send(transactionRequest)
     }
 
     /**
