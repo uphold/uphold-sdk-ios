@@ -29,4 +29,8 @@ class HeaderTest: XCTestCase {
         XCTAssertNotEqual(Header.getSecondsUntilRateLimitReset(["foobar": "10"]), "10", "Failed: Wrong value.")
     }
 
+    func testGetTotalNumberOfResults() {
+        XCTAssertEqual(Header.getTotalNumberOfResults(["content-range": "0-2/60"]), 60, "Failed: Wrong value.")
+    }
+
 }

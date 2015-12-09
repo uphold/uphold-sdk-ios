@@ -51,7 +51,7 @@ class CardTest: UpholdTestCase {
     }
 
     func testCreateTransactionShouldReturnTheTransaction() {
-        let card: Card = Fixtures.loadCard(nil)
+        let card: Card = Fixtures.loadCard()
         let expectation = expectationWithDescription("Card test: create transaction.")
         let json: String = "{" +
             "\"id\": \"foobar\"," +
@@ -168,34 +168,31 @@ class CardTest: UpholdTestCase {
 
     func testCreateTransactionShouldReturnUnexpectedResponseError() {
         let card: Card = Mapper().map("{}")!
-        card.adapter = MockRestAdapter(body: "{}")
+        card.adapter = MockRestAdapter()
         let expectation = expectationWithDescription("Card test: create transaction.")
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
         let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
-        let promise: Promise<Transaction> = card.createTransaction(transactionRequest)
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        card.createTransaction(transactionRequest).error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
     }
 
     func testCreateTransactionWithCommitShouldReturnTheTransaction() {
-        let card: Card = Fixtures.loadCard(nil)
-        card.adapter = MockRestAdapter(body: "{ \"id\": \"foobar\" }")
+        let card: Card = Fixtures.loadCard()
         let expectation = expectationWithDescription("Card test: create transaction.")
+        card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(["transactionId": "foobar"]))!)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
         let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
 
@@ -209,15 +206,86 @@ class CardTest: UpholdTestCase {
     }
 
     func testGetTransactionsShouldReturnTheArrayOfTransactions() {
-        let card: Card = Fixtures.loadCard(nil)
-        let transactions: [Transaction] = [Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])]
-        card.adapter = MockRestAdapter(body: Mapper().toJSONString(transactions)!)
+        let card: Card = Fixtures.loadCard()
         let expectation = expectationWithDescription("Card test: get transactions.")
+        card.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!)
 
-        card.getTransactions().then { (transactions: [Transaction]) -> () in
-            XCTAssertEqual(transactions.count, 2, "Failed: Wrong number of transaction objects.")
+        card.getTransactions().elements.then({ (transactions: [Transaction]) -> () in
+            let mockRestAdapter: MockRestAdapter = (card.adapter as? MockRestAdapter)!
+
+            XCTAssertEqual(mockRestAdapter.headers!.count, 1, "Failed: Wrong number of headers.")
+            XCTAssertEqual(mockRestAdapter.headers!["Range"], "items=0-49", "Failed: Wrong number of headers.")
             XCTAssertEqual(transactions[0].id, "foobar", "Failed: Wrong transaction object.")
             XCTAssertEqual(transactions[1].id, "foobiz", "Failed: Wrong transaction object.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorCount() {
+        let card: Card = Fixtures.loadCard()
+        let expectation = expectationWithDescription("Card test: get transactions.")
+        card.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(), Fixtures.loadTransaction()])!, headers: ["content-range": "0-2/60"])
+
+        card.getTransactions().count().then({ (count: Int) -> () in
+            XCTAssertEqual(count, 60, "Failed: Wrong paginator count.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorHasNext() {
+        let card: Card = Fixtures.loadCard()
+        let expectation = expectationWithDescription("Card test: get transactions.")
+        card.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(), Fixtures.loadTransaction()])!, headers: ["content-range": "0-49/51"])
+
+        card.getTransactions().hasNext().then({ (bool: Bool) -> () in
+            XCTAssertTrue(bool, "Failed: Wrong paginator hasNext value.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorNextPage() {
+        let card: Card = Fixtures.loadCard()
+        let transactions: [Transaction] = [Fixtures.loadTransaction(), Fixtures.loadTransaction()]
+        card.adapter = MockRestAdapter(body: Mapper().toJSONString(transactions)!)
+        let paginator: Paginator<Transaction> = card.getTransactions()
+
+        paginator.getNext()
+
+        let firstRequestHeaders = (card.adapter as? MockRestAdapter)!.headers
+
+        paginator.getNext()
+
+        let secondRequestHeaders = (card.adapter as? MockRestAdapter)!.headers
+
+        XCTAssertEqual(firstRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(firstRequestHeaders!["Range"], "items=50-99", "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!["Range"], "items=100-149", "Failed: Wrong number of headers.")
+    }
+
+    func testGetTransactionsPaginatorCountShouldReturnUnexpectedResponseError() {
+        let card: Card = Mapper().map("{}")!
+        card.adapter = MockRestAdapter()
+        let expectation = expectationWithDescription("Card test: get transactions.")
+
+        card.getTransactions().count().error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
         }
@@ -225,25 +293,64 @@ class CardTest: UpholdTestCase {
         wait()
     }
 
-    func testGetTransactionsShouldReturnUnexpectedResponseError() {
+    func testGetTransactionsPaginatorElementsShouldReturnUnexpectedResponseError() {
         let card: Card = Mapper().map("{}")!
-        card.adapter = MockRestAdapter(body: "{}")
+        card.adapter = MockRestAdapter()
         let expectation = expectationWithDescription("Card test: get transactions.")
-        let promise: Promise<[Transaction]> = card.getTransactions()
 
-        promise.recover { (error: ErrorType) -> Promise<[Transaction]> in
+        card.getTransactions().elements.error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
+        }
 
-            return promise
+        wait()
+    }
+
+    func testGetTransactionsPaginatorGetNextShouldReturnUnexpectedResponseError() {
+        let card: Card = Mapper().map("{}")!
+        card.adapter = MockRestAdapter()
+        let expectation = expectationWithDescription("Card test: get transactions.")
+
+        card.getTransactions().getNext().error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testGetTransactionsPaginatorHasNextShouldReturnUnexpectedResponseError() {
+        let card: Card = Mapper().map("{}")!
+        card.adapter = MockRestAdapter()
+        let expectation = expectationWithDescription("Card test: get transactions.")
+
+        card.getTransactions().hasNext().error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
+
+            expectation.fulfill()
         }
 
         wait()

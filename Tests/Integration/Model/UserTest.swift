@@ -33,7 +33,7 @@ class UserTest: UpholdTestCase {
                 "}" +
             "}" +
         "}"
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
 
         user.getBalanceByCurrency("EUR").then { (currency: Currency) -> () in
@@ -69,23 +69,20 @@ class UserTest: UpholdTestCase {
                 "}" +
             "}" +
         "}"
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
-        let promise: Promise<Currency> = user.getBalanceByCurrency("USD")
 
-        promise.recover { (error: ErrorType) -> Promise<Currency> in
+        user.getBalanceByCurrency("USD").error { (error: ErrorType) -> Void in
             guard let error = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Currency does not exist.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -93,23 +90,20 @@ class UserTest: UpholdTestCase {
 
     func testGetBalancesByCurrencyShouldReturnEmptyBalancesError() {
         let expectation = expectationWithDescription("User test: get balances by currency.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: "{}")
-        let promise: Promise<Currency> = user.getBalanceByCurrency("EUR")
 
-        promise.recover { (error: ErrorType) -> Promise<Currency> in
+        user.getBalanceByCurrency("EUR").error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
             XCTAssertEqual(error.description, "Balances should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -117,23 +111,20 @@ class UserTest: UpholdTestCase {
 
     func testGetBalancesByCurrencyShouldReturnEmptyCurrenciesError() {
         let expectation = expectationWithDescription("User test: get balances by currency.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: "{\"balances\": {} }")
-        let promise: Promise<Currency> = user.getBalanceByCurrency("EUR")
 
-        promise.recover { (error: ErrorType) -> Promise<Currency> in
+        user.getBalanceByCurrency("EUR").error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
             XCTAssertEqual(error.description, "Currencies should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -157,7 +148,7 @@ class UserTest: UpholdTestCase {
                 "}" +
             "}" +
         "}"
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
 
         user.getBalances().then { (currencies: [Currency]) -> () in
@@ -174,23 +165,20 @@ class UserTest: UpholdTestCase {
 
     func testGetBalancesShouldReturnEmptyBalancesError() {
         let expectation = expectationWithDescription("User test: get balances by currency.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: "{}")
-        let promise: Promise<[Currency]> = user.getBalances()
 
-        promise.recover { (error: ErrorType) -> Promise<[Currency]> in
+        user.getBalances().error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
             XCTAssertEqual(error.description, "Balances should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -198,23 +186,20 @@ class UserTest: UpholdTestCase {
 
     func testGetBalancesShouldReturnEmptyCurrenciesError() {
         let expectation = expectationWithDescription("User test: get balances by currency.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: "{\"balances\": {} }")
-        let promise: Promise<[Currency]> = user.getBalances()
 
-        promise.recover { (error: ErrorType) -> Promise<[Currency]> in
+        user.getBalances().error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
             XCTAssertEqual(error.description, "Currencies should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -223,7 +208,7 @@ class UserTest: UpholdTestCase {
     func testGetCardsByCurrencyShouldReturnTheArrayOfCardsWithCurrency() {
         let cards: [Card] = [Fixtures.loadCard(["id": "foobar", "currency": "USD"]), Fixtures.loadCard(["id": "foobiz", "currency": "BTC"]), Fixtures.loadCard(["id": "fuzbuz", "currency": "BTC"])]
         let expectation = expectationWithDescription("User test: get cards by currency.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: Mapper().toJSONString(cards)!)
 
         user.getCardsByCurrency("BTC").then { (cards: [Card]) -> () in
@@ -240,25 +225,21 @@ class UserTest: UpholdTestCase {
     }
 
     func testGetCardsByCurrencyShouldReturnUnmatchedCurrencyError() {
-        let card: Card = Fixtures.loadCard(["id": "foobar", "currency": "BTC"])
         let expectation = expectationWithDescription("User test: get balances by currency.")
-        let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: Mapper().toJSONString(card)!)
-        let promise: Promise<[Card]> = user.getCardsByCurrency("USD")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadCard(["id": "foobar", "currency": "BTC"]))!)
 
-        promise.recover { (error: ErrorType) -> Promise<[Card]> in
+        user.getCardsByCurrency("USD").error { (error: ErrorType) -> Void in
             guard let error = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "There are no cards in the given currency.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -267,7 +248,7 @@ class UserTest: UpholdTestCase {
     func testGetCardByIdShouldReturnTheCard() {
         let card: Card = Fixtures.loadCard(["id": "foobar"])
         let expectation = expectationWithDescription("User test: get card by id.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: Mapper().toJSONString(card)!)
 
         user.getCardById("foobar").then { (card: Card) -> () in
@@ -282,7 +263,7 @@ class UserTest: UpholdTestCase {
     func testGetCardsShouldReturnTheArrayOfCards() {
         let cards: [Card] = [Fixtures.loadCard(["id": "foo"]), Fixtures.loadCard(["id": "bar"])]
         let expectation = expectationWithDescription("User test: get cards.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: Mapper().toJSONString(cards)!)
 
         user.getCards().then { (cards: [Card]) -> () in
@@ -318,7 +299,7 @@ class UserTest: UpholdTestCase {
             "\"addresses\": [\"FizBiz FooBiz\"]," +
             "\"name\": \"Fuz Buz\"" +
         "}]"
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
 
         user.getContacts().then { (contact: [Contact]) -> () in
@@ -358,7 +339,7 @@ class UserTest: UpholdTestCase {
             "\"nationalMasked\": \"(XXX) XXX-XX04\"," +
             "\"internationalMasked\": \"+X XXX-XXX-XX04\"" +
         "}]"
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
 
         user.getPhones().then { (phones: [Phone]) -> () in
@@ -397,7 +378,7 @@ class UserTest: UpholdTestCase {
                 "}" +
             "}" +
         "}"
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
 
         user.getTotalBalances().then { (balances: UserBalance) -> () in
@@ -426,43 +407,91 @@ class UserTest: UpholdTestCase {
 
     func testGetTotalBalancesShouldReturnEmptyBalancesError() {
         let expectation = expectationWithDescription("User test: get total balances.")
-        let user: User = Fixtures.loadUser(nil)
+        let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: "{}")
         let promise: Promise<UserBalance> = user.getTotalBalances()
 
-        promise.recover { (error: ErrorType) -> Promise<UserBalance> in
+        promise.error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
             XCTAssertEqual(error.description, "Balances should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
     }
 
-    func testGetUserTransactionsShouldReturnTheListOfTransactions() {
-        let expectation = expectationWithDescription("User test: get user transactions.")
-        let transactions: [Transaction] = [Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])]
-        let user: User = Fixtures.loadUser(nil)
-        user.adapter = MockRestAdapter(body: Mapper().toJSONString(transactions)!)
+    func testGetTransactionsShouldReturnTheArrayOfTransactions() {
+        let expectation = expectationWithDescription("User test: get transactions.")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!)
 
-        user.getUserTransactions().then { (transactions: [Transaction]) -> () in
-            XCTAssertEqual(transactions.count, 2, "Failed: Wrong number of phone transactions.")
+        user.getUserTransactions().elements.then({ (transactions: [Transaction]) -> () in
+            let mockRestAdapter: MockRestAdapter = (user.adapter as? MockRestAdapter)!
+
+            XCTAssertEqual(mockRestAdapter.headers!.count, 1, "Failed: Wrong number of headers.")
+            XCTAssertEqual(mockRestAdapter.headers!["Range"], "items=0-49", "Failed: Wrong number of headers.")
+            XCTAssertEqual(transactions.count, 2, "Failed: Wrong number of transaction objects.")
             XCTAssertEqual(transactions[0].id, "foobar", "Failed: Wrong transaction object.")
             XCTAssertEqual(transactions[1].id, "foobiz", "Failed: Wrong transaction object.")
 
             expectation.fulfill()
-        }
+        })
 
         wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorCount() {
+        let expectation = expectationWithDescription("User test: get transactions.")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!, headers: ["content-range": "0-2/60"])
+
+        user.getUserTransactions().count().then({ (count: Int) -> () in
+            XCTAssertEqual(count, 60, "Failed: Wrong paginator count.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorHasNext() {
+        let expectation = expectationWithDescription("User test: get transactions.")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!, headers: ["content-range": "0-49/51"])
+
+        user.getUserTransactions().hasNext().then({ (bool: Bool) -> () in
+            XCTAssertTrue(bool, "Failed: Wrong paginator hasNext value.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorNextPage() {
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!)
+        let paginator: Paginator<Transaction> = user.getUserTransactions()
+
+        paginator.getNext()
+
+        let firstRequestHeaders = (user.adapter as? MockRestAdapter)!.headers
+
+        paginator.getNext()
+
+        let secondRequestHeaders = (user.adapter as? MockRestAdapter)!.headers
+
+        XCTAssertEqual(firstRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(firstRequestHeaders!["Range"], "items=50-99", "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!["Range"], "items=100-149", "Failed: Wrong number of headers.")
     }
 
     func testUpdateShouldReturnTheUser() {

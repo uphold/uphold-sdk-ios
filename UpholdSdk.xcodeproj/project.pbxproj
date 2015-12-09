@@ -68,6 +68,7 @@
 		BC91E8A41BECD8270074C538 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89F1BECD8270074C538 /* Value.swift */; };
 		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
 		BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
+		BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA32A241C18906C0013A347 /* PaginatorTest.swift */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
 		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
@@ -162,6 +163,7 @@
 		BC91E89F1BECD8270074C538 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Reserve/Value.swift; sourceTree = "<group>"; };
 		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
 		BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedResponseError.swift; sourceTree = "<group>"; };
+		BCA32A241C18906C0013A347 /* PaginatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatorTest.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 				BC995DA71BDFD9B50031FA5E /* ErrorHandling */,
 				BC38D9FA1BB97E4F0044239A /* Service */,
 				BC23817A1BB4627C0060CC80 /* Model */,
+				BCA32A231C18904E0013A347 /* Paginator */,
 				BCC9E0AE1BD10F0500C5C3C8 /* Util */,
 			);
 			path = Integration;
@@ -414,6 +417,14 @@
 				BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */,
 			);
 			name = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		BCA32A231C18904E0013A347 /* Paginator */ = {
+			isa = PBXGroup;
+			children = (
+				BCA32A241C18906C0013A347 /* PaginatorTest.swift */,
+			);
+			path = Paginator;
 			sourceTree = "<group>";
 		};
 		BCC9E0AE1BD10F0500C5C3C8 /* Util */ = {
@@ -703,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */,
 				BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */,
 				BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */,
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
