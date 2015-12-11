@@ -39,7 +39,11 @@ public class Denomination: Mappable {
     required public init?(_ map: Map) {
     }
 
-    /// Maps the JSON to the Object.
+    /**
+      Maps the JSON to the Object.
+
+      - parameter map: The object to map.
+    */
     public func mapping(map: Map) {
         amount  <- map["amount"]
         currency <- map["currency"]

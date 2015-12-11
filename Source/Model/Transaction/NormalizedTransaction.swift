@@ -27,7 +27,7 @@ public class NormalizedTransaction: Mappable {
       - parameter currency: The currency of the transaction normalized.
       - parameter fee: The fee of the transaction normalized.
       - parameter rate: The rate of the transaction normalized.
-     */
+    */
     public init(amount: String, commission: String, currency: String, fee: String, rate: String) {
         self.amount = amount
         self.commission = commission
@@ -48,7 +48,7 @@ public class NormalizedTransaction: Mappable {
       Maps the JSON to the Object.
 
       - parameter map: The object to map.
-     */
+    */
     public func mapping(map: Map) {
         self.amount <- map["amount"]
         self.commission <- map["commission"]

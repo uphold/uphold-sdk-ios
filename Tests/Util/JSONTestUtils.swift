@@ -9,7 +9,7 @@ public class JSONTestUtils {
       - parameter json: The JSON string to convert.
 
       - returns: The dictionary.
-     */
+    */
     public static func JSONtoDictionary(json: String) -> [String: AnyObject]? {
         if let data = json.dataUsingEncoding(NSUTF8StringEncoding) {
             do {

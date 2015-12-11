@@ -29,7 +29,11 @@ public class Source: Mappable {
     required public init?(_ map: Map) {
     }
 
-    /// Maps the JSON to the Object.
+    /**
+      Maps the JSON to the Object.
+
+      - parameter map: The object to map.
+    */
     public func mapping(map: Map) {
         id  <- map["id"]
         amount <- map["amount"]

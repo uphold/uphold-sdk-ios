@@ -55,7 +55,7 @@ public class Destination: Mappable {
       - parameter rate: The rate from the destination of the transaction.
       - parameter type: The type from the destination of the transaction.
       - parameter username: The username from the destination of the transaction.
-     */
+    */
     public init(accountId: String, cardId: String, accountType: String, amount: String, base: String, commission: String, currency: String, description: String, fee: String, rate: String, type: String, username: String) {
         self.accountId = accountId
         self.cardId = cardId
