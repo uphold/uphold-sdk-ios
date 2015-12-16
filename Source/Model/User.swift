@@ -96,7 +96,7 @@ public class User: BaseModel, Mappable {
       - returns: A promise with the created contact.
      */
     public func createContact(contactRequest: ContactRequest) -> Promise<Contact> {
-        let request = self.adapter.buildRequest(UserService.createContact(Mapper().toJSONString(contactRequest, prettyPrint: false)!))
+        let request = self.adapter.buildRequest(UserService.createContact(Mapper().toJSON(contactRequest)))
 
         return self.adapter.buildResponse(request)
     }
@@ -284,11 +284,7 @@ public class User: BaseModel, Mappable {
       - returns: A promise with the updated user.
      */
     public func update(updateFields: [String: AnyObject]) -> Promise<User> {
-        guard let json = JSONUtils.toJSONString(updateFields) else {
-            return Promise<User>(error: LogicError(code: nil, message: "Error parsing the fields to update."))
-        }
-
-        let request = self.adapter.buildRequest(UserService.updateUser(json))
+        let request = self.adapter.buildRequest(UserService.updateUser(updateFields))
 
         return self.adapter.buildResponse(request)
     }

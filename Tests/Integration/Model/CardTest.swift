@@ -249,30 +249,6 @@ class CardTest: UpholdTestCase {
         wait()
     }
 
-    func testUpdateShouldReturnParseError() {
-        let card: Card = Fixtures.loadCard(nil)
-        card.adapter = MockRestAdapter(body: Mapper().toJSONString(card)!)
-        let expectation = expectationWithDescription("Card test: update card.")
-        let promise: Promise<Card> = card.update(["id": [true: true]])
-
-        promise.recover { (error: ErrorType) -> Promise<Card> in
-            guard let error = error as? LogicError else {
-                XCTFail("Error should be LogicError.")
-
-                return promise
-            }
-
-            XCTAssertNil(error.code, "Failed: Wrong code.")
-            XCTAssertEqual(error.description, "Error parsing the fields to update.", "Failed: Wrong message.")
-
-            expectation.fulfill()
-
-            return promise
-        }
-
-        wait()
-    }
-
     func testUpdateShouldReturnTheCard() {
         let card: Card = Fixtures.loadCard(["id": "foobar"])
         card.adapter = MockRestAdapter(body: Mapper().toJSONString(card)!)

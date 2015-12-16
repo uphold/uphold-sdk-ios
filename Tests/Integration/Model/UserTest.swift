@@ -465,29 +465,6 @@ class UserTest: UpholdTestCase {
         wait()
     }
 
-    func testUpdateShouldReturnParseError() {
-        let expectation = expectationWithDescription("User test: update user.")
-        let user: User = Fixtures.loadUser(["username": "foobar"])
-        user.adapter = MockRestAdapter(body: Mapper().toJSONString(user)!)
-        let promise: Promise<User> = user.update(["username": [true: true]])
-
-        promise.recover { (error: ErrorType) -> Promise<User> in
-            guard let error = error as? LogicError else {
-                XCTFail("Error should be LogicError.")
-
-                return promise
-            }
-
-            XCTAssertNil(error.code, "Failed: Wrong code.")
-            XCTAssertEqual(error.description, "Error parsing the fields to update.", "Failed: Wrong message.")
-
-            expectation.fulfill()
-
-            return promise
-        }
-        wait()
-    }
-
     func testUpdateShouldReturnTheUser() {
         let expectation = expectationWithDescription("User test: update user.")
         let user: User = Fixtures.loadUser(["username": "foobar"])

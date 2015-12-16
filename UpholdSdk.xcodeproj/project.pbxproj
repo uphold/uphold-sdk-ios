@@ -45,7 +45,6 @@
 		BC4110511C05E68E0063761C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104E1C05E68E0063761C /* Contact.swift */; };
 		BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104F1C05E68E0063761C /* ContactRequest.swift */; };
 		BC4110531C05E68E0063761C /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110501C05E68E0063761C /* Phone.swift */; };
-		BC4110551C05E6CC0063761C /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110541C05E6CC0063761C /* JSONUtils.swift */; };
 		BC4110571C05E7270063761C /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4110561C05E7270063761C /* Fakery.framework */; };
 		BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
 		BC4A30571BEA655B001B6249 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A30561BEA655B001B6249 /* Token.swift */; };
@@ -68,7 +67,6 @@
 		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
 		BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
-		BCBF406A1C0C73C900F69C49 /* JSONUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBF40691C0C73C900F69C49 /* JSONUtilsTest.swift */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
 		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
 		BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */; };
@@ -140,7 +138,6 @@
 		BC41104E1C05E68E0063761C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		BC41104F1C05E68E0063761C /* ContactRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRequest.swift; sourceTree = "<group>"; };
 		BC4110501C05E68E0063761C /* Phone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
-		BC4110541C05E6CC0063761C /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONUtils.swift; path = Util/JSONUtils.swift; sourceTree = "<group>"; };
 		BC4110561C05E7270063761C /* Fakery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fakery.framework; path = Carthage/Build/iOS/Fakery.framework; sourceTree = "<group>"; };
 		BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdTestCase.swift; path = Util/UpholdTestCase.swift; sourceTree = "<group>"; };
 		BC4A30561BEA655B001B6249 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -162,7 +159,6 @@
 		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
 		BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedResponseError.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
-		BCBF40691C0C73C900F69C49 /* JSONUtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONUtilsTest.swift; path = Util/JSONUtilsTest.swift; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
 		BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientErrorHandling.swift; sourceTree = "<group>"; };
@@ -410,7 +406,6 @@
 			isa = PBXGroup;
 			children = (
 				BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */,
-				BCBF40691C0C73C900F69C49 /* JSONUtilsTest.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -465,7 +460,6 @@
 		BCF656C31BCFCEAE008E2F97 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				BC4110541C05E6CC0063761C /* JSONUtils.swift */,
 				BCF656C41BCFCEE5008E2F97 /* Header.swift */,
 			);
 			name = Util;
@@ -656,7 +650,6 @@
 				BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */,
 				BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */,
 				BC4110511C05E68E0063761C /* Contact.swift in Sources */,
-				BC4110551C05E6CC0063761C /* JSONUtils.swift in Sources */,
 				BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */,
 				BC91E8A41BECD8270074C538 /* Value.swift in Sources */,
 				BC2381671BB4626F0060CC80 /* Card.swift in Sources */,
@@ -709,7 +702,6 @@
 				BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
-				BCBF406A1C0C73C900F69C49 /* JSONUtilsTest.swift in Sources */,
 				BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */,
 				BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,

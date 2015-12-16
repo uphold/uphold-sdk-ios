@@ -106,7 +106,7 @@ public class Card: BaseModel, Mappable {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Card id should not be nil."))
         }
 
-        let request = self.adapter.buildRequest(UserCardService.createTransaction(id, commit: commit, transactionRequest: Mapper().toJSONString(transactionRequest, prettyPrint: false)!))
+        let request = self.adapter.buildRequest(UserCardService.createTransaction(id, commit: commit, transactionRequest: Mapper().toJSON(transactionRequest)))
 
         return self.adapter.buildResponse(request)
     }
@@ -134,15 +134,11 @@ public class Card: BaseModel, Mappable {
       - returns: A promise with the card updated.
     */
     public func update(updateFields: [String: AnyObject]) -> Promise<Card> {
-        guard let json = JSONUtils.toJSONString(updateFields) else {
-            return Promise<Card>(error: LogicError(code: nil, message: "Error parsing the fields to update."))
-        }
-
         guard let id = self.id else {
             return Promise<Card>(error: UnexpectedResponseError(message: "Card id should not be nil."))
         }
 
-        let request = self.adapter.buildRequest(UserCardService.updateCard(id, updateFields: json))
+        let request = self.adapter.buildRequest(UserCardService.updateCard(id, updateFields: updateFields))
 
         return self.adapter.buildResponse(request)
     }
