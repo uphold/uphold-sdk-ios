@@ -24,7 +24,7 @@ public class UserCardService {
 
       - returns: A request to confirm the transaction.
     */
-    static func confirmTransaction(cardId: String, transactionId: String, transactionCommitRequest: String) -> Request {
+    static func confirmTransaction(cardId: String, transactionId: String, transactionCommitRequest: AnyObject) -> Request {
         return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(transactionCommitRequest)
     }
 
@@ -37,7 +37,7 @@ public class UserCardService {
 
       - returns: A request to create a transaction.
     */
-    static func createTransaction(cardId: String, commit: Bool, transactionRequest: String) -> Request {
+    static func createTransaction(cardId: String, commit: Bool, transactionRequest: AnyObject) -> Request {
         return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions", cardId)).query(["commit": commit ? "true" : "false"]).send(transactionRequest)
     }
 
@@ -48,7 +48,7 @@ public class UserCardService {
 
       - returns: A request to create a card.
     */
-    static func createUserCard(cardRequest: String) -> Request {
+    static func createUserCard(cardRequest: AnyObject) -> Request {
         return UpholdClient().post("/v0/me/cards").send(cardRequest)
     }
 
@@ -92,7 +92,7 @@ public class UserCardService {
 
       - returns: A request to update a card.
     */
-    static func updateCard(cardId: String, updateFields: String) -> Request {
+    static func updateCard(cardId: String, updateFields: AnyObject) -> Request {
         return UpholdClient().patch(String(format: "/v0/me/cards/%@", cardId)).send(updateFields)
     }
 

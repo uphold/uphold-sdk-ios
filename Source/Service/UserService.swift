@@ -11,7 +11,7 @@ public class UserService {
 
       - returns: A request to create a contact.
     */
-    static func createContact(contactRequest: String) -> Request {
+    static func createContact(contactRequest: AnyObject) -> Request {
         return UpholdClient().post("/v0/me/contacts").send(contactRequest)
     }
 
@@ -69,7 +69,7 @@ public class UserService {
 
       - returns: A request to update the user information.
     */
-    static func updateUser(updatefields: String) -> Request {
+    static func updateUser(updatefields: AnyObject) -> Request {
         return UpholdClient().patch("/v0/me").send(updatefields)
     }
 
