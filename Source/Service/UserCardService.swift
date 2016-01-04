@@ -21,6 +21,7 @@ public class UserCardService {
 
       - parameter cardId: The id of the card.
       - parameter transactionId: The id of the transaction.
+      - parameter transactionCommitRequest: The transaction commit information.
 
       - returns: A request to confirm the transaction.
     */

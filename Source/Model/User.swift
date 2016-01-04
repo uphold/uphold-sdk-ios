@@ -66,6 +66,8 @@ public class User: BaseModel, Mappable {
 
     /**
       Constructor.
+
+      - parameter map: Mapping data object.
     */
     required public init?(_ map: Map) {
     }
@@ -74,7 +76,7 @@ public class User: BaseModel, Mappable {
       Maps the JSON to the Object.
 
       - parameter map: The object to map.
-     */
+    */
     public func mapping(map: Map) {
         self.country <- map["country"]
         self.currencies <- map["currencies"]

@@ -35,6 +35,8 @@ public class Currency: Mappable {
 
     /**
       Constructor.
+
+      - parameter map: Mapping data object.
     */
     required public init?(_ map: Map) {
     }
@@ -43,7 +45,7 @@ public class Currency: Mappable {
       Maps the JSON to the Object.
 
       - parameter map: The object to map.
-     */
+    */
     public func mapping(map: Map) {
         self.amount <- map["amount"]
         self.balance <- map["balance"]

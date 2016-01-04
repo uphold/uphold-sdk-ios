@@ -27,10 +27,10 @@ public class SessionManager {
     }
 
     /**
-      Sets the bearer token.
+      Gets the bearer token.
 
-      - parameter token: The bearer token.
-     */
+      - returns: The bearer token.
+    */
     func getBearerToken() -> String? {
         guard let token = self.keychain.get(SessionManager.KEYCHAIN_TOKEN_KEY) else {
             return nil

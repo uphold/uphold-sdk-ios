@@ -25,6 +25,8 @@ public class Source: Mappable {
 
     /**
       Constructor.
+
+      - parameter map: Mapping data object.
     */
     required public init?(_ map: Map) {
     }

@@ -40,11 +40,17 @@ public class UserSettings: Mappable {
 
     /**
       Constructor.
+
+      - parameter map: Mapping data object.
     */
     required public init?(_ map: Map) {
     }
 
-    /// Maps the JSON to the Object.
+    /**
+      Maps the JSON to the Object.
+
+      - parameter map: The object to map.
+    */
     public func mapping(map: Map) {
         currency  <- map["currency"]
         hasNewsSubscription  <- map["hasNewsSubscription"]

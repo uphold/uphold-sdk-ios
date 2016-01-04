@@ -40,6 +40,8 @@ public class Deposit: Mappable {
 
     /**
       Constructor.
+
+      - parameter map: Mapping data object.
     */
     required public init?(_ map: Map) {
     }
