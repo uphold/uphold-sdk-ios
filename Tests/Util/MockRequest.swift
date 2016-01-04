@@ -33,7 +33,6 @@ public class MockRequest: Request {
         if let headers = headers {
             super.headers = headers
         }
-
     }
 
     /**
@@ -58,7 +57,7 @@ public class MockRequest: Request {
 
       - parameter done: The completion handler.
       - parameter errorHandler: The error handler.
-     */
+    */
     public override func end(done: (SwiftClient.Response) -> Void, onError errorHandler: ((NSError) -> Void)? = nil) {
         let request = NSMutableURLRequest(URL: NSURL(string: self.mockURL)!)
         request.HTTPMethod = super.method

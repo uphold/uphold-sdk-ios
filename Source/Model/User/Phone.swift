@@ -45,6 +45,8 @@ public class Phone: Mappable {
 
     /**
       Constructor.
+
+      - parameter map: Mapping data object.
     */
     required public init?(_ map: Map) {
     }
@@ -53,7 +55,7 @@ public class Phone: Mappable {
       Maps the JSON to the Object.
 
       - parameter map: The object to map.
-     */
+    */
     public func mapping(map: Map) {
         self.id <- map["id"]
         self.e164Masked <- map["e164Masked"]

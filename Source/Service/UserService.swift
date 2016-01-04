@@ -7,7 +7,7 @@ public class UserService {
     /**
       Creates a request to create a contact.
 
-      - parameter contact: The request contact information.
+      - parameter contactRequest: The request contact information.
 
       - returns: A request to create a contact.
     */
