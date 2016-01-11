@@ -1,4 +1,4 @@
-github "Hearst-DD/ObjectMapper" ~> 1.0.1
+github "Hearst-DD/ObjectMapper" ~> 1.1.1
 github "exchangegroup/keychain-swift" ~> 3.0.8
 github "seegno-forks/PromiseKit" "support/update-codesign-identity"
 github "theadam/SwiftClient" ~> 2.0.2

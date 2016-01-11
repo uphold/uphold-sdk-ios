@@ -1,5 +1,5 @@
 github "seegno-forks/OMGHTTPURLRQ" "3bcdc6526afe861b4c8cbc7603ed168cca90c613"
-github "Hearst-DD/ObjectMapper" "1.0.1"
+github "Hearst-DD/ObjectMapper" "1.1.1"
 github "theadam/SwiftClient" "2.0.2"
 github "SwiftyJSON/SwiftyJSON" "2.3.3"
 github "kylef/URITemplate.swift" "175429f708de77e1c894e2fa4bc6c61f461822bb"
