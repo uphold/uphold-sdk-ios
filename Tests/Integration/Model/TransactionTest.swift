@@ -10,21 +10,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: cancel transaction.")
         let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\" }")!
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.cancel()
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.cancel().error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Origin cardId is missing from this transaction.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -34,21 +31,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: cancel transaction.")
         let transaction: Transaction = Mapper().map("{}")!
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.cancel()
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.cancel().error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Transaction id should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -58,21 +52,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: cancel transaction.")
         let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\", \"origin\": { \"CardId\": \"fiz\"} }")!
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.cancel()
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.cancel().error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Transaction status should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -82,21 +73,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: cancel transaction.")
         let transaction = Fixtures.loadTransaction(["transactionStatus": "pending"])
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.cancel()
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.cancel().error { (error: ErrorType) -> Void in
             guard let error = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Unable to cancel uncommited transaction.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -106,21 +94,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: cancel transaction.")
         let transaction = Fixtures.loadTransaction(["transactionStatus": "foobar"])
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.cancel()
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.cancel().error { (error: ErrorType) -> Void in
             guard let error = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "This transaction cannot be cancelled, because the current status is foobar.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -144,21 +129,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: commit transaction.")
         let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\" }")!
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.commit(TransactionCommitRequest(message: "foobar"))
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.commit(TransactionCommitRequest(message: "foobar")).error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Origin cardId is missing from this transaction.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -168,21 +150,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: commit transaction.")
         let transaction: Transaction = Mapper().map("{}")!
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.commit(TransactionCommitRequest(message: "foobar"))
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.commit(TransactionCommitRequest(message: "foobar")).error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Transaction id should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -192,21 +171,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: commit transaction.")
         let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\", \"origin\": { \"CardId\": \"fiz\"} }")!
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.commit(TransactionCommitRequest(message: "foobar"))
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.commit(TransactionCommitRequest(message: "foobar")).error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
                 XCTFail("Error should be UnexpectedResponseError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Transaction status should not be nil.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()
@@ -216,21 +192,18 @@ class TransactionTest: UpholdTestCase {
         let expectation = expectationWithDescription("Transaction test: commit transaction.")
         let transaction = Fixtures.loadTransaction(["transactionStatus": "foobar"])
         transaction.adapter = MockRestAdapter(body: "foobar")
-        let promise: Promise<Transaction> = transaction.commit(TransactionCommitRequest(message: "foobar"))
 
-        promise.recover { (error: ErrorType) -> Promise<Transaction> in
+        transaction.commit(TransactionCommitRequest(message: "foobar")).error { (error: ErrorType) -> Void in
             guard let error = error as? LogicError else {
                 XCTFail("Error should be LogicError.")
 
-                return promise
+                return
             }
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "This transaction cannot be committed, because the current status is foobar.", "Failed: Wrong message.")
 
             expectation.fulfill()
-
-            return promise
         }
 
         wait()

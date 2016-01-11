@@ -68,4 +68,19 @@ public class Header {
         return resetTime
     }
 
+    /**
+      Gets the total number of the results available for the request.
+
+      - parameter headers: The response headers.
+
+      - returns: The total number of elements.
+    */
+    public static func getTotalNumberOfResults(headers: [String: String]) -> Int? {
+        guard let contentRange = headers["content-range"] else {
+            return nil
+        }
+
+        return NSString(string: contentRange.substringFromIndex(contentRange.rangeOfString("/")!.endIndex)).integerValue
+    }
+
 }

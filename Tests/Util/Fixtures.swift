@@ -6,12 +6,21 @@ import UpholdSdk
 public class Fixtures {
 
     /**
-     Fixture to generate a card.
+      Fixture to generate a card.
 
-     - parameter fields: A dictionary containing specific fields for the card to have.
+      - returns: A card.
+    */
+    public static func loadCard() -> Card {
+        return loadCard(nil)
+    }
 
-     - returns: A card.
-     */
+    /**
+      Fixture to generate a card.
+
+      - parameter fields: A dictionary containing specific fields for the card to have.
+
+      - returns: A card.
+    */
     public static func loadCard(fields: [String: String]?) -> Card {
         let faker = Faker(locale: "en")
 
@@ -53,12 +62,21 @@ public class Fixtures {
     }
 
     /**
-     Fixture to generate a transaction.
+      Fixture to generate a transaction.
 
-     - parameter fields: A dictionary containing specific fields for the transaction to have.
+      - returns: A transaction.
+    */
+    public static func loadTransaction() -> Transaction {
+        return loadTransaction(nil)
+    }
 
-     - returns: A transaction.
-     */
+    /**
+      Fixture to generate a transaction.
+
+      - parameter fields: A dictionary containing specific fields for the transaction to have.
+
+      - returns: A transaction.
+    */
     public static func loadTransaction(fields: [String: String]?) -> Transaction {
         let faker = Faker(locale: "en")
 
@@ -139,10 +157,19 @@ public class Fixtures {
     /**
       Fixture to generate a user.
 
+      - returns: A user.
+    */
+    public static func loadUser() -> User {
+        return loadUser(nil)
+    }
+
+    /**
+      Fixture to generate a user.
+
       - parameter fields: A dictionary containing specific fields for the user to have.
 
       - returns: A user.
-     */
+    */
     public static func loadUser(fields: [String: String]?) -> User {
         let faker = Faker(locale: "en")
 

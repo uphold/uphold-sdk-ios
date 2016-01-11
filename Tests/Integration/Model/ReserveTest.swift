@@ -7,8 +7,8 @@ import PromiseKit
 /// Reserve integration tests.
 class ReserveTest: UpholdTestCase {
 
-    func testGetLedgerShouldReturnTheArrayWithDeposits() {
-        let expectation = expectationWithDescription("Reserve test.")
+    func testGetLedgerShouldReturnTheArrayOfDeposits() {
+        let expectation = expectationWithDescription("Reserve test: get ledger.")
         let json: String = "[{" +
             "\"type\": \"foo\"," +
             "\"out\": {" +
@@ -35,8 +35,13 @@ class ReserveTest: UpholdTestCase {
         "}]"
         let reserve = UpholdClient().getReserve()
         reserve.adapter = MockRestAdapter(body: json)
+        let paginator: Paginator<Deposit> = reserve.getLedger()
 
-        reserve.getLedger(0, end: 5).then { (deposits: [Deposit]) -> () in
+        paginator.elements.then({ (deposits: [Deposit]) -> () in
+            let mockRestAdapter: MockRestAdapter = (reserve.adapter as? MockRestAdapter)!
+
+            XCTAssertEqual(mockRestAdapter.headers!.count, 1, "Failed: Wrong number of headers.")
+            XCTAssertEqual(mockRestAdapter.headers!["Range"], "items=0-49", "Failed: Wrong number of headers.")
             XCTAssertEqual(deposits[0].createdAt, "2015-04-20T14:57:12.398Z", "Failed: DepositMovement in currency didn't match.")
             XCTAssertEqual(deposits[0].input!.amount, "foobiz", "Failed: DepositMovement in amount didn't match.")
             XCTAssertEqual(deposits[0].input!.currency, "fiz", "Failed: DepositMovement in currency didn't match.")
@@ -52,9 +57,56 @@ class ReserveTest: UpholdTestCase {
             XCTAssertEqual(deposits[1].type, "bar", "Failed: Deposit type didn't match.")
 
             expectation.fulfill()
-        }
+        })
 
         wait()
+    }
+
+    func testGetLedgerShouldReturnThePaginatorCount() {
+        let expectation = expectationWithDescription("Reserve test: get ledger.")
+        let reserve = UpholdClient().getReserve()
+        reserve.adapter = MockRestAdapter(body: "[{ \"id\": \"foobar\" }, { \"id\": \"foobiz\" }]", headers: ["content-range": "0-2/60"])
+
+        reserve.getLedger().count().then({ (count: Int) -> () in
+            XCTAssertEqual(count, 60, "Failed: Wrong paginator count.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetLedgerShouldReturnThePaginatorHasNext() {
+        let expectation = expectationWithDescription("Reserve test: get ledger.")
+        let reserve = UpholdClient().getReserve()
+        reserve.adapter = MockRestAdapter(body: "[{ \"id\": \"foobar\" }, { \"id\": \"foobiz\" }]", headers: ["content-range": "0-49/51"])
+
+        reserve.getLedger().hasNext().then({ (bool: Bool) -> () in
+            XCTAssertTrue(bool, "Failed: Wrong paginator hasNext value.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetLedgerShouldReturnThePaginatorNextPage() {
+        let reserve = UpholdClient().getReserve()
+        reserve.adapter = MockRestAdapter(body: "[{ \"id\": \"foobar\" }, { \"id\": \"foobiz\" }]")
+        let paginator: Paginator<Deposit> = reserve.getLedger()
+
+        paginator.getNext()
+
+        let firstRequestHeaders = (reserve.adapter as? MockRestAdapter)!.headers
+
+        paginator.getNext()
+
+        let secondRequestHeaders = (reserve.adapter as? MockRestAdapter)!.headers
+
+        XCTAssertEqual(firstRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(firstRequestHeaders!["Range"], "items=50-99", "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!["Range"], "items=100-149", "Failed: Wrong number of headers.")
     }
 
     func testGetStatisticsShouldReturnTheListWithReserveStatistics() {
@@ -118,10 +170,9 @@ class ReserveTest: UpholdTestCase {
     }
 
     func testGetTransactionsByIdShouldReturnTheTransaction() {
-        let expectation = expectationWithDescription("Reserve test.")
-        let json: String = "{ \"id\": \"foobar\" }"
+        let expectation = expectationWithDescription("Reserve test: get transaction by id.")
         let reserve = UpholdClient().getReserve()
-        reserve.adapter = MockRestAdapter(body: json)
+        reserve.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(["transactionId": "foobar"]))!)
 
         reserve.getTransactionById("foobar").then { (transaction: Transaction) -> () in
             XCTAssertEqual(transaction.id, "foobar", "Failed: TransactionId didn't match.")
@@ -132,20 +183,71 @@ class ReserveTest: UpholdTestCase {
         wait()
     }
 
-    func testGetTransactionsShouldReturnTheListOfTransactions() {
-        let expectation = expectationWithDescription("Reserve test.")
-        let json: String = "[{ \"id\": \"foobar\" }, { \"id\": \"foobiz\" }]"
+    func testGetTransactionsShouldReturnTheArrayOfTransactions() {
+        let expectation = expectationWithDescription("Reserve test: get transactions.")
         let reserve = UpholdClient().getReserve()
-        reserve.adapter = MockRestAdapter(body: json)
+        reserve.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!)
 
-        reserve.getTransactions(0, end: 5).then { (transaction: [Transaction]) -> () in
-            XCTAssertEqual(transaction.first!.id, "foobar", "Failed: TransactionId didn't match.")
-            XCTAssertEqual(transaction.last!.id, "foobiz", "Failed: TransactionId didn't match.")
+        reserve.getTransactions().elements.then({ (transactions: [Transaction]) -> () in
+            let mockRestAdapter: MockRestAdapter = (reserve.adapter as? MockRestAdapter)!
+
+            XCTAssertEqual(mockRestAdapter.headers!.count, 1, "Failed: Wrong number of headers.")
+            XCTAssertEqual(mockRestAdapter.headers!["Range"], "items=0-49", "Failed: Wrong number of headers.")
+            XCTAssertEqual(transactions.count, 2, "Failed: Wrong number of transaction objects.")
+            XCTAssertEqual(transactions[0].id, "foobar", "Failed: Wrong transaction object.")
+            XCTAssertEqual(transactions[1].id, "foobiz", "Failed: Wrong transaction object.")
 
             expectation.fulfill()
-        }
+        })
 
         wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorCount() {
+        let expectation = expectationWithDescription("Reserve test: get transactions.")
+        let reserve = UpholdClient().getReserve()
+        reserve.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!, headers: ["content-range": "0-2/60"])
+
+        reserve.getTransactions().count().then({ (count: Int) -> () in
+            XCTAssertEqual(count, 60, "Failed: Wrong paginator count.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorHasNext() {
+        let expectation = expectationWithDescription("Reserve test: get transactions.")
+        let reserve = UpholdClient().getReserve()
+        reserve.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!, headers: ["content-range": "0-49/51"])
+
+        reserve.getTransactions().hasNext().then({ (bool: Bool) -> () in
+            XCTAssertTrue(bool, "Failed: Wrong paginator hasNext value.")
+
+            expectation.fulfill()
+        })
+
+        wait()
+    }
+
+    func testGetTransactionsShouldReturnThePaginatorNextPage() {
+        let reserve = UpholdClient().getReserve()
+        reserve.adapter = MockRestAdapter(body: Mapper().toJSONString([Fixtures.loadTransaction(["transactionId": "foobar"]), Fixtures.loadTransaction(["transactionId": "foobiz"])])!)
+        let paginator: Paginator<Transaction> = reserve.getTransactions()
+
+        paginator.getNext()
+
+        let firstRequestHeaders = (reserve.adapter as? MockRestAdapter)!.headers
+
+        paginator.getNext()
+
+        let secondRequestHeaders = (reserve.adapter as? MockRestAdapter)!.headers
+
+        XCTAssertEqual(firstRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!.count, 1, "Failed: Wrong number of headers.")
+        XCTAssertEqual(firstRequestHeaders!["Range"], "items=50-99", "Failed: Wrong number of headers.")
+        XCTAssertEqual(secondRequestHeaders!["Range"], "items=100-149", "Failed: Wrong number of headers.")
     }
 
 }

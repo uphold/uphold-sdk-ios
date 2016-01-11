@@ -38,6 +38,8 @@
 		BC38DA001BB97E4F0044239A /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; };
 		BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; };
 		BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; };
+		BC3EE5951C1E3E9D0058478D /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EE5931C1E3E9D0058478D /* Paginator.swift */; };
+		BC3EE5961C1E3E9D0058478D /* PaginatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EE5941C1E3E9D0058478D /* PaginatorProtocol.swift */; };
 		BC4110461C05E5F90063761C /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110451C05E5F90063761C /* Fixtures.swift */; };
 		BC4110481C05E6350063761C /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110471C05E6350063761C /* Balance.swift */; };
 		BC41104C1C05E6400063761C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104A1C05E6400063761C /* Currency.swift */; };
@@ -66,6 +68,7 @@
 		BC91E8A41BECD8270074C538 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89F1BECD8270074C538 /* Value.swift */; };
 		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
 		BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
+		BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA32A241C18906C0013A347 /* PaginatorTest.swift */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
 		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
@@ -131,6 +134,8 @@
 		BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardServiceTest.swift; sourceTree = "<group>"; };
 		BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
+		BC3EE5931C1E3E9D0058478D /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
+		BC3EE5941C1E3E9D0058478D /* PaginatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatorProtocol.swift; sourceTree = "<group>"; };
 		BC4110451C05E5F90063761C /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fixtures.swift; path = Util/Fixtures.swift; sourceTree = "<group>"; };
 		BC4110471C05E6350063761C /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		BC41104A1C05E6400063761C /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -158,6 +163,7 @@
 		BC91E89F1BECD8270074C538 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Reserve/Value.swift; sourceTree = "<group>"; };
 		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
 		BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedResponseError.swift; sourceTree = "<group>"; };
+		BCA32A241C18906C0013A347 /* PaginatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatorTest.swift; sourceTree = "<group>"; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 				BCF656B91BCFCD6E008E2F97 /* Config */,
 				BCCBE55F1BC692E200D61852 /* ErrorHandling */,
 				BC23814A1BB4626F0060CC80 /* Model */,
+				BC3EE5921C1E3E9D0058478D /* Paginator */,
 				BC23815D1BB4626F0060CC80 /* Service */,
 				BCF656C31BCFCEAE008E2F97 /* Util */,
 			);
@@ -333,6 +340,7 @@
 				BC995DA71BDFD9B50031FA5E /* ErrorHandling */,
 				BC38D9FA1BB97E4F0044239A /* Service */,
 				BC23817A1BB4627C0060CC80 /* Model */,
+				BCA32A231C18904E0013A347 /* Paginator */,
 				BCC9E0AE1BD10F0500C5C3C8 /* Util */,
 			);
 			path = Integration;
@@ -359,6 +367,15 @@
 				BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		BC3EE5921C1E3E9D0058478D /* Paginator */ = {
+			isa = PBXGroup;
+			children = (
+				BC3EE5931C1E3E9D0058478D /* Paginator.swift */,
+				BC3EE5941C1E3E9D0058478D /* PaginatorProtocol.swift */,
+			);
+			path = Paginator;
 			sourceTree = "<group>";
 		};
 		BC4110491C05E6400063761C /* Balance */ = {
@@ -400,6 +417,14 @@
 				BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */,
 			);
 			name = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		BCA32A231C18904E0013A347 /* Paginator */ = {
+			isa = PBXGroup;
+			children = (
+				BCA32A241C18906C0013A347 /* PaginatorTest.swift */,
+			);
+			path = Paginator;
 			sourceTree = "<group>";
 		};
 		BCC9E0AE1BD10F0500C5C3C8 /* Util */ = {
@@ -641,6 +666,7 @@
 				BC41104D1C05E6400063761C /* UserBalance.swift in Sources */,
 				BC91E8A11BECD8270074C538 /* DepositMovement.swift in Sources */,
 				BC2381721BB4626F0060CC80 /* User.swift in Sources */,
+				BC3EE5951C1E3E9D0058478D /* Paginator.swift in Sources */,
 				BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */,
 				BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */,
 				BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */,
@@ -648,6 +674,7 @@
 				BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */,
 				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
 				BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */,
+				BC3EE5961C1E3E9D0058478D /* PaginatorProtocol.swift in Sources */,
 				BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */,
 				BC4110511C05E68E0063761C /* Contact.swift in Sources */,
 				BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */,
@@ -687,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */,
 				BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */,
 				BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */,
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
