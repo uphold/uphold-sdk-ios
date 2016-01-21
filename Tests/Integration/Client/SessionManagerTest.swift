@@ -15,7 +15,7 @@ class SessionManagerTest: UpholdTestCase {
     }
 
     func testGetBearerTokenShouldReturnToken() {
-        _ = UpholdClient(token: Token(bearerToken: "foo"))
+        _ = UpholdClient(bearerToken: "foo")
 
         guard let token = SessionManager.sharedInstance.getBearerToken() else {
             XCTFail("The bearer token should not be nil.")
@@ -27,7 +27,7 @@ class SessionManagerTest: UpholdTestCase {
     }
 
     func testInvalidateSessionShouldRemoveToken() {
-        let client = UpholdClient(token: Token(bearerToken: "foo"))
+        let client = UpholdClient(bearerToken: "foo")
 
         SessionManager.sharedInstance.invalidateSession()
 
@@ -45,7 +45,7 @@ class SessionManagerTest: UpholdTestCase {
     }
 
     func testUpholdClientWithTokenShouldSetToken() {
-        let client = UpholdClient(token: Token(bearerToken: "foo"))
+        let client = UpholdClient(bearerToken: "foo")
         let request = client.token.adapter.buildRequest(TickerService.getAllTickers())
 
         guard let header = request.headers["authorization"] else {

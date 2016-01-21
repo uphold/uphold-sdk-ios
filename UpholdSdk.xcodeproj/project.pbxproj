@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
 		BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
+		BC0C90231C4CF40400AD0F99 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
 		BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12F44E1C10691E00EB2E2B /* TransactionCommitRequest.swift */; };
 		BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; };
 		BC202DCA1C4420920069A230 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DC91C4420920069A230 /* AuthenticationRequest.swift */; };
@@ -54,6 +55,7 @@
 		BC4110531C05E68E0063761C /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110501C05E68E0063761C /* Phone.swift */; };
 		BC4110571C05E7270063761C /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4110561C05E7270063761C /* Fakery.framework */; };
 		BC431F431C57F51D000685DD /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC431F421C57F51D000685DD /* AuthorizationViewController.swift */; };
+		BC4424151C56A06500FAC537 /* URLUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4424141C56A06500FAC537 /* URLUtilsTest.swift */; };
 		BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
 		BC4A30571BEA655B001B6249 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A30561BEA655B001B6249 /* Token.swift */; };
 		BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A306F1BEA657C001B6249 /* BaseModel.swift */; };
@@ -109,6 +111,7 @@
 /* Begin PBXFileReference section */
 		BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRequest.swift; sourceTree = "<group>"; };
 		BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDenominationRequest.swift; sourceTree = "<group>"; };
+		BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ServiceTest.swift; sourceTree = "<group>"; };
 		BC12F44E1C10691E00EB2E2B /* TransactionCommitRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCommitRequest.swift; sourceTree = "<group>"; };
 		BC1CFA451BDFCF1D00979038 /* LogicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicError.swift; sourceTree = "<group>"; };
 		BC202DC91C4420920069A230 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 		BC4110501C05E68E0063761C /* Phone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
 		BC4110561C05E7270063761C /* Fakery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fakery.framework; path = Carthage/Build/iOS/Fakery.framework; sourceTree = "<group>"; };
 		BC431F421C57F51D000685DD /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		BC4424141C56A06500FAC537 /* URLUtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLUtilsTest.swift; path = Util/URLUtilsTest.swift; sourceTree = "<group>"; };
 		BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdTestCase.swift; path = Util/UpholdTestCase.swift; sourceTree = "<group>"; };
 		BC4A30561BEA655B001B6249 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		BC4A306F1BEA657C001B6249 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -385,6 +389,7 @@
 				BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */,
 				BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */,
 				BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */,
+				BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */,
+				BC4424141C56A06500FAC537 /* URLUtilsTest.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -748,6 +754,7 @@
 			files = (
 				BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */,
 				BC38DA021BB97E4F0044239A /* UserServiceTest.swift in Sources */,
+				BC0C90231C4CF40400AD0F99 /* OAuth2ServiceTest.swift in Sources */,
 				BC38DA011BB97E4F0044239A /* UserCardServiceTest.swift in Sources */,
 				BC2381831BB4627C0060CC80 /* UserTest.swift in Sources */,
 				BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */,
@@ -764,6 +771,7 @@
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
 				BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */,
 				BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */,
+				BC4424151C56A06500FAC537 /* URLUtilsTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
 				BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */,
 			);

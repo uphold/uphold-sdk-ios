@@ -45,18 +45,13 @@ public class MockRestAdapter: UpholdRestAdapter {
       - returns: The mock HTTP request.
     */
     public override func buildRequest(request: Request) -> MockRequest {
-        let mockRequest = MockRequest(body: nil, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
-
         if let _ = self.headers {
             _ = request.headers.map { (key, value) in self.headers!.updateValue(value, forKey: key)}
         } else {
             self.headers = request.headers
         }
 
-        mockRequest.data = self.body
-        mockRequest.headers = self.headers!
-
-        return mockRequest
+        return MockRequest(body: self.body, code: 200, errorHandler: {(error: NSError) -> Void in}, headers: self.headers!, method: request.method)
     }
 
     /**
