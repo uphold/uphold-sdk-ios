@@ -10,6 +10,8 @@
 		BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
 		BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
 		BC0C90231C4CF40400AD0F99 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
+		BC0F492B1C5BDA0B00FAE568 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
+		BC0F492C1C5BDA0B00FAE568 /* URLUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4424141C56A06500FAC537 /* URLUtilsTest.swift */; };
 		BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12F44E1C10691E00EB2E2B /* TransactionCommitRequest.swift */; };
 		BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; };
 		BC202DCA1C4420920069A230 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DC91C4420920069A230 /* AuthenticationRequest.swift */; };
@@ -79,6 +81,26 @@
 		BC81F7031C0758830025A1AF /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62431BFE28A600094F3A /* ObjectMapper.framework */; };
 		BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8386CE1BF2458B00D67F98 /* SessionManager.swift */; };
 		BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8387171BF395A300D67F98 /* SessionManagerTest.swift */; };
+		BC865B651C59411F003D67E5 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8387171BF395A300D67F98 /* SessionManagerTest.swift */; };
+		BC865B661C59411F003D67E5 /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
+		BC865B671C59411F003D67E5 /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
+		BC865B681C59411F003D67E5 /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
+		BC865B691C59411F003D67E5 /* ReserveServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */; };
+		BC865B6A1C59411F003D67E5 /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; };
+		BC865B6B1C59411F003D67E5 /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; };
+		BC865B6C1C59411F003D67E5 /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; };
+		BC865B6D1C59411F003D67E5 /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817B1BB4627C0060CC80 /* CardTest.swift */; };
+		BC865B6E1C59411F003D67E5 /* RateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817C1BB4627C0060CC80 /* RateTest.swift */; };
+		BC865B6F1C59411F003D67E5 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
+		BC865B701C59411F003D67E5 /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817D1BB4627C0060CC80 /* TransactionTest.swift */; };
+		BC865B711C59411F003D67E5 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817E1BB4627C0060CC80 /* UserTest.swift */; };
+		BC865B721C59411F003D67E5 /* PaginatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA32A241C18906C0013A347 /* PaginatorTest.swift */; };
+		BC865B731C59411F003D67E5 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
+		BC865B741C59411F003D67E5 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110451C05E5F90063761C /* Fixtures.swift */; };
+		BC865B751C59411F003D67E5 /* JSONTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */; };
+		BC865B761C59411F003D67E5 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; };
+		BC865B771C59411F003D67E5 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
+		BC865B781C59411F003D67E5 /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
 		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
 		BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8851BECD80C0074C538 /* Reserve.swift */; };
 		BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89B1BECD8270074C538 /* Deposit.swift */; };
@@ -89,7 +111,11 @@
 		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
 		BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
 		BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */; };
+		BCA15B331C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */; };
 		BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA32A241C18906C0013A347 /* PaginatorTest.swift */; };
+		BCACC4101C5928C2008E7CE7 /* GlobalConfigurationSandboxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */; };
+		BCACC4241C5928C2008E7CE7 /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4110561C05E7270063761C /* Fakery.framework */; };
+		BCACC4251C5928C2008E7CE7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62401BFE285000094F3A /* Mockingjay.framework */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
 		BCC9D6D51C56377E00671171 /* NormalizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */; };
@@ -156,6 +182,8 @@
 		BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5631BC692E200D61852 /* UpholdClientError.swift */; };
 		BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5641BC692E200D61852 /* NotFoundError.swift */; };
 		BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5651BC692E200D61852 /* UnhandledError.swift */; };
+		BCCD63001C60D00E0087330A /* ResourcesUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */; };
+		BCCD63011C60D00E0087330A /* ResourcesUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */; };
 		BCE7757C1C565D67005CE55A /* URLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7757B1C565D67005CE55A /* URLUtils.swift */; };
 		BCE7757E1C565F6A005CE55A /* MalformedUrlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7757D1C565F6A005CE55A /* MalformedUrlError.swift */; };
 		BCEB62411BFE285000094F3A /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62401BFE285000094F3A /* Mockingjay.framework */; };
@@ -174,6 +202,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BC23812B1BB462170060CC80;
 			remoteInfo = UpholdSdk;
+		};
+		BC865B631C593FDC003D67E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381231BB462170060CC80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC9D6D31C56377E00671171;
+			remoteInfo = UpholdSdkSandbox;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -255,7 +290,10 @@
 		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
 		BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedResponseError.swift; sourceTree = "<group>"; };
 		BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurations.swift; sourceTree = "<group>"; };
+		BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurationProductionTest.swift; sourceTree = "<group>"; };
+		BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurationSandboxTest.swift; sourceTree = "<group>"; };
 		BCA32A241C18906C0013A347 /* PaginatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatorTest.swift; sourceTree = "<group>"; };
+		BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpholdSdkSandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCC9D7181C56377E00671171 /* UpholdSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpholdSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +304,7 @@
 		BCCBE5631BC692E200D61852 /* UpholdClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientError.swift; sourceTree = "<group>"; };
 		BCCBE5641BC692E200D61852 /* NotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotFoundError.swift; sourceTree = "<group>"; };
 		BCCBE5651BC692E200D61852 /* UnhandledError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhandledError.swift; sourceTree = "<group>"; };
+		BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesUtilTest.swift; path = Util/ResourcesUtilTest.swift; sourceTree = "<group>"; };
 		BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		BCE7757B1C565D67005CE55A /* URLUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLUtils.swift; path = Util/URLUtils.swift; sourceTree = "<group>"; };
@@ -302,6 +341,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCACC4231C5928C2008E7CE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCACC4241C5928C2008E7CE7 /* Fakery.framework in Frameworks */,
+				BCACC4251C5928C2008E7CE7 /* Mockingjay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BCC9D7091C56377E00671171 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +382,7 @@
 				BC23812C1BB462170060CC80 /* UpholdSdk.framework */,
 				BC2381361BB462180060CC80 /* UpholdSdkTests.xctest */,
 				BCC9D7181C56377E00671171 /* UpholdSdk.framework */,
+				BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,6 +491,7 @@
 			children = (
 				BC3FC4431C3BF0E600487CDC /* Info.plist */,
 				BC2381791BB4627C0060CC80 /* Integration */,
+				BCA15B311C591B3E00DE7D54 /* Unit */,
 				BC5C0A7B1BD4F6F800CEF466 /* Util */,
 			);
 			path = Tests;
@@ -569,6 +619,15 @@
 			name = ErrorHandling;
 			sourceTree = "<group>";
 		};
+		BCA15B311C591B3E00DE7D54 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */,
+				BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
 		BCA32A231C18904E0013A347 /* Paginator */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,6 +641,7 @@
 			children = (
 				BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */,
 				BC4424141C56A06500FAC537 /* URLUtilsTest.swift */,
+				BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -700,6 +760,26 @@
 			productReference = BC2381361BB462180060CC80 /* UpholdSdkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BCACC4091C5928C2008E7CE7 /* UpholdSdkSandboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCACC4291C5928C2008E7CE7 /* Build configuration list for PBXNativeTarget "UpholdSdkSandboxTests" */;
+			buildPhases = (
+				BCACC40C1C5928C2008E7CE7 /* Sources */,
+				BCACC4231C5928C2008E7CE7 /* Frameworks */,
+				BCACC4261C5928C2008E7CE7 /* Resources */,
+				BCACC4271C5928C2008E7CE7 /* Carthage Dependencies Run Script */,
+				BCACC4281C5928C2008E7CE7 /* Environment Configuration Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC865B641C593FDC003D67E5 /* PBXTargetDependency */,
+			);
+			name = UpholdSdkSandboxTests;
+			productName = UpholdSdkTests;
+			productReference = BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BCC9D6D31C56377E00671171 /* UpholdSdkSandbox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCC9D7131C56377E00671171 /* Build configuration list for PBXNativeTarget "UpholdSdkSandbox" */;
@@ -753,6 +833,7 @@
 				BC23812B1BB462170060CC80 /* UpholdSdk */,
 				BCC9D6D31C56377E00671171 /* UpholdSdkSandbox */,
 				BC2381351BB462180060CC80 /* UpholdSdkTests */,
+				BCACC4091C5928C2008E7CE7 /* UpholdSdkSandboxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -766,6 +847,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BC2381341BB462180060CC80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCACC4261C5928C2008E7CE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -837,6 +925,43 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		BCACC4271C5928C2008E7CE7 /* Carthage Dependencies Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Mockingjay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftClient.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/URITemplate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OMGHTTPURLRQ.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Fakery.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			name = "Carthage Dependencies Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		BCACC4281C5928C2008E7CE7 /* Environment Configuration Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Environment Configuration Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if  [ \"${CONFIGURATION}\" == \"ProductionDebug\" ] || [ \"${CONFIGURATION}\" == \"ProductionRelease\" ]; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Production\nelif [ \"${CONFIGURATION}\" == \"SandboxDebug\" ] || [ \"${CONFIGURATION}\" == \"SandboxRelease\" ] ; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Sandbox\nfi\n\nBUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.xctest\n\necho \"Copying all files under ${RESOURCE_PATH} to ${BUILD_APP_DIR}\"\ncp -v \"${RESOURCE_PATH}/\"*.plist \"${BUILD_APP_DIR}/\"";
 		};
 		BCC9D7111C56377E00671171 /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1004,6 +1129,8 @@
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
 				BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */,
 				BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */,
+				BCCD63001C60D00E0087330A /* ResourcesUtilTest.swift in Sources */,
+				BCA15B331C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
 				BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */,
@@ -1011,6 +1138,37 @@
 				BC4424151C56A06500FAC537 /* URLUtilsTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
 				BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCACC40C1C5928C2008E7CE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0F492B1C5BDA0B00FAE568 /* OAuth2ServiceTest.swift in Sources */,
+				BC0F492C1C5BDA0B00FAE568 /* URLUtilsTest.swift in Sources */,
+				BC865B651C59411F003D67E5 /* SessionManagerTest.swift in Sources */,
+				BC865B661C59411F003D67E5 /* UpholdRestAdapterTest.swift in Sources */,
+				BC865B671C59411F003D67E5 /* UpholdClientTest.swift in Sources */,
+				BC865B681C59411F003D67E5 /* UpholdClientErrorHandlingTest.swift in Sources */,
+				BC865B691C59411F003D67E5 /* ReserveServiceTest.swift in Sources */,
+				BC865B6A1C59411F003D67E5 /* TickerServiceTest.swift in Sources */,
+				BC865B6B1C59411F003D67E5 /* UserCardServiceTest.swift in Sources */,
+				BC865B6C1C59411F003D67E5 /* UserServiceTest.swift in Sources */,
+				BC865B6D1C59411F003D67E5 /* CardTest.swift in Sources */,
+				BC865B6E1C59411F003D67E5 /* RateTest.swift in Sources */,
+				BC865B6F1C59411F003D67E5 /* ReserveTest.swift in Sources */,
+				BC865B701C59411F003D67E5 /* TransactionTest.swift in Sources */,
+				BC865B711C59411F003D67E5 /* UserTest.swift in Sources */,
+				BCCD63011C60D00E0087330A /* ResourcesUtilTest.swift in Sources */,
+				BC865B721C59411F003D67E5 /* PaginatorTest.swift in Sources */,
+				BC865B731C59411F003D67E5 /* HeaderTest.swift in Sources */,
+				BC865B741C59411F003D67E5 /* Fixtures.swift in Sources */,
+				BC865B751C59411F003D67E5 /* JSONTestUtils.swift in Sources */,
+				BC865B761C59411F003D67E5 /* MockRequest.swift in Sources */,
+				BC865B771C59411F003D67E5 /* UpholdTestCase.swift in Sources */,
+				BC865B781C59411F003D67E5 /* MockRestAdapter.swift in Sources */,
+				BCACC4101C5928C2008E7CE7 /* GlobalConfigurationSandboxTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,6 +1248,11 @@
 			isa = PBXTargetDependency;
 			target = BC23812B1BB462170060CC80 /* UpholdSdk */;
 			targetProxy = BC6BEE221BCEACBA0090656F /* PBXContainerItemProxy */;
+		};
+		BC865B641C593FDC003D67E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCC9D6D31C56377E00671171 /* UpholdSdkSandbox */;
+			targetProxy = BC865B631C593FDC003D67E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1262,6 +1425,66 @@
 				PRODUCT_NAME = UpholdSdkTests;
 			};
 			name = ProductionRelease;
+		};
+		BCACC42A1C5928C2008E7CE7 /* ProductionDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = ProductionDebug;
+		};
+		BCACC42B1C5928C2008E7CE7 /* SandboxDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = SandboxDebug;
+		};
+		BCACC42C1C5928C2008E7CE7 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = ProductionRelease;
+		};
+		BCACC42D1C5928C2008E7CE7 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = SandboxRelease;
 		};
 		BCC9D7141C56377E00671171 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
@@ -1556,6 +1779,17 @@
 				BCC9D71D1C563B2E00671171 /* SandboxDebug */,
 				BC2381451BB462180060CC80 /* ProductionRelease */,
 				BCC9D7211C563B3D00671171 /* SandboxRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = ProductionRelease;
+		};
+		BCACC4291C5928C2008E7CE7 /* Build configuration list for PBXNativeTarget "UpholdSdkSandboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCACC42A1C5928C2008E7CE7 /* ProductionDebug */,
+				BCACC42B1C5928C2008E7CE7 /* SandboxDebug */,
+				BCACC42C1C5928C2008E7CE7 /* ProductionRelease */,
+				BCACC42D1C5928C2008E7CE7 /* SandboxRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = ProductionRelease;

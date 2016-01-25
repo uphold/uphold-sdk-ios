@@ -10,7 +10,7 @@ class OAuth2ServiceTest: XCTestCase {
         let loginData: NSData = "foo:bar".dataUsingEncoding(NSUTF8StringEncoding)!
         let base64LoginString = loginData.base64EncodedStringWithOptions([])
 
-        XCTAssertEqual(request.url, "https://api.uphold.com/oauth2/token",  "Failed: Wrong URL.")
+        XCTAssertEqual(request.url, String(format: "%@/oauth2/token", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
         XCTAssertEqual(request.headers["authorization"], String(format: "Basic %@", base64LoginString), "Failed: Wrong method.")
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
         XCTAssertEqual(request.data! as? String, "code=foobar&grant_type=foobiz", "Failed: Wrong body.")

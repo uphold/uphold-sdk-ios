@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC2381351BB462180060CC80"
-               BuildableName = "UpholdSdkTests.xctest"
-               BlueprintName = "UpholdSdkTests"
+               BlueprintIdentifier = "BCACC4091C5928C2008E7CE7"
+               BuildableName = "UpholdSdkSandboxTests.xctest"
+               BlueprintName = "UpholdSdkSandboxTests"
                ReferencedContainer = "container:UpholdSdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC2381351BB462180060CC80"
-               BuildableName = "UpholdSdkTests.xctest"
-               BlueprintName = "UpholdSdkTests"
+               BlueprintIdentifier = "BCACC4091C5928C2008E7CE7"
+               BuildableName = "UpholdSdkSandboxTests.xctest"
+               BlueprintName = "UpholdSdkSandboxTests"
                ReferencedContainer = "container:UpholdSdk.xcodeproj">
             </BuildableReference>
          </TestableReference>
