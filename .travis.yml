@@ -2,6 +2,10 @@ language: objective-c
 
 osx_image: xcode7.1
 
+env:
+  - SCHEME=UpholdSdk
+  - SCHEME=UpholdSdkSandbox
+
 before_script:
   - brew update
   - brew install carthage
@@ -13,4 +17,4 @@ before_script:
 script:
   # Workaround introduced until the pull request #430 is merged (https://github.com/realm/SwiftLint/pull/430).
   - swiftlint lint
-  - xctool -project UpholdSdk.xcodeproj -scheme UpholdSdk test sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+  - xctool -project UpholdSdk.xcodeproj -scheme $SCHEME test sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
