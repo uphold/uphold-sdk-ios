@@ -75,6 +75,7 @@
 		BC5236A31C5A41120088B62D /* ConfigurationMissingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5236A11C5A41120088B62D /* ConfigurationMissingError.swift */; };
 		BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; };
 		BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
+		BC6F8DDE1C5B8D290016D1CB /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F8DDD1C5B8D290016D1CB /* Fee.swift */; };
 		BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
 		BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
 		BC81F7021C0753BA0025A1AF /* NormalizedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */; };
@@ -275,6 +276,7 @@
 		BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdRestAdapterTest.swift; path = Client/UpholdRestAdapterTest.swift; sourceTree = "<group>"; };
 		BC6330771C5783A9003DB6D8 /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		BC6330781C5783BE003DB6D8 /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
+		BC6F8DDD1C5B8D290016D1CB /* Fee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
 		BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientTest.swift; path = Client/UpholdClientTest.swift; sourceTree = "<group>"; };
 		BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRestAdapter.swift; path = Util/MockRestAdapter.swift; sourceTree = "<group>"; };
 		BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalizedTransaction.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 			children = (
 				BC2381521BB4626F0060CC80 /* Denomination.swift */,
 				BC2381531BB4626F0060CC80 /* Destination.swift */,
+				BC6F8DDD1C5B8D290016D1CB /* Fee.swift */,
 				BC2381541BB4626F0060CC80 /* Origin.swift */,
 				BC2381551BB4626F0060CC80 /* Parameters.swift */,
 				BC2381561BB4626F0060CC80 /* Source.swift */,
@@ -1054,6 +1057,7 @@
 				BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */,
 				BC91E8A31BECD8270074C538 /* Total.swift in Sources */,
 				BC4110481C05E6350063761C /* Balance.swift in Sources */,
+				BC6F8DDE1C5B8D290016D1CB /* Fee.swift in Sources */,
 				BC41104D1C05E6400063761C /* UserBalance.swift in Sources */,
 				BC91E8A11BECD8270074C538 /* DepositMovement.swift in Sources */,
 				BC202DCC1C4420AE0069A230 /* AuthenticationResponse.swift in Sources */,

@@ -270,6 +270,13 @@ class TransactionTest: UpholdTestCase {
                 "\"currency\": \"BTC\"," +
                 "\"fee\": \"1.00\"," +
                 "\"rate\": \"2.345\"" +
+            "}]," +
+            "\"fees\": [{" +
+                "\"type\": \"deposit\"," +
+                "\"amount\": \"0.30\"," +
+                "\"target\": \"origin\"," +
+                "\"currency\": \"USD\"," +
+                "\"percentage\": \"2.75\"" +
             "}]" +
         "}"
         let transaction = Mapper<Transaction>().map(json)
@@ -291,6 +298,11 @@ class TransactionTest: UpholdTestCase {
         XCTAssertEqual(transaction!.destination!.rate!, "1.00", "Failed: Transaction destination rate didn't match.")
         XCTAssertEqual(transaction!.destination!.type!, "email", "Failed: Transaction destination type didn't match.")
         XCTAssertEqual(transaction!.destination!.username!, "fizbiz", "Failed: Transaction destination username didn't match.")
+        XCTAssertEqual(transaction!.fees![0].amount, "0.30", "Failed: Transaction fee amount didn't match.")
+        XCTAssertEqual(transaction!.fees![0].currency, "USD", "Failed: Transaction fee currency didn't match.")
+        XCTAssertEqual(transaction!.fees![0].percentage, "2.75", "Failed: Transaction fee percentage didn't match.")
+        XCTAssertEqual(transaction!.fees![0].target, "origin", "Failed: Transaction fee target didn't match.")
+        XCTAssertEqual(transaction!.fees![0].type, "deposit", "Failed: Transaction fee type didn't match.")
         XCTAssertEqual(transaction!.message!, "foobar message", "Failed: Transaction message didn't match.")
         XCTAssertEqual(transaction!.normalized!.count, 1, "Failed: Normalized didn't match.")
         XCTAssertEqual(transaction!.normalized![0].amount, "14.00", "Failed: Normalized amount didn't match.")
