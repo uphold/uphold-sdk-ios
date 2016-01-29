@@ -57,6 +57,7 @@ class CardTest: UpholdTestCase {
             "\"id\": \"foobar\"," +
             "\"type\": \"transfer\"," +
             "\"message\": \"foobar\"," +
+            "\"network\": \"qux\"," +
             "\"status\": \"pending\"," +
             "\"RefundedById\": \"foobiz\"," +
             "\"createdAt\": \"2014-08-27T00:01:11.616Z\"," +
@@ -142,6 +143,7 @@ class CardTest: UpholdTestCase {
             XCTAssertEqual(transaction.fees![0].target, "origin", "Failed: Wrong transaction fee target.")
             XCTAssertEqual(transaction.fees![0].type, "deposit", "Failed: Wrong transaction fee type.")
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
+            XCTAssertEqual(transaction.network, "qux", "Failed: Wrong transaction network.")
             XCTAssertEqual(transaction.message, "foobar", "Failed: Wrong transaction message.")
             XCTAssertEqual(transaction.normalized!.count, 1, "Failed: Wrong transaction normalized count.")
             XCTAssertEqual(transaction.normalized![0].amount, "123", "Failed: Wrong transaction normalized amount.")

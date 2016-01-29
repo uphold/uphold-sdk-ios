@@ -23,6 +23,9 @@ public class Transaction: BaseModel, Mappable {
     /// A message or note provided by the user at the time the transaction was initiated, with the intent of communicating additional information and context about the nature/purpose of the transaction.
     public private(set) var message: String?
 
+    /// The network of the transaction.
+    public private(set) var network: String?
+
     /// The transaction details normalized.
     public private(set) var normalized: [NormalizedTransaction]?
 
@@ -50,6 +53,7 @@ public class Transaction: BaseModel, Mappable {
       - parameter destination: The recipient of the funds.
       - parameter fees: The transaction fees.
       - parameter message: A message or note provided by the user at the time the transaction was initiated, with the intent of communicating additional information and context about the nature/purpose of the transaction.
+      - parameter network: The network of the transaction.
       - parameter normalized: The transaction details normalized.
       - parameter origin: The sender of the funds.
       - parameter params: Other parameters of this transaction.
@@ -57,13 +61,14 @@ public class Transaction: BaseModel, Mappable {
       - parameter status: The current status of the transaction.
       - parameter type: The nature of the transaction.
     */
-    public init(id: String, createdAt: String, denomination: Denomination, destination: Destination, fees: [Fee], message: String, normalized: [NormalizedTransaction], origin: Origin, params: Parameters, refundedById: String, status: String, type: String) {
+    public init(id: String, createdAt: String, denomination: Denomination, destination: Destination, fees: [Fee], message: String, network: String, normalized: [NormalizedTransaction], origin: Origin, params: Parameters, refundedById: String, status: String, type: String) {
         self.id = id
         self.createdAt = createdAt
         self.denomination = denomination
         self.destination = destination
         self.fees = fees
         self.message = message
+        self.network = network
         self.normalized = normalized
         self.origin = origin
         self.params = params
@@ -94,6 +99,7 @@ public class Transaction: BaseModel, Mappable {
         destination <- map["destination"]
         fees <- map["fees"]
         message <- map["message"]
+        network <- map["network"]
         normalized <- map["normalized"]
         origin <- map["origin"]
         params <- map["params"]
