@@ -18,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BC3C28C31C60E991003BF9B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC9D6D31C56377E00671171;
+			remoteInfo = UpholdSdkSandbox;
+		};
 		BC7C7BEB1BCE782C00CB0CDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
@@ -32,12 +39,19 @@
 			remoteGlobalIDString = BC2381361BB462180060CC80;
 			remoteInfo = UpholdSdkTests;
 		};
-		BC8E257C1BCFBBA100C15899 /* PBXContainerItemProxy */ = {
+		BCE54E051C5BDFC900B98509 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BC23812B1BB462170060CC80;
-			remoteInfo = UpholdSdk;
+			proxyType = 2;
+			remoteGlobalIDString = BCC9D7181C56377E00671171;
+			remoteInfo = UpholdSdkSandbox;
+		};
+		BCE54E071C5BDFC900B98509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381BE1BB465260060CC80 /* UpholdSdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCACC42E1C5928C2008E7CE7;
+			remoteInfo = UpholdSdkSandboxTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -127,7 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				BC7C7BEC1BCE782C00CB0CDD /* UpholdSdk.framework */,
+				BCE54E061C5BDFC900B98509 /* UpholdSdk.framework */,
 				BC7C7BEE1BCE782C00CB0CDD /* UpholdSdkTests.xctest */,
+				BCE54E081C5BDFC900B98509 /* UpholdSdkSandboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,7 +171,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BC8E257D1BCFBBA100C15899 /* PBXTargetDependency */,
+				BC3C28C41C60E991003BF9B4 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -215,6 +231,20 @@
 			remoteRef = BC7C7BED1BCE782C00CB0CDD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BCE54E061C5BDFC900B98509 /* UpholdSdk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UpholdSdk.framework;
+			remoteRef = BCE54E051C5BDFC900B98509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BCE54E081C5BDFC900B98509 /* UpholdSdkSandboxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UpholdSdkSandboxTests.xctest;
+			remoteRef = BCE54E071C5BDFC900B98509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -267,10 +297,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BC8E257D1BCFBBA100C15899 /* PBXTargetDependency */ = {
+		BC3C28C41C60E991003BF9B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = UpholdSdk;
-			targetProxy = BC8E257C1BCFBBA100C15899 /* PBXContainerItemProxy */;
+			name = UpholdSdkSandbox;
+			targetProxy = BC3C28C31C60E991003BF9B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -286,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BC23811D1BB461DE0060CC80 /* Debug */ = {
+		BC18A6641C60DB0D00FC87AB /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -329,9 +359,22 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = ProductionDebug;
 		};
-		BC23811E1BB461DE0060CC80 /* Release */ = {
+		BC18A6651C60DB0D00FC87AB /* ProductionDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = ProductionDebug;
+		};
+		BC18A6691C60DB2E00FC87AB /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -367,9 +410,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = ProductionRelease;
 		};
-		BC2381201BB461DE0060CC80 /* Debug */ = {
+		BC18A66A1C60DB2E00FC87AB /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -380,9 +423,92 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = ProductionRelease;
 		};
-		BC2381211BB461DE0060CC80 /* Release */ = {
+		BC23811D1BB461DE0060CC80 /* SandboxDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = SandboxDebug;
+		};
+		BC23811E1BB461DE0060CC80 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = SandboxRelease;
+		};
+		BC2381201BB461DE0060CC80 /* SandboxDebug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -393,7 +519,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = SandboxDebug;
+		};
+		BC2381211BB461DE0060CC80 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = SandboxRelease;
 		};
 /* End XCBuildConfiguration section */
 
@@ -401,20 +540,24 @@
 		BC2381081BB461DE0060CC80 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC23811D1BB461DE0060CC80 /* Debug */,
-				BC23811E1BB461DE0060CC80 /* Release */,
+				BC23811D1BB461DE0060CC80 /* SandboxDebug */,
+				BC18A6641C60DB0D00FC87AB /* ProductionDebug */,
+				BC23811E1BB461DE0060CC80 /* SandboxRelease */,
+				BC18A6691C60DB2E00FC87AB /* ProductionRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = SandboxRelease;
 		};
 		BC23811F1BB461DE0060CC80 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC2381201BB461DE0060CC80 /* Debug */,
-				BC2381211BB461DE0060CC80 /* Release */,
+				BC2381201BB461DE0060CC80 /* SandboxDebug */,
+				BC18A6651C60DB0D00FC87AB /* ProductionDebug */,
+				BC2381211BB461DE0060CC80 /* SandboxRelease */,
+				BC18A66A1C60DB2E00FC87AB /* ProductionRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = SandboxRelease;
 		};
 /* End XCConfigurationList section */
 	};
