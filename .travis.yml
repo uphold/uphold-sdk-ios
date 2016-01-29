@@ -11,5 +11,6 @@ before_script:
   - open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args -CurrentDeviceUDID 4E51E3C5-611D-403E-8EFD-1DA15203C4DF
 
 script:
-  - swiftlint lint --strict
+  # Workaround introduced until the pull request #430 is merged (https://github.com/realm/SwiftLint/pull/430).
+  - swiftlint lint
   - xctool -project UpholdSdk.xcodeproj -scheme UpholdSdk test sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO

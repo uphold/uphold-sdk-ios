@@ -25,4 +25,17 @@ public class Token: BaseModel {
         self.bearerToken = bearerToken
     }
 
+    /**
+      Gets the current user.
+
+      - returns: A promise with the user.
+     */
+    public func getUser() -> Promise<User> {
+        guard let _ = SessionManager.sharedInstance.getBearerToken() else {
+            return Promise<User>(error: AuthenticationRequiredError(message: "Missing bearer authorization"))
+        }
+
+        return adapter.buildResponse(adapter.buildRequest(UserService.getUser()))
+    }
+
 }

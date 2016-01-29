@@ -1,0 +1,8 @@
+// Localizable strings.
+
+"global.dismiss" = "Dismiss";
+"global.unknown-error" = "Something went wrong getting your data.";
+"login-view-controller.alert-title-login-error" = "Login Error";
+"user-view-controller.alert-title-fetching-error" = "Fetching Data Error";
+"user-view-controller.fetching-data" = "Fetching your data...";
+"user-view-controller.presenting-data" = "Hi %@! You have %i cards.";

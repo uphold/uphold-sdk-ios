@@ -12,6 +12,9 @@ public class GlobalConfigurations {
     /// Uphold's API URL.
     public static let UPHOLD_API_URL: String = "https://api.uphold.com"
 
+    /// Uphold's authorization server URL.
+    public static let UPHOLD_AUTHORIZATION_SERVER_URL: String = "https://uphold.com"
+
     /// Uphold's Swift SDK current version.
     public static let UPHOLD_SDK_VERSION: String = "0.0.1"
 

@@ -43,9 +43,9 @@ public class MockRequest: Request {
       - returns: The mock response.
     */
     func builder(request: NSURLRequest) -> Mockingjay.Response {
-        let response = NSHTTPURLResponse(URL: request.URL!, statusCode: self.code, HTTPVersion: nil, headerFields: super.headers)!
+        let response = NSHTTPURLResponse(URL: request.URL!, statusCode: self.code, HTTPVersion: nil, headerFields: self.headers)!
 
-        guard let body = super.data else {
+        guard let body = self.data else {
             return .Success(response, nil)
         }
 
@@ -59,12 +59,13 @@ public class MockRequest: Request {
       - parameter errorHandler: The error handler.
     */
     public override func end(done: (SwiftClient.Response) -> Void, onError errorHandler: ((NSError) -> Void)? = nil) {
-        let request = NSMutableURLRequest(URL: NSURL(string: self.mockURL)!)
-        request.HTTPMethod = super.method
+        let request = NSMutableURLRequest(URL: NSURL(string: self.mockURL)!, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: NSTimeInterval(self.timeout))
+        request.HTTPMethod = self.method
+        self.headers["content-type"] = "json"
 
         switch builder(request) {
             case let .Success(response, data):
-               return done(self.transformer(SwiftClient.Response((response as? NSHTTPURLResponse)!, self, data)))
+                return done(self.transformer(SwiftClient.Response((response as? NSHTTPURLResponse)!, self, data)))
 
             default:
                 return

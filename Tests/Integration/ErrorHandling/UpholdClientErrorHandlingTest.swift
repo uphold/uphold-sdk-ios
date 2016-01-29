@@ -84,16 +84,23 @@ class UpholdClientErrorHandlingTest: UpholdTestCase {
     }
 
     func testHandleErrorShouldReturnLogicError() {
-        let done = { (response: Response) -> Void in
-            let error = LogicError(code: 200, message: "foo")
+        let error = LogicError(code: 200, message: "foo")
 
-            XCTAssertEqual(error.code, 200, "Failed: Wrong response HTTP status code.")
-            XCTAssertEqual(error.info, ["Logic error": "foo"], "Failed: Wrong error message.")
+        XCTAssertEqual(error.code, 200, "Failed: Wrong response HTTP status code.")
+        XCTAssertEqual(error.info, ["Logic error": "foo"], "Failed: Wrong error message.")
 
-            self.expectation.fulfill()
-        }
+        self.expectation.fulfill()
 
-        MockRequest(body: "body", code: 200, errorHandler: { (error: NSError) -> Void in }, headers: nil, method: "foo").end(done, onError: self.defaultError)
+        wait()
+    }
+
+    func testHandleErrorShouldReturnMalformedUrlError() {
+        let error = MalformedUrlError(message: "foo")
+
+        XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
+        XCTAssertEqual(error.info, ["Malformed URL error": "foo"], "Failed: Wrong error message.")
+
+        self.expectation.fulfill()
 
         wait()
     }
@@ -130,17 +137,24 @@ class UpholdClientErrorHandlingTest: UpholdTestCase {
         wait()
     }
 
+    func testHandleErrorShouldReturnStateMatchError() {
+        let error = StateMatchError(message: "foo")
+
+        XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
+        XCTAssertEqual(error.info, ["State match response error": "foo"], "Failed: Wrong error message.")
+
+        self.expectation.fulfill()
+
+        wait()
+    }
+
     func testHandleErrorShouldReturnUnexpectedResponseError() {
-        let done = { (response: Response) -> Void in
-            let error = UnexpectedResponseError(message: "foo")
+        let error = UnexpectedResponseError(message: "foo")
 
-            XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
-            XCTAssertEqual(error.info, ["Unexpected response error": "foo"], "Failed: Wrong error message.")
+        XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
+        XCTAssertEqual(error.info, ["Unexpected response error": "foo"], "Failed: Wrong error message.")
 
-            self.expectation.fulfill()
-        }
-
-        MockRequest(body: "body", code: 200, errorHandler: { (error: NSError) -> Void in }, headers: nil, method: "foo").end(done, onError: self.defaultError)
+        self.expectation.fulfill()
 
         wait()
     }
