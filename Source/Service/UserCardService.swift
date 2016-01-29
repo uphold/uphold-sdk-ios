@@ -20,13 +20,26 @@ public class UserCardService {
       Creates a request to confirm a transaction.
 
       - parameter cardId: The id of the card.
+      - parameter otp: the otp code to confirm the transaction.
       - parameter transactionId: The id of the transaction.
       - parameter transactionCommitRequest: The transaction commit information.
 
       - returns: A request to confirm the transaction.
     */
-    static func confirmTransaction(cardId: String, transactionId: String, transactionCommitRequest: AnyObject) -> Request {
-        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId)).send(transactionCommitRequest)
+    static func confirmTransaction(cardId: String, otp: String?, transactionId: String, transactionCommitRequest: AnyObject?) -> Request {
+        let request = UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId))
+
+        guard let guardedOtp = otp, let guardedTransactionCommitRequest = transactionCommitRequest else {
+            if let otp = otp {
+                return request.set("X-Bitreserve-OTP", otp)
+            } else if let transactionCommitRequest = transactionCommitRequest {
+                return request.send(transactionCommitRequest)
+            }
+
+            return request
+        }
+
+        return request.set("X-Bitreserve-OTP", guardedOtp).send(guardedTransactionCommitRequest)
     }
 
     /**

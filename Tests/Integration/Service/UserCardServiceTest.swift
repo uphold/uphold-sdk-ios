@@ -13,10 +13,20 @@ class UserCardServiceTest: XCTestCase {
     }
 
     func testConfirmTransactionShouldReturnTheRequest() {
-        let request = UserCardService.confirmTransaction("bar", transactionId: "foo", transactionCommitRequest: "foobar")
+        let request = UserCardService.confirmTransaction("bar", otp: nil, transactionId: "foo", transactionCommitRequest: "foobar")
 
         XCTAssertEqual(request.url, String(format: "%@/v0/me/cards/bar/transactions/foo/commit", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
+        XCTAssertNil(request.headers["X-Bitreserve-OTP"], "Failed: Wrong header.")
+        XCTAssertEqual(request.data! as? String, "foobar", "Failed: Wrong body.")
+    }
+
+    func testConfirmTransactionWithOTPShouldReturnTheRequest() {
+        let request = UserCardService.confirmTransaction("bar", otp: "otp", transactionId: "foo", transactionCommitRequest: "foobar")
+
+        XCTAssertEqual(request.url, "https://api.uphold.com/v0/me/cards/bar/transactions/foo/commit",  "Failed: Wrong URL.")
+        XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
+        XCTAssertEqual(request.headers["X-Bitreserve-OTP"], "otp", "Failed: Wrong header.")
         XCTAssertEqual(request.data! as? String, "foobar", "Failed: Wrong body.")
     }
 

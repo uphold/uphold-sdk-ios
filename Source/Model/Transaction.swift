@@ -1,6 +1,7 @@
 import Foundation
 import PromiseKit
 import ObjectMapper
+import SwiftClient
 
 /// Transaction model.
 public class Transaction: BaseModel, Mappable {
@@ -143,11 +144,43 @@ public class Transaction: BaseModel, Mappable {
     /**
       Confirm a transaction.
 
+      - returns: A promise with the transaction.
+    */
+    public func commit() -> Promise<Transaction> {
+        return commit(nil, transactionCommit: nil)
+    }
+
+    /**
+      Confirm a transaction.
+
+      - parameter otp: The otp code to confirm the transaction.
+
+      - returns: A promise with the transaction.
+    */
+    public func commit(otp: String) -> Promise<Transaction> {
+        return commit(otp, transactionCommit: nil)
+    }
+
+    /**
+     Confirm a transaction.
+
       - parameter transactionCommit: A transactionCommitRequest with an optional transaction message.
 
       - returns: A promise with the transaction.
     */
     public func commit(transactionCommit: TransactionCommitRequest) -> Promise<Transaction> {
+        return commit(nil, transactionCommit: nil)
+    }
+
+    /**
+      Confirm a transaction.
+
+      - parameter otp: The otp code to confirm the transaction.
+      - parameter transactionCommit: A transactionCommitRequest with an optional transaction message.
+
+      - returns: A promise with the transaction.
+    */
+    public func commit(otp: String?, transactionCommit: TransactionCommitRequest?) -> Promise<Transaction> {
         guard let id = self.id else {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction id should not be nil."))
         }
@@ -164,7 +197,14 @@ public class Transaction: BaseModel, Mappable {
             return Promise<Transaction>(error: LogicError(code: nil, message: String(format: "This transaction cannot be committed, because the current status is %@.", status)))
         }
 
-        let request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, transactionId: id, transactionCommitRequest: Mapper().toJSONString(transactionCommit, prettyPrint: false)!))
+        let request: Request
+        guard let transactionCommit = transactionCommit else {
+            request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: nil))
+
+            return self.adapter.buildResponse(request)
+        }
+
+        request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: Mapper().toJSONString(transactionCommit, prettyPrint: false)!))
 
         return self.adapter.buildResponse(request)
     }

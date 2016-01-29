@@ -125,6 +125,62 @@ class TransactionTest: UpholdTestCase {
         wait()
     }
 
+    func testCommitShouldReturnTheTransaction() {
+        let expectation = expectationWithDescription("Transaction test: commit transaction.")
+        let transaction: Transaction = Fixtures.loadTransaction(["transactionId": "foobar", "transactionStatus": "pending"])
+        transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
+
+        transaction.commit().then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction object.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCommitWithOTPShouldReturnTheTransaction() {
+        let expectation = expectationWithDescription("Transaction test: commit transaction.")
+        let transaction: Transaction = Fixtures.loadTransaction(["transactionId": "foobar", "transactionStatus": "pending"])
+        transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
+
+        transaction.commit("otp").then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction object.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCommitWithTransactionCommitRequestAndOTPShouldReturnTheTransaction() {
+        let expectation = expectationWithDescription("Transaction test: commit transaction.")
+        let transaction: Transaction = Fixtures.loadTransaction(["transactionId": "foobar", "transactionStatus": "pending"])
+        transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
+
+        transaction.commit("otp", transactionCommit: TransactionCommitRequest(message: "foobar")).then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction object.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCommitWithTransactionCommitRequestShouldReturnTheTransaction() {
+        let expectation = expectationWithDescription("Transaction test: commit transaction.")
+        let transaction: Transaction = Fixtures.loadTransaction(["transactionId": "foobar", "transactionStatus": "pending"])
+        transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
+
+        transaction.commit(TransactionCommitRequest(message: "foobar")).then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction object.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testCommitShouldReturnUnexpectedResponseErrorIfCardIdIsNil() {
         let expectation = expectationWithDescription("Transaction test: commit transaction.")
         let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\" }")!
