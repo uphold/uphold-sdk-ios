@@ -7,6 +7,12 @@ import PromiseKit
 /// UpholdClient integration tests.
 class UpholdClientTest: UpholdTestCase {
 
+    override func tearDown() {
+        super.tearDown()
+
+        SessionManager.sharedInstance.invalidateSession()
+    }
+
     func testCompleteAuthorizationShouldReturnEmptyCodeError() {
         let authenticationResponse = AuthenticationResponse(accessToken: "foo", expiresIn: 1234, scope: "foobar", tokenType: "bar")
         let authorizationViewController = AuthorizationViewController(URL: NSURL(string: "http://foo.bar")!, entersReaderIfAvailable: false)
@@ -141,6 +147,86 @@ class UpholdClientTest: UpholdTestCase {
             XCTAssertEqual(rates[0].ask, "foo", "Failed: Wrong response object attribute.")
             XCTAssertEqual(rates[1].ask, "fiz", "Failed: Wrong response object attribute.")
             XCTAssertEqual(rates[2].ask, "foobar", "Failed: Wrong response object attribute.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testGetUserShouldReturnTheUser() {
+        let expectation = expectationWithDescription("Uphold client test.")
+        let json: String = "{" +
+            "\"username\": \"foobar\"," +
+            "\"email\": \"foo@bar.org\"," +
+            "\"firstName\": \"foo\"," +
+            "\"lastName\": \"bar\"," +
+            "\"name\": \"Foo Bar\"," +
+            "\"country\": \"BAR\"," +
+            "\"state\": \"FOO\"," +
+            "\"currencies\": [" +
+                "\"BTC\"" +
+            "]," +
+            "\"status\": \"ok\"," +
+            "\"settings\": {" +
+                "\"theme\": \"minimalistic\"," +
+                "\"currency\": \"USD\"," +
+                "\"hasNewsSubscription\": true," +
+                "\"intl\": {" +
+                    "\"language\": {" +
+                        "\"locale\": \"en-US\"" +
+                    "}," +
+                    "\"dateTimeFormat\": {" +
+                        "\"locale\": \"en-US\"" +
+                    "}," +
+                    "\"numberFormat\": {" +
+                        "\"locale\": \"en-US\"" +
+                    "}" +
+                "}," +
+                "\"otp\": {" +
+                    "\"login\": {" +
+                        "\"enabled\": false" +
+                    "}," +
+                    "\"transactions\": {" +
+                        "\"send\": {" +
+                            "\"enabled\": false" +
+                        "}," +
+                        "\"transfer\": {" +
+                            "\"enabled\": true" +
+                        "}," +
+                        "\"withdraw\": {" +
+                            "\"crypto\": {" +
+                                "\"enabled\": true" +
+                            "}" +
+                        "}" +
+                    "}" +
+                "}" +
+            "}" +
+        "}"
+        let client = UpholdClient(bearerToken: "foobar")
+        client.token.adapter = MockRestAdapter(body: json)
+
+        client.getUser().then { (user: User) -> () in
+            XCTAssertEqual(user.country, "BAR", "Failed: User country didn't match.")
+            XCTAssertEqual(user.currencies!.count, 1, "Failed: User currencies didn't match.")
+            XCTAssertEqual(user.currencies![0], "BTC", "Failed: User currencies didn't match.")
+            XCTAssertEqual(user.email, "foo@bar.org", "Failed: User email didn't match.")
+            XCTAssertEqual(user.firstName, "foo", "Failed: User first name didn't match.")
+            XCTAssertEqual(user.lastName, "bar", "Failed: User last name didn't match.")
+            XCTAssertEqual(user.name, "Foo Bar", "Failed: User name didn't match.")
+            XCTAssertEqual(user.settings!.currency!, "USD", "Failed: User settings currency didn't match.")
+            XCTAssertTrue(user.settings!.hasNewsSubscription!, "Failed: User settings hasNewsSubscription didn't match.")
+            XCTAssertEqual(user.settings!.intl!.dateTimeFormat!.locale!, "en-US", "Failed: User settings intl dateTimeFormat didn't match.")
+            XCTAssertEqual(user.settings!.intl!.language!.locale!, "en-US", "Failed: User settings intl language didn't match.")
+            XCTAssertEqual(user.settings!.intl!.numberFormat!.locale!, "en-US", "Failed: User settings intl numberFormat didn't match.")
+            XCTAssertFalse(user.settings!.otp!.login!.enabled!, "Failed: User settings otp login didn't match.")
+            XCTAssertFalse(user.settings!.otp!.transactions!.send!.enabled!, "Failed: User settings otp transactions send didn't match.")
+            XCTAssertTrue(user.settings!.otp!.transactions!.transfer!.enabled!, "Failed: User settings otp transactions transfer didn't match.")
+            XCTAssertTrue(user.settings!.otp!.transactions!.withdraw!.crypto!.enabled!, "Failed: User settings otp login didn't match.")
+            XCTAssertEqual(user.settings!.theme!, "minimalistic", "Failed: User settings theme didn't match.")
+            XCTAssertEqual(user.state, "FOO", "Failed: User name didn't match.")
+            XCTAssertEqual(user.status, "ok", "Failed: User name didn't match.")
+            XCTAssertEqual(user.username, "foobar", "Failed: User name didn't match.")
 
             expectation.fulfill()
         }

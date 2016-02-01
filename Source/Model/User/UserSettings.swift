@@ -16,6 +16,9 @@ public class UserSettings: Mappable {
     /// The user internationalization settings.
     public private(set) var intl: InternationalizationUserSettings?
 
+    /// The user otp settings.
+    public private(set) var otp: Otp?
+
     /// The user theme.
     public private(set) var theme: String?
 
@@ -26,13 +29,15 @@ public class UserSettings: Mappable {
       - parameter hasNewsSubscription: A boolean indicating if the user has the news subscription enabled.
       - parameter hasOtpEnabled: A boolean indicating if the user has OTP enabled.
       - parameter intl: The user internationalization settings.
+      - parameter otp: The user otp settings.
       - parameter theme: The user theme.
     */
-    public init(currency: String, hasNewsSubscription: Bool, hasOtpEnabled: Bool, intl: InternationalizationUserSettings, theme: String) {
+    public init(currency: String, hasNewsSubscription: Bool, hasOtpEnabled: Bool, intl: InternationalizationUserSettings, otp: Otp, theme: String) {
         self.currency = currency
         self.hasNewsSubscription = hasNewsSubscription
         self.hasOtpEnabled = hasOtpEnabled
         self.intl = intl
+        self.otp = otp
         self.theme = theme
     }
 
@@ -56,6 +61,7 @@ public class UserSettings: Mappable {
         hasNewsSubscription  <- map["hasNewsSubscription"]
         hasOtpEnabled  <- map["hasOtpEnabled"]
         intl  <- map["intl"]
+        otp  <- map["otp"]
         theme  <- map["theme"]
     }
 

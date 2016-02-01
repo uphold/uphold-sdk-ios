@@ -146,9 +146,7 @@ public class Fixtures {
 
         let denomination = Denomination(amount: fakerFields["denominationAmount"]!, currency: fakerFields["denominationCurrency"]!, pair: fakerFields["denominationPair"]!, rate: fakerFields["denominationRate"]!)
         let destination = Destination(accountId: fakerFields["destinationAccountId"]!, cardId: fakerFields["destinationCardId"]!, accountType: fakerFields["destinationAccountType"]!, amount: fakerFields["destinationAmount"]!, base: fakerFields["destinationBase"]!, commission: fakerFields["destinationCommission"]!, currency: fakerFields["destinationCurrency"]!, description: fakerFields["destinationDescription"]!, fee: fakerFields["destinationFee"]!, rate: fakerFields["destinationRate"]!, type: fakerFields["destinationType"]!, username: fakerFields["destinationUsername"]!)
-
         let fees = [Fee(amount: fakerFields["feeAmount"]!, currency: fakerFields["feeCurrency"]!, percentage: fakerFields["feePercentage"]!, target: fakerFields["feeTarget"]!, type: fakerFields["feeType"]!)]
-
         var sources: [Source] = []
 
         for (index, ids) in fakerFields["originSourcesId"]!.componentsSeparatedByString(",").enumerate() {
@@ -194,6 +192,10 @@ public class Fixtures {
             "internationalizationUserSettingNumberFormat": faker.lorem.characters(amount: 5),
             "lastName": faker.name.lastName(),
             "name": faker.name.name(),
+            "settingsOTPLogin": "true",
+            "settingsOTPTransactionsSend": "true",
+            "settingsOTPTransactionsTransfer": "true",
+            "settingsOTPTransactionsWithdrawCrypto": "true",
             "state": faker.address.stateAbbreviation(),
             "status": faker.lorem.characters(amount: 10),
             "theme": faker.lorem.characters(amount: 10),
@@ -208,7 +210,8 @@ public class Fixtures {
         let internationalizationUserSettingLanguage = InternationalizationUserSetting(locale: fakerFields["internationalizationUserSettingLanguage"]!)
         let internationalizationUserSettingNumberFormat = InternationalizationUserSetting(locale: fakerFields["internationalizationUserSettingNumberFormat"]!)
         let internationalizationUserSettings = InternationalizationUserSettings(language: internationalizationUserSettingLanguage, dateTimeFormat: internationalizationUserSettingDateTimeFormat, numberFormat: internationalizationUserSettingNumberFormat)
-        let userSettings = UserSettings(currency: fakerFields["currency"]!, hasNewsSubscription: NSString(string: fakerFields["hasNewsSubscription"]!).boolValue, hasOtpEnabled: NSString(string: fakerFields["hasOtpEnabled"]!).boolValue, intl: internationalizationUserSettings, theme: fakerFields["theme"]!)
+        let otp = Otp(login: Login(enabled: NSString(string: fakerFields["settingsOTPLogin"]!).boolValue), transactions: Transactions(send: Send(enabled: NSString(string: fakerFields["settingsOTPTransactionsSend"]!).boolValue), transfer: Transfer(enabled: NSString(string: fakerFields["settingsOTPTransactionsTransfer"]!).boolValue), withdraw: Withdraw(crypto: Crypto(enabled: NSString(string: fakerFields["settingsOTPTransactionsWithdrawCrypto"]!).boolValue))))
+        let userSettings = UserSettings(currency: fakerFields["currency"]!, hasNewsSubscription: NSString(string: fakerFields["hasNewsSubscription"]!).boolValue, hasOtpEnabled: NSString(string: fakerFields["hasOtpEnabled"]!).boolValue, intl: internationalizationUserSettings, otp: otp, theme: fakerFields["theme"]!)
 
         return User(country: fakerFields["country"]!, currencies: fakerFields["currencies"]!.componentsSeparatedByString(","), email: fakerFields["email"]!, firstName: fakerFields["firstName"]!, lastName: fakerFields["lastName"]!, name: fakerFields["name"]!, settings: userSettings, state: fakerFields["state"]!, status: fakerFields["status"]!, username: fakerFields["username"]!)
     }

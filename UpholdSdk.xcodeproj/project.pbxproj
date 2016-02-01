@@ -113,6 +113,13 @@
 		BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
 		BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */; };
 		BCA15B331C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */; };
+		BC9FC2AC1C5FC84C00C8626D /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FC2AB1C5FC84C00C8626D /* Otp.swift */; };
+		BC9FC2AF1C5FCAFB00C8626D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FC2AE1C5FCAFB00C8626D /* Login.swift */; };
+		BC9FC2B41C5FCCE000C8626D /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FC2B31C5FCCE000C8626D /* Send.swift */; };
+		BC9FC2B61C5FCD1900C8626D /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FC2B51C5FCD1900C8626D /* Transactions.swift */; };
+		BC9FC2B81C5FCDA100C8626D /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FC2B71C5FCDA100C8626D /* Transfer.swift */; };
+		BC9FC2BA1C5FCDED00C8626D /* Withdraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FC2B91C5FCDED00C8626D /* Withdraw.swift */; };
+		BC9FC2BD1C5FCE9A00C8626D /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FC2BC1C5FCE9A00C8626D /* Crypto.swift */; };
 		BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA32A241C18906C0013A347 /* PaginatorTest.swift */; };
 		BCACC4101C5928C2008E7CE7 /* GlobalConfigurationSandboxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */; };
 		BCACC4241C5928C2008E7CE7 /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4110561C05E7270063761C /* Fakery.framework */; };
@@ -294,6 +301,13 @@
 		BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurations.swift; sourceTree = "<group>"; };
 		BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurationProductionTest.swift; sourceTree = "<group>"; };
 		BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurationSandboxTest.swift; sourceTree = "<group>"; };
+		BC9FC2AB1C5FC84C00C8626D /* Otp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Otp.swift; path = Settings/Otp.swift; sourceTree = "<group>"; };
+		BC9FC2AE1C5FCAFB00C8626D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Settings/Otp/Login.swift; sourceTree = "<group>"; };
+		BC9FC2B31C5FCCE000C8626D /* Send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Send.swift; path = Settings/Otp/Transactions/Send.swift; sourceTree = "<group>"; };
+		BC9FC2B51C5FCD1900C8626D /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transactions.swift; path = Settings/Otp/Transactions.swift; sourceTree = "<group>"; };
+		BC9FC2B71C5FCDA100C8626D /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transfer.swift; path = Settings/Otp/Transactions/Transfer.swift; sourceTree = "<group>"; };
+		BC9FC2B91C5FCDED00C8626D /* Withdraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Withdraw.swift; path = Settings/Otp/Transactions/Withdraw.swift; sourceTree = "<group>"; };
+		BC9FC2BC1C5FCE9A00C8626D /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Crypto.swift; path = Settings/Otp/Transactions/Withdraw/Crypto.swift; sourceTree = "<group>"; };
 		BCA32A241C18906C0013A347 /* PaginatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatorTest.swift; sourceTree = "<group>"; };
 		BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpholdSdkSandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
@@ -467,6 +481,7 @@
 		BC2381581BB4626F0060CC80 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				BC9FC2AA1C5FC82C00C8626D /* Settings */,
 				BC41104E1C05E68E0063761C /* Contact.swift */,
 				BC41104F1C05E68E0063761C /* ContactRequest.swift */,
 				BC4110501C05E68E0063761C /* Phone.swift */,
@@ -629,6 +644,42 @@
 				BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */,
 			);
 			path = Unit;
+		BC9FC2AA1C5FC82C00C8626D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BC9FC2AD1C5FCAC100C8626D /* Otp */,
+				BC9FC2AB1C5FC84C00C8626D /* Otp.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		BC9FC2AD1C5FCAC100C8626D /* Otp */ = {
+			isa = PBXGroup;
+			children = (
+				BC9FC2B21C5FCCB800C8626D /* Transactions */,
+				BC9FC2AE1C5FCAFB00C8626D /* Login.swift */,
+				BC9FC2B51C5FCD1900C8626D /* Transactions.swift */,
+			);
+			name = Otp;
+			sourceTree = "<group>";
+		};
+		BC9FC2B21C5FCCB800C8626D /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				BC9FC2BB1C5FCE7200C8626D /* Withdraw */,
+				BC9FC2B31C5FCCE000C8626D /* Send.swift */,
+				BC9FC2B71C5FCDA100C8626D /* Transfer.swift */,
+				BC9FC2B91C5FCDED00C8626D /* Withdraw.swift */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		BC9FC2BB1C5FCE7200C8626D /* Withdraw */ = {
+			isa = PBXGroup;
+			children = (
+				BC9FC2BC1C5FCE9A00C8626D /* Crypto.swift */,
+			);
+			name = Withdraw;
 			sourceTree = "<group>";
 		};
 		BCA32A231C18904E0013A347 /* Paginator */ = {
@@ -1053,6 +1104,7 @@
 				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
 				BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */,
 				BC23816E1BB4626F0060CC80 /* Transaction.swift in Sources */,
+				BC9FC2BD1C5FCE9A00C8626D /* Crypto.swift in Sources */,
 				BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */,
 				BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */,
 				BC91E8A31BECD8270074C538 /* Total.swift in Sources */,
@@ -1081,16 +1133,21 @@
 				BC23816D1BB4626F0060CC80 /* Source.swift in Sources */,
 				BC91E8A21BECD8270074C538 /* ReserveStatistics.swift in Sources */,
 				BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */,
+				BC9FC2B81C5FCDA100C8626D /* Transfer.swift in Sources */,
 				BC2381681BB4626F0060CC80 /* Rate.swift in Sources */,
 				BCE7757E1C565F6A005CE55A /* MalformedUrlError.swift in Sources */,
 				BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */,
 				BC202DCA1C4420920069A230 /* AuthenticationRequest.swift in Sources */,
 				BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */,
 				BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */,
+				BC9FC2B41C5FCCE000C8626D /* Send.swift in Sources */,
 				BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */,
 				BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */,
+				BC9FC2B61C5FCD1900C8626D /* Transactions.swift in Sources */,
+				BC9FC2AC1C5FC84C00C8626D /* Otp.swift in Sources */,
 				BCE7757C1C565D67005CE55A /* URLUtils.swift in Sources */,
 				BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */,
+				BC9FC2AF1C5FCAFB00C8626D /* Login.swift in Sources */,
 				BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */,
 				BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */,
 				BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */,
@@ -1106,6 +1163,7 @@
 				BC202DD01C4514F40069A230 /* StateMatchError.swift in Sources */,
 				BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */,
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
+				BC9FC2BA1C5FCDED00C8626D /* Withdraw.swift in Sources */,
 				BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
 				BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */,
