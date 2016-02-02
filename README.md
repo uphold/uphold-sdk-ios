@@ -58,7 +58,7 @@ From the application page in your account you can get the `Client ID`, `Client S
 
 ### Authenticate User
 
-In order to allow users to be re-directed back to the application after the authorization process, you’ll need to associate your custom `scheme` with your app by adding the following keys into the [`Info.plist`](https://github.com/uphold/uphold-sdk-ios/blob/master/Example/Info.plist) file:
+In order to allow users to be re-directed back to the application after the authorization process, you’ll need to associate your custom `scheme` with your app by adding the following keys into the [`Info.plist`](https://github.com/uphold/uphold-sdk-ios/blob/master/SampleApplication/Info.plist) file:
 
 * CFBundleURLTypes - The list of URLs types to be handled by the application.
     * CFBundleURLSchemes - The custom application schemes.
@@ -274,4 +274,4 @@ paginator.getNext().then { (transactions: [Transaction]) -> () in
 
 ## Uphold SDK sample
 
-Check the [sample application](https://github.com/uphold/uphold-sdk-ios/tree/master/Example) to explore an application using the Uphold iOS SDK.
+Check the [sample application](https://github.com/uphold/uphold-sdk-ios/tree/master/SampleApplication) to explore an application using the Uphold iOS SDK.
