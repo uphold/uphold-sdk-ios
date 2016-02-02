@@ -5,10 +5,10 @@ import ObjectMapper
 public class Source: Mappable {
 
     /// The id of the source.
-    public private(set) var id: String?
+    public private(set) final var id: String?
 
     /// The amount of the source.
-    public private(set) var amount: String?
+    public private(set) final var amount: String?
 
     /**
       Constructor.

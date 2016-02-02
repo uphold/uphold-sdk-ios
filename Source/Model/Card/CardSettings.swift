@@ -5,10 +5,10 @@ import ObjectMapper
 public class CardSettings: Mappable {
 
     /// The position of the card.
-    public private(set) var position: Int?
+    public private(set) final var position: Int?
 
     /// A boolean indicating if the card is starred.
-    public private(set) var starred: Bool?
+    public private(set) final var starred: Bool?
 
     /**
       Constructor.

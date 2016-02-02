@@ -5,16 +5,16 @@ import ObjectMapper
 public class AuthenticationResponse: Mappable {
 
     /// The user access token.
-    public private(set) var accessToken: String?
+    public private(set) final var accessToken: String?
 
     /// The expiration date from the token.
-    public private(set) var expiresIn: Int?
+    public private(set) final var expiresIn: Int?
 
     /// The token access permissions.
-    public private(set) var scope: String?
+    public private(set) final var scope: String?
 
     /// The description from the authentication response.
-    public private(set) var tokenType: String?
+    public private(set) final var tokenType: String?
 
      /**
        Constructor.

@@ -5,19 +5,19 @@ import ObjectMapper
 public class NormalizedTransaction: Mappable {
 
     /// The amount of the transaction normalized.
-    public private(set) var amount: String?
+    public private(set) final var amount: String?
 
     /// The commission of the transaction normalized.
-    public private(set) var commission: String?
+    public private(set) final var commission: String?
 
     /// The currency of the transaction normalized.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The fee of the transaction normalized.
-    public private(set) var fee: String?
+    public private(set) final var fee: String?
 
     /// The rate of the transaction normalized.
-    public private(set) var rate: String?
+    public private(set) final var rate: String?
 
     /**
       Constructor.

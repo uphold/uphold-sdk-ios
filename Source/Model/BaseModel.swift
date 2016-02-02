@@ -5,7 +5,7 @@ import SwiftClient
 public class BaseModel {
 
     /// The Uphold REST adapter.
-    public internal(set) var adapter: UpholdRestAdapter
+    public internal(set) final var adapter: UpholdRestAdapter
 
     /**
       Constructor.

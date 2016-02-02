@@ -5,19 +5,19 @@ import ObjectMapper
 public class Fee: Mappable {
 
     /// The amount.
-    public private(set) var amount: String?
+    public private(set) final var amount: String?
 
     /// The currency.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The percentage.
-    public private(set) var percentage: String?
+    public private(set) final var percentage: String?
 
     /// The target.
-    public private(set) var target: String?
+    public private(set) final var target: String?
 
     /// The type.
-    public private(set) var type: String?
+    public private(set) final var type: String?
 
     /**
       Constructor.

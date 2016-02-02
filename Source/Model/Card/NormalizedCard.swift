@@ -5,13 +5,13 @@ import ObjectMapper
 public class NormalizedCard: Mappable {
 
     /// The amount available normalized.
-    public private(set) var available: String?
+    public private(set) final var available: String?
 
     /// The balance available normalized.
-    public private(set) var balance: String?
+    public private(set) final var balance: String?
 
     /// The currency used in the normalization.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /**
       Constructor.

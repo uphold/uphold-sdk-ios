@@ -5,10 +5,10 @@ import SwiftClient
 public class UpholdClientError: ErrorType, CustomStringConvertible {
 
     /// The HTTP status code.
-    public var code: Int?
+    public final var code: Int?
 
     /// The description to be printed when a UpholdClientError occurs.
-    public var description: String {
+    public final var description: String {
         guard let message = info.values.first else {
             return "Unknown error"
         }
@@ -17,10 +17,10 @@ public class UpholdClientError: ErrorType, CustomStringConvertible {
     }
 
     /// The error's information being shown to the user.
-    public let info: [String: String]
+    public final let info: [String: String]
 
     /// The HTTP response.
-    public var response: Response?
+    public final var response: Response?
 
     /**
       Constructor.

@@ -7,43 +7,43 @@ import SwiftClient
 public class Transaction: BaseModel, Mappable {
 
     /// The id of the transaction.
-    public private(set) var id: String?
+    public private(set) final var id: String?
 
     /// The date and time the transaction was initiated.
-    public private(set) var createdAt: String?
+    public private(set) final var createdAt: String?
 
     /// The funds to be transferred.
-    public private(set) var denomination: Denomination?
+    public private(set) final var denomination: Denomination?
 
     /// The recipient of the funds.
-    public private(set) var destination: Destination?
+    public private(set) final var destination: Destination?
 
     /// The transaction fees.
-    public private(set) var fees: [Fee]?
+    public private(set) final var fees: [Fee]?
 
     /// A message or note provided by the user at the time the transaction was initiated, with the intent of communicating additional information and context about the nature/purpose of the transaction.
-    public private(set) var message: String?
+    public private(set) final var message: String?
 
     /// The network of the transaction.
-    public private(set) var network: String?
+    public private(set) final var network: String?
 
     /// The transaction details normalized.
-    public private(set) var normalized: [NormalizedTransaction]?
+    public private(set) final var normalized: [NormalizedTransaction]?
 
     /// The sender of the funds.
-    public private(set) var origin: Origin?
+    public private(set) final var origin: Origin?
 
     /// Other parameters of this transaction.
-    public private(set) var params: Parameters?
+    public private(set) final var params: Parameters?
 
     /// When a transaction is cancelled this contains the transaction ID of the transaction which refunds the amount back to the user.
-    public private(set) var refundedById: String?
+    public private(set) final var refundedById: String?
 
     /// The current status of the transaction.
-    public private(set) var status: String?
+    public private(set) final var status: String?
 
     /// The nature of the transaction.
-    public private(set) var type: String?
+    public private(set) final var type: String?
 
     /**
       Constructor.

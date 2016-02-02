@@ -11,16 +11,16 @@ public class UserSettings: Mappable {
     public private(set) var hasNewsSubscription: Bool?
 
     /// A boolean indicating if the user has OTP enabled.
-    public private(set) var hasOtpEnabled: Bool?
+    public private(set) final var hasOtpEnabled: Bool?
 
     /// The user internationalization settings.
-    public private(set) var intl: InternationalizationUserSettings?
+    public private(set) final var intl: InternationalizationUserSettings?
 
     /// The user otp settings.
-    public private(set) var otp: Otp?
+    public private(set) final var otp: Otp?
 
     /// The user theme.
-    public private(set) var theme: String?
+    public private(set) final var theme: String?
 
     /**
       Constructor.

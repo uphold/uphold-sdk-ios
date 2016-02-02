@@ -5,19 +5,19 @@ import ObjectMapper
 public class Deposit: Mappable {
 
     /// The date when the transaction was created.
-    public private(set) var createdAt: String?
+    public private(set) final var createdAt: String?
 
     /// The deposit in movement.
-    public private(set) var input: DepositMovement?
+    public private(set) final var input: DepositMovement?
 
     /// The deposit out movement.
-    public private(set) var output: DepositMovement?
+    public private(set) final var output: DepositMovement?
 
     /// The id of the transaction.
-    public private(set) var transactionId: String?
+    public private(set) final var transactionId: String?
 
     /// The type of the deposit.
-    public private(set) var type: String?
+    public private(set) final var type: String?
 
     /**
       Constructor.

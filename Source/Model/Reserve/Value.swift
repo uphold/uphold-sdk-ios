@@ -5,16 +5,16 @@ import ObjectMapper
 public class Value: Mappable {
 
     /// The quantity of assets held for the corresponding holding, but converted to a different currency.
-    public private(set) var assets: String?
+    public private(set) final var assets: String?
 
     /// The currency we are computing the current holding in.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The quantity of liabilities for the corresponding holding, but converted to a different currency.
-    public private(set) var liabilities: String?
+    public private(set) final var liabilities: String?
 
     /// The rate we used when computing the holding to the corresponding currency.
-    public private(set) var rate: String?
+    public private(set) final var rate: String?
 
     /**
       Constructor.

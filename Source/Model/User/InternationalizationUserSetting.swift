@@ -5,7 +5,7 @@ import ObjectMapper
 public class InternationalizationUserSetting: Mappable {
 
     /// The locale for the setting.
-    public private(set) var locale: String?
+    public private(set) final var locale: String?
 
     /**
       Constructor.

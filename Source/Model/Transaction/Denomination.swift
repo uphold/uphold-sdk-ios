@@ -5,16 +5,16 @@ import ObjectMapper
 public class Denomination: Mappable {
 
     /// The amount of the transaction.
-    public private(set) var amount: String?
+    public private(set) final var amount: String?
 
     /// The currency of the transaction.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The pair of the transaction.
-    public private(set) var pair: String?
+    public private(set) final var pair: String?
 
     /// The rate of the transaction.
-    public private(set) var rate: String?
+    public private(set) final var rate: String?
 
     /**
       Constructor.

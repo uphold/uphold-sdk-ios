@@ -5,16 +5,16 @@ import ObjectMapper
 public class Total: Mappable {
 
     /// The assets from the corresponding holding.
-    public private(set) var assets: String?
+    public private(set) final var assets: String?
 
     /// The commission from the corresponding holding.
-    public private(set) var commissions: String?
+    public private(set) final var commissions: String?
 
     /// The liabilities from the corresponding holding.
-    public private(set) var liabilities: String?
+    public private(set) final var liabilities: String?
 
     /// The transactions from the corresponding holding.
-    public private(set) var transactions: String?
+    public private(set) final var transactions: String?
 
     /**
       Constructor.
