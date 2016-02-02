@@ -8,14 +8,14 @@ class TickerServiceTest: XCTestCase {
     func testGetAllTickersShouldReturnTheRequest() {
         let request = TickerService.getAllTickers()
 
-        XCTAssertEqual(request.url, "https://api.uphold.com/v0/ticker",  "Failed: Wrong URL")
+        XCTAssertEqual(request.url, String(format: "%@/v0/ticker", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL")
         XCTAssertEqual(request.method, "GET", "Failed: Wrong method.")
     }
 
     func testGetAllTickersByCurrencyShouldReturnTheRequest() {
         let request = TickerService.getAllTickersByCurrency("foo")
 
-        XCTAssertEqual(request.url, "https://api.uphold.com/v0/ticker/foo",  "Failed: Wrong URL")
+        XCTAssertEqual(request.url, String(format: "%@/v0/ticker/foo", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL")
         XCTAssertEqual(request.method, "GET", "Failed: Wrong method.")
     }
 

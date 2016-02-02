@@ -1,5 +1,4 @@
 import UIKit
-import UpholdSdk
 
 /// Application delegate.
 @UIApplicationMain

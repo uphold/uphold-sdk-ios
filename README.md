@@ -14,26 +14,39 @@ The Uphold SDK for iOS provides an easy way for developers to integrate iOS appl
 
 ### Using [CocoaPods](https://cocoapods.org)
 
-1. Create `Podfile`.
+1. Add to your `Podfile`.
 
     ```
     platform :ios, '9.0'
     use_frameworks!
 
-    pod 'UpholdSdk'
+    # To use Uphold's production environment.
+    pod 'UpholdSdk/Production'
+
+    # To use Uphold's sandbox environment.
+    pod 'UpholdSdk/Sandbox'
     ```
 
 2. Run `pod install`.
 
 ### Using [Carthage](https://github.com/Carthage/Carthage)
 
-1. Create `Cartfile`.
+1. Add to your `Cartfile`.
 
     ```
     github "uphold/uphold-sdk-ios" ~> 0.1.0
     ```
 
-2. Run `carthage update --platform iOS`.
+2. Run `carthage update --platform iOS` specifying the build configuration to use Uphold's different environments.
+
+    ```
+    # To use Uphold's production environment.
+    carthage update --platform iOS --configuration ProductionRelease
+
+    # To use Uphold's sandbox environment.
+    carthage update --platform iOS --configuration SandboxRelease
+
+    ```
 
 ## Basic usage
 
@@ -45,7 +58,7 @@ From the application page in your account you can get the `Client ID`, `Client S
 
 ### Authenticate User
 
-In order to allow users to be re-directed back to the application after the authorization process, you’ll need to associate your custom `scheme` with your app by adding the following keys into the [`Info.plist`](https://github.com/uphold/uphold-sdk-ios/blob/master/Example/Info.plist) file:
+In order to allow users to be re-directed back to the application after the authorization process, you’ll need to associate your custom `scheme` with your app by adding the following keys into the [`Info.plist`](https://github.com/uphold/uphold-sdk-ios/blob/master/SampleApplication/Info.plist) file:
 
 * CFBundleURLTypes - The list of URLs types to be handled by the application.
     * CFBundleURLSchemes - The custom application schemes.
@@ -261,4 +274,4 @@ paginator.getNext().then { (transactions: [Transaction]) -> () in
 
 ## Uphold SDK sample
 
-Check the [sample application](https://github.com/uphold/uphold-sdk-ios/tree/master/Example) to explore an application using the Uphold iOS SDK.
+Check the [sample application](https://github.com/uphold/uphold-sdk-ios/tree/master/SampleApplication) to explore an application using the Uphold iOS SDK.

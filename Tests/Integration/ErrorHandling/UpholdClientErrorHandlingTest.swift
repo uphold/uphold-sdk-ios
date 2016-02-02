@@ -83,6 +83,17 @@ class UpholdClientErrorHandlingTest: UpholdTestCase {
         wait()
     }
 
+    func testHandleErrorShouldReturnConfigurationMissingError() {
+        let error = ConfigurationMissingError(message: "foo")
+
+        XCTAssertNil(error.code, "Failed: HTTP status code should be nil.")
+        XCTAssertEqual(error.info, ["Configuration missing error": "foo"], "Failed: Wrong error message.")
+
+        self.expectation.fulfill()
+
+        wait()
+    }
+
     func testHandleErrorShouldReturnLogicError() {
         let error = LogicError(code: 200, message: "foo")
 

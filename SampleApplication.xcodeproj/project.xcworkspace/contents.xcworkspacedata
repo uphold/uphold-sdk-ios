@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Example.xcodeproj">
+      location = "self:/Users/diogoguimaraes/Documents/Github/uphold-sdk-ios/SampleApplication.xcodeproj">
    </FileRef>
 </Workspace>

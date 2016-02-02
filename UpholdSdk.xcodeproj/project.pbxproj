@@ -10,6 +10,8 @@
 		BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
 		BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
 		BC0C90231C4CF40400AD0F99 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
+		BC0F492B1C5BDA0B00FAE568 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
+		BC0F492C1C5BDA0B00FAE568 /* URLUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4424141C56A06500FAC537 /* URLUtilsTest.swift */; };
 		BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12F44E1C10691E00EB2E2B /* TransactionCommitRequest.swift */; };
 		BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; };
 		BC202DCA1C4420920069A230 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DC91C4420920069A230 /* AuthenticationRequest.swift */; };
@@ -17,6 +19,14 @@
 		BC202DCE1C442BE30069A230 /* OAuth2Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DCD1C442BE30069A230 /* OAuth2Service.swift */; };
 		BC202DD01C4514F40069A230 /* StateMatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DCF1C4514F40069A230 /* StateMatchError.swift */; };
 		BC202DD21C451E040069A230 /* AuthenticationRequiredError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DD11C451E040069A230 /* AuthenticationRequiredError.swift */; };
+		BC215F191C5BD93B0007C7FA /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DC91C4420920069A230 /* AuthenticationRequest.swift */; };
+		BC215F1A1C5BD93B0007C7FA /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DCB1C4420AE0069A230 /* AuthenticationResponse.swift */; };
+		BC215F1B1C5BD95B0007C7FA /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC431F421C57F51D000685DD /* AuthorizationViewController.swift */; };
+		BC215F1C1C5BD95B0007C7FA /* AuthenticationRequiredError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DD11C451E040069A230 /* AuthenticationRequiredError.swift */; };
+		BC215F1D1C5BD95B0007C7FA /* MalformedUrlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7757D1C565F6A005CE55A /* MalformedUrlError.swift */; };
+		BC215F1E1C5BD95B0007C7FA /* StateMatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DCF1C4514F40069A230 /* StateMatchError.swift */; };
+		BC215F1F1C5BD95B0007C7FA /* OAuth2Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC202DCD1C442BE30069A230 /* OAuth2Service.swift */; };
+		BC215F201C5BD95B0007C7FA /* URLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7757B1C565D67005CE55A /* URLUtils.swift */; };
 		BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* UpholdClient.swift */; };
 		BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; };
 		BC2381661BB4626F0060CC80 /* NormalizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */; };
@@ -59,6 +69,10 @@
 		BC4473C51BD64E2B003B4196 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
 		BC4A30571BEA655B001B6249 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A30561BEA655B001B6249 /* Token.swift */; };
 		BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A306F1BEA657C001B6249 /* BaseModel.swift */; };
+		BC52369F1C5A3EF30088B62D /* ResourcesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC52369E1C5A3EF30088B62D /* ResourcesUtil.swift */; };
+		BC5236A01C5A3EF30088B62D /* ResourcesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC52369E1C5A3EF30088B62D /* ResourcesUtil.swift */; };
+		BC5236A21C5A41120088B62D /* ConfigurationMissingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5236A11C5A41120088B62D /* ConfigurationMissingError.swift */; };
+		BC5236A31C5A41120088B62D /* ConfigurationMissingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5236A11C5A41120088B62D /* ConfigurationMissingError.swift */; };
 		BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; };
 		BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
 		BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
@@ -67,6 +81,26 @@
 		BC81F7031C0758830025A1AF /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62431BFE28A600094F3A /* ObjectMapper.framework */; };
 		BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8386CE1BF2458B00D67F98 /* SessionManager.swift */; };
 		BC8387181BF395A300D67F98 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8387171BF395A300D67F98 /* SessionManagerTest.swift */; };
+		BC865B651C59411F003D67E5 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8387171BF395A300D67F98 /* SessionManagerTest.swift */; };
+		BC865B661C59411F003D67E5 /* UpholdRestAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */; };
+		BC865B671C59411F003D67E5 /* UpholdClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */; };
+		BC865B681C59411F003D67E5 /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
+		BC865B691C59411F003D67E5 /* ReserveServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */; };
+		BC865B6A1C59411F003D67E5 /* TickerServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */; };
+		BC865B6B1C59411F003D67E5 /* UserCardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */; };
+		BC865B6C1C59411F003D67E5 /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */; };
+		BC865B6D1C59411F003D67E5 /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817B1BB4627C0060CC80 /* CardTest.swift */; };
+		BC865B6E1C59411F003D67E5 /* RateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817C1BB4627C0060CC80 /* RateTest.swift */; };
+		BC865B6F1C59411F003D67E5 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
+		BC865B701C59411F003D67E5 /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817D1BB4627C0060CC80 /* TransactionTest.swift */; };
+		BC865B711C59411F003D67E5 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23817E1BB4627C0060CC80 /* UserTest.swift */; };
+		BC865B721C59411F003D67E5 /* PaginatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA32A241C18906C0013A347 /* PaginatorTest.swift */; };
+		BC865B731C59411F003D67E5 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
+		BC865B741C59411F003D67E5 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110451C05E5F90063761C /* Fixtures.swift */; };
+		BC865B751C59411F003D67E5 /* JSONTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */; };
+		BC865B761C59411F003D67E5 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C0A841BD4F77700CEF466 /* MockRequest.swift */; };
+		BC865B771C59411F003D67E5 /* UpholdTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */; };
+		BC865B781C59411F003D67E5 /* MockRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */; };
 		BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
 		BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8851BECD80C0074C538 /* Reserve.swift */; };
 		BC91E8A01BECD8270074C538 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89B1BECD8270074C538 /* Deposit.swift */; };
@@ -76,9 +110,71 @@
 		BC91E8A41BECD8270074C538 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89F1BECD8270074C538 /* Value.swift */; };
 		BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8A51BECDB030074C538 /* ReserveTest.swift */; };
 		BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
+		BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */; };
+		BCA15B331C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */; };
 		BCA32A251C18906C0013A347 /* PaginatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA32A241C18906C0013A347 /* PaginatorTest.swift */; };
+		BCACC4101C5928C2008E7CE7 /* GlobalConfigurationSandboxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */; };
+		BCACC4241C5928C2008E7CE7 /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4110561C05E7270063761C /* Fakery.framework */; };
+		BCACC4251C5928C2008E7CE7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62401BFE285000094F3A /* Mockingjay.framework */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
+		BCC9D6D51C56377E00671171 /* NormalizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */; };
+		BCC9D6D61C56377E00671171 /* InternationalizationUserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */; };
+		BCC9D6D71C56377E00671171 /* BadRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5621BC692E200D61852 /* BadRequestError.swift */; };
+		BCC9D6D81C56377E00671171 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381571BB4626F0060CC80 /* Transaction.swift */; };
+		BCC9D6D91C56377E00671171 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
+		BCC9D6DA1C56377E00671171 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89B1BECD8270074C538 /* Deposit.swift */; };
+		BCC9D6DB1C56377E00671171 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89E1BECD8270074C538 /* Total.swift */; };
+		BCC9D6DC1C56377E00671171 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110471C05E6350063761C /* Balance.swift */; };
+		BCC9D6DD1C56377E00671171 /* UserBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104B1C05E6400063761C /* UserBalance.swift */; };
+		BCC9D6DE1C56377E00671171 /* DepositMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89C1BECD8270074C538 /* DepositMovement.swift */; };
+		BCC9D6DF1C56377E00671171 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815C1BB4626F0060CC80 /* User.swift */; };
+		BCC9D6E01C56377E00671171 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EE5931C1E3E9D0058478D /* Paginator.swift */; };
+		BCC9D6E11C56377E00671171 /* TickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815F1BB4626F0060CC80 /* TickerService.swift */; };
+		BCC9D6E21C56377E00671171 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E8851BECD80C0074C538 /* Reserve.swift */; };
+		BCC9D6E31C56377E00671171 /* Denomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381521BB4626F0060CC80 /* Denomination.swift */; };
+		BCC9D6E41C56377E00671171 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104A1C05E6400063761C /* Currency.swift */; };
+		BCC9D6E51C56377E00671171 /* UpholdClientErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */; };
+		BCC9D6E61C56377E00671171 /* InternationalizationUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815A1BB4626F0060CC80 /* InternationalizationUserSettings.swift */; };
+		BCC9D6E71C56377E00671171 /* ContactRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104F1C05E68E0063761C /* ContactRequest.swift */; };
+		BCC9D6E81C56377E00671171 /* PaginatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EE5941C1E3E9D0058478D /* PaginatorProtocol.swift */; };
+		BCC9D6E91C56377E00671171 /* LogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CFA451BDFCF1D00979038 /* LogicError.swift */; };
+		BCC9D6EA1C56377E00671171 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41104E1C05E68E0063761C /* Contact.swift */; };
+		BCC9D6EB1C56377E00671171 /* NotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5641BC692E200D61852 /* NotFoundError.swift */; };
+		BCC9D6EC1C56377E00671171 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89F1BECD8270074C538 /* Value.swift */; };
+		BCC9D6ED1C56377E00671171 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814F1BB4626F0060CC80 /* Card.swift */; };
+		BCC9D6EE1C56377E00671171 /* UnhandledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5651BC692E200D61852 /* UnhandledError.swift */; };
+		BCC9D6EF1C56377E00671171 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381561BB4626F0060CC80 /* Source.swift */; };
+		BCC9D6F01C56377E00671171 /* ReserveStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC91E89D1BECD8270074C538 /* ReserveStatistics.swift */; };
+		BCC9D6F11C56377E00671171 /* ApiLimitExceedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E25731BCFBB4F00C15899 /* ApiLimitExceedError.swift */; };
+		BCC9D6F21C56377E00671171 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381501BB4626F0060CC80 /* Rate.swift */; };
+		BCC9D6F31C56377E00671171 /* UserCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381601BB4626F0060CC80 /* UserCardService.swift */; };
+		BCC9D6F41C56377E00671171 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5611BC692E200D61852 /* AuthenticationError.swift */; };
+		BCC9D6F51C56377E00671171 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381551BB4626F0060CC80 /* Parameters.swift */; };
+		BCC9D6F61C56377E00671171 /* UnexpectedResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */; };
+		BCC9D6F71C56377E00671171 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381541BB4626F0060CC80 /* Origin.swift */; };
+		BCC9D6F81C56377E00671171 /* UpholdClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5631BC692E200D61852 /* UpholdClientError.swift */; };
+		BCC9D6F91C56377E00671171 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; };
+		BCC9D6FA1C56377E00671171 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A306F1BEA657C001B6249 /* BaseModel.swift */; };
+		BCC9D6FB1C56377E00671171 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381531BB4626F0060CC80 /* Destination.swift */; };
+		BCC9D6FC1C56377E00671171 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
+		BCC9D6FD1C56377E00671171 /* NormalizedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */; };
+		BCC9D6FE1C56377E00671171 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A30561BEA655B001B6249 /* Token.swift */; };
+		BCC9D6FF1C56377E00671171 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381611BB4626F0060CC80 /* UserService.swift */; };
+		BCC9D7001C56377E00671171 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C41BCFCEE5008E2F97 /* Header.swift */; };
+		BCC9D7011C56377E00671171 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4110501C05E68E0063761C /* Phone.swift */; };
+		BCC9D7021C56377E00671171 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815B1BB4626F0060CC80 /* UserSettings.swift */; };
+		BCC9D7031C56377E00671171 /* UpholdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* UpholdClient.swift */; };
+		BCC9D7041C56377E00671171 /* TransactionCommitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12F44E1C10691E00EB2E2B /* TransactionCommitRequest.swift */; };
+		BCC9D7051C56377E00671171 /* ReserveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23815E1BB4626F0060CC80 /* ReserveService.swift */; };
+		BCC9D7061C56377E00671171 /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */; };
+		BCC9D7071C56377E00671171 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8386CE1BF2458B00D67F98 /* SessionManager.swift */; };
+		BCC9D7081C56377E00671171 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
+		BCC9D70A1C56377E00671171 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62421BFE28A600094F3A /* KeychainSwift.framework */; };
+		BCC9D70B1C56377E00671171 /* OMGHTTPURLRQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62441BFE28A600094F3A /* OMGHTTPURLRQ.framework */; };
+		BCC9D70C1C56377E00671171 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62451BFE28A600094F3A /* PromiseKit.framework */; };
+		BCC9D70D1C56377E00671171 /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62461BFE28A600094F3A /* SwiftClient.framework */; };
+		BCC9D70E1C56377E00671171 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62431BFE28A600094F3A /* ObjectMapper.framework */; };
 		BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */; };
 		BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */; };
 		BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5611BC692E200D61852 /* AuthenticationError.swift */; };
@@ -86,6 +182,8 @@
 		BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5631BC692E200D61852 /* UpholdClientError.swift */; };
 		BCCBE56A1BC692E200D61852 /* NotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5641BC692E200D61852 /* NotFoundError.swift */; };
 		BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5651BC692E200D61852 /* UnhandledError.swift */; };
+		BCCD63001C60D00E0087330A /* ResourcesUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */; };
+		BCCD63011C60D00E0087330A /* ResourcesUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */; };
 		BCE7757C1C565D67005CE55A /* URLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7757B1C565D67005CE55A /* URLUtils.swift */; };
 		BCE7757E1C565F6A005CE55A /* MalformedUrlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7757D1C565F6A005CE55A /* MalformedUrlError.swift */; };
 		BCEB62411BFE285000094F3A /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62401BFE285000094F3A /* Mockingjay.framework */; };
@@ -95,7 +193,6 @@
 		BCEB624B1BFE28A600094F3A /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62461BFE28A600094F3A /* SwiftClient.framework */; };
 		BCF38A631C0DFD1B0075E477 /* JSONTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */; };
 		BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C41BCFCEE5008E2F97 /* Header.swift */; };
-		BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +202,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BC23812B1BB462170060CC80;
 			remoteInfo = UpholdSdk;
+		};
+		BC865B631C593FDC003D67E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2381231BB462170060CC80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC9D6D31C56377E00671171;
+			remoteInfo = UpholdSdkSandbox;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -122,7 +226,6 @@
 		BC23812C1BB462170060CC80 /* UpholdSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpholdSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2381361BB462180060CC80 /* UpholdSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpholdSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2381481BB4626F0060CC80 /* UpholdClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClient.swift; sourceTree = "<group>"; };
-		BC2381491BB4626F0060CC80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC23814D1BB4626F0060CC80 /* CardSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSettings.swift; sourceTree = "<group>"; };
 		BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalizedCard.swift; sourceTree = "<group>"; };
 		BC23814F1BB4626F0060CC80 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -141,7 +244,6 @@
 		BC23815F1BB4626F0060CC80 /* TickerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerService.swift; sourceTree = "<group>"; };
 		BC2381601BB4626F0060CC80 /* UserCardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCardService.swift; sourceTree = "<group>"; };
 		BC2381611BB4626F0060CC80 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		BC2381781BB4627C0060CC80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC23817B1BB4627C0060CC80 /* CardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTest.swift; sourceTree = "<group>"; };
 		BC23817C1BB4627C0060CC80 /* RateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTest.swift; sourceTree = "<group>"; };
 		BC23817D1BB4627C0060CC80 /* TransactionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTest.swift; sourceTree = "<group>"; };
@@ -152,6 +254,8 @@
 		BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
 		BC3EE5931C1E3E9D0058478D /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		BC3EE5941C1E3E9D0058478D /* PaginatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatorProtocol.swift; sourceTree = "<group>"; };
+		BC3FC4411C3BF0D700487CDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC3FC4431C3BF0E600487CDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC4110451C05E5F90063761C /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fixtures.swift; path = Util/Fixtures.swift; sourceTree = "<group>"; };
 		BC4110471C05E6350063761C /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		BC41104A1C05E6400063761C /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -165,8 +269,12 @@
 		BC4473C41BD64E2B003B4196 /* UpholdTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdTestCase.swift; path = Util/UpholdTestCase.swift; sourceTree = "<group>"; };
 		BC4A30561BEA655B001B6249 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		BC4A306F1BEA657C001B6249 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		BC52369E1C5A3EF30088B62D /* ResourcesUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesUtil.swift; path = Util/ResourcesUtil.swift; sourceTree = "<group>"; };
+		BC5236A11C5A41120088B62D /* ConfigurationMissingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationMissingError.swift; sourceTree = "<group>"; };
 		BC5C0A841BD4F77700CEF466 /* MockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRequest.swift; path = Util/MockRequest.swift; sourceTree = "<group>"; };
 		BC622E981BD546CA007E767C /* UpholdRestAdapterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdRestAdapterTest.swift; path = Client/UpholdRestAdapterTest.swift; sourceTree = "<group>"; };
+		BC6330771C5783A9003DB6D8 /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
+		BC6330781C5783BE003DB6D8 /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		BC7E73FC1BEA7BB6006AAE0E /* UpholdClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientTest.swift; path = Client/UpholdClientTest.swift; sourceTree = "<group>"; };
 		BC7E74111BEA80D6006AAE0E /* MockRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRestAdapter.swift; path = Util/MockRestAdapter.swift; sourceTree = "<group>"; };
 		BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalizedTransaction.swift; sourceTree = "<group>"; };
@@ -181,9 +289,14 @@
 		BC91E89F1BECD8270074C538 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Reserve/Value.swift; sourceTree = "<group>"; };
 		BC91E8A51BECDB030074C538 /* ReserveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveTest.swift; sourceTree = "<group>"; };
 		BC9510CD1C0B92F800E2EDE1 /* UnexpectedResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedResponseError.swift; sourceTree = "<group>"; };
+		BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurations.swift; sourceTree = "<group>"; };
+		BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurationProductionTest.swift; sourceTree = "<group>"; };
+		BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigurationSandboxTest.swift; sourceTree = "<group>"; };
 		BCA32A241C18906C0013A347 /* PaginatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatorTest.swift; sourceTree = "<group>"; };
+		BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpholdSdkSandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
+		BCC9D7181C56377E00671171 /* UpholdSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpholdSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
 		BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientErrorHandling.swift; sourceTree = "<group>"; };
 		BCCBE5611BC692E200D61852 /* AuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
@@ -191,6 +304,9 @@
 		BCCBE5631BC692E200D61852 /* UpholdClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientError.swift; sourceTree = "<group>"; };
 		BCCBE5641BC692E200D61852 /* NotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotFoundError.swift; sourceTree = "<group>"; };
 		BCCBE5651BC692E200D61852 /* UnhandledError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhandledError.swift; sourceTree = "<group>"; };
+		BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesUtilTest.swift; path = Util/ResourcesUtilTest.swift; sourceTree = "<group>"; };
+		BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		BCE7757B1C565D67005CE55A /* URLUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLUtils.swift; path = Util/URLUtils.swift; sourceTree = "<group>"; };
 		BCE7757D1C565F6A005CE55A /* MalformedUrlError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalformedUrlError.swift; sourceTree = "<group>"; };
 		BCEB62401BFE285000094F3A /* Mockingjay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mockingjay.framework; path = Carthage/Build/iOS/Mockingjay.framework; sourceTree = "<group>"; };
@@ -201,7 +317,6 @@
 		BCEB62461BFE28A600094F3A /* SwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftClient.framework; path = Carthage/Build/iOS/SwiftClient.framework; sourceTree = "<group>"; };
 		BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONTestUtils.swift; path = Util/JSONTestUtils.swift; sourceTree = "<group>"; };
 		BCF656C41BCFCEE5008E2F97 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Header.swift; path = Util/Header.swift; sourceTree = "<group>"; };
-		BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalConfigurations.swift; path = Config/GlobalConfigurations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,16 +341,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCACC4231C5928C2008E7CE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCACC4241C5928C2008E7CE7 /* Fakery.framework in Frameworks */,
+				BCACC4251C5928C2008E7CE7 /* Mockingjay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC9D7091C56377E00671171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCC9D70A1C56377E00671171 /* KeychainSwift.framework in Frameworks */,
+				BCC9D70B1C56377E00671171 /* OMGHTTPURLRQ.framework in Frameworks */,
+				BCC9D70C1C56377E00671171 /* PromiseKit.framework in Frameworks */,
+				BCC9D70D1C56377E00671171 /* SwiftClient.framework in Frameworks */,
+				BCC9D70E1C56377E00671171 /* ObjectMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BC2381221BB462170060CC80 = {
 			isa = PBXGroup;
 			children = (
+				BC98A4B71C3BE84700C60A3D /* Configurations */,
 				BCEB624E1BFE28B500094F3A /* Frameworks */,
-				BC2381771BB4627C0060CC80 /* Tests */,
-				BC2381461BB4626F0060CC80 /* Source */,
 				BC23812D1BB462170060CC80 /* Products */,
+				BC2381461BB4626F0060CC80 /* Source */,
+				BC2381771BB4627C0060CC80 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +381,8 @@
 			children = (
 				BC23812C1BB462170060CC80 /* UpholdSdk.framework */,
 				BC2381361BB462180060CC80 /* UpholdSdkTests.xctest */,
+				BCC9D7181C56377E00671171 /* UpholdSdk.framework */,
+				BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,9 +390,9 @@
 		BC2381461BB4626F0060CC80 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BC2381491BB4626F0060CC80 /* Info.plist */,
+				BC3FC4411C3BF0D700487CDC /* Info.plist */,
 				BC2381471BB4626F0060CC80 /* Client */,
-				BCF656B91BCFCD6E008E2F97 /* Config */,
+				BC98A4B41C3BE80B00C60A3D /* Configurations */,
 				BCCBE55F1BC692E200D61852 /* ErrorHandling */,
 				BC23814A1BB4626F0060CC80 /* Model */,
 				BC3EE5921C1E3E9D0058478D /* Paginator */,
@@ -350,8 +489,9 @@
 		BC2381771BB4627C0060CC80 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BC2381781BB4627C0060CC80 /* Info.plist */,
+				BC3FC4431C3BF0E600487CDC /* Info.plist */,
 				BC2381791BB4627C0060CC80 /* Integration */,
+				BCA15B311C591B3E00DE7D54 /* Unit */,
 				BC5C0A7B1BD4F6F800CEF466 /* Util */,
 			);
 			path = Tests;
@@ -424,6 +564,24 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		BC8939521C3EC7740012BC52 /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				BC6330771C5783A9003DB6D8 /* Configurations.plist */,
+				BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
+		BC8939541C3EC7740012BC52 /* Sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				BC6330781C5783BE003DB6D8 /* Configurations.plist */,
+				BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */,
+			);
+			path = Sandbox;
+			sourceTree = "<group>";
+		};
 		BC91E89A1BECD8170074C538 /* Reserve */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,12 +594,38 @@
 			name = Reserve;
 			sourceTree = "<group>";
 		};
+		BC98A4B41C3BE80B00C60A3D /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				BC98A4B51C3BE80B00C60A3D /* GlobalConfigurations.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		BC98A4B71C3BE84700C60A3D /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				BC8939521C3EC7740012BC52 /* Production */,
+				BC8939541C3EC7740012BC52 /* Sandbox */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		BC995DA71BDFD9B50031FA5E /* ErrorHandling */ = {
 			isa = PBXGroup;
 			children = (
 				BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */,
 			);
 			name = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		BCA15B311C591B3E00DE7D54 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				BCA15B321C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift */,
+				BCA15B341C591ECD00DE7D54 /* GlobalConfigurationSandboxTest.swift */,
+			);
+			path = Unit;
 			sourceTree = "<group>";
 		};
 		BCA32A231C18904E0013A347 /* Paginator */ = {
@@ -457,6 +641,7 @@
 			children = (
 				BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */,
 				BC4424141C56A06500FAC537 /* URLUtilsTest.swift */,
+				BCCD62FF1C60D00E0087330A /* ResourcesUtilTest.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -470,6 +655,7 @@
 				BCCBE5621BC692E200D61852 /* BadRequestError.swift */,
 				BC1CFA451BDFCF1D00979038 /* LogicError.swift */,
 				BCE7757D1C565F6A005CE55A /* MalformedUrlError.swift */,
+				BC5236A11C5A41120088B62D /* ConfigurationMissingError.swift */,
 				BCCBE5641BC692E200D61852 /* NotFoundError.swift */,
 				BC202DCF1C4514F40069A230 /* StateMatchError.swift */,
 				BCCBE5651BC692E200D61852 /* UnhandledError.swift */,
@@ -503,19 +689,12 @@
 			name = Client;
 			sourceTree = "<group>";
 		};
-		BCF656B91BCFCD6E008E2F97 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				BCF656C61BCFCF85008E2F97 /* GlobalConfigurations.swift */,
-			);
-			name = Config;
-			sourceTree = "<group>";
-		};
 		BCF656C31BCFCEAE008E2F97 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				BCF656C41BCFCEE5008E2F97 /* Header.swift */,
 				BCE7757B1C565D67005CE55A /* URLUtils.swift */,
+				BC52369E1C5A3EF30088B62D /* ResourcesUtil.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -524,6 +703,13 @@
 
 /* Begin PBXHeadersBuildPhase section */
 		BC2381291BB462170060CC80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC9D70F1C56377E00671171 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -541,8 +727,9 @@
 				BC2381281BB462170060CC80 /* Frameworks */,
 				BC2381291BB462170060CC80 /* Headers */,
 				BC23812A1BB462170060CC80 /* Resources */,
-				BC62F2AE1BCE4EFA007E6FDB /* ShellScript */,
-				BC91D9561BFCC385000207AD /* ShellScript */,
+				BC62F2AE1BCE4EFA007E6FDB /* SwiftLint Run Script */,
+				BC91D9561BFCC385000207AD /* Carthage Dependencies Run Script */,
+				BCC9D7251C5643BA00671171 /* Environment Configuration Run Script */,
 			);
 			buildRules = (
 			);
@@ -560,7 +747,8 @@
 				BC2381321BB462180060CC80 /* Sources */,
 				BC2381331BB462180060CC80 /* Frameworks */,
 				BC2381341BB462180060CC80 /* Resources */,
-				BC91D9571BFCC401000207AD /* ShellScript */,
+				BC91D9571BFCC401000207AD /* Carthage Dependencies Run Script */,
+				BCC9D7271C5644FA00671171 /* Environment Configuration Run Script */,
 			);
 			buildRules = (
 			);
@@ -571,6 +759,47 @@
 			productName = UpholdSdkTests;
 			productReference = BC2381361BB462180060CC80 /* UpholdSdkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCACC4091C5928C2008E7CE7 /* UpholdSdkSandboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCACC4291C5928C2008E7CE7 /* Build configuration list for PBXNativeTarget "UpholdSdkSandboxTests" */;
+			buildPhases = (
+				BCACC40C1C5928C2008E7CE7 /* Sources */,
+				BCACC4231C5928C2008E7CE7 /* Frameworks */,
+				BCACC4261C5928C2008E7CE7 /* Resources */,
+				BCACC4271C5928C2008E7CE7 /* Carthage Dependencies Run Script */,
+				BCACC4281C5928C2008E7CE7 /* Environment Configuration Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC865B641C593FDC003D67E5 /* PBXTargetDependency */,
+			);
+			name = UpholdSdkSandboxTests;
+			productName = UpholdSdkTests;
+			productReference = BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCC9D6D31C56377E00671171 /* UpholdSdkSandbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCC9D7131C56377E00671171 /* Build configuration list for PBXNativeTarget "UpholdSdkSandbox" */;
+			buildPhases = (
+				BCC9D6D41C56377E00671171 /* Sources */,
+				BCC9D7091C56377E00671171 /* Frameworks */,
+				BCC9D70F1C56377E00671171 /* Headers */,
+				BCC9D7101C56377E00671171 /* Resources */,
+				BCC9D7111C56377E00671171 /* SwiftLint Run Script */,
+				BCC9D7121C56377E00671171 /* Carthage Dependencies Run Script */,
+				BCC9D7261C5644F100671171 /* Environment Configuration Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UpholdSdkSandbox;
+			productName = UpholdSdk;
+			productReference = BCC9D7181C56377E00671171 /* UpholdSdk.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -602,7 +831,9 @@
 			projectRoot = "";
 			targets = (
 				BC23812B1BB462170060CC80 /* UpholdSdk */,
+				BCC9D6D31C56377E00671171 /* UpholdSdkSandbox */,
 				BC2381351BB462180060CC80 /* UpholdSdkTests */,
+				BCACC4091C5928C2008E7CE7 /* UpholdSdkSandboxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -622,23 +853,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCACC4261C5928C2008E7CE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC9D7101C56377E00671171 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BC62F2AE1BCE4EFA007E6FDB /* ShellScript */ = {
+		BC62F2AE1BCE4EFA007E6FDB /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "SwiftLint Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		BC91D9561BFCC385000207AD /* ShellScript */ = {
+		BC91D9561BFCC385000207AD /* Carthage Dependencies Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -650,13 +896,14 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OMGHTTPURLRQ.framework",
 			);
+			name = "Carthage Dependencies Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		BC91D9571BFCC401000207AD /* ShellScript */ = {
+		BC91D9571BFCC401000207AD /* Carthage Dependencies Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -672,11 +919,124 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Fakery.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
+			name = "Carthage Dependencies Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		BCACC4271C5928C2008E7CE7 /* Carthage Dependencies Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Mockingjay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftClient.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/URITemplate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OMGHTTPURLRQ.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Fakery.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			name = "Carthage Dependencies Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		BCACC4281C5928C2008E7CE7 /* Environment Configuration Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Environment Configuration Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if  [ \"${CONFIGURATION}\" == \"ProductionDebug\" ] || [ \"${CONFIGURATION}\" == \"ProductionRelease\" ]; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Production\nelif [ \"${CONFIGURATION}\" == \"SandboxDebug\" ] || [ \"${CONFIGURATION}\" == \"SandboxRelease\" ] ; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Sandbox\nfi\n\nBUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.xctest\n\necho \"Copying all files under ${RESOURCE_PATH} to ${BUILD_APP_DIR}\"\ncp -v \"${RESOURCE_PATH}/\"*.plist \"${BUILD_APP_DIR}/\"";
+		};
+		BCC9D7111C56377E00671171 /* SwiftLint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		BCC9D7121C56377E00671171 /* Carthage Dependencies Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftClient.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OMGHTTPURLRQ.framework",
+			);
+			name = "Carthage Dependencies Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		BCC9D7251C5643BA00671171 /* Environment Configuration Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Environment Configuration Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if  [ \"${CONFIGURATION}\" == \"ProductionDebug\" ] || [ \"${CONFIGURATION}\" == \"ProductionRelease\" ]; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Production\nelif [ \"${CONFIGURATION}\" == \"SandboxDebug\" ] || [ \"${CONFIGURATION}\" == \"SandboxRelease\" ] ; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Sandbox\nfi\n\nBUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\n\necho \"Copying all files under ${RESOURCE_PATH} to ${BUILD_APP_DIR}\"\ncp -v \"${RESOURCE_PATH}/\"*.plist \"${BUILD_APP_DIR}/\"";
+		};
+		BCC9D7261C5644F100671171 /* Environment Configuration Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Environment Configuration Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if  [ \"${CONFIGURATION}\" == \"ProductionDebug\" ] || [ \"${CONFIGURATION}\" == \"ProductionRelease\" ]; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Production\nelif [ \"${CONFIGURATION}\" == \"SandboxDebug\" ] || [ \"${CONFIGURATION}\" == \"SandboxRelease\" ] ; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Sandbox\nfi\n\nBUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\n\necho \"Copying all files under ${RESOURCE_PATH} to ${BUILD_APP_DIR}\"\ncp -v \"${RESOURCE_PATH}/\"*.plist \"${BUILD_APP_DIR}/\"";
+		};
+		BCC9D7271C5644FA00671171 /* Environment Configuration Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Environment Configuration Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if  [ \"${CONFIGURATION}\" == \"ProductionDebug\" ] || [ \"${CONFIGURATION}\" == \"ProductionRelease\" ]; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Production\nelif [ \"${CONFIGURATION}\" == \"SandboxDebug\" ] || [ \"${CONFIGURATION}\" == \"SandboxRelease\" ] ; then\n    RESOURCE_PATH=${SRCROOT}/Configurations/Sandbox\nfi\n\nBUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.xctest\n\necho \"Copying all files under ${RESOURCE_PATH} to ${BUILD_APP_DIR}\"\ncp -v \"${RESOURCE_PATH}/\"*.plist \"${BUILD_APP_DIR}/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -685,6 +1045,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5236A21C5A41120088B62D /* ConfigurationMissingError.swift in Sources */,
 				BC2381661BB4626F0060CC80 /* NormalizedCard.swift in Sources */,
 				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
 				BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */,
@@ -705,6 +1066,7 @@
 				BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */,
 				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
 				BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */,
+				BC52369F1C5A3EF30088B62D /* ResourcesUtil.swift in Sources */,
 				BC3EE5961C1E3E9D0058478D /* PaginatorProtocol.swift in Sources */,
 				BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */,
 				BC4110511C05E68E0063761C /* Contact.swift in Sources */,
@@ -727,7 +1089,6 @@
 				BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */,
 				BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */,
 				BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */,
-				BCF656C71BCFCF85008E2F97 /* GlobalConfigurations.swift in Sources */,
 				BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */,
 				BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */,
 				BC81F7021C0753BA0025A1AF /* NormalizedTransaction.swift in Sources */,
@@ -743,6 +1104,7 @@
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
+				BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */,
 				BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */,
 				BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */,
 			);
@@ -767,6 +1129,8 @@
 				BC2381801BB4627C0060CC80 /* CardTest.swift in Sources */,
 				BC91E8A61BECDB030074C538 /* ReserveTest.swift in Sources */,
 				BC7E73FD1BEA7BB6006AAE0E /* UpholdClientTest.swift in Sources */,
+				BCCD63001C60D00E0087330A /* ResourcesUtilTest.swift in Sources */,
+				BCA15B331C591B3E00DE7D54 /* GlobalConfigurationProductionTest.swift in Sources */,
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
 				BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */,
@@ -774,6 +1138,106 @@
 				BC4424151C56A06500FAC537 /* URLUtilsTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
 				BC5C0A851BD4F77700CEF466 /* MockRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCACC40C1C5928C2008E7CE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0F492B1C5BDA0B00FAE568 /* OAuth2ServiceTest.swift in Sources */,
+				BC0F492C1C5BDA0B00FAE568 /* URLUtilsTest.swift in Sources */,
+				BC865B651C59411F003D67E5 /* SessionManagerTest.swift in Sources */,
+				BC865B661C59411F003D67E5 /* UpholdRestAdapterTest.swift in Sources */,
+				BC865B671C59411F003D67E5 /* UpholdClientTest.swift in Sources */,
+				BC865B681C59411F003D67E5 /* UpholdClientErrorHandlingTest.swift in Sources */,
+				BC865B691C59411F003D67E5 /* ReserveServiceTest.swift in Sources */,
+				BC865B6A1C59411F003D67E5 /* TickerServiceTest.swift in Sources */,
+				BC865B6B1C59411F003D67E5 /* UserCardServiceTest.swift in Sources */,
+				BC865B6C1C59411F003D67E5 /* UserServiceTest.swift in Sources */,
+				BC865B6D1C59411F003D67E5 /* CardTest.swift in Sources */,
+				BC865B6E1C59411F003D67E5 /* RateTest.swift in Sources */,
+				BC865B6F1C59411F003D67E5 /* ReserveTest.swift in Sources */,
+				BC865B701C59411F003D67E5 /* TransactionTest.swift in Sources */,
+				BC865B711C59411F003D67E5 /* UserTest.swift in Sources */,
+				BCCD63011C60D00E0087330A /* ResourcesUtilTest.swift in Sources */,
+				BC865B721C59411F003D67E5 /* PaginatorTest.swift in Sources */,
+				BC865B731C59411F003D67E5 /* HeaderTest.swift in Sources */,
+				BC865B741C59411F003D67E5 /* Fixtures.swift in Sources */,
+				BC865B751C59411F003D67E5 /* JSONTestUtils.swift in Sources */,
+				BC865B761C59411F003D67E5 /* MockRequest.swift in Sources */,
+				BC865B771C59411F003D67E5 /* UpholdTestCase.swift in Sources */,
+				BC865B781C59411F003D67E5 /* MockRestAdapter.swift in Sources */,
+				BCACC4101C5928C2008E7CE7 /* GlobalConfigurationSandboxTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC9D6D41C56377E00671171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC215F1B1C5BD95B0007C7FA /* AuthorizationViewController.swift in Sources */,
+				BC215F1C1C5BD95B0007C7FA /* AuthenticationRequiredError.swift in Sources */,
+				BC215F1D1C5BD95B0007C7FA /* MalformedUrlError.swift in Sources */,
+				BC215F1E1C5BD95B0007C7FA /* StateMatchError.swift in Sources */,
+				BC215F1F1C5BD95B0007C7FA /* OAuth2Service.swift in Sources */,
+				BC215F201C5BD95B0007C7FA /* URLUtils.swift in Sources */,
+				BC215F191C5BD93B0007C7FA /* AuthenticationRequest.swift in Sources */,
+				BC215F1A1C5BD93B0007C7FA /* AuthenticationResponse.swift in Sources */,
+				BC5236A31C5A41120088B62D /* ConfigurationMissingError.swift in Sources */,
+				BCC9D6D51C56377E00671171 /* NormalizedCard.swift in Sources */,
+				BCC9D6D61C56377E00671171 /* InternationalizationUserSetting.swift in Sources */,
+				BCC9D6D71C56377E00671171 /* BadRequestError.swift in Sources */,
+				BCC9D6D81C56377E00671171 /* Transaction.swift in Sources */,
+				BCC9D6D91C56377E00671171 /* TransactionRequest.swift in Sources */,
+				BCC9D6DA1C56377E00671171 /* Deposit.swift in Sources */,
+				BCC9D6DB1C56377E00671171 /* Total.swift in Sources */,
+				BCC9D6DC1C56377E00671171 /* Balance.swift in Sources */,
+				BCC9D6DD1C56377E00671171 /* UserBalance.swift in Sources */,
+				BCC9D6DE1C56377E00671171 /* DepositMovement.swift in Sources */,
+				BCC9D6DF1C56377E00671171 /* User.swift in Sources */,
+				BCC9D6E01C56377E00671171 /* Paginator.swift in Sources */,
+				BCC9D6E11C56377E00671171 /* TickerService.swift in Sources */,
+				BCC9D6E21C56377E00671171 /* Reserve.swift in Sources */,
+				BCC9D6E31C56377E00671171 /* Denomination.swift in Sources */,
+				BCC9D6E41C56377E00671171 /* Currency.swift in Sources */,
+				BCC9D6E51C56377E00671171 /* UpholdClientErrorHandling.swift in Sources */,
+				BCC9D6E61C56377E00671171 /* InternationalizationUserSettings.swift in Sources */,
+				BCC9D6E71C56377E00671171 /* ContactRequest.swift in Sources */,
+				BC5236A01C5A3EF30088B62D /* ResourcesUtil.swift in Sources */,
+				BCC9D6E81C56377E00671171 /* PaginatorProtocol.swift in Sources */,
+				BCC9D6E91C56377E00671171 /* LogicError.swift in Sources */,
+				BCC9D6EA1C56377E00671171 /* Contact.swift in Sources */,
+				BCC9D6EB1C56377E00671171 /* NotFoundError.swift in Sources */,
+				BCC9D6EC1C56377E00671171 /* Value.swift in Sources */,
+				BCC9D6ED1C56377E00671171 /* Card.swift in Sources */,
+				BCC9D6EE1C56377E00671171 /* UnhandledError.swift in Sources */,
+				BCC9D6EF1C56377E00671171 /* Source.swift in Sources */,
+				BCC9D6F01C56377E00671171 /* ReserveStatistics.swift in Sources */,
+				BCC9D6F11C56377E00671171 /* ApiLimitExceedError.swift in Sources */,
+				BCC9D6F21C56377E00671171 /* Rate.swift in Sources */,
+				BCC9D6F31C56377E00671171 /* UserCardService.swift in Sources */,
+				BCC9D6F41C56377E00671171 /* AuthenticationError.swift in Sources */,
+				BCC9D6F51C56377E00671171 /* Parameters.swift in Sources */,
+				BCC9D6F61C56377E00671171 /* UnexpectedResponseError.swift in Sources */,
+				BCC9D6F71C56377E00671171 /* Origin.swift in Sources */,
+				BCC9D6F81C56377E00671171 /* UpholdClientError.swift in Sources */,
+				BCC9D6F91C56377E00671171 /* CardSettings.swift in Sources */,
+				BCC9D6FA1C56377E00671171 /* BaseModel.swift in Sources */,
+				BCC9D6FB1C56377E00671171 /* Destination.swift in Sources */,
+				BCC9D6FC1C56377E00671171 /* UpholdRestAdapter.swift in Sources */,
+				BCC9D6FD1C56377E00671171 /* NormalizedTransaction.swift in Sources */,
+				BCC9D6FE1C56377E00671171 /* Token.swift in Sources */,
+				BCC9D6FF1C56377E00671171 /* UserService.swift in Sources */,
+				BCC9D7001C56377E00671171 /* Header.swift in Sources */,
+				BCC9D7011C56377E00671171 /* Phone.swift in Sources */,
+				BCC9D7021C56377E00671171 /* UserSettings.swift in Sources */,
+				BCC9D7031C56377E00671171 /* UpholdClient.swift in Sources */,
+				BCC9D7041C56377E00671171 /* TransactionCommitRequest.swift in Sources */,
+				BCC9D7051C56377E00671171 /* ReserveService.swift in Sources */,
+				BCC9D7061C56377E00671171 /* GlobalConfigurations.swift in Sources */,
+				BCC9D7071C56377E00671171 /* SessionManager.swift in Sources */,
+				BCC9D7081C56377E00671171 /* TransactionDenominationRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,10 +1249,15 @@
 			target = BC23812B1BB462170060CC80 /* UpholdSdk */;
 			targetProxy = BC6BEE221BCEACBA0090656F /* PBXContainerItemProxy */;
 		};
+		BC865B641C593FDC003D67E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCC9D6D31C56377E00671171 /* UpholdSdkSandbox */;
+			targetProxy = BC865B631C593FDC003D67E5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		BC23813E1BB462180060CC80 /* Debug */ = {
+		BC23813E1BB462180060CC80 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -826,6 +1295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -835,9 +1305,9 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = ProductionDebug;
 		};
-		BC23813F1BB462180060CC80 /* Release */ = {
+		BC23813F1BB462180060CC80 /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -869,6 +1339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -877,10 +1348,11 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = ProductionRelease;
 		};
-		BC2381411BB462180060CC80 /* Debug */ = {
+		BC2381411BB462180060CC80 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -890,7 +1362,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
@@ -898,10 +1371,11 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = ProductionDebug;
 		};
-		BC2381421BB462180060CC80 /* Release */ = {
+		BC2381421BB462180060CC80 /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -911,7 +1385,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
@@ -919,35 +1394,358 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = ProductionRelease;
 		};
-		BC2381441BB462180060CC80 /* Debug */ = {
+		BC2381441BB462180060CC80 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.upholdsdktests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
 				PRODUCT_NAME = UpholdSdkTests;
 			};
-			name = Debug;
+			name = ProductionDebug;
 		};
-		BC2381451BB462180060CC80 /* Release */ = {
+		BC2381451BB462180060CC80 /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.upholdsdktests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
 				PRODUCT_NAME = UpholdSdkTests;
 			};
-			name = Release;
+			name = ProductionRelease;
+		};
+		BCACC42A1C5928C2008E7CE7 /* ProductionDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = ProductionDebug;
+		};
+		BCACC42B1C5928C2008E7CE7 /* SandboxDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = SandboxDebug;
+		};
+		BCACC42C1C5928C2008E7CE7 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = ProductionRelease;
+		};
+		BCACC42D1C5928C2008E7CE7 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = SandboxRelease;
+		};
+		BCC9D7141C56377E00671171 /* ProductionDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdk;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ProductionDebug;
+		};
+		BCC9D7161C56377E00671171 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdk;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ProductionRelease;
+		};
+		BCC9D71A1C563B2E00671171 /* SandboxDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = SandboxDebug;
+		};
+		BCC9D71B1C563B2E00671171 /* SandboxDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdk;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = SandboxDebug;
+		};
+		BCC9D71C1C563B2E00671171 /* SandboxDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdk;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = SandboxDebug;
+		};
+		BCC9D71D1C563B2E00671171 /* SandboxDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdkTests;
+			};
+			name = SandboxDebug;
+		};
+		BCC9D71E1C563B3D00671171 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = SandboxRelease;
+		};
+		BCC9D71F1C563B3D00671171 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2B1C3FE19B002E02B3 /* Production.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdk;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = SandboxRelease;
+		};
+		BCC9D7201C563B3D00671171 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Source/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdk;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = SandboxRelease;
+		};
+		BCC9D7211C563B3D00671171 /* SandboxRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE6DF2C1C3FE1BC002E02B3 /* Sandbox.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uphold.sdk;
+				PRODUCT_NAME = UpholdSdkTests;
+			};
+			name = SandboxRelease;
 		};
 /* End XCBuildConfiguration section */
 
@@ -955,29 +1753,57 @@
 		BC2381261BB462170060CC80 /* Build configuration list for PBXProject "UpholdSdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC23813E1BB462180060CC80 /* Debug */,
-				BC23813F1BB462180060CC80 /* Release */,
+				BC23813E1BB462180060CC80 /* ProductionDebug */,
+				BCC9D71A1C563B2E00671171 /* SandboxDebug */,
+				BC23813F1BB462180060CC80 /* ProductionRelease */,
+				BCC9D71E1C563B3D00671171 /* SandboxRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = ProductionRelease;
 		};
 		BC2381401BB462180060CC80 /* Build configuration list for PBXNativeTarget "UpholdSdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC2381411BB462180060CC80 /* Debug */,
-				BC2381421BB462180060CC80 /* Release */,
+				BC2381411BB462180060CC80 /* ProductionDebug */,
+				BCC9D71B1C563B2E00671171 /* SandboxDebug */,
+				BC2381421BB462180060CC80 /* ProductionRelease */,
+				BCC9D71F1C563B3D00671171 /* SandboxRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = ProductionRelease;
 		};
 		BC2381431BB462180060CC80 /* Build configuration list for PBXNativeTarget "UpholdSdkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC2381441BB462180060CC80 /* Debug */,
-				BC2381451BB462180060CC80 /* Release */,
+				BC2381441BB462180060CC80 /* ProductionDebug */,
+				BCC9D71D1C563B2E00671171 /* SandboxDebug */,
+				BC2381451BB462180060CC80 /* ProductionRelease */,
+				BCC9D7211C563B3D00671171 /* SandboxRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = ProductionRelease;
+		};
+		BCACC4291C5928C2008E7CE7 /* Build configuration list for PBXNativeTarget "UpholdSdkSandboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCACC42A1C5928C2008E7CE7 /* ProductionDebug */,
+				BCACC42B1C5928C2008E7CE7 /* SandboxDebug */,
+				BCACC42C1C5928C2008E7CE7 /* ProductionRelease */,
+				BCACC42D1C5928C2008E7CE7 /* SandboxRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = ProductionRelease;
+		};
+		BCC9D7131C56377E00671171 /* Build configuration list for PBXNativeTarget "UpholdSdkSandbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCC9D7141C56377E00671171 /* ProductionDebug */,
+				BCC9D71C1C563B2E00671171 /* SandboxDebug */,
+				BCC9D7161C56377E00671171 /* ProductionRelease */,
+				BCC9D7201C563B3D00671171 /* SandboxRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = ProductionRelease;
 		};
 /* End XCConfigurationList section */
 	};
