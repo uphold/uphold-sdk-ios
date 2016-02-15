@@ -5,7 +5,7 @@ import ObjectMapper
 public class Balance: Mappable {
 
     /// The user balance.
-    public private(set) var balances: UserBalance?
+    public private(set) final var balances: UserBalance?
 
     /**
       Constructor.

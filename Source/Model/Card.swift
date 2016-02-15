@@ -7,31 +7,31 @@ import SwiftClient
 public class Card: BaseModel, Mappable {
 
     /// The id of the card.
-    public private(set) var id: String?
+    public private(set) final var id: String?
 
     /// The card's primary address dictionary.
-    public private(set) var address: [String : String]?
+    public private(set) final var address: [String : String]?
 
     /// The balance available for withdrawal/usage.
-    public private(set) var available: String?
+    public private(set) final var available: String?
 
     /// The total balance of the card, including all pending transactions.
-    public private(set) var balance: String?
+    public private(set) final var balance: String?
 
     /// The currency of the card.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The display name of the card as chosen by the user.
-    public private(set) var label: String?
+    public private(set) final var label: String?
 
     /// A timestamp of the last time a transaction on this card was conducted.
-    public private(set) var lastTransactionAt: String?
+    public private(set) final var lastTransactionAt: String?
 
     /// The list with the normalized fields.
-    public private(set) var normalized: [NormalizedCard]?
+    public private(set) final var normalized: [NormalizedCard]?
 
     /// The card settings.
-    public private(set) var settings: CardSettings?
+    public private(set) final var settings: CardSettings?
 
     /**
       Constructor.

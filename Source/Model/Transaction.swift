@@ -1,42 +1,49 @@
 import Foundation
 import PromiseKit
 import ObjectMapper
+import SwiftClient
 
 /// Transaction model.
 public class Transaction: BaseModel, Mappable {
 
     /// The id of the transaction.
-    public private(set) var id: String?
+    public private(set) final var id: String?
 
     /// The date and time the transaction was initiated.
-    public private(set) var createdAt: String?
+    public private(set) final var createdAt: String?
 
     /// The funds to be transferred.
-    public private(set) var denomination: Denomination?
+    public private(set) final var denomination: Denomination?
 
     /// The recipient of the funds.
-    public private(set) var destination: Destination?
+    public private(set) final var destination: Destination?
+
+    /// The transaction fees.
+    public private(set) final var fees: [Fee]?
 
     /// A message or note provided by the user at the time the transaction was initiated, with the intent of communicating additional information and context about the nature/purpose of the transaction.
-    public private(set) var message: String?
+    public private(set) final var message: String?
+
+    /// The network of the transaction.
+    public private(set) final var network: String?
 
     /// The transaction details normalized.
-    public private(set) var normalized: [NormalizedTransaction]?
+    public private(set) final var normalized: [NormalizedTransaction]?
 
     /// The sender of the funds.
-    public private(set) var origin: Origin?
+    public private(set) final var origin: Origin?
 
     /// Other parameters of this transaction.
-    public private(set) var params: Parameters?
+    public private(set) final var params: Parameters?
 
     /// When a transaction is cancelled this contains the transaction ID of the transaction which refunds the amount back to the user.
-    public private(set) var refundedById: String?
+    public private(set) final var refundedById: String?
 
     /// The current status of the transaction.
-    public private(set) var status: String?
+    public private(set) final var status: String?
 
     /// The nature of the transaction.
-    public private(set) var type: String?
+    public private(set) final var type: String?
 
     /**
       Constructor.
@@ -45,7 +52,9 @@ public class Transaction: BaseModel, Mappable {
       - parameter createdAt: The date and time the transaction was initiated.
       - parameter denomination: The funds to be transferred.
       - parameter destination: The recipient of the funds.
+      - parameter fees: The transaction fees.
       - parameter message: A message or note provided by the user at the time the transaction was initiated, with the intent of communicating additional information and context about the nature/purpose of the transaction.
+      - parameter network: The network of the transaction.
       - parameter normalized: The transaction details normalized.
       - parameter origin: The sender of the funds.
       - parameter params: Other parameters of this transaction.
@@ -53,12 +62,14 @@ public class Transaction: BaseModel, Mappable {
       - parameter status: The current status of the transaction.
       - parameter type: The nature of the transaction.
     */
-    public init(id: String, createdAt: String, denomination: Denomination, destination: Destination, message: String, normalized: [NormalizedTransaction], origin: Origin, params: Parameters, refundedById: String, status: String, type: String) {
+    public init(id: String, createdAt: String, denomination: Denomination, destination: Destination, fees: [Fee], message: String, network: String, normalized: [NormalizedTransaction], origin: Origin, params: Parameters, refundedById: String, status: String, type: String) {
         self.id = id
         self.createdAt = createdAt
         self.denomination = denomination
         self.destination = destination
+        self.fees = fees
         self.message = message
+        self.network = network
         self.normalized = normalized
         self.origin = origin
         self.params = params
@@ -87,7 +98,9 @@ public class Transaction: BaseModel, Mappable {
         createdAt <- map["createdAt"]
         denomination <- map["denomination"]
         destination <- map["destination"]
+        fees <- map["fees"]
         message <- map["message"]
+        network <- map["network"]
         normalized <- map["normalized"]
         origin <- map["origin"]
         params <- map["params"]
@@ -131,11 +144,43 @@ public class Transaction: BaseModel, Mappable {
     /**
       Confirm a transaction.
 
+      - returns: A promise with the transaction.
+    */
+    public func commit() -> Promise<Transaction> {
+        return commit(nil, transactionCommit: nil)
+    }
+
+    /**
+      Confirm a transaction.
+
+      - parameter otp: The otp code to confirm the transaction.
+
+      - returns: A promise with the transaction.
+    */
+    public func commit(otp: String) -> Promise<Transaction> {
+        return commit(otp, transactionCommit: nil)
+    }
+
+    /**
+     Confirm a transaction.
+
       - parameter transactionCommit: A transactionCommitRequest with an optional transaction message.
 
       - returns: A promise with the transaction.
     */
     public func commit(transactionCommit: TransactionCommitRequest) -> Promise<Transaction> {
+        return commit(nil, transactionCommit: nil)
+    }
+
+    /**
+      Confirm a transaction.
+
+      - parameter otp: The otp code to confirm the transaction.
+      - parameter transactionCommit: A transactionCommitRequest with an optional transaction message.
+
+      - returns: A promise with the transaction.
+    */
+    public func commit(otp: String?, transactionCommit: TransactionCommitRequest?) -> Promise<Transaction> {
         guard let id = self.id else {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction id should not be nil."))
         }
@@ -152,7 +197,14 @@ public class Transaction: BaseModel, Mappable {
             return Promise<Transaction>(error: LogicError(code: nil, message: String(format: "This transaction cannot be committed, because the current status is %@.", status)))
         }
 
-        let request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, transactionId: id, transactionCommitRequest: Mapper().toJSONString(transactionCommit, prettyPrint: false)!))
+        let request: Request
+        guard let transactionCommit = transactionCommit else {
+            request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: nil))
+
+            return self.adapter.buildResponse(request)
+        }
+
+        request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: Mapper().toJSONString(transactionCommit, prettyPrint: false)!))
 
         return self.adapter.buildResponse(request)
     }

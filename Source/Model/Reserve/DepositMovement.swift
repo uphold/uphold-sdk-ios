@@ -5,10 +5,10 @@ import ObjectMapper
 public class DepositMovement: Mappable {
 
     /// The amount of the deposit movement.
-    public private(set) var amount: String?
+    public private(set) final var amount: String?
 
     /// The currency of the deposit movement.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /**
       Constructor.

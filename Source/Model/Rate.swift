@@ -5,16 +5,16 @@ import ObjectMapper
 public class Rate: Mappable {
 
     /// The rate ask.
-    public private(set) var ask: String?
+    public private(set) final var ask: String?
 
     /// The rate bid.
-    public private(set) var bid: String?
+    public private(set) final var bid: String?
 
     /// The rate currency.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The rate pair.
-    public private(set) var pair: String?
+    public private(set) final var pair: String?
 
     /**
       Constructor.

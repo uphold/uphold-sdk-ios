@@ -5,13 +5,13 @@ import ObjectMapper
 public class ReserveStatistics: Mappable {
 
     /// The currency from the reserve.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The commissions, transaction volume, assets and liabilities.
-    public private(set) var totals: Total?
+    public private(set) final var totals: Total?
 
     /// The value of held in the associated currency in all supported forms.
-    public private(set) var values: [Value]?
+    public private(set) final var values: [Value]?
 
     /**
       Constructor.

@@ -57,6 +57,7 @@ class CardTest: UpholdTestCase {
             "\"id\": \"foobar\"," +
             "\"type\": \"transfer\"," +
             "\"message\": \"foobar\"," +
+            "\"network\": \"qux\"," +
             "\"status\": \"pending\"," +
             "\"RefundedById\": \"foobiz\"," +
             "\"createdAt\": \"2014-08-27T00:01:11.616Z\"," +
@@ -107,6 +108,13 @@ class CardTest: UpholdTestCase {
                 "\"currency\": \"BTC\"," +
                 "\"fee\": \"1.00\"," +
                 "\"rate\": \"2.00\"" +
+            "}]," +
+            "\"fees\": [{" +
+                "\"type\": \"deposit\"," +
+                "\"amount\": \"0.30\"," +
+                "\"target\": \"origin\"," +
+                "\"currency\": \"USD\"," +
+                "\"percentage\": \"2.75\"" +
             "}]" +
         "}"
         card.adapter = MockRestAdapter(body: json)
@@ -129,7 +137,13 @@ class CardTest: UpholdTestCase {
             XCTAssertEqual(transaction.destination!.fee, "0.00", "Failed: Wrong transaction destination fee.")
             XCTAssertEqual(transaction.destination!.rate, "1.00", "Failed: Wrong transaction destination rate.")
             XCTAssertEqual(transaction.destination!.type, "email", "Failed: Wrong transaction destination type.")
+            XCTAssertEqual(transaction.fees![0].amount, "0.30", "Failed: Wrong transaction fee amount.")
+            XCTAssertEqual(transaction.fees![0].currency, "USD", "Failed: Wrong transaction fee currency.")
+            XCTAssertEqual(transaction.fees![0].percentage, "2.75", "Failed: Wrong transaction fee percentage.")
+            XCTAssertEqual(transaction.fees![0].target, "origin", "Failed: Wrong transaction fee target.")
+            XCTAssertEqual(transaction.fees![0].type, "deposit", "Failed: Wrong transaction fee type.")
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
+            XCTAssertEqual(transaction.network, "qux", "Failed: Wrong transaction network.")
             XCTAssertEqual(transaction.message, "foobar", "Failed: Wrong transaction message.")
             XCTAssertEqual(transaction.normalized!.count, 1, "Failed: Wrong transaction normalized count.")
             XCTAssertEqual(transaction.normalized![0].amount, "123", "Failed: Wrong transaction normalized amount.")

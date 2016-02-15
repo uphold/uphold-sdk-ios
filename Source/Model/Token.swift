@@ -5,7 +5,7 @@ import PromiseKit
 public class Token: BaseModel {
 
     /// The bearer token.
-    private(set) var bearerToken: String?
+    private(set) final var bearerToken: String?
 
     /**
       Constructor.

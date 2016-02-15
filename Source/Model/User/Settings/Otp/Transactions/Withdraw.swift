@@ -1,19 +1,19 @@
 import Foundation
 import ObjectMapper
 
-/// InternationalizationUserSetting model.
-public class InternationalizationUserSetting: Mappable {
+/// Withdraw otp settings model.
+public class Withdraw: Mappable {
 
-    /// The locale for the setting.
-    public private(set) final var locale: String?
+    /// The transactions withdraw crypto otp settings.
+    public private(set) final var crypto: Crypto?
 
     /**
       Constructor.
 
-      - parameter locale: The locale for the setting.
+      - parameter crypto: The transactions withdraw crypto otp settings.
     */
-    public init(locale: String) {
-        self.locale = locale
+    public init(crypto: Crypto) {
+        self.crypto = crypto
     }
 
     // MARK: Required by the ObjectMapper.
@@ -32,7 +32,7 @@ public class InternationalizationUserSetting: Mappable {
       - parameter map: The object to map.
     */
     public func mapping(map: Map) {
-        locale  <- map["locale"]
+        self.crypto <- map["crypto"]
     }
 
 }

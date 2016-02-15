@@ -5,31 +5,31 @@ import ObjectMapper
 public class Parameters: Mappable {
 
     /// The transaction currency.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The transaction margin.
-    public private(set) var margin: String?
+    public private(set) final var margin: String?
 
     /// The transaction pair.
-    public private(set) var pair: String?
+    public private(set) final var pair: String?
 
     /// The transaction progress.
-    public private(set) var progress: String?
+    public private(set) final var progress: String?
 
     /// The transaction rate.
-    public private(set) var rate: String?
+    public private(set) final var rate: String?
 
     /// The transaction refunds information.
-    public private(set) var refunds: String?
+    public private(set) final var refunds: String?
 
     /// The transaction ttl.
-    public private(set) var ttl: Int?
+    public private(set) final var ttl: Int?
 
     /// The transaction txid.
-    public private(set) var txid: String?
+    public private(set) final var txid: String?
 
     /// The transaction type.
-    public private(set) var type: String?
+    public private(set) final var type: String?
 
     /**
       Constructor.

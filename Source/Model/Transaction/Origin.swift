@@ -5,43 +5,43 @@ import ObjectMapper
 public class Origin: Mappable {
 
     /// The id of the account from the origin of the transaction.
-    public private(set) var accountId: String?
+    public private(set) final var accountId: String?
 
     /// The card id of the card from the origin of the transaction.
-    public private(set) var cardId: String?
+    public private(set) final var cardId: String?
 
     /// The type of the account from the origin of the transaction.
-    public private(set) var accountType: String?
+    public private(set) final var accountType: String?
 
     /// The amount from the origin of the transaction.
-    public private(set) var amount: String?
+    public private(set) final var amount: String?
 
     /// The base from the origin of the transaction.
-    public private(set) var base: String?
+    public private(set) final var base: String?
 
     /// The commission from the origin of the transaction.
-    public private(set) var commission: String?
+    public private(set) final var commission: String?
 
     /// The currency from the origin of the transaction.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The description from the origin of the transaction.
-    public private(set) var description: String?
+    public private(set) final var description: String?
 
     /// The fee from the origin of the transaction.
-    public private(set) var fee: String?
+    public private(set) final var fee: String?
 
     /// The rate from the origin of the transaction.
-    public private(set) var rate: String?
+    public private(set) final var rate: String?
 
     /// The sources from the origin of the transaction.
-    public private(set) var sources: [Source]?
+    public private(set) final var sources: [Source]?
 
     /// The type from the origin of the transaction.
-    public private(set) var type: String?
+    public private(set) final var type: String?
 
     /// The username from the origin of the transaction.
-    public private(set) var username: String?
+    public private(set) final var username: String?
 
     /**
       Constructor.

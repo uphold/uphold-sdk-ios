@@ -192,6 +192,22 @@
 		BCEB624A1BFE28A600094F3A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62451BFE28A600094F3A /* PromiseKit.framework */; };
 		BCEB624B1BFE28A600094F3A /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62461BFE28A600094F3A /* SwiftClient.framework */; };
 		BCF38A631C0DFD1B0075E477 /* JSONTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */; };
+		BCF4D37F1C62112D00E4BDDA /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D37E1C62112D00E4BDDA /* Fee.swift */; };
+		BCF4D3801C62112D00E4BDDA /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D37E1C62112D00E4BDDA /* Fee.swift */; };
+		BCF4D38C1C62116900E4BDDA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3831C62116900E4BDDA /* Login.swift */; };
+		BCF4D38D1C62116900E4BDDA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3831C62116900E4BDDA /* Login.swift */; };
+		BCF4D38E1C62116900E4BDDA /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3851C62116900E4BDDA /* Send.swift */; };
+		BCF4D38F1C62116900E4BDDA /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3851C62116900E4BDDA /* Send.swift */; };
+		BCF4D3901C62116900E4BDDA /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3861C62116900E4BDDA /* Transfer.swift */; };
+		BCF4D3911C62116900E4BDDA /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3861C62116900E4BDDA /* Transfer.swift */; };
+		BCF4D3921C62116900E4BDDA /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3881C62116900E4BDDA /* Crypto.swift */; };
+		BCF4D3931C62116900E4BDDA /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3881C62116900E4BDDA /* Crypto.swift */; };
+		BCF4D3941C62116900E4BDDA /* Withdraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3891C62116900E4BDDA /* Withdraw.swift */; };
+		BCF4D3951C62116900E4BDDA /* Withdraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D3891C62116900E4BDDA /* Withdraw.swift */; };
+		BCF4D3961C62116900E4BDDA /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D38A1C62116900E4BDDA /* Transactions.swift */; };
+		BCF4D3971C62116900E4BDDA /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D38A1C62116900E4BDDA /* Transactions.swift */; };
+		BCF4D3981C62116900E4BDDA /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D38B1C62116900E4BDDA /* Otp.swift */; };
+		BCF4D3991C62116900E4BDDA /* Otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4D38B1C62116900E4BDDA /* Otp.swift */; };
 		BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF656C41BCFCEE5008E2F97 /* Header.swift */; };
 /* End PBXBuildFile section */
 
@@ -316,6 +332,14 @@
 		BCEB62451BFE28A600094F3A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		BCEB62461BFE28A600094F3A /* SwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftClient.framework; path = Carthage/Build/iOS/SwiftClient.framework; sourceTree = "<group>"; };
 		BCF38A621C0DFD1B0075E477 /* JSONTestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONTestUtils.swift; path = Util/JSONTestUtils.swift; sourceTree = "<group>"; };
+		BCF4D37E1C62112D00E4BDDA /* Fee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
+		BCF4D3831C62116900E4BDDA /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		BCF4D3851C62116900E4BDDA /* Send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Send.swift; sourceTree = "<group>"; };
+		BCF4D3861C62116900E4BDDA /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		BCF4D3881C62116900E4BDDA /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		BCF4D3891C62116900E4BDDA /* Withdraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Withdraw.swift; sourceTree = "<group>"; };
+		BCF4D38A1C62116900E4BDDA /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		BCF4D38B1C62116900E4BDDA /* Otp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Otp.swift; sourceTree = "<group>"; };
 		BCF656C41BCFCEE5008E2F97 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Header.swift; path = Util/Header.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -452,6 +476,7 @@
 				BC2381531BB4626F0060CC80 /* Destination.swift */,
 				BC2381541BB4626F0060CC80 /* Origin.swift */,
 				BC2381551BB4626F0060CC80 /* Parameters.swift */,
+				BCF4D37E1C62112D00E4BDDA /* Fee.swift */,
 				BC2381561BB4626F0060CC80 /* Source.swift */,
 				BC81F7011C0753BA0025A1AF /* NormalizedTransaction.swift */,
 				BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */,
@@ -464,6 +489,7 @@
 		BC2381581BB4626F0060CC80 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				BCF4D3811C62116900E4BDDA /* Settings */,
 				BC41104E1C05E68E0063761C /* Contact.swift */,
 				BC41104F1C05E68E0063761C /* ContactRequest.swift */,
 				BC4110501C05E68E0063761C /* Phone.swift */,
@@ -677,6 +703,44 @@
 				BCEB62401BFE285000094F3A /* Mockingjay.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCF4D3811C62116900E4BDDA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BCF4D3821C62116900E4BDDA /* Otp */,
+				BCF4D38B1C62116900E4BDDA /* Otp.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BCF4D3821C62116900E4BDDA /* Otp */ = {
+			isa = PBXGroup;
+			children = (
+				BCF4D3841C62116900E4BDDA /* Transactions */,
+				BCF4D3831C62116900E4BDDA /* Login.swift */,
+				BCF4D38A1C62116900E4BDDA /* Transactions.swift */,
+			);
+			path = Otp;
+			sourceTree = "<group>";
+		};
+		BCF4D3841C62116900E4BDDA /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				BCF4D3871C62116900E4BDDA /* Withdraw */,
+				BCF4D3851C62116900E4BDDA /* Send.swift */,
+				BCF4D3861C62116900E4BDDA /* Transfer.swift */,
+				BCF4D3891C62116900E4BDDA /* Withdraw.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		BCF4D3871C62116900E4BDDA /* Withdraw */ = {
+			isa = PBXGroup;
+			children = (
+				BCF4D3881C62116900E4BDDA /* Crypto.swift */,
+			);
+			path = Withdraw;
 			sourceTree = "<group>";
 		};
 		BCF5C69A1BCFE82200B6DFAC /* Client */ = {
@@ -1046,6 +1110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5236A21C5A41120088B62D /* ConfigurationMissingError.swift in Sources */,
+				BCF4D37F1C62112D00E4BDDA /* Fee.swift in Sources */,
 				BC2381661BB4626F0060CC80 /* NormalizedCard.swift in Sources */,
 				BC23816F1BB4626F0060CC80 /* InternationalizationUserSetting.swift in Sources */,
 				BCCBE5681BC692E200D61852 /* BadRequestError.swift in Sources */,
@@ -1065,6 +1130,7 @@
 				BC41104C1C05E6400063761C /* Currency.swift in Sources */,
 				BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */,
 				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
+				BCF4D3921C62116900E4BDDA /* Crypto.swift in Sources */,
 				BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */,
 				BC52369F1C5A3EF30088B62D /* ResourcesUtil.swift in Sources */,
 				BC3EE5961C1E3E9D0058478D /* PaginatorProtocol.swift in Sources */,
@@ -1075,14 +1141,19 @@
 				BC2381671BB4626F0060CC80 /* Card.swift in Sources */,
 				BCCBE56B1BC692E200D61852 /* UnhandledError.swift in Sources */,
 				BC23816D1BB4626F0060CC80 /* Source.swift in Sources */,
+				BCF4D38C1C62116900E4BDDA /* Login.swift in Sources */,
 				BC91E8A21BECD8270074C538 /* ReserveStatistics.swift in Sources */,
 				BC8E25741BCFBB4F00C15899 /* ApiLimitExceedError.swift in Sources */,
 				BC2381681BB4626F0060CC80 /* Rate.swift in Sources */,
 				BCE7757E1C565F6A005CE55A /* MalformedUrlError.swift in Sources */,
 				BC2381751BB4626F0060CC80 /* UserCardService.swift in Sources */,
+				BCF4D38E1C62116900E4BDDA /* Send.swift in Sources */,
 				BC202DCA1C4420920069A230 /* AuthenticationRequest.swift in Sources */,
 				BCCBE5671BC692E200D61852 /* AuthenticationError.swift in Sources */,
+				BCF4D3901C62116900E4BDDA /* Transfer.swift in Sources */,
 				BC23816C1BB4626F0060CC80 /* Parameters.swift in Sources */,
+				BCF4D3981C62116900E4BDDA /* Otp.swift in Sources */,
+				BCF4D3941C62116900E4BDDA /* Withdraw.swift in Sources */,
 				BC9510CE1C0B92F800E2EDE1 /* UnexpectedResponseError.swift in Sources */,
 				BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */,
 				BCE7757C1C565D67005CE55A /* URLUtils.swift in Sources */,
@@ -1093,6 +1164,7 @@
 				BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */,
 				BC81F7021C0753BA0025A1AF /* NormalizedTransaction.swift in Sources */,
 				BC4A30571BEA655B001B6249 /* Token.swift in Sources */,
+				BCF4D3961C62116900E4BDDA /* Transactions.swift in Sources */,
 				BC431F431C57F51D000685DD /* AuthorizationViewController.swift in Sources */,
 				BC2381761BB4626F0060CC80 /* UserService.swift in Sources */,
 				BCF656C51BCFCEE5008E2F97 /* Header.swift in Sources */,
@@ -1177,6 +1249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC215F1B1C5BD95B0007C7FA /* AuthorizationViewController.swift in Sources */,
+				BCF4D3801C62112D00E4BDDA /* Fee.swift in Sources */,
 				BC215F1C1C5BD95B0007C7FA /* AuthenticationRequiredError.swift in Sources */,
 				BC215F1D1C5BD95B0007C7FA /* MalformedUrlError.swift in Sources */,
 				BC215F1E1C5BD95B0007C7FA /* StateMatchError.swift in Sources */,
@@ -1196,6 +1269,7 @@
 				BCC9D6DD1C56377E00671171 /* UserBalance.swift in Sources */,
 				BCC9D6DE1C56377E00671171 /* DepositMovement.swift in Sources */,
 				BCC9D6DF1C56377E00671171 /* User.swift in Sources */,
+				BCF4D3931C62116900E4BDDA /* Crypto.swift in Sources */,
 				BCC9D6E01C56377E00671171 /* Paginator.swift in Sources */,
 				BCC9D6E11C56377E00671171 /* TickerService.swift in Sources */,
 				BCC9D6E21C56377E00671171 /* Reserve.swift in Sources */,
@@ -1206,14 +1280,19 @@
 				BCC9D6E71C56377E00671171 /* ContactRequest.swift in Sources */,
 				BC5236A01C5A3EF30088B62D /* ResourcesUtil.swift in Sources */,
 				BCC9D6E81C56377E00671171 /* PaginatorProtocol.swift in Sources */,
+				BCF4D38D1C62116900E4BDDA /* Login.swift in Sources */,
 				BCC9D6E91C56377E00671171 /* LogicError.swift in Sources */,
 				BCC9D6EA1C56377E00671171 /* Contact.swift in Sources */,
 				BCC9D6EB1C56377E00671171 /* NotFoundError.swift in Sources */,
 				BCC9D6EC1C56377E00671171 /* Value.swift in Sources */,
 				BCC9D6ED1C56377E00671171 /* Card.swift in Sources */,
+				BCF4D38F1C62116900E4BDDA /* Send.swift in Sources */,
 				BCC9D6EE1C56377E00671171 /* UnhandledError.swift in Sources */,
 				BCC9D6EF1C56377E00671171 /* Source.swift in Sources */,
+				BCF4D3911C62116900E4BDDA /* Transfer.swift in Sources */,
 				BCC9D6F01C56377E00671171 /* ReserveStatistics.swift in Sources */,
+				BCF4D3991C62116900E4BDDA /* Otp.swift in Sources */,
+				BCF4D3951C62116900E4BDDA /* Withdraw.swift in Sources */,
 				BCC9D6F11C56377E00671171 /* ApiLimitExceedError.swift in Sources */,
 				BCC9D6F21C56377E00671171 /* Rate.swift in Sources */,
 				BCC9D6F31C56377E00671171 /* UserCardService.swift in Sources */,
@@ -1224,6 +1303,7 @@
 				BCC9D6F81C56377E00671171 /* UpholdClientError.swift in Sources */,
 				BCC9D6F91C56377E00671171 /* CardSettings.swift in Sources */,
 				BCC9D6FA1C56377E00671171 /* BaseModel.swift in Sources */,
+				BCF4D3971C62116900E4BDDA /* Transactions.swift in Sources */,
 				BCC9D6FB1C56377E00671171 /* Destination.swift in Sources */,
 				BCC9D6FC1C56377E00671171 /* UpholdRestAdapter.swift in Sources */,
 				BCC9D6FD1C56377E00671171 /* NormalizedTransaction.swift in Sources */,

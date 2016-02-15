@@ -1,19 +1,19 @@
 import Foundation
 import ObjectMapper
 
-/// InternationalizationUserSetting model.
-public class InternationalizationUserSetting: Mappable {
+/// Login otp settings model.
+public class Login: Mappable {
 
-    /// The locale for the setting.
-    public private(set) final var locale: String?
+    /// A boolean indicating if the otp is enable for the login process.
+    public private(set) final var enabled: Bool?
 
     /**
       Constructor.
 
-      - parameter locale: The locale for the setting.
+     - parameter enabled: A boolean indicating if the otp is enable for the login process.
     */
-    public init(locale: String) {
-        self.locale = locale
+    public init(enabled: Bool) {
+        self.enabled = enabled
     }
 
     // MARK: Required by the ObjectMapper.
@@ -32,7 +32,7 @@ public class InternationalizationUserSetting: Mappable {
       - parameter map: The object to map.
     */
     public func mapping(map: Map) {
-        locale  <- map["locale"]
+        self.enabled <- map["enabled"]
     }
 
 }

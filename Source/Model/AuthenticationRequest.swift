@@ -5,7 +5,7 @@ import ObjectMapper
 public class AuthenticationRequest: Mappable {
 
     /// The description for the authentication request.
-    public private(set) var description: String?
+    public private(set) final var description: String?
 
     /**
       Constructor.

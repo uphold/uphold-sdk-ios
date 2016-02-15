@@ -5,13 +5,13 @@ import ObjectMapper
 public class InternationalizationUserSettings: Mappable {
 
     /// The internationalization language user settings.
-    public private(set) var language: InternationalizationUserSetting?
+    public private(set) final var language: InternationalizationUserSetting?
 
     /// The internationalization date time format user settings.
-    public private(set) var dateTimeFormat: InternationalizationUserSetting?
+    public private(set) final var dateTimeFormat: InternationalizationUserSetting?
 
     /// The internationalization number format user settings.
-    public private(set) var numberFormat: InternationalizationUserSetting?
+    public private(set) final var numberFormat: InternationalizationUserSetting?
 
     /**
       Constructor.

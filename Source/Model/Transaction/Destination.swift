@@ -5,40 +5,40 @@ import ObjectMapper
 public class Destination: Mappable {
 
     /// The id of the account from the destination of the transaction.
-    public private(set) var accountId: String?
+    public private(set) final var accountId: String?
 
     /// The card id of the card from the destination of the transaction.
-    public private(set) var cardId: String?
+    public private(set) final var cardId: String?
 
     /// The type of the account from the destination of the transaction.
-    public private(set) var accountType: String?
+    public private(set) final var accountType: String?
 
     /// The amount from the destination of the transaction.
-    public private(set) var amount: String?
+    public private(set) final var amount: String?
 
     /// The base from the destination of the transaction.
-    public private(set) var base: String?
+    public private(set) final var base: String?
 
     /// The commission from the destination of the transaction.
-    public private(set) var commission: String?
+    public private(set) final var commission: String?
 
     /// The currency from the destination of the transaction.
-    public private(set) var currency: String?
+    public private(set) final var currency: String?
 
     /// The description from the destination of the transaction.
-    public private(set) var description: String?
+    public private(set) final var description: String?
 
     /// The fee from the destination of the transaction.
-    public private(set) var fee: String?
+    public private(set) final var fee: String?
 
     /// The rate from the destination of the transaction.
-    public private(set) var rate: String?
+    public private(set) final var rate: String?
 
     /// The type from the destination of the transaction.
-    public private(set) var type: String?
+    public private(set) final var type: String?
 
     /// The username from the destination of the transaction.
-    public private(set) var username: String?
+    public private(set) final var username: String?
 
     /**
       Constructor.

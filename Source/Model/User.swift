@@ -7,34 +7,34 @@ import SwiftClient
 public class User: BaseModel, Mappable {
 
     /// The user country.
-    public private(set) var country: String?
+    public private(set) final var country: String?
 
     /// The user's list of currencies.
-    public private(set) var currencies: [String]?
+    public private(set) final var currencies: [String]?
 
     /// The user email.
-    public private(set) var email: String?
+    public private(set) final var email: String?
 
     /// The user first name.
-    public private(set) var firstName: String?
+    public private(set) final var firstName: String?
 
     /// The user last name.
-    public private(set) var lastName: String?
+    public private(set) final var lastName: String?
 
     /// The user name.
-    public private(set) var name: String?
+    public private(set) final var name: String?
 
     /// The user's settings.
-    public private(set) var settings: UserSettings?
+    public private(set) final var settings: UserSettings?
 
     /// The user state.
-    public private(set) var state: String?
+    public private(set) final var state: String?
 
     /// The user status.
-    public private(set) var status: String?
+    public private(set) final var status: String?
 
     /// The user username.
-    public private(set) var username: String?
+    public private(set) final var username: String?
 
     /**
       Constructor.

@@ -10,7 +10,7 @@ public class UpholdClient: Client {
     /// The SwiftLint rules that must be disabled.
     // swiftlint:disable force_try
 
-    /// The Uphold client's token.
+    /// The Uphold user's token.
     public private(set) var token: Token
 
     /**

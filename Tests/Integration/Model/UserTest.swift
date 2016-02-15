@@ -536,7 +536,24 @@ class UserTest: UpholdTestCase {
                         "\"locale\": \"en-US\"" +
                     "}" +
                 "}," +
-                "\"hasOtpEnabled\": false" +
+                "\"otp\": {" +
+                    "\"login\": {" +
+                        "\"enabled\": false" +
+                    "}," +
+                    "\"transactions\": {" +
+                        "\"send\": {" +
+                            "\"enabled\": false" +
+                        "}," +
+                        "\"transfer\": {" +
+                            "\"enabled\": true" +
+                        "}," +
+                        "\"withdraw\": {" +
+                            "\"crypto\": {" +
+                                "\"enabled\": true" +
+                            "}" +
+                        "}" +
+                    "}" +
+                "}" +
             "}" +
         "}"
         let user = Mapper<User>().map(json)
@@ -550,10 +567,13 @@ class UserTest: UpholdTestCase {
         XCTAssertEqual(user!.name!, "Foo Bar", "Failed: User name didn't match.")
         XCTAssertEqual(user!.settings!.currency!, "USD", "Failed: User settings currency didn't match.")
         XCTAssertTrue(user!.settings!.hasNewsSubscription!, "Failed: User settings hasNewsSubscription didn't match.")
-        XCTAssertFalse(user!.settings!.hasOtpEnabled!, "Failed: User settings hasOtpEnabled didn't match.")
         XCTAssertEqual(user!.settings!.intl!.dateTimeFormat!.locale!, "en-US", "Failed: User settings intl dateTimeFormat didn't match.")
         XCTAssertEqual(user!.settings!.intl!.language!.locale!, "en-US", "Failed: User settings intl language didn't match.")
         XCTAssertEqual(user!.settings!.intl!.numberFormat!.locale!, "en-US", "Failed: User settings intl numberFormat didn't match.")
+        XCTAssertFalse(user!.settings!.otp!.login!.enabled!, "Failed: User settings otp login didn't match.")
+        XCTAssertFalse(user!.settings!.otp!.transactions!.send!.enabled!, "Failed: User settings otp transactions send didn't match.")
+        XCTAssertTrue(user!.settings!.otp!.transactions!.transfer!.enabled!, "Failed: User settings otp transactions transfer didn't match.")
+        XCTAssertTrue(user!.settings!.otp!.transactions!.withdraw!.crypto!.enabled!, "Failed: User settings otp login didn't match.")
         XCTAssertEqual(user!.settings!.theme!, "minimalistic", "Failed: User settings theme didn't match.")
         XCTAssertEqual(user!.state!, "FOO", "Failed: User name didn't match.")
         XCTAssertEqual(user!.status!, "ok", "Failed: User name didn't match.")
