@@ -45,13 +45,12 @@ public class UpholdRestAdapter {
                     return
                 }
 
-                guard let _ = response.text else {
+                if let body = response.text where !body.isEmpty {
+                    reject(LogicError(code: nil, message: "Response body should be empty."))
+                } else {
                     fulfill(response)
-
-                    return
                 }
 
-                reject(LogicError(code: nil, message: "Response body should be empty."))
                 }, onError: { (error: NSError) -> Void in
                     reject(error)
             })

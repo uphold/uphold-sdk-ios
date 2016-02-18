@@ -56,6 +56,22 @@ class UpholdRestAdapterTest: UpholdTestCase {
         wait()
     }
 
+    func testBuildEmptyResponseWithBodyShouldReturnFulfilledPromise() {
+        let expectation = expectationWithDescription("Uphold REST adapter response test.")
+        let mockRequest = MockRequest(body: "", code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
+        let request = UpholdRestAdapter().buildRequest(mockRequest)
+        let promise: Promise<Response> = UpholdRestAdapter().buildEmptyResponse(request)
+
+        promise.then { (response: Response) -> () in
+            XCTAssertEqual(response.basicStatus, Response.BasicResponseType.OK, "Failed: Wrong response basic status code.")
+            XCTAssertEqual(response.text, "", "Failed: Wrong response body.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testBuildEmptyResponseShouldReturnLogicError() {
         let expectation = expectationWithDescription("Uphold REST adapter response test.")
         let mockRequest = MockRequest(body: "foobar", code: 200, errorHandler: {(error: NSError) -> Void in}, headers: nil, method: "foo")
