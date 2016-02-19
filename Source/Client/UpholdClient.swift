@@ -134,4 +134,11 @@ public class UpholdClient: Client {
         return self.token.getUser()
     }
 
+    /**
+      Invalidates the client session.
+    */
+    public func invalidateSession() {
+        SessionManager.sharedInstance.invalidateSession()
+    }
+
 }
