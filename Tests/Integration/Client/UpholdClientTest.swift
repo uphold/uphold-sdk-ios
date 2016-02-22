@@ -1,6 +1,7 @@
 import XCTest
 import ObjectMapper
 import PromiseKit
+import KeychainSwift
 @testable import UpholdSdk
 @testable import SwiftClient
 
@@ -232,6 +233,17 @@ class UpholdClientTest: UpholdTestCase {
         }
 
         wait()
+    }
+
+    func testInvalidateSessionShouldInvalidateSession() {
+        let client = UpholdClient(bearerToken: "foo")
+
+        client.invalidateSession()
+
+        let request = client.token.adapter.buildRequest(TickerService.getAllTickers())
+
+        XCTAssertNil(request.headers["authorization"], "Failed: Wrong header.")
+        XCTAssertNil(KeychainSwift().get(SessionManager.KEYCHAIN_TOKEN_KEY), "Failed: Wrong token.")
     }
 
 }
