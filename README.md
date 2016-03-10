@@ -23,8 +23,8 @@ The Uphold SDK for iOS provides an easy way for developers to integrate iOS appl
     # To use Uphold's production environment.
     pod 'UpholdSdk/Production'
 
-    # To use Uphold's sandbox environment.
-    pod 'UpholdSdk/Sandbox'
+    # To use Uphold's sandbox environment:
+    # pod 'UpholdSdk/Sandbox'
     ```
 
 2. Run `pod install`.
@@ -43,18 +43,17 @@ The Uphold SDK for iOS provides an easy way for developers to integrate iOS appl
     # To use Uphold's production environment.
     carthage update --platform iOS --configuration ProductionRelease
 
-    # To use Uphold's sandbox environment.
-    carthage update --platform iOS --configuration SandboxRelease
-
+    # To use Uphold's sandbox environment:
+    # carthage update --platform iOS --configuration SandboxRelease
     ```
 
 ## Basic usage
 
 In order to learn more about the Uphold API, please visit the [developer website](https://uphold.com/en/developer).
 
-To use the SDK you must first register an Application and obtain a unique `client_id` and `client_secret` combination. We recommend your first app be [registered in the Sandbox environment](https://sandbox.uphold.com/dashboard/profile/applications/developer/new), so you can safely play around during development.
+To use the SDK you must first register an Application and obtain a unique `CLIENT_ID` and `CLIENT_SECRET` combination. We recommend your first app be [registered in the Sandbox environment](https://sandbox.uphold.com/dashboard/profile/applications/developer/new), so you can safely play around during development.
 
-From the application page in your account you can get the `Client ID`, `Client Secret` , configure the `redirect URI` and the desired `Scopes`.
+From the application page in your account you can get the `client id`, `client secret` , configure the `redirect URI` and the desired `scopes`.
 
 ### Authenticate User
 
@@ -67,14 +66,14 @@ For instance, our demo application has the following configuration:
 
 ```xml
 <key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>uphold-demo</string>
-			</array>
-		</dict>
-	</array>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>uphold-demo</string>
+            </array>
+        </dict>
+    </array>
 ```
 
 We start the authentication process by instantiating the UpholdClient and then calling the `beginAuthorization` method:
@@ -103,7 +102,7 @@ To complete the authorization process you'll need to call the `completeAuthoriza
 ```swift
 /// LoginViewController.swift
 
-upholdClient.completeAuthorization(authorizationViewController, clientId: `CLIENT_ID`, clientSecret: `CLIENT_SECRET`, grantType: "authorization_code", state: state, uri: url).then { (response: AuthenticationResponse) -> () in
+upholdClient.completeAuthorization(authorizationViewController, clientId: CLIENT_ID, clientSecret: CLIENT_SECRET, grantType: "authorization_code", state: state, uri: url).then { (response: AuthenticationResponse) -> () in
     // Get the user bearer token from the authenticationResponse.
 }
 ```
@@ -112,6 +111,7 @@ To get the current user information, just instantiate the Uphold client with the
 
 ```swift
 let upholdClient = UpholdClient(bearertoken: bearerToken)
+
 upholdClient.getUser().then { (user: User) -> () in
     /// The user information is available at the user object.
 }
@@ -121,6 +121,7 @@ upholdClient.getUser().then { (user: User) -> () in
 
 ```swift
 let upholdClient = UpholdClient(bearerToken: bearerToken)
+
 upholdClient.getUser().then { (user: User) -> Promise<[Card]> in
     return user.getCards()
 .then { (cards: [Card]) -> () in
@@ -148,7 +149,7 @@ user.getCards().then { (cards: [Card]) -> () in
 let upholdClient = UpholdClient()
 
 /// Get tickers.
-upholdClient..getTickers().then { (rateList: [Rate]) -> () in
+upholdClient.getTickers().then { (rateList: [Rate]) -> () in
     /// Do something with the rates list.
 }.error { (error: ErrorType) -> Void in
     /// Do something with the error.
@@ -192,7 +193,6 @@ card.createTransaction(true, transactionRequest: transactionRequest)
 /// Instantiate the client. In this case, we don't need an
 /// AUTHORIZATION_TOKEN because the Ticker endpoint is public.
 let upholdClient = UpholdClient()
-
 let paginator: Paginator<Transaction> = client.getReserve().getTransactions()
 
 /// Get the list of transactions.
@@ -275,3 +275,34 @@ paginator.getNext().then { (transactions: [Transaction]) -> () in
 ## Uphold SDK sample
 
 Check the [sample application](https://github.com/uphold/uphold-sdk-ios/tree/master/SampleApplication) to explore an application using the Uphold iOS SDK.
+
+#### Building
+
+To build the sample application you need the [Xcode](https://developer.apple.com/xcode/download/). Steps to build:
+
+1. Clone the repository.
+2. Get the project dependencies:
+
+ ```
+ carthage bootstrap --platform iOS
+ ```
+
+3. Open the sample project `SampleApplication.xcodeproj`.
+4. Build and run the app from inside Xcode.
+
+The sample application is configured to use the [sandbox environment](https://sandbox.uphold.com), make sure you use a sandbox account to perform the login.
+
+## Contributing & Development
+
+#### Contributing
+
+Have you found a bug or want to suggest something? Please search the [issues](https://github.com/uphold/uphold-sdk-ios/issues) first and, if it is new, go ahead and [submit it](https://github.com/uphold/uphold-sdk-ios/issues/new).
+
+#### Develop
+
+It will be awesome if you can help us evolve `uphold-sdk-ios`. Want to help?
+
+1. [Fork it](https://github.com/uphold/uphold-sdk-ios).
+2. Hack away.
+3. Run the tests.
+5. Create a [Pull Request](https://github.com/uphold/uphold-sdk-ios/compare).
