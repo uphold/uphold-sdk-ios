@@ -1,4 +1,4 @@
-# Uphold SDK for iOS [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+# Uphold SDK for iOS [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/cocoapods/v/UpholdSdk.svg)](https://cocoapods.org/pods/UpholdSdk)
 
 Uphold is a next generation platform that allows anyone to transfer and exchange value for free, instantly and securely.
 
