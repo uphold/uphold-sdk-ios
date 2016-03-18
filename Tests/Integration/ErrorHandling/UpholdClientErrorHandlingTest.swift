@@ -78,7 +78,7 @@ class UpholdClientErrorHandlingTest: UpholdTestCase {
             self.expectation.fulfill()
         }
 
-        MockRequest(body: "body", code: 400, errorHandler: { (error: NSError) -> Void in },  headers: nil, method: "foo").end(done, onError: self.defaultError)
+        MockRequest(body: "body", code: 400, errorHandler: { (error: NSError) -> Void in }, headers: nil, method: "foo").end(done, onError: self.defaultError)
 
         wait()
     }
