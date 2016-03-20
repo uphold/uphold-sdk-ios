@@ -6,6 +6,22 @@ import PromiseKit
 /// User integration tests.
 class UserTest: UpholdTestCase {
 
+    func testCreateCardShouldReturnTheCard() {
+        let expectation = expectationWithDescription("User test: create card.")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadCard(["id": "foobar", "currency": "foo", "label": "BTC"]))!)
+
+        user.createCard(CardRequest(currency: "foo", label: "BTC")).then { (card: Card) -> () in
+            XCTAssertEqual(card.currency, "foo", "Failed: Wrong card currency.")
+            XCTAssertEqual(card.id, "foobar", "Failed: Wrong card id.")
+            XCTAssertEqual(card.label, "BTC", "Failed: Wrong card label.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testGetBalancesByCurrencyShouldReturnTheCurrencyBalance() {
         let expectation = expectationWithDescription("User test: get balances by currency.")
         let json: String = "{" +

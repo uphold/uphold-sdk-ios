@@ -92,6 +92,19 @@ public class User: BaseModel, Mappable {
     }
 
     /**
+      Creates a card to the user.
+
+      - parameter cardRequest: The CardRequest with the information to create the card.
+
+      - returns: A promise with the created card.
+    */
+    public func createCard(cardRequest: CardRequest) -> Promise<Card> {
+        let request = self.adapter.buildRequest(UserCardService.createUserCard(Mapper().toJSON(cardRequest)))
+
+        return self.adapter.buildResponse(request)
+    }
+
+    /**
       Creates a contact for the user.
 
       - parameter contactRequest: The ContactRequest with the information to create the contact.
