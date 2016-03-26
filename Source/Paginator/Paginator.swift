@@ -62,7 +62,7 @@ public class Paginator<T>: PaginatorProtocol {
     */
     public func getNext() -> Promise<[T]> {
         defer {
-            currentPage++
+            currentPage += 1
 
             objc_sync_exit(self.currentPage)
         }
