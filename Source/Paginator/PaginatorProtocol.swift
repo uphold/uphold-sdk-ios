@@ -6,7 +6,7 @@ import PromiseKit
 protocol PaginatorProtocol {
 
     /// Paginator generic type.
-    typealias T
+    associatedtype T
 
     /**
       A closure to get a promise with the total number of elements.
