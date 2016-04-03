@@ -204,7 +204,7 @@ public class Transaction: BaseModel, Mappable {
             return self.adapter.buildResponse(request)
         }
 
-        request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: Mapper().toJSONString(transactionCommit, prettyPrint: false)!))
+        request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: Mapper().toJSON(transactionCommit)))
 
         return self.adapter.buildResponse(request)
     }
