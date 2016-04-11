@@ -8,7 +8,6 @@ env:
 
 before_script:
   - brew update
-  - brew install carthage
   - brew install swiftlint
   # Workaround to fix xctool issue #666(https://github.com/facebook/xctool/issues/666)
   - brew reinstall --HEAD xctool
