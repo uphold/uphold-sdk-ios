@@ -796,7 +796,6 @@
 				BC2381291BB462170060CC80 /* Headers */,
 				BC23812A1BB462170060CC80 /* Resources */,
 				BC62F2AE1BCE4EFA007E6FDB /* SwiftLint Run Script */,
-				BC91D9561BFCC385000207AD /* Carthage Dependencies Run Script */,
 				BCC9D7251C5643BA00671171 /* Environment Configuration Run Script */,
 			);
 			buildRules = (
@@ -857,7 +856,6 @@
 				BCC9D70F1C56377E00671171 /* Headers */,
 				BCC9D7101C56377E00671171 /* Resources */,
 				BCC9D7111C56377E00671171 /* SwiftLint Run Script */,
-				BCC9D7121C56377E00671171 /* Carthage Dependencies Run Script */,
 				BCC9D7261C5644F100671171 /* Environment Configuration Run Script */,
 			);
 			buildRules = (
@@ -952,25 +950,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		BC91D9561BFCC385000207AD /* Carthage Dependencies Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftClient.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/OMGHTTPURLRQ.framework",
-			);
-			name = "Carthage Dependencies Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		BC91D9571BFCC401000207AD /* Carthage Dependencies Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1044,25 +1023,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		BCC9D7121C56377E00671171 /* Carthage Dependencies Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftClient.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/OMGHTTPURLRQ.framework",
-			);
-			name = "Carthage Dependencies Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		BCC9D7251C5643BA00671171 /* Environment Configuration Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
