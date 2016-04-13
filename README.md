@@ -141,6 +141,21 @@ user.getCards().then { (cards: [Card]) -> () in
 }
 ```
 
+### Create a new card for the user
+
+```swift
+let cardRequest: CardRequest = CardRequest(currency: "foo", label: "BTC", settings: CardSettings(position: 1, starred: true))
+
+// Or just create a card without specifying the card settings.
+// let cardRequest: CardRequest = CardRequest(currency: "foo", label: "BTC")
+
+user.createCard(cardRequest).then { (card: Card) -> () in
+    /// Do something with the card.        
+}.error { (error: ErrorType) -> Void in
+    /// Do something with the error.            
+}
+```
+
 ### Get ticker
 
 ```swift
