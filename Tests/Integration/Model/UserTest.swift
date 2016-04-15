@@ -22,6 +22,21 @@ class UserTest: UpholdTestCase {
         wait()
     }
 
+    func testCreateCardWithSettingsShouldReturnTheCard() {
+        let cardSettings: CardSettings = CardSettings(position: 1, starred: true)
+        let expectation = expectationWithDescription("User test: create card.")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadCard(["id": "foobar"]))!)
+
+        user.createCard(CardRequest(currency: "foo", label: "BTC", settings: cardSettings)).then { (card: Card) -> () in
+            XCTAssertEqual(card.id, "foobar", "Failed: Wrong card id.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testGetBalancesByCurrencyShouldReturnTheCurrencyBalance() {
         let expectation = expectationWithDescription("User test: get balances by currency.")
         let json: String = "{" +
