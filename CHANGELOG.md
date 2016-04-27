@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0](https://github.com/uphold/uphold-sdk-ios/tree/0.1.0) (2016-04-27)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.0.1...0.1.0)
+
+**Merged pull requests:**
+
+- Fix cancel transaction service [\#42](https://github.com/uphold/uphold-sdk-ios/pull/42) ([diogoguimaraes](https://github.com/diogoguimaraes))
+- Update dependencies [\#41](https://github.com/uphold/uphold-sdk-ios/pull/41) ([SandroMachado](https://github.com/SandroMachado))
+- Add card settings to the card request model [\#40](https://github.com/uphold/uphold-sdk-ios/pull/40) ([SandroMachado](https://github.com/SandroMachado))
+- Fix copy frameworks [\#39](https://github.com/uphold/uphold-sdk-ios/pull/39) ([diogoguimaraes](https://github.com/diogoguimaraes))
+- Fix transaction commit message [\#38](https://github.com/uphold/uphold-sdk-ios/pull/38) ([diogoguimaraes](https://github.com/diogoguimaraes))
+- Update to Swift 2.2 [\#37](https://github.com/uphold/uphold-sdk-ios/pull/37) ([diogoguimaraes](https://github.com/diogoguimaraes))
+- Add a new card to the user [\#36](https://github.com/uphold/uphold-sdk-ios/pull/36) ([diogoguimaraes](https://github.com/diogoguimaraes))
+- Add cocoapods badge [\#35](https://github.com/uphold/uphold-sdk-ios/pull/35) ([diogoguimaraes](https://github.com/diogoguimaraes))
+
 ## [0.0.1](https://github.com/uphold/uphold-sdk-ios/tree/0.0.1) (2016-03-10)
 **Implemented enhancements:**
 
