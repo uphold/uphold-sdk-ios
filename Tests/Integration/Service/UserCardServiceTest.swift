@@ -9,7 +9,7 @@ class UserCardServiceTest: XCTestCase {
         let request = UserCardService.cancelTransaction("bar", transactionId: "foo")
 
         XCTAssertEqual(request.url, String(format: "%@/v0/me/cards/bar/transactions/foo/cancel", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
-        XCTAssertEqual(request.method, "GET", "Failed: Wrong method.")
+        XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
     }
 
     func testConfirmTransactionShouldReturnTheRequest() {

@@ -13,7 +13,7 @@ public class UserCardService {
       - returns: A request to cancel the transaction.
     */
     static func cancelTransaction(cardId: String, transactionId: String) -> Request {
-        return UpholdClient().get(String(format: "/v0/me/cards/%@/transactions/%@/cancel", cardId, transactionId))
+        return UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/cancel", cardId, transactionId))
     }
 
     /**
