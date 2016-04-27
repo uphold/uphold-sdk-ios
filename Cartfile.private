@@ -1,2 +1,2 @@
-github "vadymmarkov/Fakery" ~> 1.1.1
+github "vadymmarkov/Fakery" ~> 1.2.0
 github "seegno-forks/Mockingjay" "support/add-carthage-configuration"
