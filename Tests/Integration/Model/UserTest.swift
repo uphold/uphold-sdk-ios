@@ -37,6 +37,59 @@ class UserTest: UpholdTestCase {
         wait()
     }
 
+    func testGetAccountByIdShouldReturnTheAccount() {
+        let account: Account = Fixtures.loadAccount(["id": "foobar"])
+        let expectation = expectationWithDescription("User test: get account by id.")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(account)!)
+
+        user.getAccountById("foobar").then { (account: Account) -> () in
+            XCTAssertEqual(account.id, "foobar", "Failed: Wrong account object.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testGetAccountsShouldReturnTheArrayOfAccounts() {
+        let expectation = expectationWithDescription("User test: get accounts.")
+        let json: String = "[{" +
+            "\"currency\": \"EUR\"," +
+            "\"id\": \"foo\"," +
+            "\"label\": \"bar\"," +
+            "\"status\": \"foobar\"," +
+            "\"type\": \"fiz\"" +
+        "}," +
+        "{" +
+            "\"currency\": \"USD\"," +
+            "\"id\": \"bar\"," +
+            "\"label\": \"foo\"," +
+            "\"status\": \"foobiz\"," +
+            "\"type\": \"biz\"" +
+        "}]"
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: json)
+
+        user.getAccounts().then { (accounts: [Account]) -> () in
+            XCTAssertEqual(accounts.count, 2, "Failed: Wrong number of accounts.")
+            XCTAssertEqual(accounts[0].currency, "EUR", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[0].id, "foo", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[0].label, "bar", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[0].status, "foobar", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[0].type, "fiz", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[1].currency, "USD", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[1].id, "bar", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[1].label, "foo", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[1].status, "foobiz", "Failed: Wrong account object.")
+            XCTAssertEqual(accounts[1].type, "biz", "Failed: Wrong account object.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testGetBalancesByCurrencyShouldReturnTheCurrencyBalance() {
         let expectation = expectationWithDescription("User test: get balances by currency.")
         let json: String = "{" +

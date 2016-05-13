@@ -124,6 +124,8 @@
 		BCC392FE1CE645FA00091B19 /* AccountsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC392FC1CE645FA00091B19 /* AccountsService.swift */; };
 		BCC393001CE646D800091B19 /* AccountsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC392FF1CE646D700091B19 /* AccountsServiceTest.swift */; };
 		BCC393011CE646D800091B19 /* AccountsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC392FF1CE646D700091B19 /* AccountsServiceTest.swift */; };
+		BCC393031CE64E5700091B19 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC393021CE64E5700091B19 /* Account.swift */; };
+		BCC393041CE64E5700091B19 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC393021CE64E5700091B19 /* Account.swift */; };
 		BCC9D6D51C56377E00671171 /* NormalizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */; };
 		BCC9D6D61C56377E00671171 /* InternationalizationUserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */; };
 		BCC9D6D71C56377E00671171 /* BadRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5621BC692E200D61852 /* BadRequestError.swift */; };
@@ -321,6 +323,7 @@
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
 		BCC392FC1CE645FA00091B19 /* AccountsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsService.swift; sourceTree = "<group>"; };
 		BCC392FF1CE646D700091B19 /* AccountsServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsServiceTest.swift; sourceTree = "<group>"; };
+		BCC393021CE64E5700091B19 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BCC9D7181C56377E00671171 /* UpholdSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpholdSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
 		BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientErrorHandling.swift; sourceTree = "<group>"; };
@@ -450,6 +453,7 @@
 		BC23814A1BB4626F0060CC80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BCC393021CE64E5700091B19 /* Account.swift */,
 				BC202DC91C4420920069A230 /* AuthenticationRequest.swift */,
 				BC202DCB1C4420AE0069A230 /* AuthenticationResponse.swift */,
 				BC4110491C05E6400063761C /* Balance */,
@@ -1153,6 +1157,7 @@
 				BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */,
 				BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */,
 				BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */,
+				BCC393031CE64E5700091B19 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1296,6 +1301,7 @@
 				BCC9D7061C56377E00671171 /* GlobalConfigurations.swift in Sources */,
 				BCC9D7071C56377E00671171 /* SessionManager.swift in Sources */,
 				BCC9D7081C56377E00671171 /* TransactionDenominationRequest.swift in Sources */,
+				BCC393041CE64E5700091B19 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,40 @@ import UpholdSdk
 public class Fixtures {
 
     /**
+      Fixture to generate an account.
+
+      - returns: An account.
+    */
+    public static func loadAccount() -> Account {
+        return loadAccount(nil)
+    }
+
+    /**
+      Fixture to generate an account.
+
+      - parameter fields: A dictionary containing specific fields for the account to have.
+
+      - returns: An account.
+    */
+    public static func loadAccount(fields: [String: String]?) -> Account {
+        let faker = Faker(locale: "en")
+
+        var fakerFields = [
+            "currency": faker.lorem.characters(amount: 3),
+            "id": faker.lorem.characters(amount: 20),
+            "label": faker.lorem.characters(amount: 10),
+            "status": faker.lorem.characters(amount: 8),
+            "type": faker.lorem.characters(amount: 8)
+        ]
+
+        if let fields = fields {
+            _ = fields.flatMap { (key, value) in fakerFields[key] = value }
+        }
+
+        return Account(currency: fakerFields["currency"]!, id: fakerFields["id"]!, label: fakerFields["label"]!, status: fakerFields["status"]!, type: fakerFields["type"]!)
+    }
+
+    /**
       Fixture to generate a card.
 
       - returns: A card.
