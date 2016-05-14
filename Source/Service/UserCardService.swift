@@ -29,7 +29,7 @@ public class UserCardService {
     static func confirmTransaction(cardId: String, otp: String?, transactionId: String, transactionCommitRequest: AnyObject?) -> Request {
         let request = UpholdClient().post(String(format: "/v0/me/cards/%@/transactions/%@/commit", cardId, transactionId))
 
-        guard let guardedOtp = otp, let guardedTransactionCommitRequest = transactionCommitRequest else {
+        guard let guardedOtp = otp, guardedTransactionCommitRequest = transactionCommitRequest else {
             if let otp = otp {
                 return request.set("X-Bitreserve-OTP", otp)
             } else if let transactionCommitRequest = transactionCommitRequest {

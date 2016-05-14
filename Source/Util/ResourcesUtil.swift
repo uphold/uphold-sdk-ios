@@ -19,13 +19,13 @@ public class ResourcesUtil {
     public static func getValueFromKey(file: String, key: String) throws -> String {
         switch file {
             case "ConfigurationsPlist":
-                guard let configurationsPath = NSBundle(forClass: self).pathForResource("Configurations", ofType: "plist"), let configurationDictionary = NSDictionary(contentsOfFile: configurationsPath), let value = configurationDictionary[key] as? String else {
+                guard let configurationsPath = NSBundle(forClass: self).pathForResource("Configurations", ofType: "plist"), configurationDictionary = NSDictionary(contentsOfFile: configurationsPath), value = configurationDictionary[key] as? String else {
                     throw ConfigurationMissingError(message: String(format: "There is no value for the key: %@", key))
                 }
 
                 return value
             case "InfoPlist":
-                guard let infoDictionary = NSBundle(forClass: self).infoDictionary, let value = infoDictionary[key] as? String else {
+                guard let infoDictionary = NSBundle(forClass: self).infoDictionary, value = infoDictionary[key] as? String else {
                     throw ConfigurationMissingError(message: String(format: "There is no value for the key: %@", key))
                 }
 

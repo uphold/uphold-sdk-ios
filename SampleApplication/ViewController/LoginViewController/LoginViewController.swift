@@ -30,7 +30,7 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
         let scopes: [String] = ["cards:read", "user:read"]
         self.state = String(format: "oauth2:%@", NSUUID().UUIDString)
 
-        guard let client = self.client, let state = self.state else {
+        guard let client = self.client, state = self.state else {
             self.handleError()
 
             return
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
     func completeAuthorization(url: NSURL) {
         let userViewController = UserViewController()
 
-        guard let authorizationViewController = self.authorizationViewController, let client = self.client, let state = self.state else {
+        guard authorizationViewController = self.authorizationViewController, client = self.client, state = self.state else {
             return self.handleError()
         }
 

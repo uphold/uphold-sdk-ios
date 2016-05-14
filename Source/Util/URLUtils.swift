@@ -13,7 +13,7 @@ public class URLUtils {
       - returns: The escaped NSURL.
     */
     public static func escapeURL(url: String) throws -> NSURL {
-        guard let escapedUrl = url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()), let uri = NSURL(string: escapedUrl) else {
+        guard let escapedUrl = url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()), uri = NSURL(string: escapedUrl) else {
             throw MalformedUrlError(message: "Invalid URL.")
         }
 
