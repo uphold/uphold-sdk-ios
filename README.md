@@ -186,9 +186,11 @@ upholdClient.getTickersByCurrency("BTC").then { (rateList: [Rate]) -> () in
 
 ```swift
 let transactionDenominationRequest = TransactionDenominationRequest(amount: "1.0", currency: "BTC")
-let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foo@bar.com")
 
-card.createTransaction(transactionRequest).then { (transaction: Transaction) -> () in
+/// A transaction to a destination.
+let transactionTransferRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foo@bar.com")
+
+card.createTransaction(transactionTransferRequest).then { (transaction: Transaction) -> () in
     /// Commit the transaction.
     transaction.commit(TransactionCommitRequest("Commit message"))
 }.error({ (error: ErrorType) -> Void in

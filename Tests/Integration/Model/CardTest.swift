@@ -119,7 +119,7 @@ class CardTest: UpholdTestCase {
         "}"
         card.adapter = MockRestAdapter(body: json)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobar")
 
         card.createTransaction(transactionRequest).then { (transaction: Transaction) -> () in
             XCTAssertEqual(transaction.createdAt, "2014-08-27T00:01:11.616Z", "Failed: Wrong transaction createdAt.")
@@ -185,7 +185,7 @@ class CardTest: UpholdTestCase {
         card.adapter = MockRestAdapter()
         let expectation = expectationWithDescription("Card test: create transaction.")
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobar")
 
         card.createTransaction(transactionRequest).error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
@@ -208,7 +208,7 @@ class CardTest: UpholdTestCase {
         let expectation = expectationWithDescription("Card test: create transaction.")
         card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(["transactionId": "foobar"]))!)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobar")
 
         card.createTransaction(true, transactionRequest: transactionRequest).then { (transaction: Transaction) -> () in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
