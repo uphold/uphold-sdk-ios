@@ -45,6 +45,17 @@ public class Transaction: BaseModel, Mappable {
     /// The nature of the transaction.
     public private(set) final var type: String?
 
+    /// The card id path.
+    private var cardIdPath: String? {
+        get {
+            if let type = self.type where type.caseInsensitiveCompare("deposit") == .OrderedSame {
+                return destination?.cardId
+            }
+
+            return origin?.cardId
+        }
+    }
+
     /**
       Constructor.
 
@@ -119,8 +130,22 @@ public class Transaction: BaseModel, Mappable {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction id should not be nil."))
         }
 
-        guard let cardId = self.origin?.cardId else {
+        if (self.type?.caseInsensitiveCompare("deposit") == .OrderedSame) {
+            guard let _ = self.origin?.accountId else {
+                return Promise<Transaction>(error: UnexpectedResponseError(message: "Origin accountId is missing from this transaction."))
+            }
+
+            guard let _ = self.destination?.cardId else {
+                return Promise<Transaction>(error: UnexpectedResponseError(message: "Destination cardId is missing from this transaction."))
+            }
+        }
+
+        if (self.origin?.cardId == nil && self.destination?.cardId == nil) {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Origin cardId is missing from this transaction."))
+        }
+
+        guard let cardIdPath = self.cardIdPath else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Unexpected cardId is missing."))
         }
 
         guard let status = self.status else {
@@ -132,7 +157,7 @@ public class Transaction: BaseModel, Mappable {
                 return Promise<Transaction>(error: LogicError(code: nil, message: "Unable to cancel uncommited transaction."))
 
             case "waiting":
-                let request = self.adapter.buildRequest(UserCardService.cancelTransaction(cardId, transactionId: id))
+                let request = self.adapter.buildRequest(UserCardService.cancelTransaction(cardIdPath, transactionId: id))
 
                 return self.adapter.buildResponse(request)
 
@@ -185,7 +210,17 @@ public class Transaction: BaseModel, Mappable {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Transaction id should not be nil."))
         }
 
-        guard let cardId = self.origin?.cardId else {
+        if (self.type?.caseInsensitiveCompare("deposit") == .OrderedSame) {
+            guard let _ = self.origin?.accountId else {
+                return Promise<Transaction>(error: UnexpectedResponseError(message: "Origin accountId is missing from this transaction."))
+            }
+
+            guard let _ = self.destination?.cardId else {
+                return Promise<Transaction>(error: UnexpectedResponseError(message: "Destination cardId is missing from this transaction."))
+            }
+        }
+
+        if (self.origin?.cardId == nil && self.destination?.cardId == nil) {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Origin cardId is missing from this transaction."))
         }
 
@@ -197,14 +232,18 @@ public class Transaction: BaseModel, Mappable {
             return Promise<Transaction>(error: LogicError(code: nil, message: String(format: "This transaction cannot be committed, because the current status is %@.", status)))
         }
 
+        guard let cardIdPath = self.cardIdPath else {
+            return Promise<Transaction>(error: UnexpectedResponseError(message: "Unexpected cardId is missing."))
+        }
+
         let request: Request
         guard let transactionCommit = transactionCommit else {
-            request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: nil))
+            request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardIdPath, otp: otp, transactionId: id, transactionCommitRequest: nil))
 
             return self.adapter.buildResponse(request)
         }
 
-        request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardId, otp: otp, transactionId: id, transactionCommitRequest: Mapper().toJSON(transactionCommit)))
+        request = self.adapter.buildRequest(UserCardService.confirmTransaction(cardIdPath, otp: otp, transactionId: id, transactionCommitRequest: Mapper().toJSON(transactionCommit)))
 
         return self.adapter.buildResponse(request)
     }

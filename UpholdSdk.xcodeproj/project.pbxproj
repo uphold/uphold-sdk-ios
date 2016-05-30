@@ -31,6 +31,10 @@
 		BC215F201C5BD95B0007C7FA /* URLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7757B1C565D67005CE55A /* URLUtils.swift */; };
 		BC23335D1CFC7AB3007928FE /* TransactionTransferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23335C1CFC7AB3007928FE /* TransactionTransferRequest.swift */; };
 		BC23335E1CFC7AB3007928FE /* TransactionTransferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23335C1CFC7AB3007928FE /* TransactionTransferRequest.swift */; };
+		BC2333601CFC8FA0007928FE /* TransactionDepositRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23335F1CFC8FA0007928FE /* TransactionDepositRequest.swift */; };
+		BC2333611CFC8FA0007928FE /* TransactionDepositRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23335F1CFC8FA0007928FE /* TransactionDepositRequest.swift */; };
+		BC2333631CFCA13A007928FE /* TransactionCardDepositRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2333621CFCA13A007928FE /* TransactionCardDepositRequest.swift */; };
+		BC2333641CFCA13A007928FE /* TransactionCardDepositRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2333621CFCA13A007928FE /* TransactionCardDepositRequest.swift */; };
 		BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381481BB4626F0060CC80 /* UpholdClient.swift */; };
 		BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814D1BB4626F0060CC80 /* CardSettings.swift */; };
 		BC2381661BB4626F0060CC80 /* NormalizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */; };
@@ -251,6 +255,8 @@
 		BC202DCF1C4514F40069A230 /* StateMatchError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMatchError.swift; sourceTree = "<group>"; };
 		BC202DD11C451E040069A230 /* AuthenticationRequiredError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequiredError.swift; sourceTree = "<group>"; };
 		BC23335C1CFC7AB3007928FE /* TransactionTransferRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTransferRequest.swift; sourceTree = "<group>"; };
+		BC23335F1CFC8FA0007928FE /* TransactionDepositRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDepositRequest.swift; sourceTree = "<group>"; };
+		BC2333621CFCA13A007928FE /* TransactionCardDepositRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCardDepositRequest.swift; sourceTree = "<group>"; };
 		BC23812C1BB462170060CC80 /* UpholdSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpholdSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2381361BB462180060CC80 /* UpholdSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpholdSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2381481BB4626F0060CC80 /* UpholdClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClient.swift; sourceTree = "<group>"; };
@@ -496,8 +502,10 @@
 				BC2381541BB4626F0060CC80 /* Origin.swift */,
 				BC2381551BB4626F0060CC80 /* Parameters.swift */,
 				BC2381561BB4626F0060CC80 /* Source.swift */,
+				BC2333621CFCA13A007928FE /* TransactionCardDepositRequest.swift */,
 				BC12F44E1C10691E00EB2E2B /* TransactionCommitRequest.swift */,
 				BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */,
+				BC23335F1CFC8FA0007928FE /* TransactionDepositRequest.swift */,
 				BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */,
 				BC23335C1CFC7AB3007928FE /* TransactionTransferRequest.swift */,
 			);
@@ -1100,8 +1108,10 @@
 				BC91E8A31BECD8270074C538 /* Total.swift in Sources */,
 				BC4110481C05E6350063761C /* Balance.swift in Sources */,
 				BC41104D1C05E6400063761C /* UserBalance.swift in Sources */,
+				BC2333631CFCA13A007928FE /* TransactionCardDepositRequest.swift in Sources */,
 				BC91E8A11BECD8270074C538 /* DepositMovement.swift in Sources */,
 				BC202DCC1C4420AE0069A230 /* AuthenticationResponse.swift in Sources */,
+				BC2333601CFC8FA0007928FE /* TransactionDepositRequest.swift in Sources */,
 				BC2381721BB4626F0060CC80 /* User.swift in Sources */,
 				BC3EE5951C1E3E9D0058478D /* Paginator.swift in Sources */,
 				BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */,
@@ -1245,8 +1255,10 @@
 				BC215F1A1C5BD93B0007C7FA /* AuthenticationResponse.swift in Sources */,
 				BC5236A31C5A41120088B62D /* ConfigurationMissingError.swift in Sources */,
 				BCC9D6D51C56377E00671171 /* NormalizedCard.swift in Sources */,
+				BC2333641CFCA13A007928FE /* TransactionCardDepositRequest.swift in Sources */,
 				BCC9D6D61C56377E00671171 /* InternationalizationUserSetting.swift in Sources */,
 				BCC9D6D71C56377E00671171 /* BadRequestError.swift in Sources */,
+				BC2333611CFC8FA0007928FE /* TransactionDepositRequest.swift in Sources */,
 				BCC9D6D81C56377E00671171 /* Transaction.swift in Sources */,
 				BCC9D6D91C56377E00671171 /* TransactionRequest.swift in Sources */,
 				BCC9D6DA1C56377E00671171 /* Deposit.swift in Sources */,
