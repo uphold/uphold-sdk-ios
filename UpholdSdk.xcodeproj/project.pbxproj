@@ -120,6 +120,12 @@
 		BCACC4251C5928C2008E7CE7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB62401BFE285000094F3A /* Mockingjay.framework */; };
 		BCB089911BD52DC20097C475 /* UpholdRestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */; };
 		BCC1EB2F1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */; };
+		BCC392FD1CE645FA00091B19 /* AccountsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC392FC1CE645FA00091B19 /* AccountsService.swift */; };
+		BCC392FE1CE645FA00091B19 /* AccountsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC392FC1CE645FA00091B19 /* AccountsService.swift */; };
+		BCC393001CE646D800091B19 /* AccountsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC392FF1CE646D700091B19 /* AccountsServiceTest.swift */; };
+		BCC393011CE646D800091B19 /* AccountsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC392FF1CE646D700091B19 /* AccountsServiceTest.swift */; };
+		BCC393031CE64E5700091B19 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC393021CE64E5700091B19 /* Account.swift */; };
+		BCC393041CE64E5700091B19 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC393021CE64E5700091B19 /* Account.swift */; };
 		BCC9D6D51C56377E00671171 /* NormalizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */; };
 		BCC9D6D61C56377E00671171 /* InternationalizationUserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2381591BB4626F0060CC80 /* InternationalizationUserSetting.swift */; };
 		BCC9D6D71C56377E00671171 /* BadRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBE5621BC692E200D61852 /* BadRequestError.swift */; };
@@ -315,6 +321,9 @@
 		BCACC42E1C5928C2008E7CE7 /* UpholdSdkSandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpholdSdkSandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB089901BD52DC20097C475 /* UpholdRestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdRestAdapter.swift; sourceTree = "<group>"; };
 		BCC1EB2E1BE3939800F37B7D /* UpholdClientErrorHandlingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpholdClientErrorHandlingTest.swift; path = ErrorHandling/UpholdClientErrorHandlingTest.swift; sourceTree = "<group>"; };
+		BCC392FC1CE645FA00091B19 /* AccountsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsService.swift; sourceTree = "<group>"; };
+		BCC392FF1CE646D700091B19 /* AccountsServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsServiceTest.swift; sourceTree = "<group>"; };
+		BCC393021CE64E5700091B19 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BCC9D7181C56377E00671171 /* UpholdSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpholdSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC9E0AF1BD10F4300C5C3C8 /* HeaderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTest.swift; path = Util/HeaderTest.swift; sourceTree = "<group>"; };
 		BCCBE5561BC6924A00D61852 /* UpholdClientErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpholdClientErrorHandling.swift; sourceTree = "<group>"; };
@@ -444,6 +453,7 @@
 		BC23814A1BB4626F0060CC80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BCC393021CE64E5700091B19 /* Account.swift */,
 				BC202DC91C4420920069A230 /* AuthenticationRequest.swift */,
 				BC202DCB1C4420AE0069A230 /* AuthenticationResponse.swift */,
 				BC4110491C05E6400063761C /* Balance */,
@@ -507,11 +517,12 @@
 		BC23815D1BB4626F0060CC80 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BCC392FC1CE645FA00091B19 /* AccountsService.swift */,
+				BC202DCD1C442BE30069A230 /* OAuth2Service.swift */,
 				BC23815E1BB4626F0060CC80 /* ReserveService.swift */,
 				BC23815F1BB4626F0060CC80 /* TickerService.swift */,
 				BC2381601BB4626F0060CC80 /* UserCardService.swift */,
 				BC2381611BB4626F0060CC80 /* UserService.swift */,
-				BC202DCD1C442BE30069A230 /* OAuth2Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -555,11 +566,12 @@
 		BC38D9FA1BB97E4F0044239A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BCC392FF1CE646D700091B19 /* AccountsServiceTest.swift */,
+				BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */,
 				BC38D9FB1BB97E4F0044239A /* ReserveServiceTest.swift */,
 				BC38D9FC1BB97E4F0044239A /* TickerServiceTest.swift */,
 				BC38D9FD1BB97E4F0044239A /* UserCardServiceTest.swift */,
 				BC38D9FE1BB97E4F0044239A /* UserServiceTest.swift */,
-				BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1138,12 +1150,14 @@
 				BC202DD21C451E040069A230 /* AuthenticationRequiredError.swift in Sources */,
 				BC202DD01C4514F40069A230 /* StateMatchError.swift in Sources */,
 				BC2381711BB4626F0060CC80 /* UserSettings.swift in Sources */,
+				BCC392FD1CE645FA00091B19 /* AccountsService.swift in Sources */,
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
 				BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */,
 				BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */,
 				BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */,
+				BCC393031CE64E5700091B19 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1171,6 +1185,7 @@
 				BCC9E0B01BD10F4300C5C3C8 /* HeaderTest.swift in Sources */,
 				BC38D9FF1BB97E4F0044239A /* ReserveServiceTest.swift in Sources */,
 				BC7E74121BEA80D6006AAE0E /* MockRestAdapter.swift in Sources */,
+				BCC393001CE646D800091B19 /* AccountsServiceTest.swift in Sources */,
 				BC622E991BD546CA007E767C /* UpholdRestAdapterTest.swift in Sources */,
 				BC4424151C56A06500FAC537 /* URLUtilsTest.swift in Sources */,
 				BC2381811BB4627C0060CC80 /* RateTest.swift in Sources */,
@@ -1202,6 +1217,7 @@
 				BC865B731C59411F003D67E5 /* HeaderTest.swift in Sources */,
 				BC865B741C59411F003D67E5 /* Fixtures.swift in Sources */,
 				BC865B751C59411F003D67E5 /* JSONTestUtils.swift in Sources */,
+				BCC393011CE646D800091B19 /* AccountsServiceTest.swift in Sources */,
 				BC865B761C59411F003D67E5 /* MockRequest.swift in Sources */,
 				BC865B771C59411F003D67E5 /* UpholdTestCase.swift in Sources */,
 				BC865B781C59411F003D67E5 /* MockRestAdapter.swift in Sources */,
@@ -1278,12 +1294,14 @@
 				BCC9D7001C56377E00671171 /* Header.swift in Sources */,
 				BCC9D7011C56377E00671171 /* Phone.swift in Sources */,
 				BCC9D7021C56377E00671171 /* UserSettings.swift in Sources */,
+				BCC392FE1CE645FA00091B19 /* AccountsService.swift in Sources */,
 				BCC9D7031C56377E00671171 /* UpholdClient.swift in Sources */,
 				BCC9D7041C56377E00671171 /* TransactionCommitRequest.swift in Sources */,
 				BCC9D7051C56377E00671171 /* ReserveService.swift in Sources */,
 				BCC9D7061C56377E00671171 /* GlobalConfigurations.swift in Sources */,
 				BCC9D7071C56377E00671171 /* SessionManager.swift in Sources */,
 				BCC9D7081C56377E00671171 /* TransactionDenominationRequest.swift in Sources */,
+				BCC393041CE64E5700091B19 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

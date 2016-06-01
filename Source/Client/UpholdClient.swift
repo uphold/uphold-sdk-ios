@@ -77,7 +77,7 @@ public class UpholdClient: Client {
 
         authorizationViewController.dismissViewControllerAnimated(true, completion: nil)
 
-        guard let queryParameters = NSURLComponents(URL: uri, resolvingAgainstBaseURL: false)?.queryItems, let stateParameter = queryParameters.filter({ parameter in parameter.name == "state" }).first, let responseState = stateParameter.value else {
+        guard let queryParameters = NSURLComponents(URL: uri, resolvingAgainstBaseURL: false)?.queryItems, stateParameter = queryParameters.filter({ parameter in parameter.name == "state" }).first, responseState = stateParameter.value else {
             return Promise<AuthenticationResponse>(error: UnexpectedResponseError(message: "URL query parameter state should not be nil."))
         }
 
@@ -85,7 +85,7 @@ public class UpholdClient: Client {
             return Promise<AuthenticationResponse>(error: StateMatchError(message: "URL query parameter state does not match."))
         }
 
-        guard let responseCode = queryParameters.filter({ parameter in parameter.name == "code" }).first, let code = responseCode.value else {
+        guard let responseCode = queryParameters.filter({ parameter in parameter.name == "code" }).first, code = responseCode.value else {
             return Promise<AuthenticationResponse>(error: UnexpectedResponseError(message: "URL query parameter code should not be nil."))
         }
 

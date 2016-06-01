@@ -36,7 +36,7 @@ class UserViewController: UIViewController {
 
             return user.getCards()
         }.then { (cards: [Card]) -> () in
-            guard let user = self.user, let firstName = user.firstName else {
+            guard let user = self.user, firstName = user.firstName else {
                 return
             }
 

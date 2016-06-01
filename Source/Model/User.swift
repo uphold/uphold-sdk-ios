@@ -118,6 +118,30 @@ public class User: BaseModel, Mappable {
     }
 
     /**
+      Gets the user accounts.
+
+      - returns: A promise with the user accounts list.
+    */
+    public func getAccounts() -> Promise<[Account]> {
+        let request = self.adapter.buildRequest(AccountsService.getUserAccounts())
+
+        return self.adapter.buildResponse(request)
+    }
+
+    /**
+      Gets the user account with the account id.
+
+      - parameter accountId: The id of the account we want.
+
+      - returns: A promise with the user account.
+    */
+    public func getAccountById(accountId: String) -> Promise<Account> {
+        let request = self.adapter.buildRequest(AccountsService.getUserAccountById(accountId))
+
+        return self.adapter.buildResponse(request)
+    }
+
+    /**
       Gets the user balances.
 
       - returns: A promise with the user balance.
