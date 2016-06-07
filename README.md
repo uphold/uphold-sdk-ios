@@ -186,13 +186,35 @@ upholdClient.getTickersByCurrency("BTC").then { (rateList: [Rate]) -> () in
 
 ```swift
 let transactionDenominationRequest = TransactionDenominationRequest(amount: "1.0", currency: "BTC")
-let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foo@bar.com")
 
-card.createTransaction(transactionRequest).then { (transaction: Transaction) -> () in
+/// A transaction to a destination (card id, crypto address, email, phone number or username).
+let transactionTransferRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foo@bar.com")
+
+card.createTransaction(transactionTransferRequest).then { (transaction: Transaction) -> () in
     /// Commit the transaction.
     transaction.commit(TransactionCommitRequest("Commit message"))
 }.error({ (error: ErrorType) -> Void in
     /// Do something with the error.            
+})
+
+/// A deposit from an ACH or SEPA account.
+let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "accountId")
+
+card.createTransaction(transactionDepositRequest).then { (transaction: Transaction) -> () in
+    /// Commit the transaction.
+    transaction.commit(TransactionCommitRequest("Commit message"))
+}.error({ (error: ErrorType) -> Void in
+    /// Do something with the error.
+})
+
+/// A deposit from a credit card.
+let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, origin: "creditCardId", securityCode: "1234")
+
+card.createTransaction(transactionCardDepositRequest).then { (transaction: Transaction) -> () in
+    /// Commit the transaction.
+    transaction.commit(TransactionCommitRequest("Commit message"))
+}.error({ (error: ErrorType) -> Void in
+    /// Do something with the error.
 })
 ```
 

@@ -6,6 +6,27 @@ import PromiseKit
 /// Transaction integration tests.
 class TransactionTest: UpholdTestCase {
 
+    func testCancelShouldReturnUnexpectedResponseErrorIfAccountIdIsNil() {
+        let expectation = expectationWithDescription("Transaction test: cancel transaction.")
+        let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\", \"type\": \"deposit\"}")!
+        transaction.adapter = MockRestAdapter(body: "foobar")
+
+        transaction.cancel().error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Origin accountId is missing from this transaction.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testCancelShouldReturnUnexpectedResponseErrorIfCardIdIsNil() {
         let expectation = expectationWithDescription("Transaction test: cancel transaction.")
         let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\" }")!
@@ -20,6 +41,27 @@ class TransactionTest: UpholdTestCase {
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Origin cardId is missing from this transaction.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCancelShouldReturnUnexpectedResponseErrorIfDestinationCardIdIsNil() {
+        let expectation = expectationWithDescription("Transaction test: cancel transaction.")
+        let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\", \"type\": \"deposit\", \"origin\": { \"AccountId\": \"fiz\"}}")!
+        transaction.adapter = MockRestAdapter(body: "foobar")
+
+        transaction.cancel().error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Destination cardId is missing from this transaction.", "Failed: Wrong message.")
 
             expectation.fulfill()
         }
@@ -181,6 +223,27 @@ class TransactionTest: UpholdTestCase {
         wait()
     }
 
+    func testCommitShouldReturnUnexpectedResponseErrorIfAccountIdIsNil() {
+        let expectation = expectationWithDescription("Transaction test: commit transaction.")
+        let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\", \"type\": \"deposit\"}")!
+        transaction.adapter = MockRestAdapter(body: "foobar")
+
+        transaction.commit(TransactionCommitRequest(message: "foobar")).error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Origin accountId is missing from this transaction.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testCommitShouldReturnUnexpectedResponseErrorIfCardIdIsNil() {
         let expectation = expectationWithDescription("Transaction test: commit transaction.")
         let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\" }")!
@@ -195,6 +258,27 @@ class TransactionTest: UpholdTestCase {
 
             XCTAssertNil(error.code, "Failed: Wrong code.")
             XCTAssertEqual(error.description, "Origin cardId is missing from this transaction.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCommitShouldReturnUnexpectedResponseErrorIfDestinationCardIdIsNil() {
+        let expectation = expectationWithDescription("Transaction test: commit transaction.")
+        let transaction: Transaction = Mapper().map("{ \"id\": \"foobar\", \"type\": \"deposit\", \"origin\": { \"AccountId\": \"fiz\"}}")!
+        transaction.adapter = MockRestAdapter(body: "foobar")
+
+        transaction.commit(TransactionCommitRequest(message: "foobar")).error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Destination cardId is missing from this transaction.", "Failed: Wrong message.")
 
             expectation.fulfill()
         }

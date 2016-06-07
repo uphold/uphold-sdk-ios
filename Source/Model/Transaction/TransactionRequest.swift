@@ -7,18 +7,13 @@ public class TransactionRequest: Mappable {
     /// The denomination of the transaction request.
     public private(set) final var denomination: TransactionDenominationRequest?
 
-    /// The destination of the transaction request.
-    public private(set) final var destination: String?
-
     /**
       Constructor.
 
       - parameter denomination: The denomination of the transaction request.
-      - parameter destination: The destination of the transaction request.
     */
-    public init(denomination: TransactionDenominationRequest, destination: String) {
+    public init(denomination: TransactionDenominationRequest) {
         self.denomination = denomination
-        self.destination = destination
     }
 
     // MARK: Required by the ObjectMapper.
@@ -38,7 +33,6 @@ public class TransactionRequest: Mappable {
     */
     public func mapping(map: Map) {
         self.denomination <- map["denomination"]
-        self.destination <- map["destination"]
     }
 
 }

@@ -50,9 +50,9 @@ class CardTest: UpholdTestCase {
         XCTAssertTrue(card!.settings!.starred!, "Failed: Starred didn't match.")
     }
 
-    func testCreateTransactionShouldReturnTheTransaction() {
+    func testCreateTransactionCardDepositShouldReturnTheTransaction() {
         let card: Card = Fixtures.loadCard()
-        let expectation = expectationWithDescription("Card test: create transaction.")
+        let expectation = expectationWithDescription("Card test: create transaction card deposit.")
         let json: String = "{" +
             "\"id\": \"foobar\"," +
             "\"type\": \"transfer\"," +
@@ -117,11 +117,12 @@ class CardTest: UpholdTestCase {
                 "\"percentage\": \"2.75\"" +
             "}]" +
         "}"
+
         card.adapter = MockRestAdapter(body: json)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, origin: "foobiz", securityCode: "1234")
 
-        card.createTransaction(transactionRequest).then { (transaction: Transaction) -> () in
+        card.createTransaction(transactionCardDepositRequest).then { (transaction: Transaction) -> () in
             XCTAssertEqual(transaction.createdAt, "2014-08-27T00:01:11.616Z", "Failed: Wrong transaction createdAt.")
             XCTAssertEqual(transaction.denomination!.amount, "0.1", "Failed: Wrong transaction denomination amount.")
             XCTAssertEqual(transaction.denomination!.currency, "BTC", "Failed: Wrong transaction denomination currency.")
@@ -173,6 +174,8 @@ class CardTest: UpholdTestCase {
             XCTAssertEqual(transaction.refundedById, "foobiz", "Failed: Wrong transaction refundedById.")
             XCTAssertEqual(transaction.status, "pending", "Failed: Wrong transaction status.")
             XCTAssertEqual(transaction.type, "transfer", "Failed: Wrong transaction type.")
+            XCTAssertEqual(transactionCardDepositRequest.origin, "foobiz", "Failed: Wrong transaction card deposit origin.")
+            XCTAssertEqual(transactionCardDepositRequest.securityCode, "1234", "Failed: Wrong transaction card deposit security code.")
 
             expectation.fulfill()
         }
@@ -180,12 +183,131 @@ class CardTest: UpholdTestCase {
         wait()
     }
 
-    func testCreateTransactionShouldReturnUnexpectedResponseError() {
+    func testCreateTransactionCardDepositShouldReturnUnexpectedResponseError() {
         let card: Card = Mapper().map("{}")!
         card.adapter = MockRestAdapter()
-        let expectation = expectationWithDescription("Card test: create transaction.")
+        let expectation = expectationWithDescription("Card test: create transaction transfer.")
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, origin: "foobar", securityCode: "1234")
+
+        card.createTransaction(transactionCardDepositRequest).error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCreateTransactionCardDepositWithCommitShouldReturnTheTransaction() {
+        let card: Card = Fixtures.loadCard()
+        let expectation = expectationWithDescription("Card test: create transaction transfer.")
+        card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(["transactionId": "foobar"]))!)
+        let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
+        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, origin: "foobar", securityCode: "1234")
+
+        card.createTransaction(true, transactionRequest: transactionCardDepositRequest).then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCreateTransactionDepositShouldReturnTheTransaction() {
+        let card: Card = Fixtures.loadCard()
+        let expectation = expectationWithDescription("Card test: create transaction deposit.")
+        let json: String = "{" +
+            "\"id\": \"foobar\"," +
+        "}"
+
+        card.adapter = MockRestAdapter(body: json)
+        let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
+        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "foobiz")
+
+        card.createTransaction(transactionDepositRequest).then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
+            XCTAssertEqual(transactionDepositRequest.origin, "foobiz", "Failed: Wrong transaction origin.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCreateTransactionDepositShouldReturnUnexpectedResponseError() {
+        let card: Card = Mapper().map("{}")!
+        card.adapter = MockRestAdapter()
+        let expectation = expectationWithDescription("Card test: create transaction transfer.")
+        let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
+        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "foobar")
+
+        card.createTransaction(transactionDepositRequest).error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCreateTransactionDepositWithCommitShouldReturnTheTransaction() {
+        let card: Card = Fixtures.loadCard()
+        let expectation = expectationWithDescription("Card test: create transaction transfer.")
+        card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(["transactionId": "foobar"]))!)
+        let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
+        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "foobar")
+
+        card.createTransaction(true, transactionRequest: transactionDepositRequest).then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCreateTransactionTransferShouldReturnTheTransaction() {
+        let card: Card = Fixtures.loadCard()
+        let expectation = expectationWithDescription("Card test: create transaction transfer.")
+        let json: String = "{" +
+            "\"id\": \"foobar\"," +
+        "}"
+        card.adapter = MockRestAdapter(body: json)
+        let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobiz")
+
+        card.createTransaction(transactionRequest).then { (transaction: Transaction) -> () in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
+            XCTAssertEqual(transactionRequest.destination, "foobiz", "Failed: Wrong transaction destination.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCreateTransactionTransferShouldReturnUnexpectedResponseError() {
+        let card: Card = Mapper().map("{}")!
+        card.adapter = MockRestAdapter()
+        let expectation = expectationWithDescription("Card test: create transaction transfer.")
+        let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobar")
 
         card.createTransaction(transactionRequest).error { (error: ErrorType) -> Void in
             guard let error = error as? UnexpectedResponseError else {
@@ -203,12 +325,12 @@ class CardTest: UpholdTestCase {
         wait()
     }
 
-    func testCreateTransactionWithCommitShouldReturnTheTransaction() {
+    func testCreateTransactionTransferWithCommitShouldReturnTheTransaction() {
         let card: Card = Fixtures.loadCard()
-        let expectation = expectationWithDescription("Card test: create transaction.")
+        let expectation = expectationWithDescription("Card test: create transaction transfer.")
         card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(["transactionId": "foobar"]))!)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobar")
 
         card.createTransaction(true, transactionRequest: transactionRequest).then { (transaction: Transaction) -> () in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
