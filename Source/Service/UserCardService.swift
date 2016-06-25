@@ -17,6 +17,18 @@ public class UserCardService {
     }
 
     /**
+      Creates a new address for the card.
+
+      - parameter cardId: The card id.
+      - parameter addressRequest: The card address request information.
+
+      - returns: A request to create a card.
+    */
+    static func createCardAddress(cardId: String, addressRequest: AnyObject) -> Request {
+        return UpholdClient().post(String(format: "/v0/me/cards/%@/addresses", cardId)).send(addressRequest)
+    }
+
+    /**
       Creates a request to confirm a transaction.
 
       - parameter cardId: The id of the card.

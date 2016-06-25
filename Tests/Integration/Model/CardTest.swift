@@ -50,6 +50,42 @@ class CardTest: UpholdTestCase {
         XCTAssertTrue(card!.settings!.starred!, "Failed: Starred didn't match.")
     }
 
+    func testCreateAddressShouldReturnTheAddress() {
+        let card: Card = Fixtures.loadCard()
+        let expectation = expectationWithDescription("User test: create address.")
+        card.adapter = MockRestAdapter(body: "{\"id\": \"foo\",\"network\": \"bar\"}")
+
+        card.createAddress(AddressRequest(network: "bitcoin")).then { (address: Address) -> () in
+            XCTAssertEqual(address.id, "foo", "Failed: Wrong adrress id.")
+            XCTAssertEqual(address.network, "bar", "Failed: Wrong address network.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testCreateAddressShouldReturnUnexpectedResponseError() {
+        let card: Card = Mapper().map("{}")!
+        let expectation = expectationWithDescription("User test: create address.")
+        card.adapter = MockRestAdapter()
+
+        card.createAddress(AddressRequest(network: "bitcoin")).error { (error: ErrorType) -> Void in
+            guard let error = error as? UnexpectedResponseError else {
+                XCTFail("Error should be UnexpectedResponseError.")
+
+                return
+            }
+
+            XCTAssertNil(error.code, "Failed: Wrong code.")
+            XCTAssertEqual(error.description, "Card id should not be nil.", "Failed: Wrong message.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testCreateTransactionCardDepositShouldReturnTheTransaction() {
         let card: Card = Fixtures.loadCard()
         let expectation = expectationWithDescription("Card test: create transaction card deposit.")

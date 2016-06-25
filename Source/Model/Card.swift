@@ -86,6 +86,23 @@ public class Card: BaseModel, Mappable {
     }
 
     /**
+      Creates an address to the card.
+
+      - parameter addressRequest: The AddressRequest with the network of the address.
+
+      - returns: A promise with the created address.
+    */
+    public func createAddress(addressRequest: AddressRequest) -> Promise<Address> {
+        guard let id = self.id else {
+            return Promise<Address>(error: UnexpectedResponseError(message: "Card id should not be nil."))
+        }
+
+        let request = self.adapter.buildRequest(UserCardService.createCardAddress(id, addressRequest: Mapper().toJSON(addressRequest)))
+
+        return self.adapter.buildResponse(request)
+    }
+
+    /**
       Creates a transaction.
 
       - parameter transactionRequest: The transaction request information.
