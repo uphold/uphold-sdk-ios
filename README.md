@@ -156,6 +156,18 @@ user.createCard(cardRequest).then { (card: Card) -> () in
 }
 ```
 
+### Create a new address for a card
+
+```swift
+let addressRequest: AddressRequest = AddressRequest(network: "bitcoin")
+
+card.createAddress(addressRequest).then { (address: Address) -> () in
+    /// Do something with the address of the card.        
+}.error { (error: ErrorType) -> Void in
+    /// Do something with the error.            
+}
+```
+
 ### Get ticker
 
 ```swift
