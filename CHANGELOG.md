@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.0](https://github.com/uphold/uphold-sdk-ios/tree/0.2.0) (2016-06-27)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.1.0...0.2.0)
+
+**Merged pull requests:**
+
+- Add create card address [\#46](https://github.com/uphold/uphold-sdk-ios/pull/46) ([SandroMachado](https://github.com/SandroMachado))
+- Add travis badge [\#45](https://github.com/uphold/uphold-sdk-ios/pull/45) ([SandroMachado](https://github.com/SandroMachado))
+- Add transaction deposits [\#44](https://github.com/uphold/uphold-sdk-ios/pull/44) ([diogoguimaraes](https://github.com/diogoguimaraes))
+- Add user accounts [\#43](https://github.com/uphold/uphold-sdk-ios/pull/43) ([diogoguimaraes](https://github.com/diogoguimaraes))
+
 ## [0.1.0](https://github.com/uphold/uphold-sdk-ios/tree/0.1.0) (2016-04-27)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.0.1...0.1.0)
 
