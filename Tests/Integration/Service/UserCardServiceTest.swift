@@ -12,6 +12,14 @@ class UserCardServiceTest: XCTestCase {
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
     }
 
+    func testCreateAddressShouldReturnTheRequest() {
+        let request = UserCardService.createCardAddress("bar", addressRequest: "foo")
+
+        XCTAssertEqual(request.url, String(format: "%@/v0/me/cards/bar/addresses", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
+        XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
+        XCTAssertEqual(request.data! as? String, "foo", "Failed: Wrong body.")
+    }
+
     func testConfirmTransactionShouldReturnTheRequest() {
         let request = UserCardService.confirmTransaction("bar", otp: nil, transactionId: "foo", transactionCommitRequest: "foobar")
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6DB5591D1ECAC900D98D32 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB5581D1ECAC900D98D32 /* Address.swift */; };
+		2A6DB55A1D1ECAC900D98D32 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB5581D1ECAC900D98D32 /* Address.swift */; };
+		2A6DB55C1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */; };
+		2A6DB55D1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */; };
 		BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
 		BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
 		BC0C90231C4CF40400AD0F99 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
@@ -243,6 +247,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A6DB5581D1ECAC900D98D32 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressRequest.swift; sourceTree = "<group>"; };
 		BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRequest.swift; sourceTree = "<group>"; };
 		BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDenominationRequest.swift; sourceTree = "<group>"; };
 		BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ServiceTest.swift; sourceTree = "<group>"; };
@@ -485,9 +491,11 @@
 		BC23814B1BB4626F0060CC80 /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				2A6DB5581D1ECAC900D98D32 /* Address.swift */,
+				2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */,
 				BC23814D1BB4626F0060CC80 /* CardSettings.swift */,
-				BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */,
 				BC13CA7B1C9B274100207DAC /* CardRequest.swift */,
+				BC23814E1BB4626F0060CC80 /* NormalizedCard.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -1117,6 +1125,7 @@
 				BC2381741BB4626F0060CC80 /* TickerService.swift in Sources */,
 				BC91E8861BECD80C0074C538 /* Reserve.swift in Sources */,
 				BC2381691BB4626F0060CC80 /* Denomination.swift in Sources */,
+				2A6DB5591D1ECAC900D98D32 /* Address.swift in Sources */,
 				BC41104C1C05E6400063761C /* Currency.swift in Sources */,
 				BCCBE5571BC6924A00D61852 /* UpholdClientErrorHandling.swift in Sources */,
 				BC2381701BB4626F0060CC80 /* InternationalizationUserSettings.swift in Sources */,
@@ -1168,6 +1177,7 @@
 				BCC392FD1CE645FA00091B19 /* AccountsService.swift in Sources */,
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */,
+				2A6DB55C1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
 				BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */,
 				BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */,
@@ -1264,6 +1274,7 @@
 				BCC9D6DA1C56377E00671171 /* Deposit.swift in Sources */,
 				BCC9D6DB1C56377E00671171 /* Total.swift in Sources */,
 				BCC9D6DC1C56377E00671171 /* Balance.swift in Sources */,
+				2A6DB55A1D1ECAC900D98D32 /* Address.swift in Sources */,
 				BCC9D6DD1C56377E00671171 /* UserBalance.swift in Sources */,
 				BCC9D6DE1C56377E00671171 /* DepositMovement.swift in Sources */,
 				BCC9D6DF1C56377E00671171 /* User.swift in Sources */,
@@ -1315,6 +1326,7 @@
 				BCC392FE1CE645FA00091B19 /* AccountsService.swift in Sources */,
 				BCC9D7031C56377E00671171 /* UpholdClient.swift in Sources */,
 				BCC9D7041C56377E00671171 /* TransactionCommitRequest.swift in Sources */,
+				2A6DB55D1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */,
 				BCC9D7051C56377E00671171 /* ReserveService.swift in Sources */,
 				BCC9D7061C56377E00671171 /* GlobalConfigurations.swift in Sources */,
 				BCC9D7071C56377E00671171 /* SessionManager.swift in Sources */,
