@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/uphold/uphold-sdk-ios/tree/0.2.1) (2016-07-12)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.2.0...0.2.1)
+
+**Merged pull requests:**
+
+- Bump PromiseKit [\#47](https://github.com/uphold/uphold-sdk-ios/pull/47) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.2.0](https://github.com/uphold/uphold-sdk-ios/tree/0.2.0) (2016-06-27)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.1.0...0.2.0)
 
