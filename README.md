@@ -230,7 +230,7 @@ card.createTransaction(transactionCardDepositRequest).then { (transaction: Trans
 })
 ```
 
-If you want to commit the transaction on the creation process, call the `createTransaction` method with the second parameter set to `true`.
+If you want to commit the transaction on the creation process, call the `createTransaction` method with the first parameter set to `true`.
 
 ```swift
 card.createTransaction(true, transactionRequest: transactionRequest)
