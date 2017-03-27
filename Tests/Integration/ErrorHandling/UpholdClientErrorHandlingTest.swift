@@ -30,7 +30,7 @@ class UpholdClientErrorHandlingTest: UpholdTestCase {
             self.expectation.fulfill()
         }
 
-        MockRequest(body: "body", code: 429, errorHandler: { (error: NSError) -> Void in }, headers: ["x-ratelimit-limit": "300", "retry-after": "10"], method: "foo").end(done, onError: self.defaultError)
+        MockRequest(body: "body", code: 429, errorHandler: { (error: NSError) -> Void in }, headers: ["rate-limit-total": "300", "retry-after": "10"], method: "foo").end(done, onError: self.defaultError)
 
         wait()
     }
