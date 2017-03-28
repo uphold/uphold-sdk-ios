@@ -20,7 +20,7 @@ class HeaderTest: XCTestCase {
     }
 
     func testGetRateLimitValueShouldReturnRateLimit() {
-        XCTAssertEqual(Header.getRateLimitValue(["x-ratelimit-limit": "300"]), "300", "Failed: Wrong value.")
+        XCTAssertEqual(Header.getRateLimitValue(["rate-limit-total": "300"]), "300", "Failed: Wrong value.")
         XCTAssertNotEqual(Header.getRateLimitValue(["foobar": "300"]), "300", "Failed: Wrong value.")
     }
 

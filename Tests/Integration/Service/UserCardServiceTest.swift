@@ -25,7 +25,7 @@ class UserCardServiceTest: XCTestCase {
 
         XCTAssertEqual(request.url, String(format: "%@/v0/me/cards/bar/transactions/foo/commit", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
-        XCTAssertNil(request.headers["X-Bitreserve-OTP"], "Failed: Wrong header.")
+        XCTAssertNil(request.headers["OTP-Token"], "Failed: Wrong header.")
         XCTAssertEqual(request.data! as? String, "foobar", "Failed: Wrong body.")
     }
 
@@ -34,7 +34,7 @@ class UserCardServiceTest: XCTestCase {
 
         XCTAssertEqual(request.url, String(format: "%@/v0/me/cards/bar/transactions/foo/commit", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
         XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
-        XCTAssertEqual(request.headers["X-Bitreserve-OTP"], "otp", "Failed: Wrong header.")
+        XCTAssertEqual(request.headers["OTP-Token"], "otp", "Failed: Wrong header.")
         XCTAssertEqual(request.data! as? String, "foobar", "Failed: Wrong body.")
     }
 

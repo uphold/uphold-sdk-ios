@@ -43,7 +43,7 @@ public class UserCardService {
 
         guard let guardedOtp = otp, guardedTransactionCommitRequest = transactionCommitRequest else {
             if let otp = otp {
-                return request.set("X-Bitreserve-OTP", otp)
+                return request.set("OTP-Token", otp)
             } else if let transactionCommitRequest = transactionCommitRequest {
                 return request.send(transactionCommitRequest)
             }
@@ -51,7 +51,7 @@ public class UserCardService {
             return request
         }
 
-        return request.set("X-Bitreserve-OTP", guardedOtp).send(guardedTransactionCommitRequest)
+        return request.set("OTP-Token", guardedOtp).send(guardedTransactionCommitRequest)
     }
 
     /**

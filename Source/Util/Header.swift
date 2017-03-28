@@ -46,7 +46,7 @@ public class Header {
       - returns: The rate limit value.
     */
     public static func getRateLimitValue(headers: [String: String]) -> String? {
-        guard let rateLimit = headers["x-ratelimit-limit"] else {
+        guard let rateLimit = headers["rate-limit-total"] else {
             return nil
         }
 
