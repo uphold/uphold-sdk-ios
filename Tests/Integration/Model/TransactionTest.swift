@@ -390,6 +390,13 @@ class TransactionTest: UpholdTestCase {
                 "\"currency\": \"BTC\"," +
                 "\"description\": \"foo@bar.com\"," +
                 "\"fee\": \"0.00\"," +
+                "\"merchant\": {" +
+                    "\"city\": \"foo\"," +
+                    "\"country\": \"bar\"," +
+                    "\"name\": \"foobar\"," +
+                    "\"state\": \"foobiz\"," +
+                    "\"zipCode\": \"foobuz\"," +
+                "}," +
                 "\"rate\": \"1.00\"," +
                 "\"type\": \"email\"," +
                 "\"username\": \"fizbiz\"" +
@@ -436,6 +443,11 @@ class TransactionTest: UpholdTestCase {
         XCTAssertEqual(transaction!.destination!.currency!, "BTC", "Failed: Transaction destination currency didn't match.")
         XCTAssertEqual(transaction!.destination!.description!, "foo@bar.com", "Failed: Transaction destination description didn't match.")
         XCTAssertEqual(transaction!.destination!.fee!, "0.00", "Failed: Transaction destination fee didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.city!, "foo", "Failed: Transaction destination fee didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.country!, "bar", "Failed: Transaction destination fee didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.name!, "foobar", "Failed: Transaction destination fee didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.state!, "foobiz", "Failed: Transaction destination fee didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.zipCode!, "foobuz", "Failed: Transaction destination fee didn't match.")
         XCTAssertEqual(transaction!.destination!.rate!, "1.00", "Failed: Transaction destination rate didn't match.")
         XCTAssertEqual(transaction!.destination!.type!, "email", "Failed: Transaction destination type didn't match.")
         XCTAssertEqual(transaction!.destination!.username!, "fizbiz", "Failed: Transaction destination username didn't match.")

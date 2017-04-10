@@ -128,6 +128,11 @@ public class Fixtures {
             "destinationCurrency": faker.lorem.characters(amount: 3),
             "destinationDescription": faker.name.name(),
             "destinationFee": faker.lorem.characters(amount: 3),
+            "destinationMerchantCity": faker.address.city(),
+            "destinationMerchantCountry": faker.address.county(),
+            "destinationMerchantName": faker.company.name(),
+            "destinationMerchantState": faker.address.state(),
+            "destinationMerchantZipCode": faker.address.postcode(),
             "destinationRate": faker.lorem.characters(amount: 3),
             "destinationType": faker.lorem.characters(amount: 6),
             "destinationUsername": faker.lorem.characters(amount: 10),
@@ -178,8 +183,9 @@ public class Fixtures {
             _ = fields.flatMap { (key, value) in fakerFields[key] = value }
         }
 
+        let merchant = Merchant(city: fakerFields["destinationMerchantCity"]!, country: fakerFields["destinationMerchantCountry"]!, name: fakerFields["destinationMerchantName"]!, state: fakerFields["destinationMerchantState"]!, zipCode: fakerFields["destinationMerchantZipCode"]!)
         let denomination = Denomination(amount: fakerFields["denominationAmount"]!, currency: fakerFields["denominationCurrency"]!, pair: fakerFields["denominationPair"]!, rate: fakerFields["denominationRate"]!)
-        let destination = Destination(accountId: fakerFields["destinationAccountId"]!, cardId: fakerFields["destinationCardId"]!, accountType: fakerFields["destinationAccountType"]!, amount: fakerFields["destinationAmount"]!, base: fakerFields["destinationBase"]!, commission: fakerFields["destinationCommission"]!, currency: fakerFields["destinationCurrency"]!, description: fakerFields["destinationDescription"]!, fee: fakerFields["destinationFee"]!, rate: fakerFields["destinationRate"]!, type: fakerFields["destinationType"]!, username: fakerFields["destinationUsername"]!)
+        let destination = Destination(accountId: fakerFields["destinationAccountId"]!, cardId: fakerFields["destinationCardId"]!, accountType: fakerFields["destinationAccountType"]!, amount: fakerFields["destinationAmount"]!, base: fakerFields["destinationBase"]!, commission: fakerFields["destinationCommission"]!, currency: fakerFields["destinationCurrency"]!, description: fakerFields["destinationDescription"]!, fee: fakerFields["destinationFee"]!, merchant: merchant, rate: fakerFields["destinationRate"]!, type: fakerFields["destinationType"]!, username: fakerFields["destinationUsername"]!)
         let fees = [Fee(amount: fakerFields["feeAmount"]!, currency: fakerFields["feeCurrency"]!, percentage: fakerFields["feePercentage"]!, target: fakerFields["feeTarget"]!, type: fakerFields["feeType"]!)]
         var sources: [Source] = []
 
