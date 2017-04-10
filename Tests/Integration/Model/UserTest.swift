@@ -52,6 +52,21 @@ class UserTest: UpholdTestCase {
         wait()
     }
 
+    func testCreateDocumentShouldReturnTheDocument() {
+        let expectation = expectationWithDescription("User test: create document.")
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: Mapper().toJSONString(Document(type: "foo", value: "bar"))!)
+
+        user.createDocument(Document(type: "foo", value: "bar")).then { (document: Document) -> () in
+            XCTAssertEqual(document.type, "foo", "Failed: Wrong card id.")
+            XCTAssertEqual(document.value, "bar", "Failed: Wrong card id.")
+
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
     func testGetAccountsShouldReturnTheArrayOfAccounts() {
         let expectation = expectationWithDescription("User test: get accounts.")
         let json: String = "[{" +
@@ -407,6 +422,25 @@ class UserTest: UpholdTestCase {
             XCTAssertEqual(contact[1].lastName, "Buz", "Failed: Wrong contact object.")
             XCTAssertEqual(contact[1].name, "Fuz Buz", "Failed: Wrong contact object.")
 
+            expectation.fulfill()
+        }
+
+        wait()
+    }
+
+    func testGetDocumentsShouldReturnTheListOfDocuments() {
+        let expectation = expectationWithDescription("User test: get documents.")
+        let json: String = "[{" +
+            "\"type\": \"foo\"," +
+            "\"value\": \"bar\"" +
+        "}]"
+        let user: User = Fixtures.loadUser()
+        user.adapter = MockRestAdapter(body: json)
+
+        user.getDocuments().then { (documents: [Document]) -> () in
+            XCTAssertEqual(documents.count, 1, "Failed: Wrong number of documents objects.")
+            XCTAssertEqual(documents[0].type, "foo", "Failed: Wrong document type field.")
+            XCTAssertEqual(documents[0].value, "bar", "Failed: Wrong document value.")
             expectation.fulfill()
         }
 

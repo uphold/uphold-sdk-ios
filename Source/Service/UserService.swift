@@ -16,6 +16,17 @@ public class UserService {
     }
 
     /**
+      Creates a request to create a document.
+
+      - parameter document: The document information.
+
+      - returns: A request to create a document.
+    */
+    static func createDocument(document: AnyObject) -> Request {
+        return UpholdClient().post("/v0/me/documents").send(document)
+    }
+
+    /**
       Creates a request to get the user information.
 
       - returns: A request to get the user information.
@@ -40,6 +51,15 @@ public class UserService {
     */
     static func getUserContacts() -> Request {
         return UpholdClient().get("/v0/me/contacts")
+    }
+
+    /**
+      Creates a request to get the user documents.
+
+      - returns: A request to get the user documents.
+    */
+    static func getUserDocuments() -> Request {
+        return UpholdClient().get("/v0/me/documents")
     }
 
     /**

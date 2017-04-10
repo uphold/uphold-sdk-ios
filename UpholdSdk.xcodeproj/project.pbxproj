@@ -11,6 +11,8 @@
 		2A6DB55A1D1ECAC900D98D32 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB5581D1ECAC900D98D32 /* Address.swift */; };
 		2A6DB55C1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */; };
 		2A6DB55D1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */; };
+		2A75796E1E9B9C670071BBCA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75796D1E9B9C670071BBCA /* Document.swift */; };
+		2A75796F1E9B9C670071BBCA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75796D1E9B9C670071BBCA /* Document.swift */; };
 		BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
 		BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
 		BC0C90231C4CF40400AD0F99 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
@@ -249,6 +251,7 @@
 /* Begin PBXFileReference section */
 		2A6DB5581D1ECAC900D98D32 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressRequest.swift; sourceTree = "<group>"; };
+		2A75796D1E9B9C670071BBCA /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRequest.swift; sourceTree = "<group>"; };
 		BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDenominationRequest.swift; sourceTree = "<group>"; };
 		BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ServiceTest.swift; sourceTree = "<group>"; };
@@ -468,6 +471,7 @@
 		BC23814A1BB4626F0060CC80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A75796D1E9B9C670071BBCA /* Document.swift */,
 				BCC393021CE64E5700091B19 /* Account.swift */,
 				BC202DC91C4420920069A230 /* AuthenticationRequest.swift */,
 				BC202DCB1C4420AE0069A230 /* AuthenticationResponse.swift */,
@@ -1157,6 +1161,7 @@
 				BC23816B1BB4626F0060CC80 /* Origin.swift in Sources */,
 				BCE7757C1C565D67005CE55A /* URLUtils.swift in Sources */,
 				BCCBE5691BC692E200D61852 /* UpholdClientError.swift in Sources */,
+				2A75796E1E9B9C670071BBCA /* Document.swift in Sources */,
 				BC2381651BB4626F0060CC80 /* CardSettings.swift in Sources */,
 				BC4A30701BEA657C001B6249 /* BaseModel.swift in Sources */,
 				BC23816A1BB4626F0060CC80 /* Destination.swift in Sources */,
@@ -1306,6 +1311,7 @@
 				BCC9D6F21C56377E00671171 /* Rate.swift in Sources */,
 				BCC9D6F31C56377E00671171 /* UserCardService.swift in Sources */,
 				BCC9D6F41C56377E00671171 /* AuthenticationError.swift in Sources */,
+				2A75796F1E9B9C670071BBCA /* Document.swift in Sources */,
 				BCC9D6F51C56377E00671171 /* Parameters.swift in Sources */,
 				BCC9D6F61C56377E00671171 /* UnexpectedResponseError.swift in Sources */,
 				BCC9D6F71C56377E00671171 /* Origin.swift in Sources */,

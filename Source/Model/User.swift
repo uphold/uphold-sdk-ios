@@ -118,6 +118,19 @@ public class User: BaseModel, Mappable {
     }
 
     /**
+      Creates a document for the user.
+
+      - parameter document: The document with the information to create it.
+
+      - returns: A promise with the created document.
+    */
+    public func createDocument(document: Document) -> Promise<Document> {
+        let request = self.adapter.buildRequest(UserService.createDocument(Mapper().toJSON(document)))
+
+        return self.adapter.buildResponse(request)
+    }
+
+    /**
       Gets the user accounts.
 
       - returns: A promise with the user accounts list.
@@ -268,6 +281,17 @@ public class User: BaseModel, Mappable {
      */
     public func getContacts() -> Promise<[Contact]> {
         let request = self.adapter.buildRequest(UserService.getUserContacts())
+
+        return self.adapter.buildResponse(request)
+    }
+
+    /**
+      Gets the user documents.
+
+      - returns: A promise with the list of user documents.
+    */
+    public func getDocuments() -> Promise<[Document]> {
+        let request = self.adapter.buildRequest(UserService.getUserDocuments())
 
         return self.adapter.buildResponse(request)
     }
