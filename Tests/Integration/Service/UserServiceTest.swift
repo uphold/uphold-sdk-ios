@@ -13,6 +13,14 @@ class UserServiceTest: XCTestCase {
         XCTAssertEqual(request.data! as? String, "foo", "Failed: Wrong body.")
     }
 
+    func testCreateDocumentShouldReturnTheRequest() {
+        let request = UserService.createDocument("foo")
+
+        XCTAssertEqual(request.url, String(format: "%@/v0/me/documents", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
+        XCTAssertEqual(request.method, "POST", "Failed: Wrong method.")
+        XCTAssertEqual(request.data! as? String, "foo", "Failed: Wrong body.")
+    }
+
     func testGetUserShouldReturnTheRequest() {
         let request = UserService.getUser()
 
@@ -31,6 +39,13 @@ class UserServiceTest: XCTestCase {
         let request = UserService.getUserContacts()
 
         XCTAssertEqual(request.url, String(format: "%@/v0/me/contacts", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
+        XCTAssertEqual(request.method, "GET", "Failed: Wrong method.")
+    }
+
+    func testGetUserDocumentsShouldReturnTheRequest() {
+        let request = UserService.getUserDocuments()
+
+        XCTAssertEqual(request.url, String(format: "%@/v0/me/documents", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
         XCTAssertEqual(request.method, "GET", "Failed: Wrong method.")
     }
 
