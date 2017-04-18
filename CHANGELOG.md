@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0](https://github.com/uphold/uphold-sdk-ios/tree/0.3.0) (2017-04-18)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.2.1...0.3.0)
+
+**Merged pull requests:**
+
+- Add merchant model to transaction destination [\#53](https://github.com/uphold/uphold-sdk-ios/pull/53) ([SandroMachado](https://github.com/SandroMachado))
+- Add support for the documents endpoint [\#52](https://github.com/uphold/uphold-sdk-ios/pull/52) ([SandroMachado](https://github.com/SandroMachado))
+- Update headers [\#51](https://github.com/uphold/uphold-sdk-ios/pull/51) ([SandroMachado](https://github.com/SandroMachado))
+- Update commit transaction instructions [\#48](https://github.com/uphold/uphold-sdk-ios/pull/48) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.2.1](https://github.com/uphold/uphold-sdk-ios/tree/0.2.1) (2016-07-12)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.2.0...0.2.1)
 
