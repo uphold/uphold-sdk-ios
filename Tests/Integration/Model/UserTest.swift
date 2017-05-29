@@ -453,9 +453,7 @@ class UserTest: UpholdTestCase {
             "\"id\": \"foobar\"," +
             "\"verified\": true," +
             "\"primary\": true," +
-            "\"e164Masked\": \"+XXXXXXXXX04\"," +
-            "\"nationalMasked\": \"(XXX) XXX-XX04\"," +
-            "\"internationalMasked\": \"+X XXX-XXX-XX04\"" +
+            "\"e164Masked\": \"+XXXXXXXXX04\"" +
         "}]"
         let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
@@ -464,8 +462,6 @@ class UserTest: UpholdTestCase {
             XCTAssertEqual(phones.count, 1, "Failed: Wrong number of phone objects.")
             XCTAssertEqual(phones[0].e164Masked, "+XXXXXXXXX04", "Failed: Wrong phone e164Masked field.")
             XCTAssertEqual(phones[0].id, "foobar", "Failed: Wrong phone id.")
-            XCTAssertEqual(phones[0].internationalMasked, "+X XXX-XXX-XX04", "Failed: Wrong phone internationalMasked field.")
-            XCTAssertEqual(phones[0].nationalMasked, "(XXX) XXX-XX04", "Failed: Wrong phone nationalMasked field.")
             XCTAssertTrue(phones[0].primary!, "Failed: Wrong phone primary field.")
             XCTAssertTrue(phones[0].verified!, "Failed: Wrong phone verified field.")
 
