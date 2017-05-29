@@ -373,6 +373,9 @@ class TransactionTest: UpholdTestCase {
                 "\"currency\": \"BTC\"," +
                 "\"description\": \"Fuz Buz\"," +
                 "\"fee\": \"0.00\"," +
+                "\"node\": {" +
+                    "\"type\": \"foo\"" +
+                "}," +
                 "\"rate\": \"1.00\"," +
                 "\"sources\": [{" +
                     "\"id\": \"fizbuz\"," +
@@ -396,6 +399,9 @@ class TransactionTest: UpholdTestCase {
                     "\"name\": \"foobar\"," +
                     "\"state\": \"foobiz\"," +
                     "\"zipCode\": \"foobuz\"," +
+                "}," +
+                "\"node\": {" +
+                    "\"type\": \"foo\"" +
                 "}," +
                 "\"rate\": \"1.00\"," +
                 "\"type\": \"email\"," +
@@ -473,6 +479,7 @@ class TransactionTest: UpholdTestCase {
         XCTAssertEqual(transaction!.origin!.currency!, "BTC", "Failed: Transaction origin currency didn't match.")
         XCTAssertEqual(transaction!.origin!.description!, "Fuz Buz", "Failed: Transaction origin description didn't match.")
         XCTAssertEqual(transaction!.origin!.fee!, "0.00", "Failed: Transaction origin fee didn't match.")
+        XCTAssertEqual(transaction!.origin!.node!.type, "foo", "Failed: Transaction origin node type didn't match.")
         XCTAssertEqual(transaction!.origin!.rate!, "1.00", "Failed: Transaction origin rate didn't match.")
         XCTAssertEqual(transaction!.origin!.sources!.count, 1, "Failed: Transaction origin type didn't match.")
         XCTAssertEqual(transaction!.origin!.sources![0].id!, "fizbuz", "Failed: Transaction origin type didn't match.")

@@ -15,6 +15,8 @@
 		2A6DB55D1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */; };
 		2A75796E1E9B9C670071BBCA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75796D1E9B9C670071BBCA /* Document.swift */; };
 		2A75796F1E9B9C670071BBCA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75796D1E9B9C670071BBCA /* Document.swift */; };
+		2AC4277D1EDC54EC00CB0F95 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4277C1EDC54EC00CB0F95 /* Node.swift */; };
+		2AC4277E1EDC54EC00CB0F95 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4277C1EDC54EC00CB0F95 /* Node.swift */; };
 		BC02EB191C10503C00FCA0D9 /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */; };
 		BC02EB1B1C1051B500FCA0D9 /* TransactionDenominationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */; };
 		BC0C90231C4CF40400AD0F99 /* OAuth2ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */; };
@@ -255,6 +257,7 @@
 		2A6DB5581D1ECAC900D98D32 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressRequest.swift; sourceTree = "<group>"; };
 		2A75796D1E9B9C670071BBCA /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		2AC4277C1EDC54EC00CB0F95 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRequest.swift; sourceTree = "<group>"; };
 		BC02EB1A1C1051B500FCA0D9 /* TransactionDenominationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDenominationRequest.swift; sourceTree = "<group>"; };
 		BC0C90221C4CF40400AD0F99 /* OAuth2ServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ServiceTest.swift; sourceTree = "<group>"; };
@@ -524,6 +527,7 @@
 				BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */,
 				BC23335C1CFC7AB3007928FE /* TransactionTransferRequest.swift */,
 				2A3515711E9BC4CA0084CADA /* Merchant.swift */,
+				2AC4277C1EDC54EC00CB0F95 /* Node.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -1186,6 +1190,7 @@
 				BC2381621BB4626F0060CC80 /* UpholdClient.swift in Sources */,
 				BC12F44F1C10691E00EB2E2B /* TransactionCommitRequest.swift in Sources */,
 				2A6DB55C1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */,
+				2AC4277D1EDC54EC00CB0F95 /* Node.swift in Sources */,
 				BC2381731BB4626F0060CC80 /* ReserveService.swift in Sources */,
 				BC98A4B61C3BE80B00C60A3D /* GlobalConfigurations.swift in Sources */,
 				BC8386CF1BF2458B00D67F98 /* SessionManager.swift in Sources */,
@@ -1337,6 +1342,7 @@
 				BCC9D7031C56377E00671171 /* UpholdClient.swift in Sources */,
 				BCC9D7041C56377E00671171 /* TransactionCommitRequest.swift in Sources */,
 				2A6DB55D1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */,
+				2AC4277E1EDC54EC00CB0F95 /* Node.swift in Sources */,
 				BCC9D7051C56377E00671171 /* ReserveService.swift in Sources */,
 				BCC9D7061C56377E00671171 /* GlobalConfigurations.swift in Sources */,
 				BCC9D7071C56377E00671171 /* SessionManager.swift in Sources */,

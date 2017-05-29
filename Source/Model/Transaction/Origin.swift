@@ -31,6 +31,9 @@ public class Origin: Mappable {
     /// The fee from the origin of the transaction.
     public private(set) final var fee: String?
 
+    /// The node from the origin of the transaction.
+    public private(set) final var node: Node?
+
     /// The rate from the origin of the transaction.
     public private(set) final var rate: String?
 
@@ -55,12 +58,13 @@ public class Origin: Mappable {
       - parameter currency: The currency from the origin of the transaction.
       - parameter description: The description from the origin of the transaction.
       - parameter fee: The fee from the origin of the transaction.
+      - parameter node: The node from the origin of the transaction.
       - parameter rate: The rate from the origin of the transaction.
       - parameter sources: The sources from the origin of the transaction.
       - parameter type: The type from the origin of the transaction.
       - parameter username: The username from the origin of the transaction.
     */
-    public init(accountId: String, cardId: String, accountType: String, amount: String, base: String, commission: String, currency: String, description: String, fee: String, rate: String, sources: [Source], type: String, username: String) {
+    public init(accountId: String, cardId: String, accountType: String, amount: String, base: String, commission: String, currency: String, description: String, fee: String, node: Node, rate: String, sources: [Source], type: String, username: String) {
         self.accountId = accountId
         self.cardId = cardId
         self.accountType = accountType
@@ -101,6 +105,7 @@ public class Origin: Mappable {
         currency <- map["currency"]
         description <- map["description"]
         fee <- map["fee"]
+        node <- map["node"]
         rate <- map["rate"]
         sources <- map["sources"]
         type <- map["type"]
