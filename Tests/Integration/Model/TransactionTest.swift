@@ -373,6 +373,9 @@ class TransactionTest: UpholdTestCase {
                 "\"currency\": \"BTC\"," +
                 "\"description\": \"Fuz Buz\"," +
                 "\"fee\": \"0.00\"," +
+                "\"node\": {" +
+                    "\"type\": \"foo\"" +
+                "}," +
                 "\"rate\": \"1.00\"," +
                 "\"sources\": [{" +
                     "\"id\": \"fizbuz\"," +
@@ -396,6 +399,9 @@ class TransactionTest: UpholdTestCase {
                     "\"name\": \"foobar\"," +
                     "\"state\": \"foobiz\"," +
                     "\"zipCode\": \"foobuz\"," +
+                "}," +
+                "\"node\": {" +
+                    "\"type\": \"foo\"" +
                 "}," +
                 "\"rate\": \"1.00\"," +
                 "\"type\": \"email\"," +
@@ -443,11 +449,12 @@ class TransactionTest: UpholdTestCase {
         XCTAssertEqual(transaction!.destination!.currency!, "BTC", "Failed: Transaction destination currency didn't match.")
         XCTAssertEqual(transaction!.destination!.description!, "foo@bar.com", "Failed: Transaction destination description didn't match.")
         XCTAssertEqual(transaction!.destination!.fee!, "0.00", "Failed: Transaction destination fee didn't match.")
-        XCTAssertEqual(transaction!.destination!.merchant!.city!, "foo", "Failed: Transaction destination fee didn't match.")
-        XCTAssertEqual(transaction!.destination!.merchant!.country!, "bar", "Failed: Transaction destination fee didn't match.")
-        XCTAssertEqual(transaction!.destination!.merchant!.name!, "foobar", "Failed: Transaction destination fee didn't match.")
-        XCTAssertEqual(transaction!.destination!.merchant!.state!, "foobiz", "Failed: Transaction destination fee didn't match.")
-        XCTAssertEqual(transaction!.destination!.merchant!.zipCode!, "foobuz", "Failed: Transaction destination fee didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.city!, "foo", "Failed: Transaction destination merchant city didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.country!, "bar", "Failed: Transaction destination merchant country didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.name!, "foobar", "Failed: Transaction destination merchant name didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.state!, "foobiz", "Failed: Transaction destination merchant state didn't match.")
+        XCTAssertEqual(transaction!.destination!.merchant!.zipCode!, "foobuz", "Failed: Transaction destination merchant zip code didn't match.")
+        XCTAssertEqual(transaction!.destination!.node!.type!, "foo", "Failed: Transaction destination node type didn't match.")
         XCTAssertEqual(transaction!.destination!.rate!, "1.00", "Failed: Transaction destination rate didn't match.")
         XCTAssertEqual(transaction!.destination!.type!, "email", "Failed: Transaction destination type didn't match.")
         XCTAssertEqual(transaction!.destination!.username!, "fizbiz", "Failed: Transaction destination username didn't match.")
@@ -472,6 +479,7 @@ class TransactionTest: UpholdTestCase {
         XCTAssertEqual(transaction!.origin!.currency!, "BTC", "Failed: Transaction origin currency didn't match.")
         XCTAssertEqual(transaction!.origin!.description!, "Fuz Buz", "Failed: Transaction origin description didn't match.")
         XCTAssertEqual(transaction!.origin!.fee!, "0.00", "Failed: Transaction origin fee didn't match.")
+        XCTAssertEqual(transaction!.origin!.node!.type, "foo", "Failed: Transaction origin node type didn't match.")
         XCTAssertEqual(transaction!.origin!.rate!, "1.00", "Failed: Transaction origin rate didn't match.")
         XCTAssertEqual(transaction!.origin!.sources!.count, 1, "Failed: Transaction origin type didn't match.")
         XCTAssertEqual(transaction!.origin!.sources![0].id!, "fizbuz", "Failed: Transaction origin type didn't match.")

@@ -133,6 +133,7 @@ public class Fixtures {
             "destinationMerchantName": faker.company.name(),
             "destinationMerchantState": faker.address.state(),
             "destinationMerchantZipCode": faker.address.postcode(),
+            "destinationNodeType": faker.lorem.characters(amount: 10),
             "destinationRate": faker.lorem.characters(amount: 3),
             "destinationType": faker.lorem.characters(amount: 6),
             "destinationUsername": faker.lorem.characters(amount: 10),
@@ -155,6 +156,7 @@ public class Fixtures {
             "originCurrency": faker.lorem.characters(amount: 3),
             "originDescription": faker.name.name(),
             "originFee": faker.lorem.numerify("123456789"),
+            "originNodeType": faker.lorem.characters(amount: 10),
             "originRate": faker.lorem.numerify("123456789"),
             "originSourcesAmount": String(format: "%@,%@,%@", faker.lorem.numerify("123456789"), faker.lorem.numerify("123456789"), faker.lorem.numerify("123456789")),
             "originSourcesId": String(format: "%@,%@,%@", faker.lorem.characters(amount: 24), faker.lorem.characters(amount: 24), faker.lorem.characters(amount: 24)),
@@ -183,9 +185,11 @@ public class Fixtures {
             _ = fields.flatMap { (key, value) in fakerFields[key] = value }
         }
 
-        let merchant = Merchant(city: fakerFields["destinationMerchantCity"]!, country: fakerFields["destinationMerchantCountry"]!, name: fakerFields["destinationMerchantName"]!, state: fakerFields["destinationMerchantState"]!, zipCode: fakerFields["destinationMerchantZipCode"]!)
         let denomination = Denomination(amount: fakerFields["denominationAmount"]!, currency: fakerFields["denominationCurrency"]!, pair: fakerFields["denominationPair"]!, rate: fakerFields["denominationRate"]!)
-        let destination = Destination(accountId: fakerFields["destinationAccountId"]!, cardId: fakerFields["destinationCardId"]!, accountType: fakerFields["destinationAccountType"]!, amount: fakerFields["destinationAmount"]!, base: fakerFields["destinationBase"]!, commission: fakerFields["destinationCommission"]!, currency: fakerFields["destinationCurrency"]!, description: fakerFields["destinationDescription"]!, fee: fakerFields["destinationFee"]!, merchant: merchant, rate: fakerFields["destinationRate"]!, type: fakerFields["destinationType"]!, username: fakerFields["destinationUsername"]!)
+        let merchant = Merchant(city: fakerFields["destinationMerchantCity"]!, country: fakerFields["destinationMerchantCountry"]!, name: fakerFields["destinationMerchantName"]!, state: fakerFields["destinationMerchantState"]!, zipCode: fakerFields["destinationMerchantZipCode"]!)
+        let nodeDestination = Node(type: fakerFields["destinationNodeType"]!)
+        let nodeOrigin = Node(type: fakerFields["originNodeType"]!)
+        let destination = Destination(accountId: fakerFields["destinationAccountId"]!, cardId: fakerFields["destinationCardId"]!, accountType: fakerFields["destinationAccountType"]!, amount: fakerFields["destinationAmount"]!, base: fakerFields["destinationBase"]!, commission: fakerFields["destinationCommission"]!, currency: fakerFields["destinationCurrency"]!, description: fakerFields["destinationDescription"]!, fee: fakerFields["destinationFee"]!, merchant: merchant, node: nodeDestination, rate: fakerFields["destinationRate"]!, type: fakerFields["destinationType"]!, username: fakerFields["destinationUsername"]!)
         let fees = [Fee(amount: fakerFields["feeAmount"]!, currency: fakerFields["feeCurrency"]!, percentage: fakerFields["feePercentage"]!, target: fakerFields["feeTarget"]!, type: fakerFields["feeType"]!)]
         var sources: [Source] = []
 
@@ -194,7 +198,7 @@ public class Fixtures {
         }
 
         let normalized = [NormalizedTransaction(amount: fakerFields["normalizedAmount"]!, commission: fakerFields["normalizedCommission"]!, currency: fakerFields["normalizedCurrency"]!, fee: fakerFields["normalizedFee"]!, rate: fakerFields["normalizedRate"]!)]
-        let origin = Origin(accountId: fakerFields["originAccountId"]!, cardId: fakerFields["originCardId"]!, accountType: fakerFields["originAccountType"]!, amount: fakerFields["originAmount"]!, base: fakerFields["originBase"]!, commission: fakerFields["originCommission"]!, currency: fakerFields["originCurrency"]!, description: fakerFields["originDescription"]!, fee: fakerFields["originFee"]!, rate: fakerFields["originRate"]!, sources: sources, type: fakerFields["originType"]!, username: fakerFields["originUsername"]!)
+        let origin = Origin(accountId: fakerFields["originAccountId"]!, cardId: fakerFields["originCardId"]!, accountType: fakerFields["originAccountType"]!, amount: fakerFields["originAmount"]!, base: fakerFields["originBase"]!, commission: fakerFields["originCommission"]!, currency: fakerFields["originCurrency"]!, description: fakerFields["originDescription"]!, fee: fakerFields["originFee"]!, node: nodeOrigin, rate: fakerFields["originRate"]!, sources: sources, type: fakerFields["originType"]!, username: fakerFields["originUsername"]!)
         let parameters = Parameters(currency: fakerFields["parametersCurrency"]!, margin: fakerFields["parametersMargin"]!, pair: fakerFields["parametersPair"]!, progress: fakerFields["parametersProgress"]!, rate: fakerFields["parametersRate"]!, refunds: fakerFields["parametersRefunds"]!, ttl: NSString(string: fakerFields["parametersTtl"]!).integerValue, txid: fakerFields["parametersTxid"]!, type: fakerFields["parametersType"]!)
 
         return Transaction(id: fakerFields["transactionId"]!, createdAt: fakerFields["transactionCreatedAt"]!, denomination: denomination, destination: destination, fees: fees, message: fakerFields["transactionMessage"]!, network: fakerFields["transactionNetwork"]!, normalized: normalized, origin: origin, params: parameters, refundedById: fakerFields["transactionRefundedById"]!, status: fakerFields["transactionStatus"]!, type: fakerFields["transactionType"]!)
