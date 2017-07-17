@@ -31,6 +31,9 @@ public class Origin: Mappable {
     /// The fee from the origin of the transaction.
     public private(set) final var fee: String?
 
+    /// The merchant from the origin of the transaction.
+    public private(set) final var merchant: Merchant?
+
     /// The rate from the origin of the transaction.
     public private(set) final var rate: String?
 
@@ -55,12 +58,13 @@ public class Origin: Mappable {
       - parameter currency: The currency from the origin of the transaction.
       - parameter description: The description from the origin of the transaction.
       - parameter fee: The fee from the origin of the transaction.
+      - parameter merchant: The merchant from the origin of the transaction.
       - parameter rate: The rate from the origin of the transaction.
       - parameter sources: The sources from the origin of the transaction.
       - parameter type: The type from the origin of the transaction.
       - parameter username: The username from the origin of the transaction.
     */
-    public init(accountId: String, cardId: String, accountType: String, amount: String, base: String, commission: String, currency: String, description: String, fee: String, rate: String, sources: [Source], type: String, username: String) {
+    public init(accountId: String, cardId: String, accountType: String, amount: String, base: String, commission: String, currency: String, description: String, fee: String, merchant: Merchant, rate: String, sources: [Source], type: String, username: String) {
         self.accountId = accountId
         self.cardId = cardId
         self.accountType = accountType
@@ -70,6 +74,7 @@ public class Origin: Mappable {
         self.currency = currency
         self.description = description
         self.fee = fee
+        self.merchant = merchant
         self.rate = rate
         self.sources = sources
         self.type = type
@@ -101,6 +106,7 @@ public class Origin: Mappable {
         currency <- map["currency"]
         description <- map["description"]
         fee <- map["fee"]
+        merchant <- map["merchant"]
         rate <- map["rate"]
         sources <- map["sources"]
         type <- map["type"]
