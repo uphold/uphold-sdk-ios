@@ -19,6 +19,7 @@ class CardTest: UpholdTestCase {
             "\"lastTransactionAt\": \"foobiz\"," +
             "\"settings\": {" +
                 "\"position\": 4," +
+                "\"protected\": true," +
                 "\"starred\": true" +
             "}," +
             "\"addresses\": [{" +
@@ -47,6 +48,7 @@ class CardTest: UpholdTestCase {
         XCTAssertEqual(card!.normalized![0].balance!, "99.04", "Failed: Balance didn't match.")
         XCTAssertEqual(card!.normalized![0].currency!, "USD", "Failed: Currency didn't match.")
         XCTAssertEqual(card!.settings!.position!, 4, "Failed: Position didn't match.")
+        XCTAssertTrue(card!.settings!.protected!, "Failed: Protected didn't match.")
         XCTAssertTrue(card!.settings!.starred!, "Failed: Starred didn't match.")
     }
 

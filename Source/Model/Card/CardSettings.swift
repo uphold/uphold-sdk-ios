@@ -7,6 +7,9 @@ public class CardSettings: Mappable {
     /// The position of the card.
     public private(set) final var position: Int?
 
+    /// A boolean indicating if the card is protected.
+    public private(set) final var protected: Bool?
+
     /// A boolean indicating if the card is starred.
     public private(set) final var starred: Bool?
 
@@ -38,6 +41,7 @@ public class CardSettings: Mappable {
     */
     public func mapping(map: Map) {
         position  <- map["position"]
+        protected  <- map["protected"]
         starred <- map["starred"]
     }
 
