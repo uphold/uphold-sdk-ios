@@ -34,7 +34,7 @@ The Uphold SDK for iOS provides an easy way for developers to integrate iOS appl
 1. Add to your `Cartfile`.
 
     ```
-    github "uphold/uphold-sdk-ios" ~> 0.5.0
+    github "uphold/uphold-sdk-ios" ~> 0.6.0
     ```
 
 2. Run `carthage update --platform iOS` specifying the build configuration to use Uphold's different environments.

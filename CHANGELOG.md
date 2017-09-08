@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/uphold/uphold-sdk-ios/tree/0.6.0) (2017-09-08)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.5.0...0.6.0)
+
+**Merged pull requests:**
+
+- Add protected to the settings model [\#57](https://github.com/uphold/uphold-sdk-ios/pull/57) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.5.0](https://github.com/uphold/uphold-sdk-ios/tree/0.5.0) (2017-07-19)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.4.0...0.5.0)
 
