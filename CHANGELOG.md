@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/uphold/uphold-sdk-ios/tree/0.7.0) (2017-09-12)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.6.0...0.7.0)
+
+**Merged pull requests:**
+
+- Add `memberAt` to the user model [\#58](https://github.com/uphold/uphold-sdk-ios/pull/58) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.6.0](https://github.com/uphold/uphold-sdk-ios/tree/0.6.0) (2017-09-08)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.5.0...0.6.0)
 
