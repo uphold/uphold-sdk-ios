@@ -21,6 +21,9 @@ public class User: BaseModel, Mappable {
     /// The user last name.
     public private(set) final var lastName: String?
 
+    /// The date when the user has become a verified member.
+    public private(set) final var memberAt: String?
+
     /// The user name.
     public private(set) final var name: String?
 
@@ -44,18 +47,20 @@ public class User: BaseModel, Mappable {
       - parameter email: The user email.
       - parameter firstName: The user first name.
       - parameter lastName: The user last name.
+      - parameter memberAt: The date when the user has become a verified member.
       - parameter name: The user name.
       - parameter settings: The user settings.
       - parameter state: The user state.
       - parameter status: The user status.
       - parameter username: The user username.
     */
-    public init(country: String, currencies: [String], email: String, firstName: String, lastName: String, name: String, settings: UserSettings, state: String, status: String, username: String) {
+    public init(country: String, currencies: [String], email: String, firstName: String, lastName: String, memberAt: String, name: String, settings: UserSettings, state: String, status: String, username: String) {
         self.country = country
         self.currencies = currencies
         self.email = email
         self.firstName = firstName
         self.lastName = lastName
+        self.memberAt = memberAt
         self.name = name
         self.settings = settings
         self.state = state
@@ -84,6 +89,7 @@ public class User: BaseModel, Mappable {
         self.email <- map["email"]
         self.firstName <- map["firstName"]
         self.lastName <- map["lastName"]
+        self.memberAt <- map["memberAt"]
         self.name <- map["name"]
         self.settings <- map["settings"]
         self.state <- map["state"]

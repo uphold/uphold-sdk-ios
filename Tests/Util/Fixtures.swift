@@ -236,6 +236,7 @@ public class Fixtures {
             "internationalizationUserSettingLanguage": faker.lorem.characters(amount: 5),
             "internationalizationUserSettingNumberFormat": faker.lorem.characters(amount: 5),
             "lastName": faker.name.lastName(),
+            "memberAt": "\(faker.business.creditCardExpiryDate())",
             "name": faker.name.name(),
             "settingsOTPLogin": "true",
             "settingsOTPTransactionsSend": "true",
@@ -258,7 +259,7 @@ public class Fixtures {
         let otp = Otp(login: Login(enabled: NSString(string: fakerFields["settingsOTPLogin"]!).boolValue), transactions: Transactions(send: Send(enabled: NSString(string: fakerFields["settingsOTPTransactionsSend"]!).boolValue), transfer: Transfer(enabled: NSString(string: fakerFields["settingsOTPTransactionsTransfer"]!).boolValue), withdraw: Withdraw(crypto: Crypto(enabled: NSString(string: fakerFields["settingsOTPTransactionsWithdrawCrypto"]!).boolValue))))
         let userSettings = UserSettings(currency: fakerFields["currency"]!, hasNewsSubscription: NSString(string: fakerFields["hasNewsSubscription"]!).boolValue, intl: internationalizationUserSettings, otp: otp, theme: fakerFields["theme"]!)
 
-        return User(country: fakerFields["country"]!, currencies: fakerFields["currencies"]!.componentsSeparatedByString(","), email: fakerFields["email"]!, firstName: fakerFields["firstName"]!, lastName: fakerFields["lastName"]!, name: fakerFields["name"]!, settings: userSettings, state: fakerFields["state"]!, status: fakerFields["status"]!, username: fakerFields["username"]!)
+        return User(country: fakerFields["country"]!, currencies: fakerFields["currencies"]!.componentsSeparatedByString(","), email: fakerFields["email"]!, firstName: fakerFields["firstName"]!, lastName: fakerFields["lastName"]!, memberAt: fakerFields["memberAt"]!, name: fakerFields["name"]!, settings: userSettings, state: fakerFields["state"]!, status: fakerFields["status"]!, username: fakerFields["username"]!)
     }
 
 }

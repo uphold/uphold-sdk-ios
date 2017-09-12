@@ -162,6 +162,7 @@ class UpholdClientTest: UpholdTestCase {
             "\"email\": \"foo@bar.org\"," +
             "\"firstName\": \"foo\"," +
             "\"lastName\": \"bar\"," +
+            "\"memberAt\": \"bizdev\"," +
             "\"name\": \"Foo Bar\"," +
             "\"country\": \"BAR\"," +
             "\"state\": \"FOO\"," +
@@ -214,6 +215,7 @@ class UpholdClientTest: UpholdTestCase {
             XCTAssertEqual(user.email, "foo@bar.org", "Failed: User email didn't match.")
             XCTAssertEqual(user.firstName, "foo", "Failed: User first name didn't match.")
             XCTAssertEqual(user.lastName, "bar", "Failed: User last name didn't match.")
+            XCTAssertEqual(user.memberAt, "bizdev", "Failed: User memberAt didn't match.")
             XCTAssertEqual(user.name, "Foo Bar", "Failed: User name didn't match.")
             XCTAssertEqual(user.settings!.currency!, "USD", "Failed: User settings currency didn't match.")
             XCTAssertTrue(user.settings!.hasNewsSubscription!, "Failed: User settings hasNewsSubscription didn't match.")
