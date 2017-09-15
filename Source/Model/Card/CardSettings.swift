@@ -2,7 +2,7 @@ import Foundation
 import ObjectMapper
 
 /// CardSettings model.
-public class CardSettings: Mappable {
+open class CardSettings: Mappable {
 
     /// The position of the card.
     public private(set) final var position: Int?
@@ -31,7 +31,7 @@ public class CardSettings: Mappable {
 
       - parameter map: Mapping data object.
     */
-    required public init?(_ map: Map) {
+    required public init?(map: Map) {
     }
 
     /**
@@ -39,7 +39,7 @@ public class CardSettings: Mappable {
 
       - parameter map: The object to map.
     */
-    public func mapping(map: Map) {
+    open func mapping(map: Map) {
         position  <- map["position"]
         protected  <- map["protected"]
         starred <- map["starred"]

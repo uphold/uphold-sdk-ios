@@ -14,7 +14,7 @@
     "tag": "0.7.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "requires_arc": true,
   "subspecs": [
@@ -39,16 +39,16 @@
   ],
   "dependencies": {
     "KeychainSwift": [
-      "3.0.13"
+      "7.0.1"
     ],
     "ObjectMapper": [
-      "1.2.0"
+      "2.2.8"
     ],
     "PromiseKit": [
-      "3.2.1"
+      "4.1.8"
     ],
     "SwiftClient": [
-      "2.0.3"
+      "3.0.1"
     ]
   }
 }

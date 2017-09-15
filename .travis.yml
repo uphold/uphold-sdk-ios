@@ -1,16 +1,17 @@
 language: objective-c
 
-osx_image: xcode7.3
+osx_image: xcode8.3
 
 env:
   - SCHEME=UpholdSdk
   - SCHEME=UpholdSdkSandbox
 
 before_script:
-  - carthage update --platform iOS
-  # Workaround introduced to fix the xctool issue #454 (https://github.com/facebook/xctool/issues/454).
-  - open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args -CurrentDeviceUDID 75FC400A-B2AA-4DD6-B159-8687FAA5018A
+  - carthage bootstrap --platform iOS --no-build
+  - cd Carthage/Checkouts/URITemplate.swift && echo "IPHONEOS_DEPLOYMENT_TARGET = 8.0" > Configuration.xcconfig && swift package generate-xcodeproj --xcconfig-overrides Configuration.xcconfig
+  - cd ../../../
+  - carthage build --platform iOS --configuration ProductionRelease
 
 script:
   - swiftlint lint --strict
-  - xctool -project UpholdSdk.xcodeproj -scheme $SCHEME test sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+  - xcodebuild -project UpholdSdk.xcodeproj test -scheme $SCHEME -sdk iphonesimulator -destination "name=iPhone SE" | xcpretty

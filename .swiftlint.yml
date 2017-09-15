@@ -1,8 +1,10 @@
 disabled_rules:
+  - conditional_binding_cascade
   - control_statement
   - file_length
   - function_body_length
   - function_parameter_count
+  - implicit_getter
   - line_length
   - type_body_length
   - variable_name
