@@ -66,7 +66,7 @@ class UserTest: UpholdTestCase {
         let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: Mapper().toJSONString(Document(type: "foo", value: "bar"))!)
 
-        _ = user.createDocument(document: Document(type: "foo", value: "bar")).then { (document: Document) -> () in
+        _ = user.createDocument(document: Document(type: "foo", value: "bar")).then { (document: Document) -> Void in
             XCTAssertEqual(document.type, "foo", "Failed: Wrong card id.")
             XCTAssertEqual(document.value, "bar", "Failed: Wrong card id.")
 
@@ -473,7 +473,7 @@ class UserTest: UpholdTestCase {
         let user: User = Fixtures.loadUser()
         user.adapter = MockRestAdapter(body: json)
 
-        _ = user.getDocuments().then { (documents: [Document]) -> () in
+        _ = user.getDocuments().then { (documents: [Document]) -> Void in
             XCTAssertEqual(documents.count, 1, "Failed: Wrong number of documents objects.")
             XCTAssertEqual(documents[0].type, "foo", "Failed: Wrong document type field.")
             XCTAssertEqual(documents[0].value, "bar", "Failed: Wrong document value.")

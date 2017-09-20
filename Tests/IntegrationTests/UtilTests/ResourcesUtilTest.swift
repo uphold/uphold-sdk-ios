@@ -12,7 +12,7 @@ class ResourcesUtilTest: XCTestCase {
         XCTAssertNotNil(try! ResourcesUtil.getValueFromKey(file: "InfoPlist", key: "CFBundleShortVersionString"), "Failed: Getting resource value failed.")
 
         do {
-            let _ = try ResourcesUtil.getValueFromKey(file: "", key: "foobar")
+            _ = try ResourcesUtil.getValueFromKey(file: "", key: "foobar")
 
             XCTFail("Error should be ConfigurationMissingError.")
         } catch let error as ConfigurationMissingError {

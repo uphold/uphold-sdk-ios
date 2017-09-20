@@ -86,9 +86,9 @@ open class UpholdRestAdapter {
                 }
 
                 fulfill(object)
-                }) { (error: Error) -> Void in
+                }, onError: { (error: Error) -> Void in
                     reject(error)
-            }
+                })
         }
     }
 
@@ -121,9 +121,9 @@ open class UpholdRestAdapter {
                 }
 
                 fulfill(object)
-                }) { (error: Error) -> Void in
+                }, onError: { (error: Error) -> Void in
                     reject(error)
-            }
+                })
         }
     }
 
