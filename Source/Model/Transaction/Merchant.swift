@@ -43,7 +43,7 @@ public class Merchant: Mappable {
 
      - parameter map: Mapping data object.
      */
-    required public init?(_ map: Map) {
+    required public init?(map: Map) {
     }
 
     /**
