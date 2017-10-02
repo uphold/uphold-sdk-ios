@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.8.0](https://github.com/uphold/uphold-sdk-ios/tree/0.8.0) (2017-10-02)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.7.0...0.8.0)
+
+**Closed issues:**
+
+- Migrate to Swift 3.0 [\#49](https://github.com/uphold/uphold-sdk-ios/issues/49)
+
+**Merged pull requests:**
+
+- Xcode 8 & Swift 3 migration [\#50](https://github.com/uphold/uphold-sdk-ios/pull/50) ([diogoguimaraes](https://github.com/diogoguimaraes))
+
 ## [0.7.0](https://github.com/uphold/uphold-sdk-ios/tree/0.7.0) (2017-09-12)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.6.0...0.7.0)
 
