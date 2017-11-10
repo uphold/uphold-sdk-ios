@@ -10,7 +10,7 @@ open class Card: BaseModel, Mappable {
     public private(set) final var id: String?
 
     /// The card's primary address dictionary.
-    public private(set) final var address: [String : String]?
+    public private(set) final var address: [String: String]?
 
     /// The balance available for withdrawal/usage.
     public private(set) final var available: String?
@@ -46,7 +46,7 @@ open class Card: BaseModel, Mappable {
       - parameter normalized: The list with the normalized fields.
       - parameter settings: The Settings of the card.
     */
-    public init(id: String, address: [String : String], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [NormalizedCard], settings: CardSettings) {
+    public init(id: String, address: [String: String], available: String, balance: String, currency: String, label: String, lastTransactionAt: String?, normalized: [NormalizedCard], settings: CardSettings) {
         self.id = id
         self.address = address
         self.available = available
