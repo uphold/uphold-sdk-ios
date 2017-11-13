@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.9.0](https://github.com/uphold/uphold-sdk-ios/tree/0.9.0) (2017-11-13)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.8.0...0.9.0)
+
+**Closed issues:**
+
+- Release version 0.8.0 to CocoaPods [\#59](https://github.com/uphold/uphold-sdk-ios/issues/59)
+
+**Merged pull requests:**
+
+- Add set rest adapter [\#60](https://github.com/uphold/uphold-sdk-ios/pull/60) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.8.0](https://github.com/uphold/uphold-sdk-ios/tree/0.8.0) (2017-10-02)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.7.0...0.8.0)
 
