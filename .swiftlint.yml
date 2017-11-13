@@ -1,3 +1,6 @@
+swiftlint_version:
+  - 0.22.0
+
 disabled_rules:
   - conditional_binding_cascade
   - control_statement
@@ -6,6 +9,7 @@ disabled_rules:
   - function_parameter_count
   - implicit_getter
   - line_length
+  - switch_case_alignment
   - type_body_length
   - variable_name
   - unused_optional_binding

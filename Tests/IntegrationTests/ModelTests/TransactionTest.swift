@@ -117,7 +117,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCancelShouldReturnLogicErrorIfStatusIsPending() {
-        let testExpectation = expectation(description:"Transaction test: cancel transaction.")
+        let testExpectation = expectation(description: "Transaction test: cancel transaction.")
 
         let transaction = Fixtures.loadTransaction(fields: ["transactionStatus": "pending"])
         transaction.adapter = MockRestAdapter(body: "foobar")
@@ -139,7 +139,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCancelShouldReturnLogicErrorIfStatusIsNotWaiting() {
-        let testExpectation = expectation(description:"Transaction test: cancel transaction.")
+        let testExpectation = expectation(description: "Transaction test: cancel transaction.")
 
         let transaction = Fixtures.loadTransaction(fields: ["transactionStatus": "foobar"])
         transaction.adapter = MockRestAdapter(body: "foobar")
@@ -161,7 +161,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCancelShouldReturnTheCanceledTransaction() {
-        let testExpectation = expectation(description:"Transaction test: cancel transaction.")
+        let testExpectation = expectation(description: "Transaction test: cancel transaction.")
 
         let transaction: Transaction = Fixtures.loadTransaction(fields: ["transactionId": "foobar", "transactionStatus": "waiting"])
         transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
@@ -178,7 +178,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitShouldReturnTheTransaction() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Fixtures.loadTransaction(fields: ["transactionId": "foobar", "transactionStatus": "pending"])
         transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
@@ -195,7 +195,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitWithOTPShouldReturnTheTransaction() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Fixtures.loadTransaction(fields: ["transactionId": "foobar", "transactionStatus": "pending"])
         transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
@@ -212,7 +212,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitWithTransactionCommitRequestAndOTPShouldReturnTheTransaction() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Fixtures.loadTransaction(fields: ["transactionId": "foobar", "transactionStatus": "pending"])
         transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
@@ -229,7 +229,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitWithTransactionCommitRequestShouldReturnTheTransaction() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Fixtures.loadTransaction(fields: ["transactionId": "foobar", "transactionStatus": "pending"])
         transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
@@ -246,7 +246,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitShouldReturnUnexpectedResponseErrorIfAccountIdIsNil() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Mapper().map(JSONString: "{ \"id\": \"foobar\", \"type\": \"deposit\"}")!
         transaction.adapter = MockRestAdapter(body: "foobar")
@@ -268,7 +268,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitShouldReturnUnexpectedResponseErrorIfCardIdIsNil() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Mapper().map(JSONString: "{ \"id\": \"foobar\" }")!
         transaction.adapter = MockRestAdapter(body: "foobar")
@@ -290,7 +290,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitShouldReturnUnexpectedResponseErrorIfDestinationCardIdIsNil() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Mapper().map(JSONString: "{ \"id\": \"foobar\", \"type\": \"deposit\", \"origin\": { \"AccountId\": \"fiz\"}}")!
         transaction.adapter = MockRestAdapter(body: "foobar")
@@ -312,7 +312,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitShouldReturnUnexpectedResponseErrorIfTransactionIdIsNil() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Mapper().map(JSONString: "{}")!
         transaction.adapter = MockRestAdapter(body: "foobar")
@@ -334,7 +334,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitShouldReturnUnexpectedResponseErrorIfStatusIsNil() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction: Transaction = Mapper().map(JSONString: "{ \"id\": \"foobar\", \"origin\": { \"CardId\": \"fiz\"} }")!
         transaction.adapter = MockRestAdapter(body: "foobar")
@@ -356,7 +356,7 @@ class TransactionTest: UpholdTestCase {
     }
 
     func testCommitShouldReturnLogicErrorIfStatusIsNotPending() {
-        let testExpectation = expectation(description:"Transaction test: commit transaction.")
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
         let transaction = Fixtures.loadTransaction(fields: ["transactionStatus": "foobar"])
         transaction.adapter = MockRestAdapter(body: "foobar")

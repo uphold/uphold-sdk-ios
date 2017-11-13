@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
       - returns: A boolean indicating if the application can handle the URL resource or continue a user activity.
     */
-    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any]) -> Bool {
         guard let window = self.window, let rootViewController = window.rootViewController, let loginViewController = rootViewController as? LoginViewController else {
             return false
         }
