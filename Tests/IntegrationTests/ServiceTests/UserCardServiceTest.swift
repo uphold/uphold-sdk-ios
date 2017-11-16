@@ -39,7 +39,7 @@ class UserCardServiceTest: XCTestCase {
     }
 
     func testCreateTransactionShouldReturnTheRequest() {
-        let request = UserCardService.createTransaction(cardId: "bar", commit: false, transactionRequest: "foobar")
+        let request = UserCardService.createTransaction(cardId: "bar", commit: false, otp: "foo", transactionRequest: "foobar")
 
         XCTAssertEqual(request.url, String(format: "%@/v0/me/cards/bar/transactions", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
         XCTAssertEqual(request.query.count, 1, "Failed: Wrong number of query parameters.")
@@ -49,7 +49,7 @@ class UserCardServiceTest: XCTestCase {
     }
 
     func testCreateTransactionWithCommitShouldReturnTheRequest() {
-        let request = UserCardService.createTransaction(cardId: "bar", commit: true, transactionRequest: "foobar")
+        let request = UserCardService.createTransaction(cardId: "bar", commit: true, otp: "foo", transactionRequest: "foobar")
 
         XCTAssertEqual(request.url, String(format: "%@/v0/me/cards/bar/transactions", GlobalConfigurations.UPHOLD_API_URL), "Failed: Wrong URL.")
         XCTAssertEqual(request.query.count, 1, "Failed: Wrong number of query parameters.")

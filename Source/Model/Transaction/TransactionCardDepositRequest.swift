@@ -11,11 +11,12 @@ open class TransactionCardDepositRequest: TransactionDepositRequest {
       Constructor.
 
       - parameter denomination: The denomination of the transaction request.
+      - parameter message: The message of the transaction request in case of a deposit.
       - parameter origin: The origin of the transaction request in case of a deposit.
       - parameter securityCode: The card's security code.
     */
-    public init(denomination: TransactionDenominationRequest, origin: String, securityCode: String) {
-        super.init(denomination: denomination, origin: origin)
+    public init(denomination: TransactionDenominationRequest, message: String?, origin: String, securityCode: String) {
+        super.init(denomination: denomination, message: message, origin: origin)
 
         self.securityCode = securityCode
     }

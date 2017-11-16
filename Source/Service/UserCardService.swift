@@ -63,8 +63,14 @@ open class UserCardService {
 
       - returns: A request to create a transaction.
     */
-    static func createTransaction(cardId: String, commit: Bool, transactionRequest: Any) -> Request {
-        return UpholdClient().post(url: String(format: "/v0/me/cards/%@/transactions", cardId)).query(query: ["commit": commit ? "true" : "false"]).send(data: transactionRequest)
+    static func createTransaction(cardId: String, commit: Bool, otp: String?, transactionRequest: Any) -> Request {
+        var request = UpholdClient().post(url: String(format: "/v0/me/cards/%@/transactions", cardId)).query(query: ["commit": commit ? "true" : "false"]).send(data: transactionRequest)
+
+        if let otp = otp {
+            request = request.set(key: "OTP-Token", value: otp)
+        }
+
+        return request
     }
 
     /**

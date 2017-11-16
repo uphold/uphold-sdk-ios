@@ -122,11 +122,24 @@ open class Card: BaseModel, Mappable {
       - returns: A promise with the transaction.
     */
     open func createTransaction(commit: Bool, transactionRequest: TransactionRequest) -> Promise<Transaction> {
+        return createTransaction(commit: commit, otp: nil, transactionRequest: transactionRequest)
+    }
+
+    /**
+      Creates a transaction.
+
+      - parameter commit: A boolean to indicate if it is to commit the transaction on the creation process.
+      - parameter otp: The otp code to confirm the transaction.
+      - parameter transactionRequest: The transaction request information.
+
+      - returns: A promise with the transaction.
+    */
+    open func createTransaction(commit: Bool, otp: String?, transactionRequest: TransactionRequest) -> Promise<Transaction> {
         guard let id = self.id else {
             return Promise<Transaction>(error: UnexpectedResponseError(message: "Card id should not be nil."))
         }
 
-        let request = self.adapter.buildRequest(request: UserCardService.createTransaction(cardId: id, commit: commit, transactionRequest: Mapper().toJSON(transactionRequest)))
+        let request = self.adapter.buildRequest(request: UserCardService.createTransaction(cardId: id, commit: commit, otp: otp, transactionRequest: Mapper().toJSON(transactionRequest)))
 
         return self.adapter.buildResponse(request: request)
     }
