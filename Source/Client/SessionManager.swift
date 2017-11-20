@@ -48,7 +48,7 @@ open class SessionManager {
         self.invalidateSession()
 
         _ = self.lockQueue.sync {
-            self.keychain.set(token, forKey: SessionManager.KEYCHAIN_TOKEN_KEY)
+            self.keychain.set(token, forKey: SessionManager.KEYCHAIN_TOKEN_KEY, withAccess: .accessibleAfterFirstUnlock)
         }
     }
 
