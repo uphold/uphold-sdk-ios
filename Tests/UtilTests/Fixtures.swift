@@ -245,7 +245,23 @@ public class Fixtures {
             "state": faker.address.stateAbbreviation(),
             "status": faker.lorem.characters(amount: 10),
             "theme": faker.lorem.characters(amount: 10),
-            "username": faker.lorem.characters(amount: 10)
+            "username": faker.lorem.characters(amount: 10),
+            "verificationsReasonAddress": faker.lorem.characters(amount: 10),
+            "verificationsReasonBirthdate": faker.lorem.characters(amount: 10),
+            "verificationsReasonDocuments": faker.lorem.characters(amount: 10),
+            "verificationsReasonEmail": faker.lorem.characters(amount: 10),
+            "verificationsReasonIdentity": faker.lorem.characters(amount: 10),
+            "verificationsReasonLocation": faker.lorem.characters(amount: 10),
+            "verificationsReasonPhone": faker.lorem.characters(amount: 10),
+            "verificationsReasonTerms": faker.lorem.characters(amount: 10),
+            "verificationsStatusAddress": faker.lorem.characters(amount: 10),
+            "verificationsStatusBirthdate": faker.lorem.characters(amount: 10),
+            "verificationsStatusDocuments": faker.lorem.characters(amount: 10),
+            "verificationsStatusEmail": faker.lorem.characters(amount: 10),
+            "verificationsStatusIdentity": faker.lorem.characters(amount: 10),
+            "verificationsStatusLocation": faker.lorem.characters(amount: 10),
+            "verificationsStatusPhone": faker.lorem.characters(amount: 10),
+            "verificationsStatusTerms": faker.lorem.characters(amount: 10)
         ]
 
         if let fields = fields {
@@ -258,8 +274,17 @@ public class Fixtures {
         let internationalizationUserSettings = InternationalizationUserSettings(language: internationalizationUserSettingLanguage, dateTimeFormat: internationalizationUserSettingDateTimeFormat, numberFormat: internationalizationUserSettingNumberFormat)
         let otp = Otp(login: Login(enabled: NSString(string: fakerFields["settingsOTPLogin"]!).boolValue), transactions: Transactions(send: Send(enabled: NSString(string: fakerFields["settingsOTPTransactionsSend"]!).boolValue), transfer: Transfer(enabled: NSString(string: fakerFields["settingsOTPTransactionsTransfer"]!).boolValue), withdraw: Withdraw(crypto: Crypto(enabled: NSString(string: fakerFields["settingsOTPTransactionsWithdrawCrypto"]!).boolValue))))
         let userSettings = UserSettings(currency: fakerFields["currency"]!, hasNewsSubscription: NSString(string: fakerFields["hasNewsSubscription"]!).boolValue, intl: internationalizationUserSettings, otp: otp, theme: fakerFields["theme"]!)
+        let addressVerifications = VerificationParameter(reason: fakerFields["verificationsReasonAddress"]!, status: fakerFields["verificationsStatusAddress"]!)
+        let birthdateVerifications = VerificationParameter(reason: fakerFields["verificationsReasonBirthdate"]!, status: fakerFields["verificationsStatusBirthdate"]!)
+        let documentsVerifications = VerificationParameter(reason: fakerFields["verificationsReasonDocuments"]!, status: fakerFields["verificationsStatusDocuments"]!)
+        let emailVerifications = VerificationParameter(reason: fakerFields["verificationsReasonEmail"]!, status: fakerFields["verificationsStatusEmail"]!)
+        let identityVerifications = VerificationParameter(reason: fakerFields["verificationsReasonIdentity"]!, status: fakerFields["verificationsStatusIdentity"]!)
+        let locationVerifications = VerificationParameter(reason: fakerFields["verificationsReasonLocation"]!, status: fakerFields["verificationsStatusLocation"]!)
+        let phoneVerifications = VerificationParameter(reason: fakerFields["verificationsReasonPhone"]!, status: fakerFields["verificationsStatusPhone"]!)
+        let termsVerifications = VerificationParameter(reason: fakerFields["verificationsReasonTerms"]!, status: fakerFields["verificationsStatusTerms"]!)
+        let verifications = Verifications(address: addressVerifications, birthdate: birthdateVerifications, documents: documentsVerifications, email: emailVerifications, identity: identityVerifications, location: locationVerifications, phone: phoneVerifications, terms: termsVerifications)
 
-        return User(country: fakerFields["country"]!, currencies: fakerFields["currencies"]!.components(separatedBy: ","), email: fakerFields["email"]!, firstName: fakerFields["firstName"]!, lastName: fakerFields["lastName"]!, memberAt: fakerFields["memberAt"]!, name: fakerFields["name"]!, settings: userSettings, state: fakerFields["state"]!, status: fakerFields["status"]!, username: fakerFields["username"]!)
+        return User(country: fakerFields["country"]!, currencies: fakerFields["currencies"]!.components(separatedBy: ","), email: fakerFields["email"]!, firstName: fakerFields["firstName"]!, lastName: fakerFields["lastName"]!, memberAt: fakerFields["memberAt"]!, name: fakerFields["name"]!, settings: userSettings, state: fakerFields["state"]!, status: fakerFields["status"]!, username: fakerFields["username"]!, verifications: verifications)
     }
 
 }
