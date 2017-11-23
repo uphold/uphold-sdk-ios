@@ -215,6 +215,40 @@ class UpholdClientTest: UpholdTestCase {
                         "}" +
                     "}" +
                 "}" +
+            "}," +
+            "\"verifications\": {" +
+                "\"address\": {" +
+                    "\"reason\": \"foo\"," +
+                    "\"status\": \"bar\"" +
+                "}," +
+                "\"birthdate\": {" +
+                    "\"reason\": \"fiz\"," +
+                    "\"status\": \"biz\"" +
+                "}," +
+                "\"documents\": {" +
+                    "\"reason\": \"fuz\"," +
+                    "\"status\": \"buz\"" +
+                "}," +
+                "\"email\": {" +
+                    "\"reason\": \"foobar\"," +
+                    "\"status\": \"foobuz\"" +
+                "}," +
+                "\"identity\": {" +
+                    "\"reason\": \"bar\"," +
+                    "\"status\": \"biz\"" +
+                "}," +
+                "\"location\": {" +
+                    "\"reason\": \"biz\"," +
+                    "\"status\": \"buz\"" +
+                "}," +
+                "\"phone\": {" +
+                    "\"reason\": \"fizbuz\"," +
+                    "\"status\": \"fuzbuz\"" +
+                "}," +
+                "\"terms\": {" +
+                    "\"reason\": \"foobar\"," +
+                    "\"status\": \"fizbiz\"" +
+                "}" +
             "}" +
         "}"
         let client = MockUpholdClient(bearerToken: "foobar")
@@ -242,6 +276,22 @@ class UpholdClientTest: UpholdTestCase {
             XCTAssertEqual(user.state, "FOO", "Failed: User name didn't match.")
             XCTAssertEqual(user.status, "ok", "Failed: User name didn't match.")
             XCTAssertEqual(user.username, "foobar", "Failed: User name didn't match.")
+            XCTAssertEqual(user.verifications!.address?.reason, "foo", "Failed: Address reason didn't match.")
+            XCTAssertEqual(user.verifications!.address?.status, "bar", "Failed: Address status didn't match.")
+            XCTAssertEqual(user.verifications!.birthdate?.reason, "fiz", "Failed: Birthdate reason didn't match.")
+            XCTAssertEqual(user.verifications!.birthdate?.status, "biz", "Failed: Birthdate status didn't match.")
+            XCTAssertEqual(user.verifications!.documents?.reason, "fuz", "Failed: Documents reason didn't match.")
+            XCTAssertEqual(user.verifications!.documents?.status, "buz", "Failed: Documents status didn't match.")
+            XCTAssertEqual(user.verifications!.email?.reason, "foobar", "Failed: Email reason didn't match.")
+            XCTAssertEqual(user.verifications!.email?.status, "foobuz", "Failed: Email status didn't match.")
+            XCTAssertEqual(user.verifications!.identity?.reason, "bar", "Failed: Identity reason didn't match.")
+            XCTAssertEqual(user.verifications!.identity?.status, "biz", "Failed: Identity status didn't match.")
+            XCTAssertEqual(user.verifications!.location?.reason, "biz", "Failed: Location reason didn't match.")
+            XCTAssertEqual(user.verifications!.location?.status, "buz", "Failed: Location status didn't match.")
+            XCTAssertEqual(user.verifications!.phone?.reason, "fizbuz", "Failed: Phone reason didn't match.")
+            XCTAssertEqual(user.verifications!.phone?.status, "fuzbuz", "Failed: Phone status didn't match.")
+            XCTAssertEqual(user.verifications!.terms?.reason, "foobar", "Failed: Terms reason didn't match.")
+            XCTAssertEqual(user.verifications!.terms?.status, "fizbiz", "Failed: Terms status didn't match.")
 
             testExpectation.fulfill()
         }.catch(execute: { (_: Error) in

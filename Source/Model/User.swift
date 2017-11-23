@@ -39,6 +39,9 @@ open class User: BaseModel, Mappable {
     /// The user username.
     public private(set) final var username: String?
 
+    /// The user verifications.
+    public private(set) final var verifications: Verifications?
+
     /**
       Constructor.
 
@@ -53,8 +56,9 @@ open class User: BaseModel, Mappable {
       - parameter state: The user state.
       - parameter status: The user status.
       - parameter username: The user username.
+      - parameter verifications: The user verifications.
     */
-    public init(country: String, currencies: [String], email: String, firstName: String, lastName: String, memberAt: String, name: String, settings: UserSettings, state: String, status: String, username: String) {
+    public init(country: String, currencies: [String], email: String, firstName: String, lastName: String, memberAt: String, name: String, settings: UserSettings, state: String, status: String, username: String, verifications: Verifications) {
         self.country = country
         self.currencies = currencies
         self.email = email
@@ -66,6 +70,7 @@ open class User: BaseModel, Mappable {
         self.state = state
         self.status = status
         self.username = username
+        self.verifications = verifications
     }
 
     // MARK: Required by the ObjectMapper.
@@ -95,6 +100,7 @@ open class User: BaseModel, Mappable {
         self.state <- map["state"]
         self.status <- map["status"]
         self.username <- map["username"]
+        self.verifications <- map["verifications"]
     }
 
     /**
