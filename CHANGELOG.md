@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0](https://github.com/uphold/uphold-sdk-ios/tree/0.10.0) (2017-12-04)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.9.0...0.10.0)
+
+**Merged pull requests:**
+
+- Add verifications to User model [\#63](https://github.com/uphold/uphold-sdk-ios/pull/63) ([SandroMachado](https://github.com/SandroMachado))
+- Add keychain access level [\#62](https://github.com/uphold/uphold-sdk-ios/pull/62) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.9.0](https://github.com/uphold/uphold-sdk-ios/tree/0.9.0) (2017-11-13)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.8.0...0.9.0)
 
