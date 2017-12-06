@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/uphold/uphold-sdk-ios/tree/0.11.0) (2017-12-06)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.10.0...0.11.0)
+
+**Merged pull requests:**
+
+- Add support to Xcode 9 [\#64](https://github.com/uphold/uphold-sdk-ios/pull/64) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.10.0](https://github.com/uphold/uphold-sdk-ios/tree/0.10.0) (2017-12-04)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.9.0...0.10.0)
 
