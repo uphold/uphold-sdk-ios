@@ -25,7 +25,7 @@ open class TransactionCommitRequest: Mappable {
       - parameter message: The transaction message.
       - parameter securityCode: The transaction security code.
     */
-    public init(message: String, securityCode: String) {
+    public init(message: String?, securityCode: String) {
         self.message = message
         self.securityCode = securityCode
     }
