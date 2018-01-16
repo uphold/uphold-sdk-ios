@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/uphold/uphold-sdk-ios/tree/0.12.0) (2018-01-16)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.11.0...0.12.0)
+
+**Merged pull requests:**
+
+- Allow transaction commit request with empty message [\#65](https://github.com/uphold/uphold-sdk-ios/pull/65) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.11.0](https://github.com/uphold/uphold-sdk-ios/tree/0.11.0) (2017-12-06)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.10.0...0.11.0)
 
