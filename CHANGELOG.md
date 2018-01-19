@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.0](https://github.com/uphold/uphold-sdk-ios/tree/0.13.0) (2018-01-19)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.12.0...0.13.0)
+
+**Merged pull requests:**
+
+- Add Node model to transaction origin and destination [\#66](https://github.com/uphold/uphold-sdk-ios/pull/66) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.12.0](https://github.com/uphold/uphold-sdk-ios/tree/0.12.0) (2018-01-16)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.11.0...0.12.0)
 
