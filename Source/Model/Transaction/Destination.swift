@@ -13,6 +13,9 @@ open class Destination: Mappable {
     /// The type of the account from the destination of the transaction.
     public private(set) final var accountType: String?
 
+    /// The address from the destination of the transaction.
+    public private(set) final var address: String?
+
     /// The amount from the destination of the transaction.
     public private(set) final var amount: String?
 
@@ -52,6 +55,7 @@ open class Destination: Mappable {
       - parameter accountId: The id of the account from the destination of the transaction.
       - parameter cardId: The card id of the card from the destination of the transaction.
       - parameter accountType: The type of the account from the destination of the transaction.
+      - parameter address: The address from the destination of the transaction.
       - parameter amount: The amount from the destination of the transaction.
       - parameter base: The base from the destination of the transaction.
       - parameter commission: The commission from the destination of the transaction.
@@ -64,8 +68,9 @@ open class Destination: Mappable {
       - parameter type: The type from the destination of the transaction.
       - parameter username: The username from the destination of the transaction.
     */
-    public init(accountId: String, cardId: String, accountType: String, amount: String, base: String, commission: String, currency: String, description: String, fee: String, merchant: Merchant, node: Node, rate: String, type: String, username: String) {
+    public init(accountId: String, cardId: String, accountType: String, address: String, amount: String, base: String, commission: String, currency: String, description: String, fee: String, merchant: Merchant, node: Node, rate: String, type: String, username: String) {
         self.accountId = accountId
+        self.address = address
         self.cardId = cardId
         self.accountType = accountType
         self.amount = amount
@@ -100,6 +105,7 @@ open class Destination: Mappable {
         accountId  <- map["AccountId"]
         cardId  <- map["CardId"]
         accountType <- map["accountType"]
+        address <- map["address"]
         amount <- map["amount"]
         base <- map["base"]
         commission <- map["commission"]
