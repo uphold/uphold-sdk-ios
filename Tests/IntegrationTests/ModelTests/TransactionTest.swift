@@ -458,6 +458,7 @@ class TransactionTest: UpholdTestCase {
             "\"destination\": {" +
                 "\"AccountId\": \"fizbuz\"," +
                 "\"CardId\": \"fuzbuz\"," +
+                "\"address\": \"a1b2c3d4e5f6g7h8j9101112\"," +
                 "\"amount\": \"0.1\"," +
                 "\"base\": \"0.1\"," +
                 "\"commission\": \"0.00\"," +
@@ -516,6 +517,7 @@ class TransactionTest: UpholdTestCase {
         XCTAssertEqual(transaction!.denomination!.rate!, "1.00", "Failed: Transaction denomination rate didn't match.")
         XCTAssertEqual(transaction!.destination!.accountId!, "fizbuz", "Failed: Transaction destination accountId didn't match.")
         XCTAssertEqual(transaction!.destination!.cardId!, "fuzbuz", "Failed: Transaction destination cardId didn't match.")
+        XCTAssertEqual(transaction!.destination!.address!, "a1b2c3d4e5f6g7h8j9101112", "Failed: Transaction destination address didn't match.")
         XCTAssertEqual(transaction!.destination!.amount!, "0.1", "Failed: Transaction destination amount didn't match.")
         XCTAssertEqual(transaction!.destination!.base!, "0.1", "Failed: Transaction destination base didn't match.")
         XCTAssertEqual(transaction!.destination!.commission!, "0.00", "Failed: Transaction destination commission didn't match.")

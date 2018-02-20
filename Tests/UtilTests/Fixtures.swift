@@ -121,6 +121,7 @@ public class Fixtures {
             "denominationRate": faker.lorem.numerify("123456789"),
             "destinationAccountId": faker.lorem.numerify("123456789"),
             "destinationAccountType": faker.lorem.characters(amount: 7),
+            "destinationAddress": faker.lorem.characters(amount: 20),
             "destinationAmount": faker.lorem.numerify("123456789"),
             "destinationBase": faker.lorem.numerify("123456789"),
             "destinationCardId": faker.lorem.characters(amount: 24),
