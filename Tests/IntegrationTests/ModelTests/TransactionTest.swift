@@ -262,6 +262,23 @@ class TransactionTest: UpholdTestCase {
         wait()
     }
 
+    func testCommitWithTransactionCommitRequestWithSecurityCodeShouldReturnTheTransaction() {
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
+
+        let transaction: Transaction = Fixtures.loadTransaction(fields: ["transactionId": "foobar", "transactionStatus": "pending"])
+        transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
+
+        transaction.commit(transactionCommit: TransactionCommitRequest(securityCode: "1234")).then { (transaction: Transaction) -> Void in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction object.")
+
+            testExpectation.fulfill()
+        }.catch(execute: { (_: Error) in
+            XCTFail("User test: create transaction transfer error.")
+        })
+
+        wait()
+    }
+
     func testCommitWithTransactionCommitRequestWithBeneficiaryAndMessageShouldReturnTheTransaction() {
         let testExpectation = expectation(description: "Transaction test: commit transaction.")
 
@@ -269,6 +286,23 @@ class TransactionTest: UpholdTestCase {
         transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
 
         transaction.commit(transactionCommit: TransactionCommitRequest(beneficiary: Beneficiary(address: BeneficiaryAddress(city: "foo", country: "bar", line1: "biz", line2: "buz", state: "foobar", zipCode: "foobiz"), name: "Foo Bar", relationship: "Uncle"), message: "foobar")).then { (transaction: Transaction) -> Void in
+            XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction object.")
+
+            testExpectation.fulfill()
+        }.catch(execute: { (_: Error) in
+            XCTFail("User test: create transaction transfer error.")
+        })
+
+        wait()
+    }
+
+    func testCommitWithTransactionCommitRequestWithMessageAndSecurityCodeShouldReturnTheTransaction() {
+        let testExpectation = expectation(description: "Transaction test: commit transaction.")
+
+        let transaction: Transaction = Fixtures.loadTransaction(fields: ["transactionId": "foobar", "transactionStatus": "pending"])
+        transaction.adapter = MockRestAdapter(body: Mapper().toJSONString(transaction)!)
+
+        transaction.commit(transactionCommit: TransactionCommitRequest(message: "foobar", securityCode: "1234")).then { (transaction: Transaction) -> Void in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction object.")
 
             testExpectation.fulfill()
