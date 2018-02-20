@@ -4,11 +4,20 @@ import ObjectMapper
 /// Transaction commit request model.
 open class TransactionCommitRequest: Mappable {
 
+    /// The transaction beneficiary.
+    public private(set) final var beneficiary: Beneficiary?
+
     /// The transaction message.
     public private(set) final var message: String?
 
-    /// The transaction security code.
-    public private(set) final var securityCode: String?
+    /**
+      Constructor.
+
+      - parameter beneficiary: The transaction beneficiary.
+    */
+    public init(beneficiary: Beneficiary) {
+        self.beneficiary = beneficiary
+    }
 
     /**
       Constructor.
@@ -22,12 +31,12 @@ open class TransactionCommitRequest: Mappable {
     /**
       Constructor.
 
+      - parameter beneficiary: The transaction beneficiary.
       - parameter message: The transaction message.
-      - parameter securityCode: The transaction security code.
     */
-    public init(message: String?, securityCode: String) {
+    public init(beneficiary: Beneficiary?, message: String?) {
+        self.beneficiary = beneficiary
         self.message = message
-        self.securityCode = securityCode
     }
 
     // MARK: Required by the ObjectMapper.
@@ -46,8 +55,8 @@ open class TransactionCommitRequest: Mappable {
       - parameter map: The object to map.
     */
     open func mapping(map: Map) {
+        self.beneficiary <- map["beneficiary"]
         self.message <- map["message"]
-        self.securityCode <- map["securityCode"]
     }
 
 }

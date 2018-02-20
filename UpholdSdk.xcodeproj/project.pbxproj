@@ -15,6 +15,10 @@
 		2A6DB55D1D1ECB1A00D98D32 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */; };
 		2A75796E1E9B9C670071BBCA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75796D1E9B9C670071BBCA /* Document.swift */; };
 		2A75796F1E9B9C670071BBCA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A75796D1E9B9C670071BBCA /* Document.swift */; };
+		2A85CC52203C3CA000692B7C /* Beneficiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85CC51203C3CA000692B7C /* Beneficiary.swift */; };
+		2A85CC53203C3CA000692B7C /* Beneficiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85CC51203C3CA000692B7C /* Beneficiary.swift */; };
+		2A85CC55203C40B200692B7C /* BeneficiaryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85CC54203C40B200692B7C /* BeneficiaryAddress.swift */; };
+		2A85CC56203C40B200692B7C /* BeneficiaryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85CC54203C40B200692B7C /* BeneficiaryAddress.swift */; };
 		2ABB18FA1FC3282E0098A87D /* VerificationParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB18F91FC3282E0098A87D /* VerificationParameter.swift */; };
 		2ABB18FB1FC3282E0098A87D /* VerificationParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB18F91FC3282E0098A87D /* VerificationParameter.swift */; };
 		2ABB18FD1FC3294D0098A87D /* Verifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB18FC1FC3294D0098A87D /* Verifications.swift */; };
@@ -271,6 +275,8 @@
 		2A6DB5581D1ECAC900D98D32 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		2A6DB55B1D1ECB1A00D98D32 /* AddressRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressRequest.swift; sourceTree = "<group>"; };
 		2A75796D1E9B9C670071BBCA /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		2A85CC51203C3CA000692B7C /* Beneficiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beneficiary.swift; sourceTree = "<group>"; };
+		2A85CC54203C40B200692B7C /* BeneficiaryAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiaryAddress.swift; sourceTree = "<group>"; };
 		2ABB18F91FC3282E0098A87D /* VerificationParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationParameter.swift; sourceTree = "<group>"; };
 		2ABB18FC1FC3294D0098A87D /* Verifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verifications.swift; sourceTree = "<group>"; };
 		2AFF8F9C201124BC003BC0F7 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -550,6 +556,8 @@
 				BC02EB181C10503C00FCA0D9 /* TransactionRequest.swift */,
 				BC23335C1CFC7AB3007928FE /* TransactionTransferRequest.swift */,
 				2A3515711E9BC4CA0084CADA /* Merchant.swift */,
+				2A85CC51203C3CA000692B7C /* Beneficiary.swift */,
+				2A85CC54203C40B200692B7C /* BeneficiaryAddress.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -1167,6 +1175,7 @@
 				BC41104D1C05E6400063761C /* UserBalance.swift in Sources */,
 				BC2333631CFCA13A007928FE /* TransactionCardDepositRequest.swift in Sources */,
 				2ABB18FD1FC3294D0098A87D /* Verifications.swift in Sources */,
+				2A85CC52203C3CA000692B7C /* Beneficiary.swift in Sources */,
 				BC91E8A11BECD8270074C538 /* DepositMovement.swift in Sources */,
 				BC202DCC1C4420AE0069A230 /* AuthenticationResponse.swift in Sources */,
 				BC2333601CFC8FA0007928FE /* TransactionDepositRequest.swift in Sources */,
@@ -1182,6 +1191,7 @@
 				BCF4D3921C62116900E4BDDA /* Crypto.swift in Sources */,
 				BC4110521C05E68E0063761C /* ContactRequest.swift in Sources */,
 				BC52369F1C5A3EF30088B62D /* ResourcesUtil.swift in Sources */,
+				2A85CC55203C40B200692B7C /* BeneficiaryAddress.swift in Sources */,
 				BC3EE5961C1E3E9D0058478D /* PaginatorProtocol.swift in Sources */,
 				BC1CFA461BDFCF1D00979038 /* LogicError.swift in Sources */,
 				BC23335D1CFC7AB3007928FE /* TransactionTransferRequest.swift in Sources */,
@@ -1331,6 +1341,7 @@
 				BCC9D6D51C56377E00671171 /* NormalizedCard.swift in Sources */,
 				BC2333641CFCA13A007928FE /* TransactionCardDepositRequest.swift in Sources */,
 				2ABB18FE1FC3294D0098A87D /* Verifications.swift in Sources */,
+				2A85CC53203C3CA000692B7C /* Beneficiary.swift in Sources */,
 				BCC9D6D61C56377E00671171 /* InternationalizationUserSetting.swift in Sources */,
 				BCC9D6D71C56377E00671171 /* BadRequestError.swift in Sources */,
 				BC2333611CFC8FA0007928FE /* TransactionDepositRequest.swift in Sources */,
@@ -1346,6 +1357,7 @@
 				BCF4D3931C62116900E4BDDA /* Crypto.swift in Sources */,
 				BCC9D6E01C56377E00671171 /* Paginator.swift in Sources */,
 				BCC9D6E11C56377E00671171 /* TickerService.swift in Sources */,
+				2A85CC56203C40B200692B7C /* BeneficiaryAddress.swift in Sources */,
 				BCC9D6E21C56377E00671171 /* Reserve.swift in Sources */,
 				BCC9D6E31C56377E00671171 /* Denomination.swift in Sources */,
 				BC23335E1CFC7AB3007928FE /* TransactionTransferRequest.swift in Sources */,
