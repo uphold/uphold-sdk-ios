@@ -10,6 +10,9 @@ open class TransactionCommitRequest: Mappable {
     /// The transaction message.
     public private(set) final var message: String?
 
+    /// The transaction security code.
+    public private(set) final var securityCode: String?
+
     /**
       Constructor.
 
@@ -29,6 +32,15 @@ open class TransactionCommitRequest: Mappable {
     }
 
     /**
+     Constructor.
+
+     - parameter securityCode: The transaction security code.
+     */
+    public init(securityCode: String) {
+        self.securityCode = securityCode
+    }
+
+    /**
       Constructor.
 
       - parameter beneficiary: The transaction beneficiary.
@@ -37,6 +49,17 @@ open class TransactionCommitRequest: Mappable {
     public init(beneficiary: Beneficiary?, message: String?) {
         self.beneficiary = beneficiary
         self.message = message
+    }
+
+    /**
+      Constructor.
+
+      - parameter message: The transaction message.
+      - parameter securityCode: The transaction security code.
+    */
+    public init(message: String?, securityCode: String) {
+        self.message = message
+        self.securityCode = securityCode
     }
 
     // MARK: Required by the ObjectMapper.
