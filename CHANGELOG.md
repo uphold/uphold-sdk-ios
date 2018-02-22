@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.14.0](https://github.com/uphold/uphold-sdk-ios/tree/0.14.0) (2018-02-22)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.13.0...0.14.0)
+
+**Merged pull requests:**
+
+- Add security code transaction commit [\#69](https://github.com/uphold/uphold-sdk-ios/pull/69) ([SandroMachado](https://github.com/SandroMachado))
+- Add support for transaction commit request beneficiary [\#68](https://github.com/uphold/uphold-sdk-ios/pull/68) ([SandroMachado](https://github.com/SandroMachado))
+- Add support for transaction destination address [\#67](https://github.com/uphold/uphold-sdk-ios/pull/67) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.13.0](https://github.com/uphold/uphold-sdk-ios/tree/0.13.0) (2018-01-19)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.12.0...0.13.0)
 
