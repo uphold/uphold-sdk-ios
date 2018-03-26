@@ -80,6 +80,7 @@ open class TransactionCommitRequest: Mappable {
     open func mapping(map: Map) {
         self.beneficiary <- map["beneficiary"]
         self.message <- map["message"]
+        self.securityCode <- map["securityCode"]
     }
 
 }
