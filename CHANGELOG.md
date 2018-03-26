@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.0](https://github.com/uphold/uphold-sdk-ios/tree/0.15.0) (2018-03-26)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.14.0...0.15.0)
+
+**Merged pull requests:**
+
+- Fix transaction commit request security code [\#70](https://github.com/uphold/uphold-sdk-ios/pull/70) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.14.0](https://github.com/uphold/uphold-sdk-ios/tree/0.14.0) (2018-02-22)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.13.0...0.14.0)
 
