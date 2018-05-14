@@ -7,6 +7,9 @@ open class TransactionTransferRequest: TransactionRequest {
     /// The destination of the transaction request.
     public private(set) final var destination: String?
 
+    /// The destination of the transaction request.
+    public private(set) final var reference: String?
+
     /**
       Constructor.
 
@@ -17,6 +20,20 @@ open class TransactionTransferRequest: TransactionRequest {
         super.init(denomination: denomination)
 
         self.destination = destination
+    }
+
+    /**
+      Constructor.
+
+      - parameter denomination: The denomination of the transaction request.
+      - parameter destination: The destination of the transaction request.
+      - parameter reference: The reference of the transaction request.
+    */
+    public init(denomination: TransactionDenominationRequest, destination: String, reference: String) {
+        super.init(denomination: denomination)
+
+        self.destination = destination
+        self.reference = reference
     }
 
     // MARK: Required by the ObjectMapper.
@@ -39,6 +56,7 @@ open class TransactionTransferRequest: TransactionRequest {
         super.mapping(map: map)
 
         self.destination <- map["destination"]
+        self.reference <- map["reference"]
     }
 
 }

@@ -36,6 +36,9 @@ open class Transaction: BaseModel, Mappable {
     /// Other parameters of this transaction.
     public private(set) final var params: Parameters?
 
+    /// The reference of this transaction.
+    public private(set) final var reference: String?
+
     /// When a transaction is cancelled this contains the transaction ID of the transaction which refunds the amount back to the user.
     public private(set) final var refundedById: String?
 
@@ -69,11 +72,12 @@ open class Transaction: BaseModel, Mappable {
       - parameter normalized: The transaction details normalized.
       - parameter origin: The sender of the funds.
       - parameter params: Other parameters of this transaction.
+      - parameter reference: The reference of the transaction.
       - parameter refundedById: When a transaction is cancelled this contains the transaction ID of the transaction which refunds the amount back to the user.
       - parameter status: The current status of the transaction.
       - parameter type: The nature of the transaction.
     */
-    public init(id: String, createdAt: String, denomination: Denomination, destination: Destination, fees: [Fee], message: String, network: String, normalized: [NormalizedTransaction], origin: Origin, params: Parameters, refundedById: String, status: String, type: String) {
+    public init(id: String, createdAt: String, denomination: Denomination, destination: Destination, fees: [Fee], message: String, network: String, normalized: [NormalizedTransaction], origin: Origin, params: Parameters, reference: String, refundedById: String, status: String, type: String) {
         self.id = id
         self.createdAt = createdAt
         self.denomination = denomination
@@ -84,6 +88,7 @@ open class Transaction: BaseModel, Mappable {
         self.normalized = normalized
         self.origin = origin
         self.params = params
+        self.reference = reference
         self.refundedById = refundedById
         self.status = status
         self.type = type
@@ -115,6 +120,7 @@ open class Transaction: BaseModel, Mappable {
         normalized <- map["normalized"]
         origin <- map["origin"]
         params <- map["params"]
+        reference <- map["reference"]
         refundedById <- map["RefundedById"]
         status <- map["status"]
         type <- map["type"]
