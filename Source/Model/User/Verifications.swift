@@ -22,6 +22,9 @@ open class Verifications: Mappable {
     /// The location verification.
     public private(set) final var location: VerificationParameter?
 
+    /// The marketing verification.
+    public private(set) final var marketing: VerificationParameter?
+
     /// The phone verification.
     public private(set) final var phone: VerificationParameter?
 
@@ -37,16 +40,18 @@ open class Verifications: Mappable {
       - parameter email: The email verification.
       - parameter identity: The identity verification.
       - parameter location: The location verification.
+      - parameter marketing: The marketing verification.
       - parameter phone: The phone verification.
       - parameter terms: The terms verification.
     */
-    public init(address: VerificationParameter?, birthdate: VerificationParameter?, documents: VerificationParameter?, email: VerificationParameter?, identity: VerificationParameter?, location: VerificationParameter?, phone: VerificationParameter?, terms: VerificationParameter?) {
+    public init(address: VerificationParameter?, birthdate: VerificationParameter?, documents: VerificationParameter?, email: VerificationParameter?, identity: VerificationParameter?, location: VerificationParameter?, marketing: VerificationParameter?, phone: VerificationParameter?, terms: VerificationParameter?) {
         self.address = address
         self.birthdate = birthdate
         self.documents = documents
         self.email = email
         self.identity = identity
         self.location = location
+        self.marketing = marketing
         self.phone = phone
         self.terms = terms
     }
@@ -73,6 +78,7 @@ open class Verifications: Mappable {
         email  <- map["email"]
         identity  <- map["identity"]
         location  <- map["location"]
+        marketing  <- map["marketing"]
         phone  <- map["phone"]
         terms  <- map["terms"]
     }

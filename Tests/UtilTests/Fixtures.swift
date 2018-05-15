@@ -261,6 +261,7 @@ public class Fixtures {
             "verificationsReasonEmail": faker.lorem.characters(amount: 10),
             "verificationsReasonIdentity": faker.lorem.characters(amount: 10),
             "verificationsReasonLocation": faker.lorem.characters(amount: 10),
+            "verificationsReasonMarketing": faker.lorem.characters(amount: 10),
             "verificationsReasonPhone": faker.lorem.characters(amount: 10),
             "verificationsReasonTerms": faker.lorem.characters(amount: 10),
             "verificationsStatusAddress": faker.lorem.characters(amount: 10),
@@ -269,6 +270,7 @@ public class Fixtures {
             "verificationsStatusEmail": faker.lorem.characters(amount: 10),
             "verificationsStatusIdentity": faker.lorem.characters(amount: 10),
             "verificationsStatusLocation": faker.lorem.characters(amount: 10),
+            "verificationsStatusMarketing": faker.lorem.characters(amount: 10),
             "verificationsStatusPhone": faker.lorem.characters(amount: 10),
             "verificationsStatusTerms": faker.lorem.characters(amount: 10)
         ]
@@ -289,9 +291,10 @@ public class Fixtures {
         let emailVerifications = VerificationParameter(reason: fakerFields["verificationsReasonEmail"]!, status: fakerFields["verificationsStatusEmail"]!)
         let identityVerifications = VerificationParameter(reason: fakerFields["verificationsReasonIdentity"]!, status: fakerFields["verificationsStatusIdentity"]!)
         let locationVerifications = VerificationParameter(reason: fakerFields["verificationsReasonLocation"]!, status: fakerFields["verificationsStatusLocation"]!)
+        let marketingVerifications = VerificationParameter(reason: fakerFields["verificationsReasonMarketing"]!, status: fakerFields["verificationsStatusMarketing"]!)
         let phoneVerifications = VerificationParameter(reason: fakerFields["verificationsReasonPhone"]!, status: fakerFields["verificationsStatusPhone"]!)
         let termsVerifications = VerificationParameter(reason: fakerFields["verificationsReasonTerms"]!, status: fakerFields["verificationsStatusTerms"]!)
-        let verifications = Verifications(address: addressVerifications, birthdate: birthdateVerifications, documents: documentsVerifications, email: emailVerifications, identity: identityVerifications, location: locationVerifications, phone: phoneVerifications, terms: termsVerifications)
+        let verifications = Verifications(address: addressVerifications, birthdate: birthdateVerifications, documents: documentsVerifications, email: emailVerifications, identity: identityVerifications, location: locationVerifications, marketing: marketingVerifications, phone: phoneVerifications, terms: termsVerifications)
 
         return User(country: fakerFields["country"]!, currencies: fakerFields["currencies"]!.components(separatedBy: ","), email: fakerFields["email"]!, firstName: fakerFields["firstName"]!, lastName: fakerFields["lastName"]!, memberAt: fakerFields["memberAt"]!, name: fakerFields["name"]!, settings: userSettings, state: fakerFields["state"]!, status: fakerFields["status"]!, username: fakerFields["username"]!, verifications: verifications)
     }
