@@ -7,7 +7,7 @@ open class TransactionTransferRequest: TransactionRequest {
     /// The destination of the transaction request.
     public private(set) final var destination: String?
 
-    /// The destination of the transaction request.
+    /// The reference of the transaction request.
     public private(set) final var reference: String?
 
     /**

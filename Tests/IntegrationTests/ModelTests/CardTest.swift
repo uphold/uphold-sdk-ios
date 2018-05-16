@@ -56,11 +56,12 @@ class CardTest: UpholdTestCase {
         let testExpectation = expectation(description: "User test: create address.")
 
         let card: Card = Fixtures.loadCard()
-        card.adapter = MockRestAdapter(body: "{\"id\": \"foo\",\"network\": \"bar\"}")
+        card.adapter = MockRestAdapter(body: "{\"id\": \"foo\",\"network\": \"bar\",\"tag\": \"foobar\"}")
 
         card.createAddress(addressRequest: AddressRequest(network: "bitcoin")).then { (address: Address) -> Void in
             XCTAssertEqual(address.id, "foo", "Failed: Wrong adrress id.")
             XCTAssertEqual(address.network, "bar", "Failed: Wrong address network.")
+            XCTAssertEqual(address.tag, "foobar", "Failed: Wrong address network.")
 
             testExpectation.fulfill()
         }.catch(execute: { (_: Error) in
