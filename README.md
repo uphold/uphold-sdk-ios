@@ -211,6 +211,16 @@ card.createTransaction(transactionTransferRequest).then { (transaction: Transact
     /// Do something with the error.            
 })
 
+/// A transaction to a destination (card id, crypto address, email, phone number or username) with reference.
+let transactionTransferRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foo@bar.com", reference: "123456")
+
+card.createTransaction(transactionTransferRequest).then { (transaction: Transaction) -> () in
+    /// Commit the transaction.
+    transaction.commit(TransactionCommitRequest("Commit message"))
+}.error({ (error: ErrorType) -> Void in
+    /// Do something with the error.            
+})
+
 /// A deposit from an ACH or SEPA account.
 let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "accountId")
 

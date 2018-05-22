@@ -10,15 +10,20 @@ open class Address: Mappable {
     /// The network of the created address.
     public private(set) final var network: String?
 
+    /// The tag of the created address if available.
+    public private(set) final var tag: String?
+
     /**
       Constructor.
 
       - parameter id: The id of the created address.
       - parameter network: The network of the created address.
+      - parameter tag: The tag of the created address.
     */
-    public init(id: String, network: String) {
+    public init(id: String, network: String, tag: String) {
         self.id = id
         self.network = network
+        self.tag = tag
     }
 
     // MARK: Required by the ObjectMapper.
@@ -39,6 +44,7 @@ open class Address: Mappable {
     open func mapping(map: Map) {
         self.id <- map["id"]
         self.network <- map["network"]
+        self.tag <- map["tag"]
     }
 
 }
