@@ -753,6 +753,10 @@ class UserTest: UpholdTestCase {
                     "\"reason\": \"biz\"," +
                     "\"status\": \"buz\"" +
                 "}," +
+                "\"marketing\": {" +
+                    "\"reason\": \"foo\"," +
+                    "\"status\": \"bar\"" +
+                "}," +
                 "\"phone\": {" +
                     "\"reason\": \"fizbuz\"," +
                     "\"status\": \"fuzbuz\"" +
@@ -797,6 +801,8 @@ class UserTest: UpholdTestCase {
         XCTAssertEqual(user!.verifications!.identity!.status, "biz", "Failed: Identity status didn't match.")
         XCTAssertEqual(user!.verifications!.location!.reason, "biz", "Failed: Location reason didn't match.")
         XCTAssertEqual(user!.verifications!.location!.status, "buz", "Failed: Location status didn't match.")
+        XCTAssertEqual(user!.verifications!.marketing!.reason, "foo", "Failed: Marketing reason didn't match.")
+        XCTAssertEqual(user!.verifications!.marketing!.status, "bar", "Failed: Marketing status didn't match.")
         XCTAssertEqual(user!.verifications!.phone!.reason, "fizbuz", "Failed: Phone reason didn't match.")
         XCTAssertEqual(user!.verifications!.phone!.status, "fuzbuz", "Failed: Phone status didn't match.")
         XCTAssertEqual(user!.verifications!.terms!.reason, "foobar", "Failed: Terms reason didn't match.")
