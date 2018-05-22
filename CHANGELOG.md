@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.16.0](https://github.com/uphold/uphold-sdk-ios/tree/0.16.0) (2018-05-22)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.15.0...0.16.0)
+
+**Merged pull requests:**
+
+- Update user verifications [\#72](https://github.com/uphold/uphold-sdk-ios/pull/72) ([SandroMachado](https://github.com/SandroMachado))
+- Add support to create transactions with reference [\#71](https://github.com/uphold/uphold-sdk-ios/pull/71) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.15.0](https://github.com/uphold/uphold-sdk-ios/tree/0.15.0) (2018-03-26)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.14.0...0.15.0)
 
