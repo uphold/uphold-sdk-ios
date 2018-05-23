@@ -697,6 +697,7 @@ class UserTest: UpholdTestCase {
             "\"settings\": {" +
                 "\"theme\": \"minimalistic\"," +
                 "\"currency\": \"USD\"," +
+                "\"hasMarketingConsent\": true," +
                 "\"hasNewsSubscription\": true," +
                 "\"intl\": {" +
                     "\"language\": {" +
@@ -777,6 +778,7 @@ class UserTest: UpholdTestCase {
         XCTAssertEqual(user!.lastName!, "bar", "Failed: User last name didn't match.")
         XCTAssertEqual(user!.name!, "Foo Bar", "Failed: User name didn't match.")
         XCTAssertEqual(user!.settings!.currency!, "USD", "Failed: User settings currency didn't match.")
+        XCTAssertTrue(user!.settings!.hasMarketingConsent!, "Failed: User settings hasMarketingConsent didn't match.")
         XCTAssertTrue(user!.settings!.hasNewsSubscription!, "Failed: User settings hasNewsSubscription didn't match.")
         XCTAssertEqual(user!.settings!.intl!.dateTimeFormat!.locale!, "en-US", "Failed: User settings intl dateTimeFormat didn't match.")
         XCTAssertEqual(user!.settings!.intl!.language!.locale!, "en-US", "Failed: User settings intl language didn't match.")

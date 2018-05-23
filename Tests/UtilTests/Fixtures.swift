@@ -241,6 +241,7 @@ public class Fixtures {
             "currency": faker.lorem.characters(amount: 3),
             "email": faker.internet.email(),
             "firstName": faker.name.firstName(),
+            "hasMarketingConsent": "true",
             "hasNewsSubscription": "true",
             "internationalizationUserSettingDateTimeFormat": faker.lorem.characters(amount: 5),
             "internationalizationUserSettingLanguage": faker.lorem.characters(amount: 5),
@@ -285,7 +286,7 @@ public class Fixtures {
         let internationalizationUserSettingNumberFormat = InternationalizationUserSetting(locale: fakerFields["internationalizationUserSettingNumberFormat"]!)
         let internationalizationUserSettings = InternationalizationUserSettings(language: internationalizationUserSettingLanguage, dateTimeFormat: internationalizationUserSettingDateTimeFormat, numberFormat: internationalizationUserSettingNumberFormat)
         let otp = Otp(login: Login(enabled: NSString(string: fakerFields["settingsOTPLogin"]!).boolValue), transactions: Transactions(send: Send(enabled: NSString(string: fakerFields["settingsOTPTransactionsSend"]!).boolValue), transfer: Transfer(enabled: NSString(string: fakerFields["settingsOTPTransactionsTransfer"]!).boolValue), withdraw: Withdraw(crypto: Crypto(enabled: NSString(string: fakerFields["settingsOTPTransactionsWithdrawCrypto"]!).boolValue))))
-        let userSettings = UserSettings(currency: fakerFields["currency"]!, hasNewsSubscription: NSString(string: fakerFields["hasNewsSubscription"]!).boolValue, intl: internationalizationUserSettings, otp: otp, theme: fakerFields["theme"]!)
+        let userSettings = UserSettings(currency: fakerFields["currency"]!, hasMarketingConsent: NSString(string: fakerFields["hasMarketingConsent"]!).boolValue, hasNewsSubscription: NSString(string: fakerFields["hasNewsSubscription"]!).boolValue, intl: internationalizationUserSettings, otp: otp, theme: fakerFields["theme"]!)
         let addressVerifications = VerificationParameter(reason: fakerFields["verificationsReasonAddress"]!, status: fakerFields["verificationsStatusAddress"]!)
         let birthdateVerifications = VerificationParameter(reason: fakerFields["verificationsReasonBirthdate"]!, status: fakerFields["verificationsStatusBirthdate"]!)
         let documentsVerifications = VerificationParameter(reason: fakerFields["verificationsReasonDocuments"]!, status: fakerFields["verificationsStatusDocuments"]!)
