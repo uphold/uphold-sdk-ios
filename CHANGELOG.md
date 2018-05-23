@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.0](https://github.com/uphold/uphold-sdk-ios/tree/0.17.0) (2018-05-23)
+[Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.16.0...0.17.0)
+
+**Merged pull requests:**
+
+- Add `hasMarketingConsent` setting [\#73](https://github.com/uphold/uphold-sdk-ios/pull/73) ([SandroMachado](https://github.com/SandroMachado))
+
 ## [0.16.0](https://github.com/uphold/uphold-sdk-ios/tree/0.16.0) (2018-05-22)
 [Full Changelog](https://github.com/uphold/uphold-sdk-ios/compare/0.15.0...0.16.0)
 

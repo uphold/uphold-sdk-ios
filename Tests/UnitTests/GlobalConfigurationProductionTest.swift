@@ -13,7 +13,7 @@ class GlobalConfigurationProductionTest: XCTestCase {
     }
 
     func testUpholdSdkVersionShouldReturnSdkVersion() {
-        XCTAssertEqual(GlobalConfigurations.UPHOLD_SDK_VERSION, "0.16.0", "Failed: Wrong URL value.")
+        XCTAssertEqual(GlobalConfigurations.UPHOLD_SDK_VERSION, "0.17.0", "Failed: Wrong URL value.")
     }
 
 }
