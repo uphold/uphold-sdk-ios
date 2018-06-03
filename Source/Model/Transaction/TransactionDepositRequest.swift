@@ -11,10 +11,11 @@ open class TransactionDepositRequest: TransactionRequest {
       Constructor.
 
       - parameter denomination: The denomination of the transaction request.
+      - parameter message: The message of the transaction request in case of a deposit.
       - parameter origin: The origin of the transaction request in case of a deposit.
     */
-    public init(denomination: TransactionDenominationRequest, origin: String) {
-        super.init(denomination: denomination)
+    public init(denomination: TransactionDenominationRequest, message: String?, origin: String) {
+        super.init(denomination: denomination, message: message)
 
         self.origin = origin
     }

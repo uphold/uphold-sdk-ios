@@ -14,10 +14,11 @@ open class TransactionTransferRequest: TransactionRequest {
       Constructor.
 
       - parameter denomination: The denomination of the transaction request.
+      - parameter message: The message of the transaction request.
       - parameter destination: The destination of the transaction request.
     */
-    public init(denomination: TransactionDenominationRequest, destination: String) {
-        super.init(denomination: denomination)
+    public init(denomination: TransactionDenominationRequest, message: String?, destination: String) {
+        super.init(denomination: denomination, message: message)
 
         self.destination = destination
     }

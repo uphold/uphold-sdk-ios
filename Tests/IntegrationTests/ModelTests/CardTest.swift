@@ -165,7 +165,7 @@ class CardTest: UpholdTestCase {
 
         card.adapter = MockRestAdapter(body: json)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, origin: "foobiz", securityCode: "1234")
+        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, message: "foobar", origin: "foobiz", securityCode: "1234")
 
         card.createTransaction(transactionRequest: transactionCardDepositRequest).then { (transaction: Transaction) -> Void in
             XCTAssertEqual(transaction.createdAt, "2014-08-27T00:01:11.616Z", "Failed: Wrong transaction createdAt.")
@@ -236,7 +236,7 @@ class CardTest: UpholdTestCase {
         let card: Card = Mapper().map(JSONString: "{}")!
         card.adapter = MockRestAdapter()
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, origin: "foobar", securityCode: "1234")
+        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, message: nil, origin: "foobar", securityCode: "1234")
 
         card.createTransaction(transactionRequest: transactionCardDepositRequest).catch(execute: { (error: Error) in
             guard let error = error as? UnexpectedResponseError else {
@@ -260,7 +260,7 @@ class CardTest: UpholdTestCase {
         let card: Card = Fixtures.loadCard()
         card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(fields: ["transactionId": "foobar"]))!)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, origin: "foobar", securityCode: "1234")
+        let transactionCardDepositRequest = TransactionCardDepositRequest(denomination: transactionDenominationRequest, message: "fuz", origin: "foobar", securityCode: "1234")
 
         card.createTransaction(commit: true, transactionRequest: transactionCardDepositRequest).then { (transaction: Transaction) -> Void in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
@@ -283,7 +283,7 @@ class CardTest: UpholdTestCase {
 
         card.adapter = MockRestAdapter(body: json)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "foobiz")
+        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, message: nil, origin: "foobiz")
 
         card.createTransaction(transactionRequest: transactionDepositRequest).then { (transaction: Transaction) -> Void in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
@@ -303,7 +303,7 @@ class CardTest: UpholdTestCase {
         let card: Card = Mapper().map(JSONString: "{}")!
         card.adapter = MockRestAdapter()
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "foobar")
+        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, message: nil, origin: "foobar")
 
         card.createTransaction(transactionRequest: transactionDepositRequest).catch(execute: { (error: Error) in
             guard let error = error as? UnexpectedResponseError else {
@@ -327,7 +327,7 @@ class CardTest: UpholdTestCase {
         let card: Card = Fixtures.loadCard()
         card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(fields: ["transactionId": "foobar"]))!)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, origin: "foobar")
+        let transactionDepositRequest = TransactionDepositRequest(denomination: transactionDenominationRequest, message: nil, origin: "foobar")
 
         card.createTransaction(commit: true, transactionRequest: transactionDepositRequest).then { (transaction: Transaction) -> Void in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
@@ -349,11 +349,12 @@ class CardTest: UpholdTestCase {
         "}"
         card.adapter = MockRestAdapter(body: json)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobiz")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, message: "foobar", destination: "foobiz")
 
         card.createTransaction(transactionRequest: transactionRequest).then { (transaction: Transaction) -> Void in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
             XCTAssertEqual(transactionRequest.destination, "foobiz", "Failed: Wrong transaction destination.")
+            XCTAssertEqual(transactionRequest.message, "foobar", "Failed: Wrong transaction message.")
 
             testExpectation.fulfill()
         }.catch(execute: { (_: Error) in
@@ -392,7 +393,7 @@ class CardTest: UpholdTestCase {
         let card: Card = Mapper().map(JSONString: "{}")!
         card.adapter = MockRestAdapter()
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, message: nil, destination: "foobar")
 
         card.createTransaction(transactionRequest: transactionRequest).catch(execute: { (error: Error) in
             guard let error = error as? UnexpectedResponseError else {
@@ -416,7 +417,7 @@ class CardTest: UpholdTestCase {
         let card: Card = Fixtures.loadCard()
         card.adapter = MockRestAdapter(body: Mapper().toJSONString(Fixtures.loadTransaction(fields: ["transactionId": "foobar"]))!)
         let transactionDenominationRequest = TransactionDenominationRequest(amount: "foo", currency: "bar")
-        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, destination: "foobar")
+        let transactionRequest = TransactionTransferRequest(denomination: transactionDenominationRequest, message: "foobuz", destination: "foobar")
 
         card.createTransaction(commit: true, transactionRequest: transactionRequest).then { (transaction: Transaction) -> Void in
             XCTAssertEqual(transaction.id, "foobar", "Failed: Wrong transaction id.")
